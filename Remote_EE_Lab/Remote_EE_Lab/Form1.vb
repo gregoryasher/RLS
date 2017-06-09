@@ -66,6 +66,10 @@
     Dim Board_7_Clock_State = "0"
     Dim Board_7_Clear_All = "0" '0 means no signal is not sent; 1 means clear all flipflops when Update button is pressed
 
+    'Error messages from Arduino
+    '-1 = Bad board ID
+    '-2 = Bad data recieved from GUI
+
     Private Sub btn_Dev_Test_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Dev_Test.Click
         Shell("C:\Program Files (x86)\Velleman\PcLab2000LT\PcLab2000LT.exe")
 
@@ -91,6 +95,8 @@
             boardID = "null"
             SerialPort1.PortName = USB_port
             SerialPort1.Open()
+            SerialPort1.DiscardInBuffer()
+            SerialPort1.DiscardOutBuffer()
             SerialPort1.Write(SendCode)
             boardID = SerialPort1.ReadLine()
             SerialPort1.Close()
@@ -99,69 +105,76 @@
         Catch ex As Exception
         End Try
 
+        'Paolo's test code to gray out boxes
+        boardID = "00000001"
+        If boardID.Equals("00000001") Then
+            board_1_R3_enable.Enabled = True
+        End If
+        '''''''''''''''''''''''''''''''''''''''
+
     End Sub
 
     Sub Panel_Enable(ByVal board As String)
         Try
-            Dim Board_IDNFR As String = board.Substring(9, 8) 'If there is a problem transmitting board ID, it's likely to be due to the indices of this substring
-            Select Case Board_IDNFR
+            'If there is a problem transmitting board ID, it's likely to be due to the indices of this substring
+            Select Case board
                 Case "00000000"
                     'do something
                     Deactivate()
-                    Serial_Text_Test.Text = "No board is present: " + Board_IDNFR
+                    Serial_Text_Test.Text = "No board is present: " + board
                 Case "00000001"
                     'do something
                     Setup.SelectTab(0)
                     Deactivate()
                     lbl_board_1_status.BackColor = Color.Green
                     lbl_board_1_status.Text = "Active"
-                    Serial_Text_Test.Text = Board_IDNFR
+                    Serial_Text_Test.Text = board
                 Case "00000010"
                     'do something
                     Setup.SelectTab(1)
                     Deactivate()
                     lbl_board_2_status.BackColor = Color.Green
                     lbl_board_2_status.Text = "Active"
-                    Serial_Text_Test.Text = Board_IDNFR
+                    Serial_Text_Test.Text = board
                 Case "00000011" 'Daughterboard 3: Current Mirror or Widlar Reducing Current Source
                     'do something
                     Setup.SelectTab(2)
                     Deactivate()
                     lbl_board_3_status.BackColor = Color.Green
                     lbl_board_3_status.Text = "Active"
-                    Serial_Text_Test.Text = Board_IDNFR
+                    Serial_Text_Test.Text = board
                 Case "00000100" 'Daughterboard 4: Half-Wave Rectifier
                     ' do something
                     Setup.SelectTab(3)
                     Deactivate()
                     lbl_board_4_status.BackColor = Color.Green
                     lbl_board_4_status.Text = "Active"
-                    Serial_Text_Test.Text = Board_IDNFR
+                    Serial_Text_Test.Text = board
                 Case "00000101" 'Daughterboard 5: Integrator/Low-Pass Filter
                     'do something
                     Setup.SelectTab(4)
                     Deactivate()
                     lbl_board_5_status.BackColor = Color.Green
                     lbl_board_5_status.Text = "Active"
-                    Serial_Text_Test.Text = Board_IDNFR
+                    Serial_Text_Test.Text = board
                 Case "00000110" 'Daughterboard 6: Debugging a Z80 circuit
                     'do something
                     Setup.SelectTab(5)
                     Deactivate()
                     lbl_board_6_status.BackColor = Color.Green
                     lbl_board_6_status.Text = "Active"
-                    Serial_Text_Test.Text = Board_IDNFR
+                    Serial_Text_Test.Text = board
                 Case "00000111" 'Daughterboard 7: Learning to use the Logic Analyzer with Flipflops
                     'do something
                     Setup.SelectTab(6)
                     Deactivate()
                     lbl_board_7_status.BackColor = Color.Green
                     lbl_board_7_status.Text = "Active"
-                    Serial_Text_Test.Text = Board_IDNFR
+                    Serial_Text_Test.Text = board
                 Case Else
                     'don't do anything
                     Deactivate()
-                    Serial_Text_Test.Text = Board_IDNFR
+                    Serial_Text_Test.Text = board
             End Select
         Catch ex As Exception
             Serial_Text_Test.Text = "WARNING: Recheck Board ID"
@@ -196,6 +209,8 @@
             boardID = "null"
             SerialPort1.PortName = USB_port
             SerialPort1.Open()
+            SerialPort1.DiscardInBuffer()
+            SerialPort1.DiscardOutBuffer()
             SerialPort1.Write(SendCode)
             boardID = SerialPort1.ReadLine()
             SerialPort1.Close()
@@ -205,7 +220,7 @@
         End Try
 
         Try
-            Select Case boardID.Substring(9, 8) 'If there is a problem transmitting board ID, it's likely to be due to the indices of this substring
+            Select Case boardID 'If there is a problem transmitting board ID, it's likely to be due to the indices of this substring
                 Case "00000000"
                     lbl_board_1_status.BackColor = Color.Red
                     lbl_board_1_status.Text = "Inactive"
@@ -239,6 +254,8 @@
         Try
             SerialPort1.PortName = USB_port
             SerialPort1.Open()
+            SerialPort1.DiscardInBuffer()
+            SerialPort1.DiscardOutBuffer()
             SerialPort1.WriteLine(Serial_Message)
             SerialPort1.Close()
         Catch ex As Exception
@@ -308,6 +325,8 @@
 
 
     Private Sub board_1_R3_enable_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles board_1_R3_enable.SelectedIndexChanged
+
+
         If board_1_R3_enable.SelectedIndex = 0 Then
             Board_1_R3_State = "1"
         Else
