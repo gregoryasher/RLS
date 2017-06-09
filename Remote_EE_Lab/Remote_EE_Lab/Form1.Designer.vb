@@ -264,6 +264,7 @@ Partial Class Form1
         'Serial_Text_Test
         '
         Me.Serial_Text_Test.Location = New System.Drawing.Point(330, 19)
+        Me.Serial_Text_Test.Multiline = False
         Me.Serial_Text_Test.Name = "Serial_Text_Test"
         Me.Serial_Text_Test.ReadOnly = True
         Me.Serial_Text_Test.Size = New System.Drawing.Size(255, 23)
@@ -1686,6 +1687,7 @@ Partial Class Form1
         '
         Me.board_1_R3_enable.BackColor = System.Drawing.SystemColors.ControlLight
         Me.board_1_R3_enable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.board_1_R3_enable.Enabled = False
         Me.board_1_R3_enable.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.board_1_R3_enable.FormattingEnabled = True
         Me.board_1_R3_enable.Items.AddRange(New Object() {"5 k", "Open"})
