@@ -18,9 +18,8 @@ class DBControl {
   public: 
   void serialControl();
   void configureDaughterboardPins();
-  void safetyCheck();
+  boolean safetyCheck();
   void readBoardID();
-  String stringifyBoardID();
   void configureBoardIdPins();
   
   private:

@@ -4,10 +4,16 @@
   that are part of the Remote Lab System at the University of
   Washington Bothell. See dbControl.cpp for implementation.
   This code is designed to run on an Arduino Mega 2560.
-  
+
   Created by Ellery Walsh, March 2016
   Reseased into the public domain.
 ******************************************************************************/
+
+/*
+   Error messages:
+   -1 = bad board id
+   -2 = bad serial command recieved from GUI
+*/
 
 #include "Arduino.h"
 #include "dbControl.h"
@@ -32,143 +38,164 @@ DB7 board7;
 const int boardIdPins[8] = {51, 49, 47, 45, 43, 41, 53, 52};
 int boardIdPinState[8] = {0};
 
+String bID = ""; //global variable used for comparison of each bit represented in boardIdPinState
+
+/*****************************
+
+   serialControl handles the commands sent from the GUI
+
+
+*****************************/
 void DBControl::serialControl() {
-      //String outputMessage = "";
-      if (Serial.available()) 
+
+  if (Serial.available()) {
+
+    String outputFromUI = Serial.readString();
+    Serial.flush();
+    Serial.println(outputFromUI);
+    String boardIDsubstring = outputFromUI.substring(0, 7);
+    if (outputFromUI.equalsIgnoreCase("boardID")) //Board ID is requested
+    {
+      readBoardID();
+      Serial.flush();
+      if (bID.equals("00000000")) // if all zeros error
+        Serial.println("-1");     //send -1: no board present
+      else Serial.println(bID);
+    }
+    else if (boardIDsubstring == "board_3")//Board 3 is addressed (the default message is board_3,1,1)
+    {
+      board3.execute(outputFromUI);
+      //outputMessage = outputFromUI; //Configure board_3
+    }
+    else if (boardIDsubstring == "board_4") // Board 4 is addressed (the default message is board_4,1,1,1)
+    {
+      board4.execute(outputFromUI);
+    }
+    else if (boardIDsubstring == "board_5")//Board 5 is addressed (the default message is board_5,1,1,1)
+    {
+      board5.execute(outputFromUI);
+    }
+    else if (boardIDsubstring == "board_6")//Board 5 is addressed (the default message is board_5,1,1,1)
+    {
+      board6.execute(outputFromUI);
+    }
+    else if (boardIDsubstring == "board_7")//Board 5 is addressed (the default message is board_5,1,1,1)
+    {
+      board7.execute(outputFromUI);
+    }
+    /*
+      else if(outputFromUI.substring(0,9) == "power_reg")
       {
-        String outputFromUI = Serial.readString();
-        String boardIDsubstring = outputFromUI.substring(0,7);
-        if (outputFromUI == "boardID") //Board ID is requested
-        {
-          readBoardID();
-          String boardID = stringifyBoardID();
-          //Serial.print("Board ID: "); // DELETE THIS LINE LATER IF WEIRD SERIAL PRINT THINGS ARE HAPPENING!!!!!
-          Serial.println(boardID); 
-          //outputMessage = "IdChecked";
-        }
-        /*else if (boardIDsubstring == "board_1") //Board_1 is addressed
-        {
-			board1.execute(outputFromUI);
-          //Serial.println(outputFromUI); 
-          //outputMessage = outputFromUI; //Configure board_1 (the default message is board_1,01,1,4,4,01,01)
-        }      
-        else if (boardIDsubstring == "board_2")//Board 2 is addressed
-        {
-          Serial.println(outputFromUI); 
-          outputMessage = outputFromUI; //Configure board_2 (the default message is board_2,1,1,1,1,1,1,01,01)
-        } */
-		else if (boardIDsubstring == "board_3")//Board 3 is addressed (the default message is board_3,1,1)
-        {
-          board3.execute(outputFromUI);
-          //outputMessage = outputFromUI; //Configure board_3
-        }
-		else if (boardIDsubstring == "board_4") // Board 4 is addressed (the default message is board_4,1,1,1)
-		{
-		  board4.execute(outputFromUI);
-		  //Serial.println(outputFromUI);           
-          //outputMessage = outputFromUI;; //Configure board_4
-		}
-        else if (boardIDsubstring == "board_5")//Board 5 is addressed (the default message is board_5,1,1,1)
-        {
-			board5.execute(outputFromUI);
-          //Serial.println(outputFromUI);           
-          //outputMessage = outputFromUI;; //Configure board_5
-        }
-		else if (boardIDsubstring == "board_6")//Board 5 is addressed (the default message is board_5,1,1,1)
-        {
-			board6.execute(outputFromUI);
-          //Serial.println(outputFromUI);           
-          //outputMessage = outputFromUI;; //Configure board_6
-        }
-		else if (boardIDsubstring == "board_7")//Board 5 is addressed (the default message is board_5,1,1,1)
-        {
-			board7.execute(outputFromUI);
-          //Serial.println(outputFromUI);           
-          //outputMessage = outputFromUI;; //Configure board_7
-        }
-        /*
-        else if(outputFromUI.substring(0,9) == "power_reg")
-        {
-          Power_Regulation(outputFromUI); //power_reg,111
-        }
-        */
-        else
-        {
-          safetyCheck();
-          Serial.println("Error");
-          //outputMessage = "Error";
-        }
+      Power_Regulation(outputFromUI); //power_reg,111
       }
-    //return outputMessage;
+    */
+    else
+    {
+      safetyCheck();
+      // error -2: bad serial command received
+      Serial.println("-2");
+    }
+  }
 }
 
-// Configure Pins makes sure that each board has the 
-// correct digital pins marked as outputFromUI
+/************************
+
+    Configure Pins makes sure that each board has the
+    correct digital pins marked as outputFromUI
+
+    Note: Daughterboard 1 and daughterboard 2 files do not exist (or are missing)
+          Thier configuration settings have been commented out.
+
+*************************/
 void DBControl::configureDaughterboardPins() {
-	readBoardID();
-	String boardID = stringifyBoardID();
+  readBoardID();
 
   // Configure pins correctly for the given board
+  //Note: Daughterboard 1 and daughterboard 2 configuration commented out
   /*
-  if (boardID == "Board_ID,00000001") {
+    if (boardID == "Board_ID,00000001") {
     board1.configurePins();
-  }
-  else if (boardID == "Board_ID,00000010") {
+    }
+    else if (boardID == "Board_ID,00000010") {
     board2.configurePins();
+    }
+    else*/
+  if (bID.equalsIgnoreCase("00000011")) {
+  board3.configurePins();
   }
-  else*/ if (boardID == "Board_ID,00000011") {
-    board3.configurePins();
+  else if (bID.equalsIgnoreCase("00000100")) {
+  board4.configurePins();
   }
-  else if (boardID == "Board_ID,00000100") {
-    board4.configurePins();
+  else if (bID.equalsIgnoreCase("00000101")) {
+  board5.configurePins();
   }
-  else if (boardID == "Board_ID,00000101") {
-    board5.configurePins();
+  else if (bID.equalsIgnoreCase("00000110")) {
+  board6.configurePins();
   }
-  else if (boardID == "Board_ID,00000110") {
-    board6.configurePins();
+  else if (bID.equalsIgnoreCase("00000111")) {
+  board7.configurePins();
   }
-  else if (boardID == "Board_ID,00000111") {
-    board7.configurePins();
-  }
-  Serial.println(boardID);
+  Serial.println(bID);
 }
 
-//Check if the daughter board is present,
-//if it isnt, disable the Power Regulator relay
-void DBControl::safetyCheck(){
-    readBoardID();
-    int sumOfIdStates = 0;
-    for (int i = 0; i < 8; i++) {
-      sumOfIdStates += boardIdPinState[i];
-    }
-    if (sumOfIdStates == 0)
-    {
-      Serial.println("No board in place!!");
-      //digitalWrite(Power_Relay_Enable, LOW);
-    }
- }
+/*****************************
 
+   Check if the daughter board is present,
+   if it isnt, disable the Power Regulator relay
+   returns true if passes saftey
+   returns false if fails
+
+*****************************/
+boolean DBControl::safetyCheck() {
+  readBoardID();
+  if (bID.equalsIgnoreCase("00000000") || bID.equalsIgnoreCase("-1")) {
+      return false;
+    /*
+       error, no board in place
+       clear buffer, write
+       -1: bad board ID.
+
+       edit: this was changed to reduce buffer filling.
+              now only writes in the loop of arduino_main class
+    */
+  
+//    Serial.flush();
+//    Serial.println("-1");
+//    digitalWrite(Power_Relay_Enable, LOW);
+  }
+  return true;
+}
+
+
+/*****************************
+
+   Reads daughterboard ID pin states and populates array
+   then writes the global board ID string with new value.
+
+
+*****************************/
 void DBControl::readBoardID() {
-  // Read the voltage on all 8 pins of the board ID
-  // and save their state into the array boardIDPinState
+  bID = "";
+  //first clear all values
+  for (int i = 0; i < 8; i++)
+    boardIdPinState[i] = 0;
+
+  //then obtain new values read from board
   for (int i = 0; i < 8; i++) {
     boardIdPinState[i] = digitalRead(boardIdPins[i]);
+    bID += boardIdPinState[i];
   }
 }
 
-String DBControl::stringifyBoardID() {
-  // Build up a string from all the board ID pin states
-  String boardID = "Board_ID,";
-  for (int i = 0; i < 8; i++) {
-     boardID = boardID + String(boardIdPinState[i]);
-  }
-  return boardID;
-}
+/*****************************
 
+   Sets daughterboard ID pins to input.
+   Pins are determined by array boardIdPins
+
+*****************************/
 void DBControl::configureBoardIdPins() {
   for (int i = 0; i < 8; i++) {
-     pinMode(boardIdPins[i], INPUT);
+    pinMode(boardIdPins[i], INPUT);
   }
 }
 
