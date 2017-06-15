@@ -2,7 +2,7 @@
     Dim Serial_Message As String = "test_message"
     Dim boardID As String = "null"
     Dim temp_read As String = "null"
-    Dim USB_port As String = "COM4" 'default COM port; this can be changed later using Setup tab
+    Dim USB_port As String = "COM3" 'default COM port; this can be changed later using Setup tab
 
     'Declare the variables for Board_1
     Dim Board_1_Serial_Message As String = "board_1,01,1,4,4,01,01" 'default message
@@ -99,18 +99,78 @@
             SerialPort1.DiscardOutBuffer()
             SerialPort1.Write(SendCode)
             boardID = SerialPort1.ReadLine()
+            boardID = SerialPort1.ReadLine().Substring(0, 8)
             SerialPort1.Close()
             Serial_Text_Test.Text = boardID
             Panel_Enable(boardID)
+
+            If boardID.Equals("00000001") Then
+                board_1_R3_enable.Enabled = True
+                Brd_1_Res_Select.Enabled = True
+                Brd_1_Scope.Enabled = True
+                brd_1_ch1_gain.Enabled = True
+                Brd_1_Scope_Ch2.Enabled = True
+                brd_1_ch_2_gain.Enabled = True
+            ElseIf boardID.Equals("00000010") Then
+                board_2_R1.Enabled = True
+                board_2_R2.Enabled = True
+                board_2_R3.Enabled = True
+                board_2_R4.Enabled = True
+                board_2_C1.Enabled = True
+                board_2_C2.Enabled = True
+                board_2_scope_ch_1_gain.Enabled = True
+                board_2_scope_ch_2_gain.Enabled = True
+            ElseIf boardID.Equals("00000011") Then
+                board_3_R2.Enabled = True
+                board_3_R3.Enabled = True
+                board_3_multimeter_output.Enabled = True
+            ElseIf boardID.Equals("00000100") Then
+                board_4_R1.Enabled = True
+                board4_Diode1_RadioButton1.Enabled = True
+                board4_Diode1_RadioButton2.Enabled = True
+                board4_Diode2_RadioButton1.Enabled = True
+                board4_Diode2_RadioButton2.Enabled = True
+            ElseIf boardID.Equals("00000101") Then
+                board_5_R2.Enabled = True
+                board_5_R3.Enabled = True
+                board_5_C1.Enabled = True
+            ElseIf boardID.Equals("00000110") Then
+                ProgramSelector.Enabled = True
+            ElseIf boardID.Equals("00000111") Then
+                PresetD1.Enabled = True
+                ConnectXOR1.Enabled = True
+                BypassXOR1.Enabled = True
+                PresetD2.Enabled = True
+                ConnectXOR2.Enabled = True
+                BypassXOR2.Enabled = True
+                PresetD3.Enabled = True
+                ConnectXOR3.Enabled = True
+                BypassXOR3.Enabled = True
+                PresetD4.Enabled = True
+                ConnectXOR4.Enabled = True
+                BypassXOR4.Enabled = True
+                PresetD5.Enabled = True
+                ConnectXOR5.Enabled = True
+                BypassXOR5.Enabled = True
+                PresetD6.Enabled = True
+                ConnectXOR6.Enabled = True
+                BypassXOR6.Enabled = True
+                PresetD7.Enabled = True
+                ConnectXOR7.Enabled = True
+                BypassXOR7.Enabled = True
+                PresetD8.Enabled = True
+                ClearCheckBox.Enabled = True
+                ConnectClock.Enabled = True
+                DisconnectClock.Enabled = True
+
+            End If
+
         Catch ex As Exception
         End Try
 
-        'Paolo's test code to gray out boxes
-        boardID = "00000001"
-        If boardID.Equals("00000001") Then
-            board_1_R3_enable.Enabled = True
-        End If
-        '''''''''''''''''''''''''''''''''''''''
+        'boardID = "00000111"
+
+
 
     End Sub
 
@@ -1059,4 +1119,11 @@
         End If
     End Sub
 
+    Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
+
+    End Sub
+
+    Private Sub Serial_Text_Test_TextChanged(sender As Object, e As EventArgs) Handles Serial_Text_Test.TextChanged
+
+    End Sub
 End Class

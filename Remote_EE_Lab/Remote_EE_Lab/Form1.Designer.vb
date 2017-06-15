@@ -319,6 +319,7 @@ Partial Class Form1
         'ClearCheckBox
         '
         Me.ClearCheckBox.AutoSize = True
+        Me.ClearCheckBox.Enabled = False
         Me.ClearCheckBox.Location = New System.Drawing.Point(87, 301)
         Me.ClearCheckBox.Name = "ClearCheckBox"
         Me.ClearCheckBox.Size = New System.Drawing.Size(15, 14)
@@ -339,6 +340,7 @@ Partial Class Form1
         'ConnectClock
         '
         Me.ConnectClock.AutoSize = True
+        Me.ConnectClock.Enabled = False
         Me.ConnectClock.ForeColor = System.Drawing.SystemColors.MenuHighlight
         Me.ConnectClock.Location = New System.Drawing.Point(6, 11)
         Me.ConnectClock.Name = "ConnectClock"
@@ -351,6 +353,7 @@ Partial Class Form1
         'DisconnectClock
         '
         Me.DisconnectClock.AutoSize = True
+        Me.DisconnectClock.Enabled = False
         Me.DisconnectClock.ForeColor = System.Drawing.Color.Red
         Me.DisconnectClock.Location = New System.Drawing.Point(6, 29)
         Me.DisconnectClock.Name = "DisconnectClock"
@@ -374,6 +377,7 @@ Partial Class Form1
         'ConnectXOR1
         '
         Me.ConnectXOR1.AutoSize = True
+        Me.ConnectXOR1.Enabled = False
         Me.ConnectXOR1.ForeColor = System.Drawing.SystemColors.MenuHighlight
         Me.ConnectXOR1.Location = New System.Drawing.Point(6, 11)
         Me.ConnectXOR1.Name = "ConnectXOR1"
@@ -386,6 +390,7 @@ Partial Class Form1
         'BypassXOR1
         '
         Me.BypassXOR1.AutoSize = True
+        Me.BypassXOR1.Enabled = False
         Me.BypassXOR1.ForeColor = System.Drawing.Color.Red
         Me.BypassXOR1.Location = New System.Drawing.Point(6, 29)
         Me.BypassXOR1.Name = "BypassXOR1"
@@ -409,6 +414,7 @@ Partial Class Form1
         'ConnectXOR2
         '
         Me.ConnectXOR2.AutoSize = True
+        Me.ConnectXOR2.Enabled = False
         Me.ConnectXOR2.ForeColor = System.Drawing.SystemColors.MenuHighlight
         Me.ConnectXOR2.Location = New System.Drawing.Point(6, 11)
         Me.ConnectXOR2.Name = "ConnectXOR2"
@@ -421,6 +427,7 @@ Partial Class Form1
         'BypassXOR2
         '
         Me.BypassXOR2.AutoSize = True
+        Me.BypassXOR2.Enabled = False
         Me.BypassXOR2.ForeColor = System.Drawing.Color.Red
         Me.BypassXOR2.Location = New System.Drawing.Point(6, 29)
         Me.BypassXOR2.Name = "BypassXOR2"
@@ -444,6 +451,7 @@ Partial Class Form1
         'ConnectXOR3
         '
         Me.ConnectXOR3.AutoSize = True
+        Me.ConnectXOR3.Enabled = False
         Me.ConnectXOR3.ForeColor = System.Drawing.SystemColors.MenuHighlight
         Me.ConnectXOR3.Location = New System.Drawing.Point(6, 11)
         Me.ConnectXOR3.Name = "ConnectXOR3"
@@ -456,6 +464,7 @@ Partial Class Form1
         'BypassXOR3
         '
         Me.BypassXOR3.AutoSize = True
+        Me.BypassXOR3.Enabled = False
         Me.BypassXOR3.ForeColor = System.Drawing.Color.Red
         Me.BypassXOR3.Location = New System.Drawing.Point(6, 29)
         Me.BypassXOR3.Name = "BypassXOR3"
@@ -479,6 +488,7 @@ Partial Class Form1
         'ConnectXOR4
         '
         Me.ConnectXOR4.AutoSize = True
+        Me.ConnectXOR4.Enabled = False
         Me.ConnectXOR4.ForeColor = System.Drawing.SystemColors.MenuHighlight
         Me.ConnectXOR4.Location = New System.Drawing.Point(6, 11)
         Me.ConnectXOR4.Name = "ConnectXOR4"
@@ -491,6 +501,7 @@ Partial Class Form1
         'BypassXOR4
         '
         Me.BypassXOR4.AutoSize = True
+        Me.BypassXOR4.Enabled = False
         Me.BypassXOR4.ForeColor = System.Drawing.Color.Red
         Me.BypassXOR4.Location = New System.Drawing.Point(6, 29)
         Me.BypassXOR4.Name = "BypassXOR4"
@@ -514,6 +525,7 @@ Partial Class Form1
         'ConnectXOR5
         '
         Me.ConnectXOR5.AutoSize = True
+        Me.ConnectXOR5.Enabled = False
         Me.ConnectXOR5.ForeColor = System.Drawing.SystemColors.MenuHighlight
         Me.ConnectXOR5.Location = New System.Drawing.Point(6, 11)
         Me.ConnectXOR5.Name = "ConnectXOR5"
@@ -526,6 +538,7 @@ Partial Class Form1
         'BypassXOR5
         '
         Me.BypassXOR5.AutoSize = True
+        Me.BypassXOR5.Enabled = False
         Me.BypassXOR5.ForeColor = System.Drawing.Color.Red
         Me.BypassXOR5.Location = New System.Drawing.Point(6, 29)
         Me.BypassXOR5.Name = "BypassXOR5"
@@ -549,6 +562,7 @@ Partial Class Form1
         'ConnectXOR6
         '
         Me.ConnectXOR6.AutoSize = True
+        Me.ConnectXOR6.Enabled = False
         Me.ConnectXOR6.ForeColor = System.Drawing.SystemColors.MenuHighlight
         Me.ConnectXOR6.Location = New System.Drawing.Point(6, 11)
         Me.ConnectXOR6.Name = "ConnectXOR6"
@@ -561,6 +575,7 @@ Partial Class Form1
         'BypassXOR6
         '
         Me.BypassXOR6.AutoSize = True
+        Me.BypassXOR6.Enabled = False
         Me.BypassXOR6.ForeColor = System.Drawing.Color.Red
         Me.BypassXOR6.Location = New System.Drawing.Point(6, 29)
         Me.BypassXOR6.Name = "BypassXOR6"
@@ -584,6 +599,7 @@ Partial Class Form1
         'ConnectXOR7
         '
         Me.ConnectXOR7.AutoSize = True
+        Me.ConnectXOR7.Enabled = False
         Me.ConnectXOR7.ForeColor = System.Drawing.SystemColors.MenuHighlight
         Me.ConnectXOR7.Location = New System.Drawing.Point(6, 11)
         Me.ConnectXOR7.Name = "ConnectXOR7"
@@ -596,6 +612,7 @@ Partial Class Form1
         'BypassXOR7
         '
         Me.BypassXOR7.AutoSize = True
+        Me.BypassXOR7.Enabled = False
         Me.BypassXOR7.ForeColor = System.Drawing.Color.Red
         Me.BypassXOR7.Location = New System.Drawing.Point(6, 29)
         Me.BypassXOR7.Name = "BypassXOR7"
@@ -609,6 +626,7 @@ Partial Class Form1
         '
         Me.PresetD1.BackColor = System.Drawing.SystemColors.ControlLight
         Me.PresetD1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.PresetD1.Enabled = False
         Me.PresetD1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.PresetD1.FormattingEnabled = True
         Me.PresetD1.Items.AddRange(New Object() {"1"})
@@ -621,6 +639,7 @@ Partial Class Form1
         '
         Me.PresetD2.BackColor = System.Drawing.SystemColors.ControlLight
         Me.PresetD2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.PresetD2.Enabled = False
         Me.PresetD2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.PresetD2.FormattingEnabled = True
         Me.PresetD2.Items.AddRange(New Object() {"1"})
@@ -633,6 +652,7 @@ Partial Class Form1
         '
         Me.PresetD3.BackColor = System.Drawing.SystemColors.ControlLight
         Me.PresetD3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.PresetD3.Enabled = False
         Me.PresetD3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.PresetD3.FormattingEnabled = True
         Me.PresetD3.Items.AddRange(New Object() {"1"})
@@ -645,6 +665,7 @@ Partial Class Form1
         '
         Me.PresetD4.BackColor = System.Drawing.SystemColors.ControlLight
         Me.PresetD4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.PresetD4.Enabled = False
         Me.PresetD4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.PresetD4.FormattingEnabled = True
         Me.PresetD4.Items.AddRange(New Object() {"1"})
@@ -657,6 +678,7 @@ Partial Class Form1
         '
         Me.PresetD5.BackColor = System.Drawing.SystemColors.ControlLight
         Me.PresetD5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.PresetD5.Enabled = False
         Me.PresetD5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.PresetD5.FormattingEnabled = True
         Me.PresetD5.Items.AddRange(New Object() {"1"})
@@ -669,6 +691,7 @@ Partial Class Form1
         '
         Me.PresetD6.BackColor = System.Drawing.SystemColors.ControlLight
         Me.PresetD6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.PresetD6.Enabled = False
         Me.PresetD6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.PresetD6.FormattingEnabled = True
         Me.PresetD6.Items.AddRange(New Object() {"1"})
@@ -681,6 +704,7 @@ Partial Class Form1
         '
         Me.PresetD7.BackColor = System.Drawing.SystemColors.ControlLight
         Me.PresetD7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.PresetD7.Enabled = False
         Me.PresetD7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.PresetD7.FormattingEnabled = True
         Me.PresetD7.Items.AddRange(New Object() {"1"})
@@ -714,6 +738,7 @@ Partial Class Form1
         '
         Me.PresetD8.BackColor = System.Drawing.SystemColors.ControlLight
         Me.PresetD8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.PresetD8.Enabled = False
         Me.PresetD8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.PresetD8.FormattingEnabled = True
         Me.PresetD8.Items.AddRange(New Object() {"1"})
@@ -742,7 +767,7 @@ Partial Class Form1
         Me.Board6.Location = New System.Drawing.Point(4, 22)
         Me.Board6.Name = "Board6"
         Me.Board6.Padding = New System.Windows.Forms.Padding(3)
-        Me.Board6.Size = New System.Drawing.Size(903, 414)
+        Me.Board6.Size = New System.Drawing.Size(1992, 414)
         Me.Board6.TabIndex = 5
         Me.Board6.Text = "Experiment 6"
         Me.Board6.UseVisualStyleBackColor = True
@@ -780,6 +805,7 @@ Partial Class Form1
         '
         Me.ProgramSelector.BackColor = System.Drawing.SystemColors.ControlLight
         Me.ProgramSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ProgramSelector.Enabled = False
         Me.ProgramSelector.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ProgramSelector.FormattingEnabled = True
         Me.ProgramSelector.Items.AddRange(New Object() {"Program A", "Program B", "Program C", "Program D", "Program E"})
@@ -830,7 +856,7 @@ Partial Class Form1
         Me.Board5.Location = New System.Drawing.Point(4, 22)
         Me.Board5.Name = "Board5"
         Me.Board5.Padding = New System.Windows.Forms.Padding(3)
-        Me.Board5.Size = New System.Drawing.Size(903, 414)
+        Me.Board5.Size = New System.Drawing.Size(1992, 414)
         Me.Board5.TabIndex = 4
         Me.Board5.Text = "Experiment 5"
         Me.Board5.UseVisualStyleBackColor = True
@@ -860,6 +886,7 @@ Partial Class Form1
         '
         Me.board_5_R3.BackColor = System.Drawing.SystemColors.ControlLight
         Me.board_5_R3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.board_5_R3.Enabled = False
         Me.board_5_R3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.board_5_R3.FormattingEnabled = True
         Me.board_5_R3.Items.AddRange(New Object() {"Open", "10 k"})
@@ -872,6 +899,7 @@ Partial Class Form1
         '
         Me.board_5_R2.BackColor = System.Drawing.SystemColors.ControlLight
         Me.board_5_R2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.board_5_R2.Enabled = False
         Me.board_5_R2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.board_5_R2.FormattingEnabled = True
         Me.board_5_R2.Items.AddRange(New Object() {"10 k", "20 k"})
@@ -884,6 +912,7 @@ Partial Class Form1
         '
         Me.board_5_C1.BackColor = System.Drawing.SystemColors.ControlLight
         Me.board_5_C1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.board_5_C1.Enabled = False
         Me.board_5_C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.board_5_C1.FormattingEnabled = True
         Me.board_5_C1.Items.AddRange(New Object() {"0.22 uF", "0.01 uF"})
@@ -932,6 +961,7 @@ Partial Class Form1
         'board4_Diode2_RadioButton2
         '
         Me.board4_Diode2_RadioButton2.AutoSize = True
+        Me.board4_Diode2_RadioButton2.Enabled = False
         Me.board4_Diode2_RadioButton2.Image = CType(resources.GetObject("board4_Diode2_RadioButton2.Image"), System.Drawing.Image)
         Me.board4_Diode2_RadioButton2.Location = New System.Drawing.Point(6, 46)
         Me.board4_Diode2_RadioButton2.Name = "board4_Diode2_RadioButton2"
@@ -943,6 +973,7 @@ Partial Class Form1
         'board4_Diode2_RadioButton1
         '
         Me.board4_Diode2_RadioButton1.AutoSize = True
+        Me.board4_Diode2_RadioButton1.Enabled = False
         Me.board4_Diode2_RadioButton1.Image = CType(resources.GetObject("board4_Diode2_RadioButton1.Image"), System.Drawing.Image)
         Me.board4_Diode2_RadioButton1.Location = New System.Drawing.Point(6, 19)
         Me.board4_Diode2_RadioButton1.Name = "board4_Diode2_RadioButton1"
@@ -965,6 +996,7 @@ Partial Class Form1
         'board4_Diode1_RadioButton2
         '
         Me.board4_Diode1_RadioButton2.AutoSize = True
+        Me.board4_Diode1_RadioButton2.Enabled = False
         Me.board4_Diode1_RadioButton2.Image = CType(resources.GetObject("board4_Diode1_RadioButton2.Image"), System.Drawing.Image)
         Me.board4_Diode1_RadioButton2.Location = New System.Drawing.Point(6, 46)
         Me.board4_Diode1_RadioButton2.Name = "board4_Diode1_RadioButton2"
@@ -975,6 +1007,7 @@ Partial Class Form1
         'board4_Diode1_RadioButton1
         '
         Me.board4_Diode1_RadioButton1.AutoSize = True
+        Me.board4_Diode1_RadioButton1.Enabled = False
         Me.board4_Diode1_RadioButton1.Image = CType(resources.GetObject("board4_Diode1_RadioButton1.Image"), System.Drawing.Image)
         Me.board4_Diode1_RadioButton1.Location = New System.Drawing.Point(6, 19)
         Me.board4_Diode1_RadioButton1.Name = "board4_Diode1_RadioButton1"
@@ -1008,6 +1041,7 @@ Partial Class Form1
         Me.board_4_R1.BackColor = System.Drawing.SystemColors.ControlLight
         Me.board_4_R1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.board_4_R1.DropDownWidth = 60
+        Me.board_4_R1.Enabled = False
         Me.board_4_R1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.board_4_R1.FormattingEnabled = True
         Me.board_4_R1.Items.AddRange(New Object() {"0.5 k", "1 k", "1.5 k ", "5 k"})
@@ -1074,6 +1108,7 @@ Partial Class Form1
         '
         'board_3_multimeter_output
         '
+        Me.board_3_multimeter_output.Enabled = False
         Me.board_3_multimeter_output.Location = New System.Drawing.Point(6, 34)
         Me.board_3_multimeter_output.Name = "board_3_multimeter_output"
         Me.board_3_multimeter_output.ReadOnly = True
@@ -1106,6 +1141,7 @@ Partial Class Form1
         '
         Me.board_3_R3.BackColor = System.Drawing.SystemColors.ControlLight
         Me.board_3_R3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.board_3_R3.Enabled = False
         Me.board_3_R3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.board_3_R3.FormattingEnabled = True
         Me.board_3_R3.Items.AddRange(New Object() {"short (for current mirror only)", "1 K", "5.1 K", "10 K", "20 K"})
@@ -1118,6 +1154,7 @@ Partial Class Form1
         '
         Me.board_3_R2.BackColor = System.Drawing.SystemColors.ControlLight
         Me.board_3_R2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.board_3_R2.Enabled = False
         Me.board_3_R2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.board_3_R2.FormattingEnabled = True
         Me.board_3_R2.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
@@ -1220,8 +1257,9 @@ Partial Class Form1
         '
         'board_2_scope_ch_2_gain
         '
-        Me.board_2_scope_ch_2_gain.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.board_2_scope_ch_2_gain.BackColor = System.Drawing.SystemColors.ControlLight
         Me.board_2_scope_ch_2_gain.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.board_2_scope_ch_2_gain.Enabled = False
         Me.board_2_scope_ch_2_gain.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.board_2_scope_ch_2_gain.FormattingEnabled = True
         Me.board_2_scope_ch_2_gain.Items.AddRange(New Object() {"1X", "10X"})
@@ -1273,7 +1311,9 @@ Partial Class Form1
         '
         'board_2_scope_ch_1_gain
         '
-        Me.board_2_scope_ch_1_gain.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.board_2_scope_ch_1_gain.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.board_2_scope_ch_1_gain.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.board_2_scope_ch_1_gain.Enabled = False
         Me.board_2_scope_ch_1_gain.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.board_2_scope_ch_1_gain.FormattingEnabled = True
         Me.board_2_scope_ch_1_gain.Items.AddRange(New Object() {"1X", "10X"})
@@ -1313,6 +1353,7 @@ Partial Class Form1
         '
         Me.board_2_C1.BackColor = System.Drawing.SystemColors.ControlLight
         Me.board_2_C1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.board_2_C1.Enabled = False
         Me.board_2_C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.board_2_C1.FormattingEnabled = True
         Me.board_2_C1.Items.AddRange(New Object() {"0.01 uF", "0.1   uF", "0.22 uF"})
@@ -1325,6 +1366,7 @@ Partial Class Form1
         '
         Me.board_2_R4.BackColor = System.Drawing.SystemColors.ControlLight
         Me.board_2_R4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.board_2_R4.Enabled = False
         Me.board_2_R4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.board_2_R4.FormattingEnabled = True
         Me.board_2_R4.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
@@ -1355,6 +1397,7 @@ Partial Class Form1
         '
         Me.board_2_C2.BackColor = System.Drawing.SystemColors.ControlLight
         Me.board_2_C2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.board_2_C2.Enabled = False
         Me.board_2_C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.board_2_C2.FormattingEnabled = True
         Me.board_2_C2.Items.AddRange(New Object() {"0.01 uF", "0.1   uF", "0.22 uF"})
@@ -1367,6 +1410,7 @@ Partial Class Form1
         '
         Me.board_2_R3.BackColor = System.Drawing.SystemColors.ControlLight
         Me.board_2_R3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.board_2_R3.Enabled = False
         Me.board_2_R3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.board_2_R3.FormattingEnabled = True
         Me.board_2_R3.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
@@ -1397,6 +1441,7 @@ Partial Class Form1
         '
         Me.board_2_R2.BackColor = System.Drawing.SystemColors.ControlLight
         Me.board_2_R2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.board_2_R2.Enabled = False
         Me.board_2_R2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.board_2_R2.FormattingEnabled = True
         Me.board_2_R2.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
@@ -1409,6 +1454,7 @@ Partial Class Form1
         '
         Me.board_2_R1.BackColor = System.Drawing.SystemColors.ControlLight
         Me.board_2_R1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.board_2_R1.Enabled = False
         Me.board_2_R1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.board_2_R1.FormattingEnabled = True
         Me.board_2_R1.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
@@ -1508,8 +1554,9 @@ Partial Class Form1
         '
         'brd_1_ch_2_gain
         '
-        Me.brd_1_ch_2_gain.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.brd_1_ch_2_gain.BackColor = System.Drawing.SystemColors.ControlLight
         Me.brd_1_ch_2_gain.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.brd_1_ch_2_gain.Enabled = False
         Me.brd_1_ch_2_gain.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.brd_1_ch_2_gain.FormattingEnabled = True
         Me.brd_1_ch_2_gain.Items.AddRange(New Object() {"1X", "10X"})
@@ -1529,8 +1576,9 @@ Partial Class Form1
         '
         'Brd_1_Scope_Ch2
         '
-        Me.Brd_1_Scope_Ch2.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Brd_1_Scope_Ch2.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Brd_1_Scope_Ch2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.Brd_1_Scope_Ch2.Enabled = False
         Me.Brd_1_Scope_Ch2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Brd_1_Scope_Ch2.FormattingEnabled = True
         Me.Brd_1_Scope_Ch2.Items.AddRange(New Object() {"(A)", "(B)", "(C)", "(D)"})
@@ -1573,8 +1621,9 @@ Partial Class Form1
         '
         'brd_1_ch1_gain
         '
-        Me.brd_1_ch1_gain.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.brd_1_ch1_gain.BackColor = System.Drawing.SystemColors.ControlLight
         Me.brd_1_ch1_gain.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.brd_1_ch1_gain.Enabled = False
         Me.brd_1_ch1_gain.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.brd_1_ch1_gain.FormattingEnabled = True
         Me.brd_1_ch1_gain.Items.AddRange(New Object() {"1X", "10X"})
@@ -1603,8 +1652,9 @@ Partial Class Form1
         '
         'Brd_1_Scope
         '
-        Me.Brd_1_Scope.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Brd_1_Scope.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Brd_1_Scope.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.Brd_1_Scope.Enabled = False
         Me.Brd_1_Scope.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Brd_1_Scope.FormattingEnabled = True
         Me.Brd_1_Scope.Items.AddRange(New Object() {"(A)", "(B)", "(C)", "(D)"})
@@ -1656,6 +1706,7 @@ Partial Class Form1
         '
         Me.Brd_1_Res_Select.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Brd_1_Res_Select.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.Brd_1_Res_Select.Enabled = False
         Me.Brd_1_Res_Select.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Brd_1_Res_Select.FormattingEnabled = True
         Me.Brd_1_Res_Select.Items.AddRange(New Object() {"1 K", "2 K", "3 K", "4 K", "5 K", "6 K", "7 K", "8 K", "9 K", "10 K", "short"})
@@ -1760,7 +1811,7 @@ Partial Class Form1
         Me.TabPageSetup.Location = New System.Drawing.Point(4, 22)
         Me.TabPageSetup.Name = "TabPageSetup"
         Me.TabPageSetup.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPageSetup.Size = New System.Drawing.Size(903, 414)
+        Me.TabPageSetup.Size = New System.Drawing.Size(1992, 414)
         Me.TabPageSetup.TabIndex = 8
         Me.TabPageSetup.Text = "Setup"
         Me.TabPageSetup.UseVisualStyleBackColor = True
