@@ -959,6 +959,7 @@
             this.Brd_1_Scope.Name = "Brd_1_Scope";
             this.Brd_1_Scope.Size = new System.Drawing.Size(104, 21);
             this.Brd_1_Scope.TabIndex = 1;
+            this.Brd_1_Scope.SelectedIndexChanged += new System.EventHandler(this.Brd_1_Scope_SelectedIndexChanged_1);
             // 
             // Label3
             // 

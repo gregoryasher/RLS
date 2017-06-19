@@ -323,6 +323,73 @@ namespace Remote_EE_Lab
             lbl_board_6_status.Text = "Inactive";
             lbl_board_7_status.BackColor = Color.Red;
             lbl_board_7_status.Text = "Inactive";
+
+
+            //board 1
+            board_1_R3_enable.Enabled = false;
+            Brd_1_Res_Select.Enabled = false;
+            Brd_1_Scope.Enabled = false;
+            brd_1_ch1_gain.Enabled = false;
+            Brd_1_Scope_Ch2.Enabled = false;
+            brd_1_ch_2_gain.Enabled = false;
+
+            //board 2
+            board_2_R1.Enabled = false;
+            board_2_R2.Enabled = false;
+            board_2_R3.Enabled = false;
+            board_2_R4.Enabled = false;
+            board_2_C1.Enabled = false;
+            board_2_C2.Enabled = false;
+            board_2_scope_ch_1_gain.Enabled = false;
+            board_2_scope_ch_2_gain.Enabled = false;
+
+            //board 3
+            board_3_R2.Enabled = false;
+            board_3_R3.Enabled = false;
+            board_3_multimeter_output.Enabled = false;
+
+            //board 4
+            board_4_R1.Enabled = false;
+            board4_Diode1_RadioButton1.Enabled = false;
+            board4_Diode1_RadioButton2.Enabled = false;
+            board4_Diode2_RadioButton1.Enabled = false;
+            board4_Diode2_RadioButton2.Enabled = false;
+
+            //board 5
+            board_5_R2.Enabled = false;
+            board_5_R3.Enabled = false;
+            board_5_C1.Enabled = false;
+
+            //board 6
+            ProgramSelector.Enabled = false;
+
+            //board 7
+            PresetD1.Enabled = false;
+            ConnectXOR1.Enabled = false;
+            BypassXOR1.Enabled = false;
+            PresetD2.Enabled = false;
+            ConnectXOR2.Enabled = false;
+            BypassXOR2.Enabled = false;
+            PresetD3.Enabled = false;
+            ConnectXOR3.Enabled = false;
+            BypassXOR3.Enabled = false;
+            PresetD4.Enabled = false;
+            ConnectXOR4.Enabled = false;
+            BypassXOR4.Enabled = false;
+            PresetD5.Enabled = false;
+            ConnectXOR5.Enabled = false;
+            BypassXOR5.Enabled = false;
+            PresetD6.Enabled = false;
+            ConnectXOR6.Enabled = false;
+            BypassXOR6.Enabled = false;
+            PresetD7.Enabled = false;
+            ConnectXOR7.Enabled = false;
+            BypassXOR7.Enabled = false;
+            PresetD8.Enabled = false;
+            ClearCheckBox.Enabled = false;
+            ConnectClock.Enabled = false;
+            DisconnectClock.Enabled = false;
+
         }
 
         private void btn_Send_Config_Click(object sender, EventArgs e)
@@ -1314,6 +1381,11 @@ namespace Remote_EE_Lab
         }
 
         private void Board7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Brd_1_Scope_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
         }
