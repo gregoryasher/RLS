@@ -1,0 +1,10 @@
+M:\Workspace\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\bin\Debug\Remote_EE_Lab.exe.config
+M:\Workspace\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\bin\Debug\Remote_EE_Lab.exe
+M:\Workspace\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\bin\Debug\Remote_EE_Lab.pdb
+M:\Workspace\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\obj\Debug\Remote_EE_Lab.csprojResolveAssemblyReference.cache
+M:\Workspace\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\obj\Debug\Remote_EE_Lab.Form1.resources
+M:\Workspace\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\obj\Debug\Remote_EE_Lab.Properties.Resources.resources
+M:\Workspace\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\obj\Debug\Remote_EE_Lab.SplashScreen_1.resources
+M:\Workspace\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\obj\Debug\Remote_EE_Lab.csproj.GenerateResource.Cache
+M:\Workspace\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\obj\Debug\Remote_EE_Lab.exe
+M:\Workspace\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\obj\Debug\Remote_EE_Lab.pdb
