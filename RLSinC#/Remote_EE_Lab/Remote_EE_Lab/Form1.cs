@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Diagnostics;
+using System.IO.Ports;
 
 namespace Remote_EE_Lab
 {
@@ -19,7 +20,7 @@ namespace Remote_EE_Lab
         String boardID = "null";
         String temp_read = "null";
         String Current_Board = "-1";
-        String USB_port = "COM3"; //default COM port; this can be changed later using Setup tab;
+        String USB_port = "COM69"; //default COM port; this can be changed later using Setup tab;
 
         //Declare the variables for Board_1
         String Board_1_Serial_Message = "board_1,01,1,4,4,01,01"; //default message
@@ -89,13 +90,12 @@ namespace Remote_EE_Lab
             Thread t = new Thread(new ThreadStart(SplashStart));
             t.Start();
             Thread.Sleep(5000);
+            
             InitializeComponent();
             t.Abort();
             bringToFront();
-
-
-
-
+            string[] temp = SerialPort.GetPortNames();
+            USB_port = temp[0];
 
             // Error messages from Arduino
             // -1 = Bad board ID
