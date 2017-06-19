@@ -71,7 +71,7 @@ void loop() {
   */
   if ( !(boardController.safetyCheck()) ) {
     if ((millis() - lastMsg) > 2000) {
-      Serial.println("-1");
+      Serial.println("00000000");
       lastMsg = millis();
     }
   }

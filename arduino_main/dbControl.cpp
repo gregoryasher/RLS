@@ -35,7 +35,6 @@ DB6 board6;
 DB7 board7;
 
 // Pins of Board ID are Arduino Mega's analog input pins
-const int boardIdPins[8] = {51, 49, 47, 45, 43, 41, 53, 52};
 int boardIdPinState[8] = {0};
 
 String bID = ""; //global variable used for comparison of each bit represented in boardIdPinState
@@ -183,6 +182,10 @@ void DBControl::readBoardID() {
   //then obtain new values read from board
   for (int i = 0; i < 8; i++) {
     boardIdPinState[i] = digitalRead(boardIdPins[i]);
+    //Serial.print("loop: ");
+    //Serial.print(i);
+    //Serial.print(" ");
+    //Serial.println(boardIdPins[i]);
     bID += boardIdPinState[i];
   }
 }
