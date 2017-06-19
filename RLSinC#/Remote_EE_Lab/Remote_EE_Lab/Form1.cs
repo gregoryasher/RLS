@@ -18,6 +18,7 @@ namespace Remote_EE_Lab
         String Serial_Message = "test_message";
         String boardID = "null";
         String temp_read = "null";
+        String Current_Board = "-1";
         String USB_port = "COM3"; //default COM port; this can be changed later using Setup tab;
 
         //Declare the variables for Board_1
@@ -141,6 +142,7 @@ namespace Remote_EE_Lab
             {
                 string SendCode = "boardID"; //request message to retreive the board ID from Arduino
                 //string boardID = "null";
+                //Deactivate();
                 SerialPort1.PortName = USB_port;
                 SerialPort1.Open();
                 SerialPort1.DiscardInBuffer();
@@ -161,6 +163,7 @@ namespace Remote_EE_Lab
                     brd_1_ch1_gain.Enabled = true;
                     Brd_1_Scope_Ch2.Enabled = true;
                     brd_1_ch_2_gain.Enabled = true;
+                    Current_Board = "00000001";
                 }
                 else if (boardID.Equals("00000010"))
                 {
@@ -172,12 +175,14 @@ namespace Remote_EE_Lab
                     board_2_C2.Enabled = true;
                     board_2_scope_ch_1_gain.Enabled = true;
                     board_2_scope_ch_2_gain.Enabled = true;
+                    Current_Board = "00000010";
                 }
                 else if (boardID.Equals("00000011"))
                 {
                     board_3_R2.Enabled = true;
                     board_3_R3.Enabled = true;
                     board_3_multimeter_output.Enabled = true;
+                    Current_Board = "00000011";
                 }
                 else if (boardID.Equals("00000100"))
                 {
@@ -186,16 +191,19 @@ namespace Remote_EE_Lab
                     board4_Diode1_RadioButton2.Enabled = true;
                     board4_Diode2_RadioButton1.Enabled = true;
                     board4_Diode2_RadioButton2.Enabled = true;
+                    Current_Board = "00000100";
                 }
                 else if (boardID.Equals("00000101"))
                 {
                     board_5_R2.Enabled = true;
                     board_5_R3.Enabled = true;
                     board_5_C1.Enabled = true;
+                    Current_Board = "00000101";
                 }
                 else if (boardID.Equals("00000110"))
                 {
                     ProgramSelector.Enabled = true;
+                    Current_Board = "00000110";
                 }
                 else if (boardID.Equals("00000111"))
                 {
@@ -224,8 +232,10 @@ namespace Remote_EE_Lab
                     ClearCheckBox.Enabled = true;
                     ConnectClock.Enabled = true;
                     DisconnectClock.Enabled = true;
+                    Current_Board = "00000111";
                 }
-            }catch(Exception ex) { };
+            }
+            catch (Exception ex) { }//Deactivate(); Serial_Text_Test.Text = "No board is present: " + boardID; };
         }
 
         private void Panel_Enable(string board)
@@ -297,7 +307,7 @@ namespace Remote_EE_Lab
                         break;
                     default:
                         Deactivate();
-                        Serial_Text_Test.Text = board;
+                        Serial_Text_Test.Text = "Invalid board: "+ board;
                         break;
                 }
             }
@@ -324,7 +334,7 @@ namespace Remote_EE_Lab
             lbl_board_7_status.BackColor = Color.Red;
             lbl_board_7_status.Text = "Inactive";
 
-
+            Current_Board = "-1";
             //board 1
             board_1_R3_enable.Enabled = false;
             Brd_1_Res_Select.Enabled = false;
@@ -396,6 +406,7 @@ namespace Remote_EE_Lab
         {
             try
             {
+                //Same as check board
                 string SendCode = "boardID"; //request message to retreive the board ID from Arduino
                 boardID = "null";
                 SerialPort1.PortName = USB_port;
@@ -403,23 +414,30 @@ namespace Remote_EE_Lab
                 SerialPort1.DiscardInBuffer();
                 SerialPort1.DiscardOutBuffer();
                 SerialPort1.Write(SendCode);
-                boardID = SerialPort1.ReadLine();
+                boardID = SerialPort1.ReadLine(); //Added to be consistant with check
+                boardID = SerialPort1.ReadLine().Substring(0, 8);
+                //System.Windows.Forms.MessageBox.Show(boardID); // debug
                 SerialPort1.Close();
-                Serial_Text_Test.Text = boardID;
-                Panel_Enable(boardID);
+                //Serial_Text_Test.Text = boardID;
+                //Panel_Enable(boardID);
+                if(boardID.Equals(Current_Board))
+                {
+                }
+                else
+                {
+                    Serial_Text_Test.Text = "Please check board first";
+                    return;
+                }
             }
             catch { }
-
+            //System.Windows.Forms.MessageBox.Show(boardID);
             try
             {
-                switch (boardID) //if there is a problem transmitting board ID, it's likely to be due to the indices of this substring
+                switch (Current_Board)//(boardID) //if there is a problem transmitting board ID, it's likely to be due to the indices of this substring
                 {
                     case "00000000":
-                        lbl_board_1_status.BackColor = Color.Red;
-                        lbl_board_1_status.Text = "Inactive";
-                        lbl_board_2_status.BackColor = Color.Red;
-                        lbl_board_2_status.Text = "Inactive";
-                        Serial_Text_Test.Text = "WARNING: No board is present";
+                        Deactivate();
+                        Serial_Text_Test.Text = "No board is present: " + boardID;
                         break;
                     case "00000001":
                         Serial_Message = Board_1_Serial_Message;
@@ -459,6 +477,7 @@ namespace Remote_EE_Lab
                 SerialPort1.DiscardInBuffer();
                 SerialPort1.DiscardOutBuffer();
                 SerialPort1.WriteLine(Serial_Message);
+                Serial_Text_Test.Text = "Board " + boardID + " message sent!";
                 SerialPort1.Close();
             }
             catch { }

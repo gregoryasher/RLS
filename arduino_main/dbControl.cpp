@@ -58,9 +58,9 @@ void DBControl::serialControl() {
     {
       readBoardID();
       Serial.flush();
-      if (bID.equals("00000000")) // if all zeros error
-        Serial.println("-1");     //send -1: no board present
-      else Serial.println(bID);
+      //if (bID.equals("00000000")) // if all zeros error
+        //Serial.println("-1");     //send -1: no board present
+      Serial.println(bID);
     }
     else if (boardIDsubstring == "board_3")//Board 3 is addressed (the default message is board_3,1,1)
     {
