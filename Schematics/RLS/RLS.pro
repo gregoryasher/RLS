@@ -1,4 +1,4 @@
-update=6/20/2017 12:06:38 PM
+update=6/21/2017 12:10:49 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,9 +23,11 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
+[general]
+version=1
 [eeschema]
 version=1
-LibDir=
+LibDir=../RLS
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -56,5 +58,3 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-[general]
-version=1
