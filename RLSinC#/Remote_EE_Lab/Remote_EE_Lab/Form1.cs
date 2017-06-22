@@ -86,6 +86,7 @@ namespace Remote_EE_Lab
 
         public Form1()
         {
+            //Creates a new thread that starts the splashscreen
             Thread t = new Thread(new ThreadStart(SplashStart));
             t.Start();
             Thread.Sleep(5000);
@@ -97,9 +98,10 @@ namespace Remote_EE_Lab
         }
 
         /************************************************************
-        *   
-        *   
-        *   
+        *  setComPort()
+        *  When called, gets all of the COM Ports currently being
+        *  used and then sets COM port of the RLS to the COM port
+        *  that is being used by the Remote lab system motherboard.
         ************************************************************/
         public void setComPort()
         {
@@ -115,15 +117,21 @@ namespace Remote_EE_Lab
         }
 
         /************************************************************
-        *   
-        *   
-        *   
+        *   SplashStart()
+        *   Starts the splash screen before the running
+        *   the RLS program.
         ************************************************************/
         public void SplashStart()
         {
+            //Runs the splashscreen
             Application.Run(new SplashScreen_1());
         }
 
+        /************************************************************
+        *   bringToFront()
+        *   Sends the RLS program to the front of everything the
+        *   user currently has open.
+        ************************************************************/
         public void bringToFront()
         {
             if (WindowState == FormWindowState.Minimized)
@@ -138,9 +146,9 @@ namespace Remote_EE_Lab
         }
 
         /************************************************************
-        *   
-        *   
-        *   
+        *   btn_Dev_Test_Click()
+        *   Starts the velleman oscilloscope + function generator
+        *   program.
         ************************************************************/
         private void btn_Dev_Test_Click(object sender, EventArgs e)
         {
@@ -148,9 +156,8 @@ namespace Remote_EE_Lab
         }
 
         /************************************************************
-        *   
-        *   
-        *   
+        *   btn_test_2_Click()
+        *   Starts the logic port logic analyzer software.
         ************************************************************/
         private void btn_test_2_Click(object sender, EventArgs e)
         {
@@ -158,9 +165,9 @@ namespace Remote_EE_Lab
         }
 
         /************************************************************
-        *   
-        *   
-        *   
+        *   SubmitButton_Click()
+        *   Allows user to manually set a COM port if for some reason
+        *   the RLS does not automatically detect the correct one.
         ************************************************************/
         private void SubmitButton_Click(object sender, EventArgs e)
         {
@@ -169,17 +176,20 @@ namespace Remote_EE_Lab
         }
 
         /************************************************************
-        *   
-        *   
-        *   
+        *   board_detect_Click
+        *   Makes check board button work. It finds what 
+        *   daughterboard is currently connected to the RLS
+        *   motherboard.
         ************************************************************/
         private void board_detect_Click(object sender, EventArgs e)
         {
             try
             {
                 string SendCode = "boardID"; //request message to retreive the board ID from Arduino
-                //string boardID = "null";
-                //Deactivate();
+               
+
+                //Using SerialPort1 send "boardID" to the arduino and the arduino responds by
+                //sending back the board id of the daughterboard currently connected.
                 SerialPort1.PortName = USB_port;
                 SerialPort1.Open();
                 SerialPort1.DiscardInBuffer();
@@ -192,7 +202,7 @@ namespace Remote_EE_Lab
                 Panel_Enable(boardID);
                 /////////////////////////////////////////
 
-                if (boardID.Equals("00000001"))
+                if (boardID.Equals("00000001")) //Enabled what is needed for board 1
                 {
                     board_1_R3_enable.Enabled = true;
                     Brd_1_Res_Select.Enabled = true;
@@ -202,7 +212,7 @@ namespace Remote_EE_Lab
                     brd_1_ch_2_gain.Enabled = true;
                     Current_Board = "00000001";
                 }
-                else if (boardID.Equals("00000010"))
+                else if (boardID.Equals("00000010")) //Enabled what is needed for board 2
                 {
                     board_2_R1.Enabled = true;
                     board_2_R2.Enabled = true;
@@ -214,14 +224,14 @@ namespace Remote_EE_Lab
                     board_2_scope_ch_2_gain.Enabled = true;
                     Current_Board = "00000010";
                 }
-                else if (boardID.Equals("00000011"))
+                else if (boardID.Equals("00000011")) //Enabled what is needed for board 3
                 {
                     board_3_R2.Enabled = true;
                     board_3_R3.Enabled = true;
                     board_3_multimeter_output.Enabled = true;
                     Current_Board = "00000011";
                 }
-                else if (boardID.Equals("00000100"))
+                else if (boardID.Equals("00000100")) //Enabled what is needed for board 4
                 {
                     board_4_R1.Enabled = true;
                     board4_Diode1_RadioButton1.Enabled = true;
@@ -230,19 +240,19 @@ namespace Remote_EE_Lab
                     board4_Diode2_RadioButton2.Enabled = true;
                     Current_Board = "00000100";
                 }
-                else if (boardID.Equals("00000101"))
+                else if (boardID.Equals("00000101")) //Enabled what is needed for board 5
                 {
                     board_5_R2.Enabled = true;
                     board_5_R3.Enabled = true;
                     board_5_C1.Enabled = true;
                     Current_Board = "00000101";
                 }
-                else if (boardID.Equals("00000110"))
+                else if (boardID.Equals("00000110")) //Enabled what is needed for board 6
                 {
                     ProgramSelector.Enabled = true;
                     Current_Board = "00000110";
                 }
-                else if (boardID.Equals("00000111"))
+                else if (boardID.Equals("00000111")) //Enabled what is needed for board 7
                 {
                     PresetD1.Enabled = true;
                     ConnectXOR1.Enabled = true;
@@ -276,31 +286,28 @@ namespace Remote_EE_Lab
         }
 
         /************************************************************
-        *   
-        *   
-        *   
+        *   Panel_Enable()
+        *   Sets the text that says wether the board is enabled
+        *   or disabled to enabled.
         ************************************************************/
         private void Panel_Enable(string board)
         {
             try
             {
-                switch (board)
+                switch (board) //Checks which board needs to be enabled
                 {
-                    case "00000000":
-                        //do something
+                    case "00000000": // makes sure everything is deactivated
                         Deactivate();
                         Serial_Text_Test.Text = "No board is present: " + board;
                         break;
-                    case "00000001":
-                        //do something
+                    case "00000001": // changes panel to active for program 1 (no project)
                         Setup.SelectTab(0);
                         Deactivate();
                         lbl_board_1_status.BackColor = Color.Green;
                         lbl_board_1_status.Text = "Active";
                         Serial_Text_Test.Text = board;
                         break;
-                    case "00000010":
-                        //do something
+                    case "00000010": // changes panel to active for program 2 (no project)
                         Setup.SelectTab(1);
                         Deactivate();
                         lbl_board_2_status.BackColor = Color.Green;
@@ -308,7 +315,6 @@ namespace Remote_EE_Lab
                         Serial_Text_Test.Text = board;
                         break;
                     case "00000011": //Daughterboard 3: Current Mirror or Widlar Reducing Current Source
-                                     //do something
                         Setup.SelectTab(2);
                         Deactivate();
                         lbl_board_3_status.BackColor = Color.Green;
@@ -316,7 +322,6 @@ namespace Remote_EE_Lab
                         Serial_Text_Test.Text = board;
                         break;
                     case "00000100": //Daughterboard 4: Half-Wave Rectifier
-                                     // do something
                         Setup.SelectTab(3);
                         Deactivate();
                         lbl_board_4_status.BackColor = Color.Green;
@@ -324,7 +329,6 @@ namespace Remote_EE_Lab
                         Serial_Text_Test.Text = board;
                         break;
                     case "00000101": //Daughterboard 5: Integrator/Low-Pass Filter
-                                     //do something
                         Setup.SelectTab(4);
                         Deactivate();
                         lbl_board_5_status.BackColor = Color.Green;
@@ -332,7 +336,6 @@ namespace Remote_EE_Lab
                         Serial_Text_Test.Text = board;
                         break;
                     case "00000110": //Daughterboard 6: Debugging a Z80 circuit
-                                     //do something
                         Setup.SelectTab(5);
                         Deactivate();
                         lbl_board_6_status.BackColor = Color.Green;
@@ -340,7 +343,6 @@ namespace Remote_EE_Lab
                         Serial_Text_Test.Text = board;
                         break;
                     case "00000111": //Daughterboard 7: Learning to use the Logic Analyzer with Flipflops
-                                     //do something
                         Setup.SelectTab(6);
                         Deactivate();
                         lbl_board_7_status.BackColor = Color.Green;
@@ -360,9 +362,9 @@ namespace Remote_EE_Lab
         }
 
         /************************************************************
-        *   
-        *   
-        *   
+        *   Deactivate()
+        *   Disables every experiment and changes everything to
+        *   inactive.
         ************************************************************/
         private void Deactivate()
         {
@@ -450,15 +452,14 @@ namespace Remote_EE_Lab
         }
 
         /************************************************************
-        *   
-        *   
-        *   
+        *   btn_Send_Config_Click()
+        *   Update button code.
         ************************************************************/
         private void btn_Send_Config_Click(object sender, EventArgs e)
         {
             try
             {
-                //Same as check board
+                //Gets board id of board currently connected
                 string SendCode = "boardID"; //request message to retreive the board ID from Arduino
                 boardID = "null";
                 SerialPort1.PortName = USB_port;
@@ -468,10 +469,9 @@ namespace Remote_EE_Lab
                 SerialPort1.Write(SendCode);
                 boardID = SerialPort1.ReadLine(); //Added to be consistant with check
                 boardID = SerialPort1.ReadLine().Substring(0, 8);
-                //System.Windows.Forms.MessageBox.Show(boardID); // debug
+                
                 SerialPort1.Close();
-                //Serial_Text_Test.Text = boardID;
-                //Panel_Enable(boardID);
+                //Check to make sure that the board that is connected matches the board that was last checked
                 if(boardID.Equals(Current_Board))
                 {
                 }
@@ -482,10 +482,10 @@ namespace Remote_EE_Lab
                 }
             }
             catch { }
-            //System.Windows.Forms.MessageBox.Show(boardID);
+            //Set message that needs to be sent
             try
             {
-                switch (Current_Board)//(boardID) //if there is a problem transmitting board ID, it's likely to be due to the indices of this substring
+                switch (Current_Board) //if there is a problem transmitting board ID, it's likely to be due to the indices of this substring
                 {
                     case "00000000":
                         Deactivate();
@@ -522,6 +522,7 @@ namespace Remote_EE_Lab
             }
             catch { Serial_Text_Test.Text = "WARNING: Resend the message"; }
 
+            //Send message through USB port to arduino based on the previous try catch
             try
             {
                 SerialPort1.PortName = USB_port;
@@ -539,25 +540,8 @@ namespace Remote_EE_Lab
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         /////////////////////BOARD SUBROUTINES
         //Board 1 Subroutines 
-
         //Board_1: Serial Message Compiler
         //This subroutine takes the individual board_1 variables and
         //combines them into one string.
@@ -578,11 +562,6 @@ namespace Remote_EE_Lab
 
 
         //Board_1: Scope CH1 placement
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void Brd_1_Scope_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             if (Brd_1_Scope.SelectedIndex.Equals(0))
@@ -600,11 +579,6 @@ namespace Remote_EE_Lab
 
 
         //Board_1: Scope CH2 placement
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void Brd_1_Scope_Ch2_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             if (Brd_1_Scope_Ch2.SelectedIndex.Equals(0))
@@ -620,11 +594,6 @@ namespace Remote_EE_Lab
             Board_1_Compile_Serial_Message();
         }
 
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board_1_R3_enable_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
 
@@ -637,11 +606,6 @@ namespace Remote_EE_Lab
             Board_1_Compile_Serial_Message();
         }
 
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void Brd_1_Res_Select_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             if (Brd_1_Res_Select.SelectedIndex.Equals(0))
@@ -673,11 +637,6 @@ namespace Remote_EE_Lab
             Board_1_Compile_Serial_Message();
         }
 
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void brd_1_ch1_gain_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             if (brd_1_ch1_gain.SelectedIndex.Equals(0))
@@ -689,11 +648,6 @@ namespace Remote_EE_Lab
             Board_1_Compile_Serial_Message();
         }
 
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void brd_1_ch_2_gain_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             if (brd_1_ch_2_gain.SelectedIndex.Equals(0))
@@ -712,12 +666,6 @@ namespace Remote_EE_Lab
 
 
         //Board 2 Subroutines 
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
-
         //Board_2: Serial Message Compiler
         //This subroutine takes the individual board_2 variables and
         //combines them into one string.
@@ -740,11 +688,6 @@ namespace Remote_EE_Lab
 
 
         //Board_2: R1 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board_2_R1_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             if (board_2_R1.SelectedIndex.Equals(0))
@@ -765,11 +708,6 @@ namespace Remote_EE_Lab
 
 
         //Board_2: R2 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board_2_R2_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             if (board_2_R2.SelectedIndex.Equals(0))
@@ -790,11 +728,6 @@ namespace Remote_EE_Lab
 
 
         //Board_2: R3 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board_2_R3_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             if (board_2_R3.SelectedIndex.Equals(0))
@@ -815,11 +748,6 @@ namespace Remote_EE_Lab
 
 
         //Board_2: R4 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board_2_R4_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             if (board_2_R4.SelectedIndex.Equals(0))
@@ -839,11 +767,6 @@ namespace Remote_EE_Lab
 
 
         //Board_2: C1 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board_2_C1_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             if (board_2_C1.SelectedIndex.Equals(0))
@@ -859,11 +782,6 @@ namespace Remote_EE_Lab
 
 
         //Board_2: C2 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board_2_C2_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             if (board_2_C2.SelectedIndex.Equals(0))
@@ -879,11 +797,6 @@ namespace Remote_EE_Lab
 
 
         //Board_2: Ch1 gain control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board_2_scope_ch_1_gain_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             if (board_2_scope_ch_1_gain.SelectedIndex.Equals(0))
@@ -895,11 +808,6 @@ namespace Remote_EE_Lab
             Board_2_Compile_Serial_Message();
         }
 
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board_2_scope_ch_2_gain_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             if (board_2_scope_ch_2_gain.SelectedIndex.Equals(0))
@@ -917,11 +825,6 @@ namespace Remote_EE_Lab
 
 
         //Board 3 Subroutines 
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         //Board_3: Serial Message Compiler
         //This subroutine takes the individual board_3 variables and
         //combines them into one string.
@@ -939,11 +842,6 @@ namespace Remote_EE_Lab
 
 
         //Board 3: R2 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board_3_R2_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             if (board_3_R2.SelectedIndex.Equals(0))
@@ -963,11 +861,6 @@ namespace Remote_EE_Lab
 
 
         //Board 3: R3 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board_3_R3_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             if (board_3_R3.SelectedIndex.Equals(0))
@@ -996,12 +889,6 @@ namespace Remote_EE_Lab
 
 
         //Board 4 Subroutines 
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
-
         //Board_4: Serial Message Compiler
         //This subroutine takes the individual board_4 variables and
         //combines them into one string.
@@ -1020,11 +907,6 @@ namespace Remote_EE_Lab
 
 
         //Board 4: R1 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board_4_R1_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             if (board_4_R1.SelectedIndex.Equals(0))
@@ -1042,11 +924,6 @@ namespace Remote_EE_Lab
 
 
         //Board 4: Diode 1 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board4_Diode1_RadioButton1_CheckedChanged(System.Object sender, System.EventArgs e)
         {
             if (board4_Diode1_RadioButton1.Checked.Equals(true))
@@ -1060,11 +937,6 @@ namespace Remote_EE_Lab
 
         //You actually DO need a function for BOTH radio buttons; if you only have a function for RadioButton1,
         // RadioButton2 will not work until AFTER RadioButton1 has been clicked, which is confusing and undesirable
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board4_Diode1_RadioButton2_CheckedChanged(System.Object sender, System.EventArgs e)
         {
             if (board4_Diode1_RadioButton2.Checked.Equals(true))
@@ -1079,11 +951,6 @@ namespace Remote_EE_Lab
 
 
         //Board 4: Diode 2 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board4_Diode2_RadioButton1_CheckedChanged(System.Object sender, System.EventArgs e)
         {
             if (board4_Diode2_RadioButton1.Checked.Equals(true))
@@ -1095,11 +962,6 @@ namespace Remote_EE_Lab
             Board_4_Compile_Serial_Message();
         }
 
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board4_Diode2_RadioButton2_CheckedChanged(System.Object sender, System.EventArgs e)
         {
             if (board4_Diode2_RadioButton2.Checked.Equals(true))
@@ -1117,11 +979,6 @@ namespace Remote_EE_Lab
 
 
         //Board 5 Subroutines 
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         //Board_5: Serial Message Compiler
         //This subroutine takes the individual board_5 variables and
         //combines them into one string.
@@ -1140,11 +997,6 @@ namespace Remote_EE_Lab
 
 
         //Board 5: R2 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board_5_R2_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             if (board_5_R2.SelectedIndex.Equals(0))
@@ -1158,11 +1010,6 @@ namespace Remote_EE_Lab
 
 
         //Board 5: R2 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board_5_R3_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             if (board_5_R3.SelectedIndex.Equals(0))
@@ -1176,11 +1023,6 @@ namespace Remote_EE_Lab
 
 
         //Board 5: C1 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board_5_C1_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             if (board_5_C1.SelectedIndex.Equals(0))
@@ -1206,11 +1048,6 @@ namespace Remote_EE_Lab
 
 
         //Board 7 Subroutines
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         //Board_7: Serial Message Compiler
         //This subroutine takes the individual board_7 variables and
         //combines them into one string.
@@ -1245,11 +1082,6 @@ namespace Remote_EE_Lab
 
         //Flipflop presets
         //Board 7: dff1 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board_7_PresetD1_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             if (PresetD1.SelectedIndex.Equals(0))
@@ -1262,11 +1094,6 @@ namespace Remote_EE_Lab
         }
 
         //Board 7: dff2 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board_7_PresetD2_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             if (PresetD2.SelectedIndex.Equals(0))
@@ -1279,11 +1106,6 @@ namespace Remote_EE_Lab
         }
 
         //Board 7: dff3 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board_7_PresetD3_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             if (PresetD3.SelectedIndex.Equals(0))
@@ -1296,11 +1118,6 @@ namespace Remote_EE_Lab
         }
 
         //Board 7: dff4 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board_7_PresetD4_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             if (PresetD4.SelectedIndex.Equals(0))
@@ -1313,11 +1130,6 @@ namespace Remote_EE_Lab
         }
 
         //Board 7: dff5 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board_7_PresetD5_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             if (PresetD5.SelectedIndex.Equals(0))
@@ -1330,11 +1142,6 @@ namespace Remote_EE_Lab
         }
 
         //Board 7: dff6 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board_7_PresetD6_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             if (PresetD6.SelectedIndex.Equals(0))
@@ -1347,11 +1154,6 @@ namespace Remote_EE_Lab
         }
 
         //Board 7: dff7 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board_7_PresetD7_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             if (PresetD7.SelectedIndex.Equals(0))
@@ -1364,11 +1166,6 @@ namespace Remote_EE_Lab
         }
 
         //Board 7: dff8 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board_7_PresetD8_SelectedIndexChanged(System.Object sender, System.EventArgs e)
         {
             if (PresetD8.SelectedIndex.Equals(0))
@@ -1383,11 +1180,6 @@ namespace Remote_EE_Lab
 
         //Clock Connection Controls
         //Board 7: Clock control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board7_ConnectClock_CheckedChanged(System.Object sender, System.EventArgs e)
         {
             if (ConnectClock.Checked.Equals(true))
@@ -1399,11 +1191,6 @@ namespace Remote_EE_Lab
             Board_7_Compile_Serial_Message();
         }
 
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board7_DisconnectClock_CheckedChanged(System.Object sender, System.EventArgs e)
         {
             if (DisconnectClock.Checked.Equals(true))
@@ -1420,11 +1207,6 @@ namespace Remote_EE_Lab
 
         //XOR Connection Controls
         //Board 7: XOR 1 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board7_ConnectXOR1_CheckedChanged(System.Object sender, System.EventArgs e)
         {
             if (ConnectXOR1.Checked.Equals(true))
@@ -1436,11 +1218,6 @@ namespace Remote_EE_Lab
             Board_7_Compile_Serial_Message();
         }
 
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board7_BypassXOR1_CheckedChanged(System.Object sender, System.EventArgs e)
         {
             if (BypassXOR1.Checked.Equals(true))
@@ -1454,11 +1231,6 @@ namespace Remote_EE_Lab
 
 
         //Board 7: XOR 2 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board7_ConnectXOR2_CheckedChanged(System.Object sender, System.EventArgs e)
         {
             if (ConnectXOR2.Checked.Equals(true))
@@ -1470,11 +1242,7 @@ namespace Remote_EE_Lab
             Board_7_Compile_Serial_Message();
         }
 
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
+
         private void board7_BypassXOR2_CheckedChanged(System.Object sender, System.EventArgs e)
         {
             if (BypassXOR2.Checked.Equals(true))
@@ -1487,11 +1255,6 @@ namespace Remote_EE_Lab
         }
 
         //Board 7: XOR 3 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board7_ConnectXOR3_CheckedChanged(System.Object sender, System.EventArgs e)
         {
             if (ConnectXOR3.Checked.Equals(true))
@@ -1503,11 +1266,6 @@ namespace Remote_EE_Lab
             Board_7_Compile_Serial_Message();
         }
 
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board7_BypassXOR3_CheckedChanged(System.Object sender, System.EventArgs e)
         {
             if (BypassXOR3.Checked.Equals(true))
@@ -1521,11 +1279,6 @@ namespace Remote_EE_Lab
 
 
         //Board 7: XOR 4 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board7_ConnectXOR4_CheckedChanged(System.Object sender, System.EventArgs e)
         {
             if (ConnectXOR4.Checked.Equals(true))
@@ -1536,12 +1289,7 @@ namespace Remote_EE_Lab
             //Call the message compiler
             Board_7_Compile_Serial_Message();
         }
-
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
+        
         private void board7_BypassXOR4_CheckedChanged(System.Object sender, System.EventArgs e)
         {
             if (BypassXOR4.Checked.Equals(true))
@@ -1555,11 +1303,6 @@ namespace Remote_EE_Lab
 
 
         //Board 7: XOR 5 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board7_ConnectXOR5_CheckedChanged(System.Object sender, System.EventArgs e)
         {
             if (ConnectXOR5.Checked.Equals(true))
@@ -1570,12 +1313,7 @@ namespace Remote_EE_Lab
             //Call the message compiler
             Board_7_Compile_Serial_Message();
         }
-
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
+        
         private void board7_BypassXOR5_CheckedChanged(System.Object sender, System.EventArgs e)
         {
             if (BypassXOR5.Checked.Equals(true))
@@ -1589,11 +1327,6 @@ namespace Remote_EE_Lab
 
 
         //Board 7: XOR 6 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board7_ConnectXOR6_CheckedChanged(System.Object sender, System.EventArgs e)
         {
             if (ConnectXOR6.Checked.Equals(true))
@@ -1604,12 +1337,7 @@ namespace Remote_EE_Lab
             //Call the message compiler
             Board_7_Compile_Serial_Message();
         }
-
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
+        
         private void board7_BypassXOR6_CheckedChanged(System.Object sender, System.EventArgs e)
         {
             if (BypassXOR6.Checked.Equals(true))
@@ -1623,11 +1351,6 @@ namespace Remote_EE_Lab
 
 
         //Board 7: XOR 7 control
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void board7_ConnectXOR7_CheckedChanged(System.Object sender, System.EventArgs e)
         {
             if (ConnectXOR7.Checked.Equals(true))
@@ -1638,12 +1361,7 @@ namespace Remote_EE_Lab
             //Call the message compiler
             Board_7_Compile_Serial_Message();
         }
-
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
+        
         private void board7_BypassXOR7_CheckedChanged(System.Object sender, System.EventArgs e)
         {
             if (BypassXOR7.Checked.Equals(true))
@@ -1657,11 +1375,6 @@ namespace Remote_EE_Lab
 
 
         //Set up behavior for the "Clear" checkbox, which resets all the DFF presets back to 0
-        /************************************************************
-        *   
-        *   
-        *   
-        ************************************************************/
         private void checkBoxChanged(System.Object sender, System.EventArgs e)
         {
             if (ClearCheckBox.Checked.Equals(true))  //User wants to clear all flipflops
