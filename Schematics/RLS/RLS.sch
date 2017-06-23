@@ -33,7 +33,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 3
 Title ""
 Date ""
 Rev ""
@@ -106,11 +106,11 @@ AD30
 Text GLabel 9350 1100 1    60   Input ~ 0
 AD31
 Text GLabel 9350 1600 3    60   Input ~ 0
-VM03
+VD03
 Text GLabel 9250 1600 3    60   Input ~ 0
-VM02
+VD02
 Text GLabel 9150 1600 3    60   Input ~ 0
-VM01
+VD01
 Text GLabel 9050 1600 3    60   Input ~ 0
 VM00
 Text GLabel 8950 1600 3    60   Input ~ 0
@@ -237,175 +237,175 @@ $EndComp
 $Comp
 L CONN_02X20 Logic_Analyzer_2
 U 1 1 594ABB94
-P 7150 5100
-F 0 "Logic_Analyzer_2" H 7150 6150 50  0000 C CNN
-F 1 "CONN_02X20" V 7150 5100 50  0000 C CNN
-F 2 "" H 7150 4150 50  0001 C CNN
-F 3 "" H 7150 4150 50  0001 C CNN
-	1    7150 5100
-	1    0    0    -1  
+P 8350 4850
+F 0 "Logic_Analyzer_2" H 8350 5900 50  0000 C CNN
+F 1 "CONN_02X20" V 8350 4850 50  0000 C CNN
+F 2 "" H 8350 3900 50  0001 C CNN
+F 3 "" H 8350 3900 50  0001 C CNN
+	1    8350 4850
+	0    -1   -1   0   
 $EndComp
 Text GLabel 8050 1600 3    60   Input ~ 0
 AD38
-Text GLabel 6900 2050 0    60   Input ~ 0
+Text GLabel 7400 2050 2    60   Input ~ 0
 L1D1
-Text GLabel 6900 2150 0    60   Input ~ 0
+Text GLabel 7400 2150 2    60   Input ~ 0
 L1D3
-Text GLabel 6900 2250 0    60   Input ~ 0
+Text GLabel 7400 2250 2    60   Input ~ 0
 L1D5
-Text GLabel 6900 2350 0    60   Input ~ 0
+Text GLabel 7400 2350 2    60   Input ~ 0
 L1D7
-Text GLabel 6900 2450 0    60   Input ~ 0
-L1GND
-Text GLabel 6900 2550 0    60   Input ~ 0
-L1D9
-Text GLabel 6900 2650 0    60   Input ~ 0
-L1D11
-Text GLabel 6900 2750 0    60   Input ~ 0
-L1D13
-Text GLabel 6900 2850 0    60   Input ~ 0
-L1D15
-Text GLabel 6900 2950 0    60   Input ~ 0
-L1CLK1
-Text GLabel 6900 3050 0    60   Input ~ 0
-L1D17
-Text GLabel 6900 3150 0    60   Input ~ 0
-L1D19
-Text GLabel 6900 3250 0    60   Input ~ 0
-L1D21
-Text GLabel 6900 3350 0    60   Input ~ 0
-L1D23
-Text GLabel 6900 3450 0    60   Input ~ 0
-L1GND
-Text GLabel 6900 3550 0    60   Input ~ 0
-L1D25
-Text GLabel 6900 3650 0    60   Input ~ 0
-L1D27
-Text GLabel 6900 3750 0    60   Input ~ 0
-L1D29
-Text GLabel 6900 3850 0    60   Input ~ 0
-L1D31
-Text GLabel 6900 3950 0    60   Input ~ 0
-L1CLK2
-Text GLabel 7400 3950 2    60   Input ~ 0
-L1GND
-Text GLabel 7400 3850 2    60   Input ~ 0
-L1D30
-Text GLabel 7400 3750 2    60   Input ~ 0
-L1D28
-Text GLabel 7400 3650 2    60   Input ~ 0
-L1D26
-Text GLabel 7400 3550 2    60   Input ~ 0
-L1D24
-Text GLabel 7400 3450 2    60   Input ~ 0
-L1GND
-Text GLabel 7400 3350 2    60   Input ~ 0
-L1D22
-Text GLabel 7400 3250 2    60   Input ~ 0
-L1D20
-Text GLabel 7400 3150 2    60   Input ~ 0
-L1D18
-Text GLabel 7400 3050 2    60   Input ~ 0
-L1D16
-Text GLabel 7400 2950 2    60   Input ~ 0
-L1GND
-Text GLabel 7400 2850 2    60   Input ~ 0
-L1D14
-Text GLabel 7400 2750 2    60   Input ~ 0
-L1D12
-Text GLabel 7400 2650 2    60   Input ~ 0
-L1D10
-Text GLabel 7400 2550 2    60   Input ~ 0
-L1D8
 Text GLabel 7400 2450 2    60   Input ~ 0
 L1GND
-Text GLabel 7400 2350 2    60   Input ~ 0
+Text GLabel 7400 2550 2    60   Input ~ 0
+L1D9
+Text GLabel 7400 2650 2    60   Input ~ 0
+L1D11
+Text GLabel 7400 2750 2    60   Input ~ 0
+L1D13
+Text GLabel 7400 2850 2    60   Input ~ 0
+L1D15
+Text GLabel 7400 2950 2    60   Input ~ 0
+L1CLK1
+Text GLabel 7400 3050 2    60   Input ~ 0
+L1D17
+Text GLabel 7400 3150 2    60   Input ~ 0
+L1D19
+Text GLabel 7400 3250 2    60   Input ~ 0
+L1D21
+Text GLabel 7400 3350 2    60   Input ~ 0
+L1D23
+Text GLabel 7400 3450 2    60   Input ~ 0
+L1GND
+Text GLabel 7400 3550 2    60   Input ~ 0
+L1D25
+Text GLabel 7400 3650 2    60   Input ~ 0
+L1D27
+Text GLabel 7400 3750 2    60   Input ~ 0
+L1D29
+Text GLabel 7400 3850 2    60   Input ~ 0
+L1D31
+Text GLabel 7400 3950 2    60   Input ~ 0
+L1CLK2
+Text GLabel 6900 3950 0    60   Input ~ 0
+L1GND
+Text GLabel 6900 3850 0    60   Input ~ 0
+L1D30
+Text GLabel 6900 3750 0    60   Input ~ 0
+L1D28
+Text GLabel 6900 3650 0    60   Input ~ 0
+L1D26
+Text GLabel 6900 3550 0    60   Input ~ 0
+L1D24
+Text GLabel 6900 3450 0    60   Input ~ 0
+L1GND
+Text GLabel 6900 3350 0    60   Input ~ 0
+L1D22
+Text GLabel 6900 3250 0    60   Input ~ 0
+L1D20
+Text GLabel 6900 3150 0    60   Input ~ 0
+L1D18
+Text GLabel 6900 3050 0    60   Input ~ 0
+L1D16
+Text GLabel 6900 2950 0    60   Input ~ 0
+L1GND
+Text GLabel 6900 2850 0    60   Input ~ 0
+L1D14
+Text GLabel 6900 2750 0    60   Input ~ 0
+L1D12
+Text GLabel 6900 2650 0    60   Input ~ 0
+L1D10
+Text GLabel 6900 2550 0    60   Input ~ 0
+L1D8
+Text GLabel 6900 2450 0    60   Input ~ 0
+L1GND
+Text GLabel 6900 2350 0    60   Input ~ 0
 L1D6
-Text GLabel 7400 2250 2    60   Input ~ 0
+Text GLabel 6900 2250 0    60   Input ~ 0
 L1D4
-Text GLabel 7400 2150 2    60   Input ~ 0
+Text GLabel 6900 2150 0    60   Input ~ 0
 L1D2
-Text GLabel 7400 2050 2    60   Input ~ 0
+Text GLabel 6900 2050 0    60   Input ~ 0
 L1D0
-Text GLabel 6900 4150 0    60   Input ~ 0
+Text GLabel 7400 4600 1    60   Input ~ 0
 L2D1
-Text GLabel 6900 4250 0    60   Input ~ 0
+Text GLabel 7500 4600 1    60   Input ~ 0
 L2D3
-Text GLabel 6900 4350 0    60   Input ~ 0
+Text GLabel 7600 4600 1    60   Input ~ 0
 L2D5
-Text GLabel 6900 4450 0    60   Input ~ 0
+Text GLabel 7700 4600 1    60   Input ~ 0
 L2D7
-Text GLabel 6900 4550 0    60   Input ~ 0
+Text GLabel 7800 4600 1    60   Input ~ 0
 L2GND
-Text GLabel 6900 4650 0    60   Input ~ 0
+Text GLabel 7900 4600 1    60   Input ~ 0
 L2D9
-Text GLabel 6900 4750 0    60   Input ~ 0
+Text GLabel 8000 4600 1    60   Input ~ 0
 L2D11
-Text GLabel 6900 4850 0    60   Input ~ 0
+Text GLabel 8100 4600 1    60   Input ~ 0
 L2D13
-Text GLabel 6900 4950 0    60   Input ~ 0
+Text GLabel 8200 4600 1    60   Input ~ 0
 L2D15
-Text GLabel 6900 5050 0    60   Input ~ 0
+Text GLabel 8300 4600 1    60   Input ~ 0
 L2CLK1
-Text GLabel 6900 5150 0    60   Input ~ 0
+Text GLabel 8400 4600 1    60   Input ~ 0
 L2D17
-Text GLabel 6900 5250 0    60   Input ~ 0
+Text GLabel 8500 4600 1    60   Input ~ 0
 L2D19
-Text GLabel 6900 5350 0    60   Input ~ 0
+Text GLabel 8600 4600 1    60   Input ~ 0
 L2D21
-Text GLabel 6900 5450 0    60   Input ~ 0
+Text GLabel 8700 4600 1    60   Input ~ 0
 L2D23
-Text GLabel 6900 5550 0    60   Input ~ 0
+Text GLabel 8800 4600 1    60   Input ~ 0
 L2GND
-Text GLabel 6900 5650 0    60   Input ~ 0
+Text GLabel 8900 4600 1    60   Input ~ 0
 L2D25
-Text GLabel 6900 5750 0    60   Input ~ 0
+Text GLabel 9000 4600 1    60   Input ~ 0
 L2D27
-Text GLabel 6900 5850 0    60   Input ~ 0
+Text GLabel 9100 4600 1    60   Input ~ 0
 L2D29
-Text GLabel 6900 5950 0    60   Input ~ 0
+Text GLabel 9200 4600 1    60   Input ~ 0
 L2D31
-Text GLabel 6900 6050 0    60   Input ~ 0
+Text GLabel 9300 4600 1    60   Input ~ 0
 L2CLK2
-Text GLabel 7400 6050 2    60   Input ~ 0
+Text GLabel 9300 5100 3    60   Input ~ 0
 L2GND
-Text GLabel 7400 5950 2    60   Input ~ 0
+Text GLabel 9200 5100 3    60   Input ~ 0
 L2D30
-Text GLabel 7400 5850 2    60   Input ~ 0
+Text GLabel 9100 5100 3    60   Input ~ 0
 L2D28
-Text GLabel 7400 5750 2    60   Input ~ 0
+Text GLabel 9000 5100 3    60   Input ~ 0
 L2D26
-Text GLabel 7400 5650 2    60   Input ~ 0
+Text GLabel 8900 5100 3    60   Input ~ 0
 L2D24
-Text GLabel 7400 5550 2    60   Input ~ 0
+Text GLabel 8800 5100 3    60   Input ~ 0
 L2GND
-Text GLabel 7400 5450 2    60   Input ~ 0
+Text GLabel 8700 5100 3    60   Input ~ 0
 L2D22
-Text GLabel 7400 5350 2    60   Input ~ 0
+Text GLabel 8600 5100 3    60   Input ~ 0
 L2D20
-Text GLabel 7400 5250 2    60   Input ~ 0
+Text GLabel 8500 5100 3    60   Input ~ 0
 L2D18
-Text GLabel 7400 5150 2    60   Input ~ 0
+Text GLabel 8400 5100 3    60   Input ~ 0
 L2D16
-Text GLabel 7400 5050 2    60   Input ~ 0
+Text GLabel 8300 5100 3    60   Input ~ 0
 L2GND
-Text GLabel 7400 4950 2    60   Input ~ 0
+Text GLabel 8200 5100 3    60   Input ~ 0
 L2D14
-Text GLabel 7400 4850 2    60   Input ~ 0
+Text GLabel 8100 5100 3    60   Input ~ 0
 L2D12
-Text GLabel 7400 4750 2    60   Input ~ 0
+Text GLabel 8000 5100 3    60   Input ~ 0
 L2D10
-Text GLabel 7400 4650 2    60   Input ~ 0
+Text GLabel 7900 5100 3    60   Input ~ 0
 L2D8
-Text GLabel 7400 4550 2    60   Input ~ 0
+Text GLabel 7800 5100 3    60   Input ~ 0
 L2GND
-Text GLabel 7400 4450 2    60   Input ~ 0
+Text GLabel 7700 5100 3    60   Input ~ 0
 L2D6
-Text GLabel 7400 4350 2    60   Input ~ 0
+Text GLabel 7600 5100 3    60   Input ~ 0
 L2D4
-Text GLabel 7400 4250 2    60   Input ~ 0
+Text GLabel 7500 5100 3    60   Input ~ 0
 L2D2
-Text GLabel 7400 4150 2    60   Input ~ 0
+Text GLabel 7400 5100 3    60   Input ~ 0
 L2D0
 $Comp
 L ARDUINO_MEGA_SHIELD Arduino_Connector
@@ -584,15 +584,15 @@ $EndComp
 Text GLabel 1500 2200 2    60   Input ~ 0
 +5V
 Text GLabel 1950 2450 2    60   Input ~ 0
-DGND
+AGND
 Text GLabel 1500 2800 2    60   Input ~ 0
 VM00
 Text GLabel 1500 2900 2    60   Input ~ 0
-VM01
+VD01
 Text GLabel 1500 3000 2    60   Input ~ 0
-VM02
+VD02
 Text GLabel 1500 3100 2    60   Input ~ 0
-VM03
+VD03
 Text GLabel 1500 2400 2    60   Input ~ 0
 SCL
 Text GLabel 1500 2500 2    60   Input ~ 0
@@ -667,63 +667,6 @@ F 3 "" H 5750 7350 50  0001 C CNN
 $EndComp
 Text GLabel 5750 7450 3    60   Input ~ 0
 -15V
-$Comp
-L ULN2803A U1
-U 1 1 594B4F11
-P 1550 4000
-F 0 "U1" H 1550 4525 50  0000 C CNN
-F 1 "ULN2803A" H 1550 4450 50  0000 C CNN
-F 2 "" H 1600 3350 50  0001 L CNN
-F 3 "" H 1650 3900 50  0001 C CNN
-	1    1550 4000
-	1    0    0    -1  
-$EndComp
-Text GLabel 1550 4700 3    60   Input ~ 0
-DGND
-Text GLabel 800  3700 0    60   Input ~ 0
-AA12
-Text GLabel 800  3800 0    60   Input ~ 0
-AA13
-$Comp
-L R R1
-U 1 1 594B73D5
-P 850 3400
-F 0 "R1" V 930 3400 50  0000 C CNN
-F 1 "4.7K" V 850 3400 50  0000 C CNN
-F 2 "" V 780 3400 50  0001 C CNN
-F 3 "" H 850 3400 50  0001 C CNN
-	1    850  3400
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R2
-U 1 1 594B7430
-P 1050 3400
-F 0 "R2" V 1130 3400 50  0000 C CNN
-F 1 "4.7K" V 1050 3400 50  0000 C CNN
-F 2 "" V 980 3400 50  0001 C CNN
-F 3 "" H 1050 3400 50  0001 C CNN
-	1    1050 3400
-	1    0    0    -1  
-$EndComp
-Text GLabel 750  3250 0    60   Input ~ 0
-+5V
-Text GLabel 1950 3700 2    60   Input ~ 0
-RLY1
-Text GLabel 1950 3800 2    60   Input ~ 0
-RLY2
-NoConn ~ 1150 3900
-NoConn ~ 1150 4000
-NoConn ~ 1150 4100
-NoConn ~ 1150 4200
-NoConn ~ 1150 4300
-NoConn ~ 1150 4400
-NoConn ~ 1950 3900
-NoConn ~ 1950 4000
-NoConn ~ 1950 4100
-NoConn ~ 1950 4200
-NoConn ~ 1950 4300
-NoConn ~ 1950 4400
 Text GLabel 2600 3400 0    60   Input ~ 0
 AA12
 Text GLabel 2600 3500 0    60   Input ~ 0
@@ -772,88 +715,6 @@ F 3 "" H 8150 2650 50  0001 C CNN
 	1    8150 2650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2250 1450 2150 1450
-Wire Wire Line
-	2250 550  2250 1450
-Wire Wire Line
-	2250 550  2050 550 
-Wire Wire Line
-	2150 1250 2150 750 
-Wire Wire Line
-	2150 750  2050 750 
-Wire Wire Line
-	850  1250 1050 1250
-Wire Wire Line
-	1850 550  1550 550 
-Wire Wire Line
-	1550 750  1850 750 
-Wire Wire Line
-	1350 1250 1250 1250
-Wire Wire Line
-	1500 2300 1850 2300
-Wire Wire Line
-	1850 2300 1850 2600
-Wire Wire Line
-	1850 2600 1500 2600
-Wire Wire Line
-	1850 2450 1950 2450
-Connection ~ 1850 2450
-Wire Wire Line
-	6700 7450 6700 7600
-Wire Wire Line
-	6450 7450 6450 7600
-Wire Wire Line
-	6050 7350 6050 7450
-Wire Wire Line
-	6250 7350 6250 7450
-Wire Wire Line
-	5750 7350 5750 7450
-Wire Wire Line
-	1150 3700 800  3700
-Wire Wire Line
-	1050 3550 1050 3700
-Connection ~ 1050 3700
-Wire Wire Line
-	850  3550 850  3800
-Wire Wire Line
-	800  3800 1150 3800
-Connection ~ 850  3800
-Connection ~ 850  3250
-Wire Wire Line
-	2250 3250 2250 4500
-Wire Wire Line
-	2250 4500 1950 4500
-Connection ~ 1050 3250
-Wire Wire Line
-	750  3250 2250 3250
-Wire Wire Line
-	9400 2150 8750 2150
-Wire Wire Line
-	8750 2150 8750 2500
-Wire Wire Line
-	9400 2250 8550 2250
-Wire Wire Line
-	8550 2250 8550 2500
-Wire Wire Line
-	8350 2350 8350 2500
-Wire Wire Line
-	8150 2450 8150 2500
-Wire Wire Line
-	8750 2850 8750 2800
-Wire Wire Line
-	8150 2850 8750 2850
-Wire Wire Line
-	8150 2850 8150 2800
-Wire Wire Line
-	8350 2800 8350 2850
-Connection ~ 8350 2850
-Wire Wire Line
-	8550 2800 8550 2850
-Connection ~ 8550 2850
-Wire Wire Line
-	8450 2850 8450 2950
-Connection ~ 8450 2850
 Text GLabel 8450 2950 3    60   Input ~ 0
 +5V
 $Comp
@@ -900,6 +761,78 @@ F 3 "" H 11100 2700 50  0001 C CNN
 	1    11100 2700
 	1    0    0    -1  
 $EndComp
+Text GLabel 10800 3000 3    60   Input ~ 0
++5V
+$Sheet
+S 500  7200 500  500 
+U 594D69D7
+F0 "Voltage_Divider" 60
+F1 "Voltage_Divider.sch" 60
+$EndSheet
+Wire Wire Line
+	2250 1450 2150 1450
+Wire Wire Line
+	2250 550  2250 1450
+Wire Wire Line
+	2250 550  2050 550 
+Wire Wire Line
+	2150 1250 2150 750 
+Wire Wire Line
+	2150 750  2050 750 
+Wire Wire Line
+	850  1250 1050 1250
+Wire Wire Line
+	1850 550  1550 550 
+Wire Wire Line
+	1550 750  1850 750 
+Wire Wire Line
+	1350 1250 1250 1250
+Wire Wire Line
+	1500 2300 1850 2300
+Wire Wire Line
+	1850 2300 1850 2600
+Wire Wire Line
+	1850 2600 1500 2600
+Wire Wire Line
+	1850 2450 1950 2450
+Connection ~ 1850 2450
+Wire Wire Line
+	6700 7450 6700 7600
+Wire Wire Line
+	6450 7450 6450 7600
+Wire Wire Line
+	6050 7350 6050 7450
+Wire Wire Line
+	6250 7350 6250 7450
+Wire Wire Line
+	5750 7350 5750 7450
+Wire Wire Line
+	9400 2150 8750 2150
+Wire Wire Line
+	8750 2150 8750 2500
+Wire Wire Line
+	9400 2250 8550 2250
+Wire Wire Line
+	8550 2250 8550 2500
+Wire Wire Line
+	8350 2350 8350 2500
+Wire Wire Line
+	8150 2450 8150 2500
+Wire Wire Line
+	8750 2850 8750 2800
+Wire Wire Line
+	8150 2850 8750 2850
+Wire Wire Line
+	8150 2850 8150 2800
+Wire Wire Line
+	8350 2800 8350 2850
+Connection ~ 8350 2850
+Wire Wire Line
+	8550 2800 8550 2850
+Connection ~ 8550 2850
+Wire Wire Line
+	8450 2850 8450 2950
+Connection ~ 8450 2850
 Wire Wire Line
 	9900 2150 10500 2150
 Wire Wire Line
@@ -927,8 +860,6 @@ Connection ~ 10700 2900
 Wire Wire Line
 	10800 2900 10800 3000
 Connection ~ 10800 2900
-Text GLabel 10800 3000 3    60   Input ~ 0
-+5V
 Wire Wire Line
 	9900 2350 10900 2350
 Wire Wire Line
@@ -937,4 +868,20 @@ Wire Wire Line
 	9400 2350 8350 2350
 Wire Wire Line
 	9400 2450 8150 2450
+Text Notes 9550 1550 0    60   ~ 0
+VOLTMETER NOTES:\nVM00 MAX RANGE +/- 5V\nVD01 MAX RANGE +/- 10V\nVD02 MAX RANGE +/- 15V\nVD03 MAX RANGE +/- 15V
+Wire Notes Line
+	9500 1050 10850 1050
+Wire Notes Line
+	10850 1050 10850 1600
+Wire Notes Line
+	10850 1600 9500 1600
+Wire Notes Line
+	9500 1600 9500 1050
+$Sheet
+S 1800 7200 500  500 
+U 594DCA38
+F0 "Scope_Probe_Gain" 60
+F1 "Scope_Probe_Gain.sch" 60
+$EndSheet
 $EndSCHEMATC
