@@ -173,6 +173,7 @@
             this.btn_Send_Config = new System.Windows.Forms.Button();
             this.CommControlGroup = new System.Windows.Forms.GroupBox();
             this.board_detect = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.board_2_Ch_1.SuspendLayout();
             this.board_2_ch2.SuspendLayout();
             this.Diode1.SuspendLayout();
@@ -583,7 +584,7 @@
             "5.1 K",
             "10 K",
             "20 K"});
-            this.board_3_R3.Location = new System.Drawing.Point(377, 320);
+            this.board_3_R3.Location = new System.Drawing.Point(307, 302);
             this.board_3_R3.Name = "board_3_R3";
             this.board_3_R3.Size = new System.Drawing.Size(166, 21);
             this.board_3_R3.TabIndex = 4;
@@ -601,7 +602,7 @@
             "10 K",
             "20 K",
             "27 K"});
-            this.board_3_R2.Location = new System.Drawing.Point(377, 151);
+            this.board_3_R2.Location = new System.Drawing.Point(307, 140);
             this.board_3_R2.Name = "board_3_R2";
             this.board_3_R2.Size = new System.Drawing.Size(54, 21);
             this.board_3_R2.TabIndex = 6;
@@ -610,7 +611,7 @@
             // 
             this.PictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox6.Image")));
-            this.PictureBox6.Location = new System.Drawing.Point(81, 54);
+            this.PictureBox6.Location = new System.Drawing.Point(3, 44);
             this.PictureBox6.Name = "PictureBox6";
             this.PictureBox6.Size = new System.Drawing.Size(482, 348);
             this.PictureBox6.TabIndex = 3;
@@ -637,7 +638,7 @@
             this.Board_2.Location = new System.Drawing.Point(4, 22);
             this.Board_2.Name = "Board_2";
             this.Board_2.Padding = new System.Windows.Forms.Padding(3);
-            this.Board_2.Size = new System.Drawing.Size(903, 414);
+            this.Board_2.Size = new System.Drawing.Size(1008, 443);
             this.Board_2.TabIndex = 1;
             this.Board_2.Text = "Experiment 2";
             this.Board_2.UseVisualStyleBackColor = true;
@@ -797,7 +798,7 @@
             this.lbl_board_1_status.BackColor = System.Drawing.Color.Red;
             this.lbl_board_1_status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbl_board_1_status.ForeColor = System.Drawing.Color.White;
-            this.lbl_board_1_status.Location = new System.Drawing.Point(11, 22);
+            this.lbl_board_1_status.Location = new System.Drawing.Point(6, 26);
             this.lbl_board_1_status.Name = "lbl_board_1_status";
             this.lbl_board_1_status.Size = new System.Drawing.Size(47, 15);
             this.lbl_board_1_status.TabIndex = 12;
@@ -807,7 +808,7 @@
             // 
             this.Circuit_Controls.Controls.Add(this.brd_1_ch2);
             this.Circuit_Controls.Controls.Add(this.brd_1_ch1);
-            this.Circuit_Controls.Location = new System.Drawing.Point(540, 40);
+            this.Circuit_Controls.Location = new System.Drawing.Point(470, 44);
             this.Circuit_Controls.Name = "Circuit_Controls";
             this.Circuit_Controls.Size = new System.Drawing.Size(200, 359);
             this.Circuit_Controls.TabIndex = 2;
@@ -996,7 +997,7 @@
             this.Setup.Location = new System.Drawing.Point(17, 88);
             this.Setup.Name = "Setup";
             this.Setup.SelectedIndex = 0;
-            this.Setup.Size = new System.Drawing.Size(911, 440);
+            this.Setup.Size = new System.Drawing.Size(1016, 469);
             this.Setup.TabIndex = 7;
             // 
             // Board_1
@@ -1019,7 +1020,7 @@
             this.Board_1.Location = new System.Drawing.Point(4, 22);
             this.Board_1.Name = "Board_1";
             this.Board_1.Padding = new System.Windows.Forms.Padding(3);
-            this.Board_1.Size = new System.Drawing.Size(903, 414);
+            this.Board_1.Size = new System.Drawing.Size(1008, 443);
             this.Board_1.TabIndex = 0;
             this.Board_1.Text = "Experiment 1";
             // 
@@ -1154,7 +1155,7 @@
             // 
             this.Board_1_Image.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Board_1_Image.Image = ((System.Drawing.Image)(resources.GetObject("Board_1_Image.Image")));
-            this.Board_1_Image.Location = new System.Drawing.Point(11, 40);
+            this.Board_1_Image.Location = new System.Drawing.Point(3, 44);
             this.Board_1_Image.Name = "Board_1_Image";
             this.Board_1_Image.Size = new System.Drawing.Size(450, 359);
             this.Board_1_Image.TabIndex = 0;
@@ -1171,7 +1172,7 @@
             this.Board3.Location = new System.Drawing.Point(4, 22);
             this.Board3.Name = "Board3";
             this.Board3.Padding = new System.Windows.Forms.Padding(3);
-            this.Board3.Size = new System.Drawing.Size(903, 414);
+            this.Board3.Size = new System.Drawing.Size(1008, 443);
             this.Board3.TabIndex = 7;
             this.Board3.Text = "Experiment 3";
             this.Board3.UseVisualStyleBackColor = true;
@@ -1181,7 +1182,7 @@
             this.GroupBox3.Controls.Add(this.board_3_multimeter_refresh);
             this.GroupBox3.Controls.Add(this.Label6);
             this.GroupBox3.Controls.Add(this.board_3_multimeter_output);
-            this.GroupBox3.Location = new System.Drawing.Point(586, 151);
+            this.GroupBox3.Location = new System.Drawing.Point(524, 151);
             this.GroupBox3.Name = "GroupBox3";
             this.GroupBox3.Size = new System.Drawing.Size(200, 100);
             this.GroupBox3.TabIndex = 19;
@@ -1199,7 +1200,7 @@
             this.Board4.Location = new System.Drawing.Point(4, 22);
             this.Board4.Name = "Board4";
             this.Board4.Padding = new System.Windows.Forms.Padding(3);
-            this.Board4.Size = new System.Drawing.Size(903, 414);
+            this.Board4.Size = new System.Drawing.Size(1008, 443);
             this.Board4.TabIndex = 2;
             this.Board4.Text = "Experiment 4";
             this.Board4.UseVisualStyleBackColor = true;
@@ -1225,7 +1226,7 @@
             this.Board5.Location = new System.Drawing.Point(4, 22);
             this.Board5.Name = "Board5";
             this.Board5.Padding = new System.Windows.Forms.Padding(3);
-            this.Board5.Size = new System.Drawing.Size(903, 414);
+            this.Board5.Size = new System.Drawing.Size(1008, 443);
             this.Board5.TabIndex = 4;
             this.Board5.Text = "Experiment 5";
             this.Board5.UseVisualStyleBackColor = true;
@@ -1316,7 +1317,7 @@
             this.Board6.Location = new System.Drawing.Point(4, 22);
             this.Board6.Name = "Board6";
             this.Board6.Padding = new System.Windows.Forms.Padding(3);
-            this.Board6.Size = new System.Drawing.Size(903, 414);
+            this.Board6.Size = new System.Drawing.Size(1008, 443);
             this.Board6.TabIndex = 5;
             this.Board6.Text = "Experiment 6";
             this.Board6.UseVisualStyleBackColor = true;
@@ -1393,7 +1394,7 @@
             // 
             this.PictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox4.Image")));
-            this.PictureBox4.Location = new System.Drawing.Point(6, 44);
+            this.PictureBox4.Location = new System.Drawing.Point(3, 44);
             this.PictureBox4.Name = "PictureBox4";
             this.PictureBox4.Size = new System.Drawing.Size(724, 368);
             this.PictureBox4.TabIndex = 3;
@@ -1425,7 +1426,7 @@
             this.Board7.Location = new System.Drawing.Point(4, 22);
             this.Board7.Name = "Board7";
             this.Board7.Padding = new System.Windows.Forms.Padding(3);
-            this.Board7.Size = new System.Drawing.Size(903, 414);
+            this.Board7.Size = new System.Drawing.Size(1008, 443);
             this.Board7.TabIndex = 6;
             this.Board7.Text = "Experiment 7";
             this.Board7.UseVisualStyleBackColor = true;
@@ -1940,6 +1941,7 @@
             // 
             // CommControlGroup
             // 
+            this.CommControlGroup.Controls.Add(this.button1);
             this.CommControlGroup.Controls.Add(this.lbl_serial);
             this.CommControlGroup.Controls.Add(this.btn_test_2);
             this.CommControlGroup.Controls.Add(this.btn_Dev_Test);
@@ -1949,7 +1951,7 @@
             this.CommControlGroup.Cursor = System.Windows.Forms.Cursors.Default;
             this.CommControlGroup.Location = new System.Drawing.Point(17, 17);
             this.CommControlGroup.Name = "CommControlGroup";
-            this.CommControlGroup.Size = new System.Drawing.Size(911, 65);
+            this.CommControlGroup.Size = new System.Drawing.Size(1016, 65);
             this.CommControlGroup.TabIndex = 6;
             this.CommControlGroup.TabStop = false;
             this.CommControlGroup.Text = "Communication Control";
@@ -1966,12 +1968,23 @@
             this.board_detect.UseVisualStyleBackColor = false;
             this.board_detect.Click += new System.EventHandler(this.board_detect_Click);
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(909, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(96, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Logic Analyzer 2";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(936, 544);
+            this.ClientSize = new System.Drawing.Size(1044, 569);
             this.Controls.Add(this.Setup);
             this.Controls.Add(this.CommControlGroup);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -2189,6 +2202,7 @@
         internal System.Windows.Forms.Button btn_Send_Config;
         internal System.Windows.Forms.GroupBox CommControlGroup;
         internal System.Windows.Forms.Button board_detect;
+        internal System.Windows.Forms.Button button1;
     }
 }
 

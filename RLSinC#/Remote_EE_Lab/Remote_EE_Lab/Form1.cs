@@ -1441,5 +1441,10 @@ namespace Remote_EE_Lab
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Process.Start("C:/Program Files (x86)/LogicPort2/LogicPort.exe");
+        }
     }
 }
