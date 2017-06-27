@@ -17,4 +17,3 @@ C:\Users\Gytau_000\Documents\GitHub\RLS\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\obj\
 C:\Users\Gytau_000\Documents\GitHub\RLS\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\obj\Debug\Remote_EE_Lab.csproj.GenerateResource.Cache
 C:\Users\Gytau_000\Documents\GitHub\RLS\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\obj\Debug\Remote_EE_Lab.exe
 C:\Users\Gytau_000\Documents\GitHub\RLS\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\obj\Debug\Remote_EE_Lab.pdb
-C:\Users\Gytau_000\Documents\GitHub\RLS\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\obj\Debug\Remote_EE_Lab.csprojResolveAssemblyReference.cache
