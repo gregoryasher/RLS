@@ -33,7 +33,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 5
 Title ""
 Date ""
 Rev ""
@@ -657,15 +657,15 @@ Text GLabel 6250 7450 3    60   Input ~ 0
 $Comp
 L -15V #PWR?
 U 1 1 594B3412
-P 5750 7350
-F 0 "#PWR?" H 5750 7450 50  0001 C CNN
-F 1 "-15V" H 5750 7500 50  0000 C CNN
-F 2 "" H 5750 7350 50  0001 C CNN
-F 3 "" H 5750 7350 50  0001 C CNN
-	1    5750 7350
+P 5850 7350
+F 0 "#PWR?" H 5850 7450 50  0001 C CNN
+F 1 "-15V" H 5850 7500 50  0000 C CNN
+F 2 "" H 5850 7350 50  0001 C CNN
+F 3 "" H 5850 7350 50  0001 C CNN
+	1    5850 7350
 	1    0    0    -1  
 $EndComp
-Text GLabel 5750 7450 3    60   Input ~ 0
+Text GLabel 5850 7450 3    60   Input ~ 0
 -15V
 Text GLabel 2600 3400 0    60   Input ~ 0
 AA12
@@ -790,7 +790,9 @@ Wire Wire Line
 Wire Wire Line
 	1500 2300 1850 2300
 Wire Wire Line
-	1850 2300 1850 2600
+	1850 2300 1850 2450
+Wire Wire Line
+	1850 2450 1850 2600
 Wire Wire Line
 	1850 2600 1500 2600
 Wire Wire Line
@@ -805,7 +807,7 @@ Wire Wire Line
 Wire Wire Line
 	6250 7350 6250 7450
 Wire Wire Line
-	5750 7350 5750 7450
+	5850 7350 5850 7450
 Wire Wire Line
 	9400 2150 8750 2150
 Wire Wire Line
@@ -821,7 +823,13 @@ Wire Wire Line
 Wire Wire Line
 	8750 2850 8750 2800
 Wire Wire Line
-	8150 2850 8750 2850
+	8150 2850 8350 2850
+Wire Wire Line
+	8350 2850 8450 2850
+Wire Wire Line
+	8450 2850 8550 2850
+Wire Wire Line
+	8550 2850 8750 2850
 Wire Wire Line
 	8150 2850 8150 2800
 Wire Wire Line
@@ -848,7 +856,13 @@ Wire Wire Line
 Wire Wire Line
 	10500 2850 10500 2900
 Wire Wire Line
-	10500 2900 11100 2900
+	10500 2900 10700 2900
+Wire Wire Line
+	10700 2900 10800 2900
+Wire Wire Line
+	10800 2900 10900 2900
+Wire Wire Line
+	10900 2900 11100 2900
 Wire Wire Line
 	11100 2900 11100 2850
 Wire Wire Line
@@ -879,9 +893,21 @@ Wire Notes Line
 Wire Notes Line
 	9500 1600 9500 1050
 $Sheet
-S 1800 7200 500  500 
+S 1700 7200 500  500 
 U 594DCA38
 F0 "Scope_Probe_Gain" 60
 F1 "Scope_Probe_Gain.sch" 60
+$EndSheet
+$Sheet
+S 3000 7200 500  500 
+U 5952F710
+F0 "Negative_Regulators" 60
+F1 "Negative_Regulators.sch" 60
+$EndSheet
+$Sheet
+S 4400 7200 500  500 
+U 5952FCB2
+F0 "Positive_Regulators" 60
+F1 "Positive_Regulators.sch" 60
 $EndSheet
 $EndSCHEMATC
