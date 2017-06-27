@@ -20,6 +20,7 @@ namespace Remote_EE_Lab
         String boardID = "null";
         String Current_Board = "-1";
         String USB_port = "COM69"; //default COM port; this can be changed later using Setup tab;
+        bool isDebugMode = true;
 
         //Declare the variables for Board_1
         String Board_1_Serial_Message = "board_1,01,1,4,4,01,01"; //default message
@@ -134,15 +135,15 @@ namespace Remote_EE_Lab
         ************************************************************/
         public void bringToFront()
         {
-            if (WindowState == FormWindowState.Minimized)
-                WindowState = FormWindowState.Normal;
-            else
-            {
+            //if (WindowState == FormWindowState.Minimized)
+              //  WindowState = FormWindowState.Normal;
+            //else
+            //{
                 TopMost = true;
                 Focus();
                 BringToFront();
                 TopMost = false;
-            }
+            //}
         }
 
         /************************************************************
@@ -152,7 +153,14 @@ namespace Remote_EE_Lab
         ************************************************************/
         private void btn_Dev_Test_Click(object sender, EventArgs e)
         {
-            Process.Start("C:/Program Files (x86)/Velleman/PcLab2000LT/PcLab2000LT.exe");
+            if (Process.GetProcessesByName("PcLab2000LT").Length > 0)
+            {
+                MessageBox.Show("An instance of the PcLab2000LT.exe is already running");
+            }
+            else
+            {
+                Process.Start("C:/Program Files (x86)/Velleman/PcLab2000LT/PcLab2000LT.exe");
+            }
         }
 
         /************************************************************
@@ -161,7 +169,14 @@ namespace Remote_EE_Lab
         ************************************************************/
         private void btn_test_2_Click(object sender, EventArgs e)
         {
-            Process.Start("C:/Program Files (x86)/LogicPort/LogicPort.exe");
+            if (Process.GetProcessesByName("LogicPort").Length > 0)
+            {
+                MessageBox.Show("An instance of the LogicPort.exe is already running");
+            }
+            else
+            {
+                Process.Start("C:/Program Files (x86)/LogicPort/LogicPort.exe");
+            }
         }
 
         /************************************************************
@@ -183,106 +198,192 @@ namespace Remote_EE_Lab
         ************************************************************/
         private void board_detect_Click(object sender, EventArgs e)
         {
-            try
+            if (isDebugMode == true)
             {
-                string SendCode = "boardID"; //request message to retreive the board ID from Arduino
-               
+                lbl_board_1_status.BackColor = Color.Purple;
+                lbl_board_1_status.Text = "Debug";
+                lbl_board_2_status.BackColor = Color.Purple;
+                lbl_board_2_status.Text = "Debug";
+                lbl_board_3_status.BackColor = Color.Purple;
+                lbl_board_3_status.Text = "Debug";
+                lbl_board_4_status.BackColor = Color.Purple;
+                lbl_board_4_status.Text = "Debug";
+                lbl_board_5_status.BackColor = Color.Purple;
+                lbl_board_5_status.Text = "Debug";
+                lbl_board_6_status.BackColor = Color.Purple;
+                lbl_board_6_status.Text = "Debug";
+                lbl_board_7_status.BackColor = Color.Purple;
+                lbl_board_7_status.Text = "Debug";
 
-                //Using SerialPort1 send "boardID" to the arduino and the arduino responds by
-                //sending back the board id of the daughterboard currently connected.
-                SerialPort1.PortName = USB_port;
-                SerialPort1.Open();
-                SerialPort1.DiscardInBuffer();
-                SerialPort1.DiscardOutBuffer();
-                SerialPort1.Write(SendCode);
-                boardID = SerialPort1.ReadLine();
-                boardID = SerialPort1.ReadLine().Substring(0, 8);
-                SerialPort1.Close();
-                Serial_Text_Test.Text = boardID;
-                Panel_Enable(boardID);
-                /////////////////////////////////////////
+                Current_Board = "-1";
+                //board 1
+                board_1_R3_enable.Enabled = true;
+                Brd_1_Res_Select.Enabled = true;
+                Brd_1_Scope.Enabled = true;
+                brd_1_ch1_gain.Enabled = true;
+                Brd_1_Scope_Ch2.Enabled = true;
+                brd_1_ch_2_gain.Enabled = true;
 
-                if (boardID.Equals("00000001")) //Enabled what is needed for board 1
-                {
-                    board_1_R3_enable.Enabled = true;
-                    Brd_1_Res_Select.Enabled = true;
-                    Brd_1_Scope.Enabled = true;
-                    brd_1_ch1_gain.Enabled = true;
-                    Brd_1_Scope_Ch2.Enabled = true;
-                    brd_1_ch_2_gain.Enabled = true;
-                    Current_Board = "00000001";
-                }
-                else if (boardID.Equals("00000010")) //Enabled what is needed for board 2
-                {
-                    board_2_R1.Enabled = true;
-                    board_2_R2.Enabled = true;
-                    board_2_R3.Enabled = true;
-                    board_2_R4.Enabled = true;
-                    board_2_C1.Enabled = true;
-                    board_2_C2.Enabled = true;
-                    board_2_scope_ch_1_gain.Enabled = true;
-                    board_2_scope_ch_2_gain.Enabled = true;
-                    Current_Board = "00000010";
-                }
-                else if (boardID.Equals("00000011")) //Enabled what is needed for board 3
-                {
-                    board_3_R2.Enabled = true;
-                    board_3_R3.Enabled = true;
-                    board_3_multimeter_output.Enabled = true;
-                    Current_Board = "00000011";
-                }
-                else if (boardID.Equals("00000100")) //Enabled what is needed for board 4
-                {
-                    board_4_R1.Enabled = true;
-                    board4_Diode1_RadioButton1.Enabled = true;
-                    board4_Diode1_RadioButton2.Enabled = true;
-                    board4_Diode2_RadioButton1.Enabled = true;
-                    board4_Diode2_RadioButton2.Enabled = true;
-                    Current_Board = "00000100";
-                }
-                else if (boardID.Equals("00000101")) //Enabled what is needed for board 5
-                {
-                    board_5_R2.Enabled = true;
-                    board_5_R3.Enabled = true;
-                    board_5_C1.Enabled = true;
-                    Current_Board = "00000101";
-                }
-                else if (boardID.Equals("00000110")) //Enabled what is needed for board 6
-                {
-                    ProgramSelector.Enabled = true;
-                    Current_Board = "00000110";
-                }
-                else if (boardID.Equals("00000111")) //Enabled what is needed for board 7
-                {
-                    PresetD1.Enabled = true;
-                    ConnectXOR1.Enabled = true;
-                    BypassXOR1.Enabled = true;
-                    PresetD2.Enabled = true;
-                    ConnectXOR2.Enabled = true;
-                    BypassXOR2.Enabled = true;
-                    PresetD3.Enabled = true;
-                    ConnectXOR3.Enabled = true;
-                    BypassXOR3.Enabled = true;
-                    PresetD4.Enabled = true;
-                    ConnectXOR4.Enabled = true;
-                    BypassXOR4.Enabled = true;
-                    PresetD5.Enabled = true;
-                    ConnectXOR5.Enabled = true;
-                    BypassXOR5.Enabled = true;
-                    PresetD6.Enabled = true;
-                    ConnectXOR6.Enabled = true;
-                    BypassXOR6.Enabled = true;
-                    PresetD7.Enabled = true;
-                    ConnectXOR7.Enabled = true;
-                    BypassXOR7.Enabled = true;
-                    PresetD8.Enabled = true;
-                    ClearCheckBox.Enabled = true;
-                    ConnectClock.Enabled = true;
-                    DisconnectClock.Enabled = true;
-                    Current_Board = "00000111";
-                }
+                //board 2
+                board_2_R1.Enabled = true;
+                board_2_R2.Enabled = true;
+                board_2_R3.Enabled = true;
+                board_2_R4.Enabled = true;
+                board_2_C1.Enabled = true;
+                board_2_C2.Enabled = true;
+                board_2_scope_ch_1_gain.Enabled = true;
+                board_2_scope_ch_2_gain.Enabled = true;
+
+                //board 3
+                board_3_R2.Enabled = true;
+                board_3_R3.Enabled = true;
+                board_3_multimeter_output.Enabled = true;
+
+                //board 4
+                board_4_R1.Enabled = true;
+                board4_Diode1_RadioButton1.Enabled = true;
+                board4_Diode1_RadioButton2.Enabled = true;
+                board4_Diode2_RadioButton1.Enabled = true;
+                board4_Diode2_RadioButton2.Enabled = true;
+
+                //board 5
+                board_5_R2.Enabled = true;
+                board_5_R3.Enabled = true;
+                board_5_C1.Enabled = true;
+
+                //board 6
+                ProgramSelector.Enabled = false;
+
+                //board 7
+                PresetD1.Enabled = true;
+                ConnectXOR1.Enabled = true;
+                BypassXOR1.Enabled = true;
+                PresetD2.Enabled = true;
+                ConnectXOR2.Enabled = true;
+                BypassXOR2.Enabled = true;
+                PresetD3.Enabled = true;
+                ConnectXOR3.Enabled = true;
+                BypassXOR3.Enabled = true;
+                PresetD4.Enabled = true;
+                ConnectXOR4.Enabled = true;
+                BypassXOR4.Enabled = true;
+                PresetD5.Enabled = true;
+                ConnectXOR5.Enabled = true;
+                BypassXOR5.Enabled = true;
+                PresetD6.Enabled = true;
+                ConnectXOR6.Enabled = true;
+                BypassXOR6.Enabled = true;
+                PresetD7.Enabled = true;
+                ConnectXOR7.Enabled = true;
+                BypassXOR7.Enabled = true;
+                PresetD8.Enabled = true;
+                ClearCheckBox.Enabled = true;
+                ConnectClock.Enabled = true;
+                DisconnectClock.Enabled = true;
             }
-            catch (Exception ex) { }//Deactivate(); Serial_Text_Test.Text = "No board is present: " + boardID; };
+            else
+            {
+                try
+                {
+                    string SendCode = "boardID"; //request message to retreive the board ID from Arduino
+
+
+                    //Using SerialPort1 send "boardID" to the arduino and the arduino responds by
+                    //sending back the board id of the daughterboard currently connected.
+                    SerialPort1.PortName = USB_port;
+                    SerialPort1.Open();
+                    SerialPort1.DiscardInBuffer();
+                    SerialPort1.DiscardOutBuffer();
+                    SerialPort1.Write(SendCode);
+                    boardID = SerialPort1.ReadLine();
+                    boardID = SerialPort1.ReadLine().Substring(0, 8);
+                    SerialPort1.Close();
+                    Serial_Text_Test.Text = boardID;
+                    Panel_Enable(boardID);
+                    /////////////////////////////////////////
+
+                    if (boardID.Equals("00000001")) //Enabled what is needed for board 1
+                    {
+                        board_1_R3_enable.Enabled = true;
+                        Brd_1_Res_Select.Enabled = true;
+                        Brd_1_Scope.Enabled = true;
+                        brd_1_ch1_gain.Enabled = true;
+                        Brd_1_Scope_Ch2.Enabled = true;
+                        brd_1_ch_2_gain.Enabled = true;
+                        Current_Board = "00000001";
+                    }
+                    else if (boardID.Equals("00000010")) //Enabled what is needed for board 2
+                    {
+                        board_2_R1.Enabled = true;
+                        board_2_R2.Enabled = true;
+                        board_2_R3.Enabled = true;
+                        board_2_R4.Enabled = true;
+                        board_2_C1.Enabled = true;
+                        board_2_C2.Enabled = true;
+                        board_2_scope_ch_1_gain.Enabled = true;
+                        board_2_scope_ch_2_gain.Enabled = true;
+                        Current_Board = "00000010";
+                    }
+                    else if (boardID.Equals("00000011")) //Enabled what is needed for board 3
+                    {
+                        board_3_R2.Enabled = true;
+                        board_3_R3.Enabled = true;
+                        board_3_multimeter_output.Enabled = true;
+                        Current_Board = "00000011";
+                    }
+                    else if (boardID.Equals("00000100")) //Enabled what is needed for board 4
+                    {
+                        board_4_R1.Enabled = true;
+                        board4_Diode1_RadioButton1.Enabled = true;
+                        board4_Diode1_RadioButton2.Enabled = true;
+                        board4_Diode2_RadioButton1.Enabled = true;
+                        board4_Diode2_RadioButton2.Enabled = true;
+                        Current_Board = "00000100";
+                    }
+                    else if (boardID.Equals("00000101")) //Enabled what is needed for board 5
+                    {
+                        board_5_R2.Enabled = true;
+                        board_5_R3.Enabled = true;
+                        board_5_C1.Enabled = true;
+                        Current_Board = "00000101";
+                    }
+                    else if (boardID.Equals("00000110")) //Enabled what is needed for board 6
+                    {
+                        ProgramSelector.Enabled = true;
+                        Current_Board = "00000110";
+                    }
+                    else if (boardID.Equals("00000111")) //Enabled what is needed for board 7
+                    {
+                        PresetD1.Enabled = true;
+                        ConnectXOR1.Enabled = true;
+                        BypassXOR1.Enabled = true;
+                        PresetD2.Enabled = true;
+                        ConnectXOR2.Enabled = true;
+                        BypassXOR2.Enabled = true;
+                        PresetD3.Enabled = true;
+                        ConnectXOR3.Enabled = true;
+                        BypassXOR3.Enabled = true;
+                        PresetD4.Enabled = true;
+                        ConnectXOR4.Enabled = true;
+                        BypassXOR4.Enabled = true;
+                        PresetD5.Enabled = true;
+                        ConnectXOR5.Enabled = true;
+                        BypassXOR5.Enabled = true;
+                        PresetD6.Enabled = true;
+                        ConnectXOR6.Enabled = true;
+                        BypassXOR6.Enabled = true;
+                        PresetD7.Enabled = true;
+                        ConnectXOR7.Enabled = true;
+                        BypassXOR7.Enabled = true;
+                        PresetD8.Enabled = true;
+                        ClearCheckBox.Enabled = true;
+                        ConnectClock.Enabled = true;
+                        DisconnectClock.Enabled = true;
+                        Current_Board = "00000111";
+                    }
+                }
+                catch { }//Deactivate(); Serial_Text_Test.Text = "No board is present: " + boardID; };
+            }
         }
 
         /************************************************************
@@ -355,7 +456,7 @@ namespace Remote_EE_Lab
                         break;
                 }
             }
-            catch (ArgumentException e)
+            catch
             {
                 Serial_Text_Test.Text = "WARNING: Recheck Board ID";
             }
@@ -1444,7 +1545,19 @@ namespace Remote_EE_Lab
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Process.Start("C:/Program Files (x86)/LogicPort2/LogicPort.exe");
+            if (Process.GetProcessesByName("LogicPort2").Length > 0)
+            {
+                MessageBox.Show("An instance of the LogicPort2.exe is already running");
+            }
+            else
+            {
+                Process.Start("C:/Program Files (x86)/LogicPort2/LogicPort2.exe");
+            }
+        }
+
+        private void ProgramSelector_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

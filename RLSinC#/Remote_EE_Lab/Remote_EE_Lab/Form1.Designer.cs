@@ -172,8 +172,8 @@
             this.Serial_Text_Test = new System.Windows.Forms.RichTextBox();
             this.btn_Send_Config = new System.Windows.Forms.Button();
             this.CommControlGroup = new System.Windows.Forms.GroupBox();
-            this.board_detect = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.board_detect = new System.Windows.Forms.Button();
             this.board_2_Ch_1.SuspendLayout();
             this.board_2_ch2.SuspendLayout();
             this.Diode1.SuspendLayout();
@@ -979,7 +979,7 @@
             this.TabPageSetup.Location = new System.Drawing.Point(4, 22);
             this.TabPageSetup.Name = "TabPageSetup";
             this.TabPageSetup.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPageSetup.Size = new System.Drawing.Size(903, 414);
+            this.TabPageSetup.Size = new System.Drawing.Size(1008, 443);
             this.TabPageSetup.TabIndex = 8;
             this.TabPageSetup.Text = "Setup";
             this.TabPageSetup.UseVisualStyleBackColor = true;
@@ -1368,6 +1368,7 @@
             this.ProgramSelector.Name = "ProgramSelector";
             this.ProgramSelector.Size = new System.Drawing.Size(97, 21);
             this.ProgramSelector.TabIndex = 12;
+            this.ProgramSelector.SelectedIndexChanged += new System.EventHandler(this.ProgramSelector_SelectedIndexChanged);
             // 
             // Label19
             // 
@@ -1956,6 +1957,17 @@
             this.CommControlGroup.TabStop = false;
             this.CommControlGroup.Text = "Communication Control";
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(909, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(96, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Logic Analyzer 2";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // board_detect
             // 
             this.board_detect.BackColor = System.Drawing.Color.LightBlue;
@@ -1967,17 +1979,6 @@
             this.board_detect.Text = "Check Board ";
             this.board_detect.UseVisualStyleBackColor = false;
             this.board_detect.Click += new System.EventHandler(this.board_detect_Click);
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(909, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Logic Analyzer 2";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
