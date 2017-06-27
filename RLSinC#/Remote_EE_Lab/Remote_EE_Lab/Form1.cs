@@ -134,15 +134,15 @@ namespace Remote_EE_Lab
         ************************************************************/
         public void bringToFront()
         {
-            if (WindowState == FormWindowState.Minimized)
-                WindowState = FormWindowState.Normal;
-            else
-            {
+            //if (WindowState == FormWindowState.Minimized)
+              //  WindowState = FormWindowState.Normal;
+            //else
+            //{
                 TopMost = true;
                 Focus();
                 BringToFront();
                 TopMost = false;
-            }
+            //}
         }
 
         /************************************************************
@@ -1440,6 +1440,11 @@ namespace Remote_EE_Lab
         private void Brd_1_Scope_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Process.Start("C:/Program Files (x86)/LogicPort2/LogicPort.exe");
         }
     }
 }
