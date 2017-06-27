@@ -46,16 +46,16 @@
             this.MainLayoutPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainLayoutPanel.BackgroundImage")));
             this.MainLayoutPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.MainLayoutPanel.ColumnCount = 2;
-            this.MainLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 243F));
-            this.MainLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.MainLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 326F));
+            this.MainLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.MainLayoutPanel.Controls.Add(this.ApplicationTitle, 1, 0);
             this.MainLayoutPanel.Controls.Add(this.DetailsLayoutPanel, 1, 1);
             this.MainLayoutPanel.Controls.Add(this.progressBar1, 0, 1);
             this.MainLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.MainLayoutPanel.Name = "MainLayoutPanel";
-            this.MainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 225F));
-            this.MainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.MainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 211F));
+            this.MainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.MainLayoutPanel.Size = new System.Drawing.Size(533, 355);
             this.MainLayoutPanel.TabIndex = 1;
             // 
@@ -64,9 +64,9 @@
             this.ApplicationTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ApplicationTitle.BackColor = System.Drawing.Color.Transparent;
             this.ApplicationTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ApplicationTitle.Location = new System.Drawing.Point(276, 53);
+            this.ApplicationTitle.Location = new System.Drawing.Point(329, 46);
             this.ApplicationTitle.Name = "ApplicationTitle";
-            this.ApplicationTitle.Size = new System.Drawing.Size(223, 119);
+            this.ApplicationTitle.Size = new System.Drawing.Size(201, 119);
             this.ApplicationTitle.TabIndex = 0;
             this.ApplicationTitle.Text = "Remote EE Lab";
             this.ApplicationTitle.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -81,11 +81,11 @@
             this.DetailsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 142F));
             this.DetailsLayoutPanel.Controls.Add(this.Copyright, 0, 1);
             this.DetailsLayoutPanel.Controls.Add(this.Version, 0, 0);
-            this.DetailsLayoutPanel.Location = new System.Drawing.Point(264, 254);
+            this.DetailsLayoutPanel.Location = new System.Drawing.Point(329, 247);
             this.DetailsLayoutPanel.Name = "DetailsLayoutPanel";
             this.DetailsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33F));
             this.DetailsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33F));
-            this.DetailsLayoutPanel.Size = new System.Drawing.Size(247, 72);
+            this.DetailsLayoutPanel.Size = new System.Drawing.Size(201, 72);
             this.DetailsLayoutPanel.TabIndex = 1;
             // 
             // Copyright
@@ -113,9 +113,9 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(3, 228);
+            this.progressBar1.Location = new System.Drawing.Point(3, 214);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(237, 41);
+            this.progressBar1.Size = new System.Drawing.Size(320, 26);
             this.progressBar1.TabIndex = 2;
             this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
