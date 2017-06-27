@@ -134,15 +134,15 @@ namespace Remote_EE_Lab
         ************************************************************/
         public void bringToFront()
         {
-            if (WindowState == FormWindowState.Minimized)
-                WindowState = FormWindowState.Normal;
-            else
-            {
+            //if (WindowState == FormWindowState.Minimized)
+              //  WindowState = FormWindowState.Normal;
+            //else
+            //{
                 TopMost = true;
                 Focus();
                 BringToFront();
                 TopMost = false;
-            }
+            //}
         }
 
         /************************************************************
