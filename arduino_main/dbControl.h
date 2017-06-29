@@ -21,6 +21,7 @@ class DBControl {
   boolean safetyCheck();
   void readBoardID();
   void configureBoardIdPins();
+  void setVin(double vin1, double vin2 = vin1);
   
   private:
   // Arduino Pins used for reading Board ID
