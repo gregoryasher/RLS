@@ -1,0 +1,365 @@
+ERC report (7/2/2017 03:11:07, Encoding UTF8 )
+
+***** Sheet /
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (114.30 mm,66.04 mm): Pin 0 (Bidirectional) of component Arduino_Connector1 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (114.30 mm,63.50 mm): Pin 1 (Bidirectional) of component Arduino_Connector1 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (114.30 mm,60.96 mm): Pin 2 (Bidirectional) of component Arduino_Connector1 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (114.30 mm,58.42 mm): Pin 3 (Bidirectional) of component Arduino_Connector1 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (114.30 mm,73.66 mm): Pin 15 (Bidirectional) of component Arduino_Connector1 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (114.30 mm,76.20 mm): Pin 16 (Bidirectional) of component Arduino_Connector1 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (114.30 mm,78.74 mm): Pin 17 (Bidirectional) of component Arduino_Connector1 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (114.30 mm,81.28 mm): Pin 18 (Bidirectional) of component Arduino_Connector1 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (114.30 mm,83.82 mm): Pin 19 (Bidirectional) of component Arduino_Connector1 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (114.30 mm,71.12 mm): Pin 14 (Bidirectional) of component Arduino_Connector1 is unconnected.
+ErrType(3): Pin connected to some others pins but no pin to drive it
+    @ (66.04 mm,48.26 mm): Pin V_IN (Power input) of component Arduino_Connector1 is not driven (Net 80).
+ErrType(3): Pin connected to some others pins but no pin to drive it
+    @ (170.18 mm,193.04 mm): Pin 1 (Power input) of component #PWR02 is not driven (Net 85).
+ErrType(3): Pin connected to some others pins but no pin to drive it
+    @ (163.83 mm,193.04 mm): Pin 1 (Power input) of component #PWR01 is not driven (Net 93).
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (238.76 mm,64.77 mm): Pin 11 (Passive) of component BoardID_Regulator_Scope_Gen1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (238.76 mm,64.77 mm): Global label POS_GEN is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (251.46 mm,64.77 mm): Pin 12 (Passive) of component BoardID_Regulator_Scope_Gen1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (251.46 mm,64.77 mm): Global label NEG_GEN is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (208.28 mm,116.84 mm): Pin 18 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (208.28 mm,116.84 mm): Global label L2D15 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (218.44 mm,129.54 mm): Pin 25 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (218.44 mm,129.54 mm): Global label L2D20 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (231.14 mm,129.54 mm): Pin 35 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (231.14 mm,129.54 mm): Global label L2D28 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (205.74 mm,116.84 mm): Pin 16 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (205.74 mm,116.84 mm): Global label L2D13 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (218.44 mm,116.84 mm): Pin 26 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (218.44 mm,116.84 mm): Global label L2D21 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (231.14 mm,116.84 mm): Pin 36 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (231.14 mm,116.84 mm): Global label L2D29 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (208.28 mm,129.54 mm): Pin 17 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (208.28 mm,129.54 mm): Global label L2D14 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (220.98 mm,129.54 mm): Pin 27 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (220.98 mm,129.54 mm): Global label L2D22 is not connected to any other global label.
+ErrType(8): Global label not connected to any other global label
+    @ (233.68 mm,129.54 mm): Global label L2D30 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (233.68 mm,129.54 mm): Pin 37 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (220.98 mm,116.84 mm): Global label L2D23 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (220.98 mm,116.84 mm): Pin 28 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (233.68 mm,116.84 mm): Pin 38 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (233.68 mm,116.84 mm): Global label L2D31 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (175.26 mm,67.31 mm): Pin 13 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (175.26 mm,67.31 mm): Global label L1D10 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (187.96 mm,74.93 mm): Pin 20 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (187.96 mm,74.93 mm): Global label L1CLK1 is not connected to any other global label.
+ErrType(8): Global label not connected to any other global label
+    @ (187.96 mm,100.33 mm): Global label L1CLK2 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (187.96 mm,100.33 mm): Pin 40 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (175.26 mm,64.77 mm): Pin 11 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (175.26 mm,64.77 mm): Global label L1D8 is not connected to any other global label.
+ErrType(8): Global label not connected to any other global label
+    @ (175.26 mm,77.47 mm): Global label L1D16 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (175.26 mm,77.47 mm): Pin 21 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (175.26 mm,90.17 mm): Global label L1D24 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (175.26 mm,90.17 mm): Pin 31 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (187.96 mm,64.77 mm): Global label L1D9 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (187.96 mm,64.77 mm): Pin 12 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (187.96 mm,77.47 mm): Global label L1D17 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (187.96 mm,77.47 mm): Pin 22 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (187.96 mm,90.17 mm): Pin 32 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (187.96 mm,90.17 mm): Global label L1D25 is not connected to any other global label.
+ErrType(8): Global label not connected to any other global label
+    @ (175.26 mm,80.01 mm): Global label L1D18 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (175.26 mm,80.01 mm): Pin 23 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (175.26 mm,92.71 mm): Global label L1D26 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (175.26 mm,92.71 mm): Pin 33 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (187.96 mm,67.31 mm): Pin 14 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (187.96 mm,67.31 mm): Global label L1D11 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (187.96 mm,80.01 mm): Pin 24 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (187.96 mm,80.01 mm): Global label L1D19 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (187.96 mm,92.71 mm): Pin 34 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (187.96 mm,92.71 mm): Global label L1D27 is not connected to any other global label.
+ErrType(8): Global label not connected to any other global label
+    @ (175.26 mm,69.85 mm): Global label L1D12 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (175.26 mm,69.85 mm): Pin 15 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (175.26 mm,82.55 mm): Pin 25 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (175.26 mm,82.55 mm): Global label L1D20 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (175.26 mm,95.25 mm): Pin 35 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (175.26 mm,95.25 mm): Global label L1D28 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (175.26 mm,52.07 mm): Pin 1 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (175.26 mm,52.07 mm): Global label L1D0 is not connected to any other global label.
+ErrType(8): Global label not connected to any other global label
+    @ (205.74 mm,129.54 mm): Global label L2D12 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (205.74 mm,129.54 mm): Pin 15 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (228.60 mm,116.84 mm): Global label L2D27 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (228.60 mm,116.84 mm): Pin 34 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (187.96 mm,52.07 mm): Global label L1D1 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (187.96 mm,52.07 mm): Pin 2 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (175.26 mm,54.61 mm): Pin 3 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (175.26 mm,54.61 mm): Global label L1D2 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (187.96 mm,54.61 mm): Pin 4 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (187.96 mm,54.61 mm): Global label L1D3 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (175.26 mm,57.15 mm): Pin 5 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (175.26 mm,57.15 mm): Global label L1D4 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (187.96 mm,57.15 mm): Pin 6 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (187.96 mm,57.15 mm): Global label L1D5 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (175.26 mm,59.69 mm): Pin 7 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (175.26 mm,59.69 mm): Global label L1D6 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (187.96 mm,59.69 mm): Pin 8 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (187.96 mm,59.69 mm): Global label L1D7 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (226.06 mm,129.54 mm): Pin 31 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (226.06 mm,129.54 mm): Global label L2D24 is not connected to any other global label.
+ErrType(8): Global label not connected to any other global label
+    @ (195.58 mm,116.84 mm): Global label L2D7 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (195.58 mm,116.84 mm): Pin 8 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (210.82 mm,116.84 mm): Global label L2CLK1 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (210.82 mm,116.84 mm): Pin 20 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (236.22 mm,116.84 mm): Global label L2CLK2 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (236.22 mm,116.84 mm): Pin 40 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (200.66 mm,129.54 mm): Pin 11 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (200.66 mm,129.54 mm): Global label L2D8 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (213.36 mm,129.54 mm): Pin 21 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (213.36 mm,129.54 mm): Global label L2D16 is not connected to any other global label.
+ErrType(8): Global label not connected to any other global label
+    @ (187.96 mm,82.55 mm): Global label L1D21 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (187.96 mm,82.55 mm): Pin 26 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (200.66 mm,116.84 mm): Global label L2D9 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (200.66 mm,116.84 mm): Pin 12 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (213.36 mm,116.84 mm): Global label L2D17 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (213.36 mm,116.84 mm): Pin 22 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (226.06 mm,116.84 mm): Pin 32 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (226.06 mm,116.84 mm): Global label L2D25 is not connected to any other global label.
+ErrType(8): Global label not connected to any other global label
+    @ (203.20 mm,129.54 mm): Global label L2D10 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (203.20 mm,129.54 mm): Pin 13 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (215.90 mm,129.54 mm): Global label L2D18 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (215.90 mm,129.54 mm): Pin 23 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (228.60 mm,129.54 mm): Pin 33 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (228.60 mm,129.54 mm): Global label L2D26 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (203.20 mm,116.84 mm): Pin 14 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (203.20 mm,116.84 mm): Global label L2D11 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (215.90 mm,116.84 mm): Pin 24 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (215.90 mm,116.84 mm): Global label L2D19 is not connected to any other global label.
+ErrType(8): Global label not connected to any other global label
+    @ (193.04 mm,116.84 mm): Global label L2D5 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (193.04 mm,116.84 mm): Pin 6 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (187.96 mm,69.85 mm): Pin 16 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (187.96 mm,69.85 mm): Global label L1D13 is not connected to any other global label.
+ErrType(8): Global label not connected to any other global label
+    @ (187.96 mm,95.25 mm): Global label L1D29 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (187.96 mm,95.25 mm): Pin 36 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (175.26 mm,72.39 mm): Global label L1D14 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (175.26 mm,72.39 mm): Pin 17 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (175.26 mm,85.09 mm): Global label L1D22 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (175.26 mm,85.09 mm): Pin 27 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (175.26 mm,97.79 mm): Pin 37 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (175.26 mm,97.79 mm): Global label L1D30 is not connected to any other global label.
+ErrType(8): Global label not connected to any other global label
+    @ (187.96 mm,72.39 mm): Global label L1D15 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (187.96 mm,72.39 mm): Pin 18 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (187.96 mm,85.09 mm): Pin 28 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (187.96 mm,85.09 mm): Global label L1D23 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (187.96 mm,97.79 mm): Pin 38 (Passive) of component Logic_Analyzer_1 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (187.96 mm,97.79 mm): Global label L1D31 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (187.96 mm,129.54 mm): Pin 1 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (187.96 mm,129.54 mm): Global label L2D0 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (187.96 mm,116.84 mm): Pin 2 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (187.96 mm,116.84 mm): Global label L2D1 is not connected to any other global label.
+ErrType(8): Global label not connected to any other global label
+    @ (190.50 mm,129.54 mm): Global label L2D2 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (190.50 mm,129.54 mm): Pin 3 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (190.50 mm,116.84 mm): Global label L2D3 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (190.50 mm,116.84 mm): Pin 4 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (193.04 mm,129.54 mm): Pin 5 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (193.04 mm,129.54 mm): Global label L2D4 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (195.58 mm,129.54 mm): Pin 7 (Passive) of component Logic_Analyzer_2 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (195.58 mm,129.54 mm): Global label L2D6 is not connected to any other global label.
+
+***** Sheet /Voltage_Divider/
+ErrType(8): Global label not connected to any other global label
+    @ (101.60 mm,53.34 mm): Global label VM03 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (101.60 mm,53.34 mm): Pin 1 (Passive) of component R11 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (124.46 mm,53.34 mm): Global label VM02 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (124.46 mm,53.34 mm): Pin 1 (Passive) of component R13 is unconnected.
+ErrType(8): Global label not connected to any other global label
+    @ (147.32 mm,53.34 mm): Global label VM01 is not connected to any other global label.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (147.32 mm,53.34 mm): Pin 1 (Passive) of component R15 is unconnected.
+
+***** Sheet /Scope_Probe_Gain/
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (123.19 mm,55.88 mm): Pin 12 (Open collector) of component U1 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (123.19 mm,53.34 mm): Pin 13 (Open collector) of component U1 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (123.19 mm,45.72 mm): Pin 16 (Open collector) of component U1 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (123.19 mm,48.26 mm): Pin 15 (Open collector) of component U1 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (123.19 mm,50.80 mm): Pin 14 (Open collector) of component U1 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (123.19 mm,58.42 mm): Pin 11 (Open collector) of component U1 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (102.87 mm,58.42 mm): Pin 8 (Input) of component U1 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (102.87 mm,55.88 mm): Pin 7 (Input) of component U1 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (102.87 mm,53.34 mm): Pin 6 (Input) of component U1 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (102.87 mm,50.80 mm): Pin 5 (Input) of component U1 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (102.87 mm,48.26 mm): Pin 4 (Input) of component U1 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (102.87 mm,45.72 mm): Pin 3 (Input) of component U1 is unconnected.
+
+***** Sheet /Negative_Regulators/
+ErrType(3): Pin connected to some others pins but no pin to drive it
+    @ (105.41 mm,106.68 mm): Pin 6 (Power input) of component U4 is not driven (Net 79).
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (120.65 mm,114.30 mm): Pin 3 (Passive) of component U4 is unconnected.
+ErrType(2): Pin not connected (and no connect symbol found on this pin)
+    @ (120.65 mm,46.99 mm): Pin 3 (Passive) of component U5 is unconnected.
+
+***** Sheet /Positive_Regulators/
+ErrType(3): Pin connected to some others pins but no pin to drive it
+    @ (81.28 mm,147.32 mm): Pin 2 (Power input) of component U8 is not driven (Net 83).
+
+***** Sheet /+5V_-5V_Regulators/
+
+ ** ERC messages: 175  Errors 0  Warnings 175

@@ -34,7 +34,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 5
+Sheet 4 7
 Title ""
 Date ""
 Rev ""
@@ -218,9 +218,9 @@ Text GLabel 4700 1200 2    60   Input ~ 0
 AGND
 Text GLabel 3400 1200 0    60   Input ~ 0
 AGND
-Text GLabel 3950 5200 3    60   Input ~ 0
+Text GLabel 3950 5250 3    60   Input ~ 0
 AGND
-Text GLabel 3950 2550 3    60   Input ~ 0
+Text GLabel 3900 2650 0    60   Input ~ 0
 AGND
 $Comp
 L CP1 C11
@@ -247,7 +247,7 @@ $EndComp
 Text GLabel 4700 2850 2    60   Input ~ 0
 AGND
 Text GLabel 4050 3000 0    60   Input ~ 0
--15v
+-15V
 $Comp
 L CP1 C5
 U 1 1 59594AB0
@@ -298,7 +298,7 @@ L R R20
 U 1 1 5959FDF4
 P 5800 5150
 F 0 "R20" V 5880 5150 50  0000 C CNN
-F 1 "1K" V 5800 5150 50  0000 C CNN
+F 1 "1.78K" V 5800 5150 50  0000 C CNN
 F 2 "" V 5730 5150 50  0001 C CNN
 F 3 "" H 5800 5150 50  0001 C CNN
 	1    5800 5150
@@ -327,13 +327,13 @@ F 3 "" H 6050 5150 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 Text GLabel 6350 4750 2    60   Input ~ 0
--V1_SHDN
+-V2_SHDN
 Text GLabel 5800 5550 3    60   Input ~ 0
 AGND
 Text GLabel 6400 4900 2    60   Input ~ 0
 -15V
 Text GLabel 5500 4550 1    60   Input ~ 0
--V1
+-V2
 $Comp
 L LT3015 U7
 U 1 1 595A20C2
@@ -350,7 +350,7 @@ L R R21
 U 1 1 595A20CD
 P 5800 2500
 F 0 "R21" V 5880 2500 50  0000 C CNN
-F 1 "1K" V 5800 2500 50  0000 C CNN
+F 1 "1.78K" V 5800 2500 50  0000 C CNN
 F 2 "" V 5730 2500 50  0001 C CNN
 F 3 "" H 5800 2500 50  0001 C CNN
 	1    5800 2500
@@ -379,13 +379,13 @@ F 3 "" H 6050 2500 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 Text GLabel 6350 2100 2    60   Input ~ 0
--V2_SHDN
+-V1_SHDN
 Text GLabel 5800 2900 3    60   Input ~ 0
 AGND
 Text GLabel 6400 2250 2    60   Input ~ 0
 -15V
 Text GLabel 5500 1900 1    60   Input ~ 0
--V2
+-V1
 Wire Wire Line
 	3350 5000 3300 5000
 Wire Wire Line
@@ -469,16 +469,10 @@ Wire Wire Line
 Wire Wire Line
 	4650 2700 4550 2700
 Wire Wire Line
-	4050 3000 4250 3000
-Wire Wire Line
 	4250 2700 4150 2700
-Connection ~ 4150 2700
 Wire Wire Line
 	4700 2850 4650 2850
 Connection ~ 4650 2850
-Connection ~ 4150 3000
-Wire Wire Line
-	4150 2550 4150 3000
 Wire Wire Line
 	4650 5700 4550 5700
 Wire Wire Line
@@ -601,4 +595,18 @@ Wire Wire Line
 Wire Wire Line
 	6400 4900 6050 4900
 Connection ~ 6050 4900
+NoConn ~ 4750 1850
+NoConn ~ 4750 4500
+Wire Wire Line
+	3950 5200 3950 5250
+Wire Wire Line
+	4050 3000 4250 3000
+Wire Wire Line
+	4150 2550 4150 3000
+Connection ~ 4150 3000
+Connection ~ 4150 2700
+Wire Wire Line
+	3900 2650 3950 2650
+Wire Wire Line
+	3950 2650 3950 2550
 $EndSCHEMATC
