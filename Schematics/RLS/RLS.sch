@@ -50,7 +50,7 @@ U 1 1 59497804
 P 9650 3000
 F 0 "DB1" H 9650 4050 50  0000 C CNN
 F 1 "BoardID_VIN_Scope_FuncGen_DB_CONN" V 9650 3000 50  0000 C CNN
-F 2 "" H 9650 2050 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x20_Pitch2.54mm" H 9650 2050 50  0001 C CNN
 F 3 "" H 9650 2050 50  0001 C CNN
 	1    9650 3000
 	1    0    0    -1  
@@ -61,7 +61,7 @@ U 1 1 59497DF1
 P 8400 1350
 F 0 "DB2" H 8400 2400 50  0000 C CNN
 F 1 "Arduino_DB_CONN" V 8400 1350 50  0000 C CNN
-F 2 "" H 8400 400 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x20_Pitch2.54mm" H 8400 400 50  0001 C CNN
 F 3 "" H 8400 400 50  0001 C CNN
 	1    8400 1350
 	0    -1   -1   0   
@@ -210,7 +210,7 @@ U 1 1 594ABA94
 P 7150 3000
 F 0 "DB3" H 7150 4050 50  0000 C CNN
 F 1 "Logic_Analyzer1_DB_CONN" V 7150 3000 50  0000 C CNN
-F 2 "" H 7150 2050 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x20_Pitch2.54mm" H 7150 2050 50  0001 C CNN
 F 3 "" H 7150 2050 50  0001 C CNN
 	1    7150 3000
 	1    0    0    -1  
@@ -221,7 +221,7 @@ U 1 1 594ABB94
 P 8350 4850
 F 0 "DB4" H 8350 5900 50  0000 C CNN
 F 1 "Logic_Analyzer2_DB_CONN" V 8350 4850 50  0000 C CNN
-F 2 "" H 8350 3900 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x20_Pitch2.54mm" H 8350 3900 50  0001 C CNN
 F 3 "" H 8350 3900 50  0001 C CNN
 	1    8350 4850
 	0    -1   -1   0   
@@ -391,108 +391,108 @@ L2D0
 $Comp
 L ARDUINO_MEGA_SHIELD U1
 U 1 1 594ADDBF
-P 3850 3350
-F 0 "U1" H 3450 5850 60  0000 C CNN
-F 1 "ARDUINO_MEGA_SHIELD" H 3750 650 60  0000 C CNN
-F 2 "" H 3850 3350 60  0001 C CNN
-F 3 "" H 3850 3350 60  0001 C CNN
-	1    3850 3350
+P 4150 3350
+F 0 "U1" H 3750 5850 60  0000 C CNN
+F 1 "ARDUINO_MEGA_SHIELD" H 4050 650 60  0000 C CNN
+F 2 "" H 4150 3350 60  0001 C CNN
+F 3 "" H 4150 3350 60  0001 C CNN
+	1    4150 3350
 	1    0    0    -1  
 $EndComp
-Text GLabel 4750 2200 2    60   Input ~ 0
+Text GLabel 5050 2200 2    60   Input ~ 0
 AD4
-Text GLabel 4750 2100 2    60   Input ~ 0
+Text GLabel 5050 2100 2    60   Input ~ 0
 AD5
-Text GLabel 4750 2000 2    60   Input ~ 0
+Text GLabel 5050 2000 2    60   Input ~ 0
 AD6
-Text GLabel 4750 1900 2    60   Input ~ 0
+Text GLabel 5050 1900 2    60   Input ~ 0
 AD7
-Text GLabel 4750 1700 2    60   Input ~ 0
+Text GLabel 5050 1700 2    60   Input ~ 0
 AD8
-Text GLabel 4750 1600 2    60   Input ~ 0
+Text GLabel 5050 1600 2    60   Input ~ 0
 AD9
-Text GLabel 4750 1500 2    60   Input ~ 0
+Text GLabel 5050 1500 2    60   Input ~ 0
 AD10
-Text GLabel 4750 1400 2    60   Input ~ 0
+Text GLabel 5050 1400 2    60   Input ~ 0
 AD11
-Text GLabel 4750 1300 2    60   Input ~ 0
+Text GLabel 5050 1300 2    60   Input ~ 0
 AD12
-Text GLabel 4750 1200 2    60   Input ~ 0
+Text GLabel 5050 1200 2    60   Input ~ 0
 AD13
-Text GLabel 4750 4000 2    60   Input ~ 0
+Text GLabel 5050 4000 2    60   Input ~ 0
 AD22
-Text GLabel 4750 4100 2    60   Input ~ 0
+Text GLabel 5050 4100 2    60   Input ~ 0
 AD23
-Text GLabel 4750 4200 2    60   Input ~ 0
+Text GLabel 5050 4200 2    60   Input ~ 0
 AD24
-Text GLabel 4750 4300 2    60   Input ~ 0
+Text GLabel 5050 4300 2    60   Input ~ 0
 AD25
-Text GLabel 4750 4400 2    60   Input ~ 0
+Text GLabel 5050 4400 2    60   Input ~ 0
 AD26
-Text GLabel 4750 4500 2    60   Input ~ 0
+Text GLabel 5050 4500 2    60   Input ~ 0
 AD27
-Text GLabel 4750 4600 2    60   Input ~ 0
+Text GLabel 5050 4600 2    60   Input ~ 0
 AD28
-Text GLabel 4750 4700 2    60   Input ~ 0
+Text GLabel 5050 4700 2    60   Input ~ 0
 AD29
-Text GLabel 4750 4850 2    60   Input ~ 0
+Text GLabel 5050 4850 2    60   Input ~ 0
 AD30
-Text GLabel 4750 4950 2    60   Input ~ 0
+Text GLabel 5050 4950 2    60   Input ~ 0
 AD31
-Text GLabel 4750 5050 2    60   Input ~ 0
+Text GLabel 5050 5050 2    60   Input ~ 0
 AD32
-Text GLabel 4750 5150 2    60   Input ~ 0
+Text GLabel 5050 5150 2    60   Input ~ 0
 AD33
-Text GLabel 2850 5150 0    60   Input ~ 0
+Text GLabel 3150 5150 0    60   Input ~ 0
 AD44
-Text GLabel 4750 5250 2    60   Input ~ 0
+Text GLabel 5050 5250 2    60   Input ~ 0
 AD34
-Text GLabel 4750 5350 2    60   Input ~ 0
+Text GLabel 5050 5350 2    60   Input ~ 0
 AD35
-Text GLabel 4750 5450 2    60   Input ~ 0
+Text GLabel 5050 5450 2    60   Input ~ 0
 AD36
-Text GLabel 4750 5550 2    60   Input ~ 0
+Text GLabel 5050 5550 2    60   Input ~ 0
 AD37
-Text GLabel 2850 5800 0    60   Input ~ 0
+Text GLabel 3150 5800 0    60   Input ~ 0
 AD38
-Text GLabel 2850 5700 0    60   Input ~ 0
+Text GLabel 3150 5700 0    60   Input ~ 0
 AD39
-Text GLabel 2850 5600 0    60   Input ~ 0
+Text GLabel 3150 5600 0    60   Input ~ 0
 AD40
-Text GLabel 2850 5500 0    60   Input ~ 0
+Text GLabel 3150 5500 0    60   Input ~ 0
 AD41
-Text GLabel 2850 5350 0    60   Input ~ 0
+Text GLabel 3150 5350 0    60   Input ~ 0
 AD42
-Text GLabel 2850 5250 0    60   Input ~ 0
+Text GLabel 3150 5250 0    60   Input ~ 0
 AD43
-Text GLabel 2850 5050 0    60   Input ~ 0
+Text GLabel 3150 5050 0    60   Input ~ 0
 AD45
-Text GLabel 2850 4950 0    60   Input ~ 0
+Text GLabel 3150 4950 0    60   Input ~ 0
 AD46
-Text GLabel 2850 4850 0    60   Input ~ 0
+Text GLabel 3150 4850 0    60   Input ~ 0
 AD47
-Text GLabel 2850 2100 0    60   Input ~ 0
+Text GLabel 3150 2100 0    60   Input ~ 0
 BID0
-Text GLabel 2850 2200 0    60   Input ~ 0
+Text GLabel 3150 2200 0    60   Input ~ 0
 BID1
-Text GLabel 2850 2300 0    60   Input ~ 0
+Text GLabel 3150 2300 0    60   Input ~ 0
 BID2
-Text GLabel 2850 2400 0    60   Input ~ 0
+Text GLabel 3150 2400 0    60   Input ~ 0
 BID3
-Text GLabel 2850 2500 0    60   Input ~ 0
+Text GLabel 3150 2500 0    60   Input ~ 0
 BID4
-Text GLabel 2850 2600 0    60   Input ~ 0
+Text GLabel 3150 2600 0    60   Input ~ 0
 BID5
-Text GLabel 2850 2700 0    60   Input ~ 0
+Text GLabel 3150 2700 0    60   Input ~ 0
 BID6
-Text GLabel 2850 2800 0    60   Input ~ 0
+Text GLabel 3150 2800 0    60   Input ~ 0
 BID7
-Text GLabel 2850 3600 0    60   Input ~ 0
+Text GLabel 3150 3600 0    60   Input ~ 0
 AA14
-Text GLabel 2850 3700 0    60   Input ~ 0
+Text GLabel 3150 3700 0    60   Input ~ 0
 AA15
-NoConn ~ 4750 3750
-NoConn ~ 4750 3850
+NoConn ~ 5050 3750
+NoConn ~ 5050 3850
 $Comp
 L DIN_5-RESCUE-RLS PSU1
 U 1 1 594AF81A
@@ -520,7 +520,7 @@ U 1 1 594B028E
 P 2450 750
 F 0 "F3" H 2450 690 50  0000 C CNN
 F 1 "4A" H 2450 810 50  0000 C CNN
-F 2 "" H 2450 750 50  0001 C CNN
+F 2 "Fuse_Holders_and_Fuses:Fuse_SMD2920" H 2450 750 50  0001 C CNN
 F 3 "" H 2450 750 50  0001 C CNN
 	1    2450 750 
 	-1   0    0    -1  
@@ -531,7 +531,7 @@ U 1 1 594B02D1
 P 1950 750
 F 0 "F2" H 1950 690 50  0000 C CNN
 F 1 "1.5A" H 1950 810 50  0000 C CNN
-F 2 "" H 1950 750 50  0001 C CNN
+F 2 "Fuse_Holders_and_Fuses:Fuse_SMD2920" H 1950 750 50  0001 C CNN
 F 3 "" H 1950 750 50  0001 C CNN
 	1    1950 750 
 	1    0    0    -1  
@@ -542,7 +542,7 @@ U 1 1 594B0320
 P 1150 1250
 F 0 "F1" H 1150 1190 50  0000 C CNN
 F 1 "1A" H 1150 1310 50  0000 C CNN
-F 2 "" H 1150 1250 50  0001 C CNN
+F 2 "Fuse_Holders_and_Fuses:Fuse_SMD2920" H 1150 1250 50  0001 C CNN
 F 3 "" H 1150 1250 50  0001 C CNN
 	1    1150 1250
 	1    0    0    -1  
@@ -552,8 +552,8 @@ L CONN_01X10 J6
 U 1 1 594B108D
 P 1300 2650
 F 0 "J6" H 1300 3200 50  0000 C CNN
-F 1 "Voltmeter" V 1400 2650 50  0000 C CNN
-F 2 "" H 1300 2650 50  0001 C CNN
+F 1 "ADS1115" V 1400 2650 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x10_Pitch2.54mm" H 1300 2650 50  0001 C CNN
 F 3 "" H 1300 2650 50  0001 C CNN
 	1    1300 2650
 	-1   0    0    -1  
@@ -575,13 +575,13 @@ SCL
 Text GLabel 1500 2500 2    60   Input ~ 0
 SDA
 NoConn ~ 1500 2700
-Text GLabel 4750 3400 2    60   Input ~ 0
+Text GLabel 5050 3400 2    60   Input ~ 0
 SDA
-Text GLabel 4750 3500 2    60   Input ~ 0
+Text GLabel 5050 3500 2    60   Input ~ 0
 SCL
-Text GLabel 2850 3400 0    60   Input ~ 0
+Text GLabel 3150 3400 0    60   Input ~ 0
 AA12
-Text GLabel 2850 3500 0    60   Input ~ 0
+Text GLabel 3150 3500 0    60   Input ~ 0
 AA13
 $Comp
 L R R6
@@ -589,7 +589,7 @@ U 1 1 594B86C6
 P 8750 2650
 F 0 "R6" V 8830 2650 50  0000 C CNN
 F 1 "4.7K" V 8750 2650 50  0000 C CNN
-F 2 "" V 8680 2650 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8680 2650 50  0001 C CNN
 F 3 "" H 8750 2650 50  0001 C CNN
 	1    8750 2650
 	1    0    0    -1  
@@ -600,7 +600,7 @@ U 1 1 594B8719
 P 8550 2650
 F 0 "R5" V 8630 2650 50  0000 C CNN
 F 1 "4.7K" V 8550 2650 50  0000 C CNN
-F 2 "" V 8480 2650 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8480 2650 50  0001 C CNN
 F 3 "" H 8550 2650 50  0001 C CNN
 	1    8550 2650
 	1    0    0    -1  
@@ -611,7 +611,7 @@ U 1 1 594B8750
 P 8350 2650
 F 0 "R4" V 8430 2650 50  0000 C CNN
 F 1 "4.7K" V 8350 2650 50  0000 C CNN
-F 2 "" V 8280 2650 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8280 2650 50  0001 C CNN
 F 3 "" H 8350 2650 50  0001 C CNN
 	1    8350 2650
 	1    0    0    -1  
@@ -622,7 +622,7 @@ U 1 1 594B8785
 P 8150 2650
 F 0 "R3" V 8230 2650 50  0000 C CNN
 F 1 "4.7K" V 8150 2650 50  0000 C CNN
-F 2 "" V 8080 2650 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8080 2650 50  0001 C CNN
 F 3 "" H 8150 2650 50  0001 C CNN
 	1    8150 2650
 	1    0    0    -1  
@@ -635,7 +635,7 @@ U 1 1 594BA5AC
 P 10500 2700
 F 0 "R7" V 10580 2700 50  0000 C CNN
 F 1 "4.7K" V 10500 2700 50  0000 C CNN
-F 2 "" V 10430 2700 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 10430 2700 50  0001 C CNN
 F 3 "" H 10500 2700 50  0001 C CNN
 	1    10500 2700
 	1    0    0    -1  
@@ -646,7 +646,7 @@ U 1 1 594BA5F7
 P 10700 2700
 F 0 "R8" V 10780 2700 50  0000 C CNN
 F 1 "4.7K" V 10700 2700 50  0000 C CNN
-F 2 "" V 10630 2700 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 10630 2700 50  0001 C CNN
 F 3 "" H 10700 2700 50  0001 C CNN
 	1    10700 2700
 	1    0    0    -1  
@@ -657,7 +657,7 @@ U 1 1 594BA632
 P 10900 2700
 F 0 "R9" V 10980 2700 50  0000 C CNN
 F 1 "4.7K" V 10900 2700 50  0000 C CNN
-F 2 "" V 10830 2700 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 10830 2700 50  0001 C CNN
 F 3 "" H 10900 2700 50  0001 C CNN
 	1    10900 2700
 	1    0    0    -1  
@@ -668,7 +668,7 @@ U 1 1 594BA66F
 P 11100 2700
 F 0 "R10" V 11180 2700 50  0000 C CNN
 F 1 "4.7K" V 11100 2700 50  0000 C CNN
-F 2 "" V 11030 2700 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 11030 2700 50  0001 C CNN
 F 3 "" H 11100 2700 50  0001 C CNN
 	1    11100 2700
 	1    0    0    -1  
@@ -701,21 +701,21 @@ U 5952FCB2
 F0 "Positive_Regulators" 60
 F1 "Positive_Regulators.sch" 60
 $EndSheet
-Text GLabel 2850 4200 0    60   Input ~ 0
+Text GLabel 3150 4200 0    60   Input ~ 0
 N_POT_CE
-Text GLabel 2850 4500 0    60   Input ~ 0
+Text GLabel 3150 4500 0    60   Input ~ 0
 P_POT_CE
-Text GLabel 2850 4300 0    60   Input ~ 0
+Text GLabel 3150 4300 0    60   Input ~ 0
 SCLK
-Text GLabel 2850 4400 0    60   Input ~ 0
+Text GLabel 3150 4400 0    60   Input ~ 0
 MOSI
-Text GLabel 2850 3000 0    60   Input ~ 0
+Text GLabel 3150 3000 0    60   Input ~ 0
 +V1_SHDN
-Text GLabel 2850 3100 0    60   Input ~ 0
+Text GLabel 3150 3100 0    60   Input ~ 0
 +V2_SHDN
-Text GLabel 2850 3200 0    60   Input ~ 0
+Text GLabel 3150 3200 0    60   Input ~ 0
 -V1_SHDN
-Text GLabel 2850 3300 0    60   Input ~ 0
+Text GLabel 3150 3300 0    60   Input ~ 0
 -V2_SHDN
 $Sheet
 S 2150 6400 500  500 
@@ -723,35 +723,34 @@ U 5959581C
 F0 "+5V_-5V_Regulators" 60
 F1 "+5V_-5V_Regulator.sch" 60
 $EndSheet
-NoConn ~ 2850 3950
-NoConn ~ 2850 4050
-NoConn ~ 2850 4650
-NoConn ~ 2850 4750
-NoConn ~ 2850 1800
-NoConn ~ 2850 1600
-NoConn ~ 2850 1500
-NoConn ~ 2850 1400
-NoConn ~ 4750 1000
-NoConn ~ 4750 1100
+NoConn ~ 3150 3950
+NoConn ~ 3150 4050
+NoConn ~ 3150 4650
+NoConn ~ 3150 4750
+NoConn ~ 3150 1800
+NoConn ~ 3150 1500
+NoConn ~ 3150 1400
+NoConn ~ 5050 1000
+NoConn ~ 5050 1100
 $Sheet
 S 600  6400 500  500 
 U 595AF7B8
 F0 "Logic_Analyzer_Circuit" 60
 F1 "Logic_Analyzer_Circuit.sch" 60
 $EndSheet
-NoConn ~ 4750 3300
-NoConn ~ 4750 3200
-NoConn ~ 4750 3100
-NoConn ~ 4750 3000
-NoConn ~ 4750 2900
-NoConn ~ 4750 2800
-NoConn ~ 4750 2600
-NoConn ~ 4750 2500
-NoConn ~ 4750 2400
-NoConn ~ 4750 2300
-Text GLabel 2850 1700 0    60   Input ~ 0
+NoConn ~ 5050 3300
+NoConn ~ 5050 3200
+NoConn ~ 5050 3100
+NoConn ~ 5050 3000
+NoConn ~ 5050 2900
+NoConn ~ 5050 2800
+NoConn ~ 5050 2600
+NoConn ~ 5050 2500
+NoConn ~ 5050 2400
+NoConn ~ 5050 2300
+Text GLabel 3150 1700 0    60   Input ~ 0
 DGND
-Text GLabel 2850 1900 0    60   Input ~ 0
+Text GLabel 3150 1900 0    60   Input ~ 0
 +5V
 Wire Wire Line
 	2250 1450 2150 1450
@@ -904,10 +903,10 @@ F 3 "" H 950 1200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +15V-RESCUE-RLS #PWR3
+L +15V-RESCUE-RLS #PWR01
 U 1 1 595A0DC0
 P 1600 700
-F 0 "#PWR3" H 1600 550 50  0001 C CNN
+F 0 "#PWR01" H 1600 550 50  0001 C CNN
 F 1 "+15V" H 1600 840 50  0000 C CNN
 F 2 "" H 1600 700 50  0001 C CNN
 F 3 "" H 1600 700 50  0001 C CNN
@@ -915,10 +914,10 @@ F 3 "" H 1600 700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V-RESCUE-RLS #PWR5
+L +5V-RESCUE-RLS #PWR02
 U 1 1 595A0E0A
 P 2650 750
-F 0 "#PWR5" H 2650 600 50  0001 C CNN
+F 0 "#PWR02" H 2650 600 50  0001 C CNN
 F 1 "+5V" H 2650 890 50  0000 C CNN
 F 2 "" H 2650 750 50  0001 C CNN
 F 3 "" H 2650 750 50  0001 C CNN
@@ -926,10 +925,10 @@ F 3 "" H 2650 750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDA-RESCUE-RLS #PWR4
+L GNDA-RESCUE-RLS #PWR03
 U 1 1 595A1070
 P 1950 950
-F 0 "#PWR4" H 1950 700 50  0001 C CNN
+F 0 "#PWR03" H 1950 700 50  0001 C CNN
 F 1 "GNDA" H 1950 800 50  0000 C CNN
 F 2 "" H 1950 950 50  0001 C CNN
 F 3 "" H 1950 950 50  0001 C CNN
@@ -937,10 +936,10 @@ F 3 "" H 1950 950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDD-RESCUE-RLS #PWR2
+L GNDD-RESCUE-RLS #PWR04
 U 1 1 595A10A8
 P 1250 1600
-F 0 "#PWR2" H 1250 1350 50  0001 C CNN
+F 0 "#PWR04" H 1250 1350 50  0001 C CNN
 F 1 "GNDD" H 1250 1450 50  0000 C CNN
 F 2 "" H 1250 1600 50  0001 C CNN
 F 3 "" H 1250 1600 50  0001 C CNN
@@ -960,4 +959,105 @@ Wire Wire Line
 Wire Wire Line
 	2550 750  2800 750 
 Connection ~ 2650 750 
+$Comp
+L LED D1
+U 1 1 595DC5FA
+P 1200 5000
+F 0 "D1" H 1200 5100 50  0000 C CNN
+F 1 "AD_LED" H 1200 4900 50  0000 C CNN
+F 2 "LEDs:LED_0603" H 1200 5000 50  0001 C CNN
+F 3 "" H 1200 5000 50  0001 C CNN
+	1    1200 5000
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D2
+U 1 1 595DC6EF
+P 1650 5000
+F 0 "D2" H 1650 5100 50  0000 C CNN
+F 1 "+5V_LED" H 1650 4900 50  0000 C CNN
+F 2 "LEDs:LED_0603" H 1650 5000 50  0001 C CNN
+F 3 "" H 1650 5000 50  0001 C CNN
+	1    1650 5000
+	0    1    1    0   
+$EndComp
+$Comp
+L R R30
+U 1 1 595DC99A
+P 1200 4500
+F 0 "R30" V 1280 4500 50  0000 C CNN
+F 1 "4.7K" V 1200 4500 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 1130 4500 50  0001 C CNN
+F 3 "" H 1200 4500 50  0001 C CNN
+	1    1200 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R31
+U 1 1 595DCB07
+P 1650 4500
+F 0 "R31" V 1730 4500 50  0000 C CNN
+F 1 "4.7K" V 1650 4500 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 1580 4500 50  0001 C CNN
+F 3 "" H 1650 4500 50  0001 C CNN
+	1    1650 4500
+	1    0    0    -1  
+$EndComp
+Text GLabel 3150 1600 0    60   Input ~ 0
+AD_LED
+Text GLabel 1200 3900 1    60   Input ~ 0
+AD_LED
+Text GLabel 1650 3900 1    60   Input ~ 0
++5V_LED
+Text GLabel 1400 5250 3    60   Input ~ 0
+AGND
+Wire Wire Line
+	1650 5200 1650 5150
+Wire Wire Line
+	1200 5200 1650 5200
+Wire Wire Line
+	1200 5200 1200 5150
+Wire Wire Line
+	1400 5250 1400 5200
+Connection ~ 1400 5200
+Wire Wire Line
+	1650 4650 1650 4850
+Wire Wire Line
+	1200 4650 1200 4850
+Wire Wire Line
+	1200 4250 1200 4350
+Wire Wire Line
+	1650 4250 1650 4350
+Text GLabel 2800 900  2    60   Input ~ 0
++5V_LED
+Wire Wire Line
+	2650 750  2650 900 
+Wire Wire Line
+	2650 900  2800 900 
+$Comp
+L R R32
+U 1 1 595DF587
+P 1200 4100
+F 0 "R32" V 1280 4100 50  0000 C CNN
+F 1 "4.7K" V 1200 4100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 1130 4100 50  0001 C CNN
+F 3 "" H 1200 4100 50  0001 C CNN
+	1    1200 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R33
+U 1 1 595DF58E
+P 1650 4100
+F 0 "R33" V 1730 4100 50  0000 C CNN
+F 1 "4.7K" V 1650 4100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 1580 4100 50  0001 C CNN
+F 3 "" H 1650 4100 50  0001 C CNN
+	1    1650 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 3900 1200 3950
+Wire Wire Line
+	1650 3900 1650 3950
 $EndSCHEMATC

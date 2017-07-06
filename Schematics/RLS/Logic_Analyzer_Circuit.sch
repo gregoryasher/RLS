@@ -50,7 +50,7 @@ U 1 1 595979EB
 P 4750 3300
 F 0 "J4" H 4750 4350 50  0000 C CNN
 F 1 "Logic_Analyzer1" V 4750 3300 50  0000 C CNN
-F 2 "" H 4750 2350 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x20_Pitch2.54mm" H 4750 2350 50  0001 C CNN
 F 3 "" H 4750 2350 50  0001 C CNN
 	1    4750 3300
 	1    0    0    -1  
@@ -61,7 +61,7 @@ U 1 1 59597A25
 P 6450 3300
 F 0 "J5" H 6450 4350 50  0000 C CNN
 F 1 "Logic_Analyzer2" V 6450 3300 50  0000 C CNN
-F 2 "" H 6450 2350 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x20_Pitch2.54mm" H 6450 2350 50  0001 C CNN
 F 3 "" H 6450 2350 50  0001 C CNN
 	1    6450 3300
 	1    0    0    -1  
