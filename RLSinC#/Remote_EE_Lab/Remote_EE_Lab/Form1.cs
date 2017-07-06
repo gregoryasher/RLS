@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using System.Threading;
 using System.Diagnostics;
 using System.IO.Ports;
+using System.Net.Mail;
+using System.Net;
+
 
 namespace Remote_EE_Lab
 {
@@ -184,11 +187,11 @@ namespace Remote_EE_Lab
         *   Allows user to manually set a COM port if for some reason
         *   the RLS does not automatically detect the correct one.
         ************************************************************/
-        private void SubmitButton_Click(object sender, EventArgs e)
-        {
-            USB_port = ComPortTextBox.Text;
-            MessageBox.Show("COM Port Successfully Set to " + USB_port);
-        }
+        //private void SubmitButton_Click(object sender, EventArgs e)
+        //{
+        //    USB_port = ComPortTextBox.Text;
+        //    MessageBox.Show("COM Port Successfully Set to " + USB_port);
+        //}
 
         /************************************************************
         *   board_detect_Click
@@ -639,6 +642,7 @@ namespace Remote_EE_Lab
         }
 
 
+      
 
 
         /////////////////////BOARD SUBROUTINES
@@ -1559,5 +1563,54 @@ namespace Remote_EE_Lab
         {
 
         }
+
+        private void Form1_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            //MessageBox.Show("Something is required here!");
+
+            //e.Cancel = true;
+            //this.WindowState = FormWindowState.Minimized;
+            //var psi = new ProcessStartInfo("shutdown", "/s /t 0");
+            //psi.CreateNoWindow = true;
+            //psi.UseShellExecute = false;
+            //Process.Start(psi);
+            foreach (var process in Process.GetProcessesByName("LogicPort"))
+            {
+                process.Kill();
+            }
+            foreach (var process in Process.GetProcessesByName("LogicPort2"))
+            {
+                process.Kill();
+            }
+            foreach (var process in Process.GetProcessesByName("PcLab2000LT"))
+            {
+                process.Kill();
+            }
+
+
+        }
+
+        private void Form1_SizeChanged(object sender, EventArgs e)
+        {
+            //CommControlGroup.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            //Setup.Size = Screen.PrimaryScreen.WorkingArea.Size;
+        }
+
+        private void CommControlGroup_Resize(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Setup_Resize(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
+
+
 }

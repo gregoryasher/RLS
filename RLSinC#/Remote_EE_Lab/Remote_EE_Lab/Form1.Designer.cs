@@ -74,10 +74,6 @@
             this.Diode2 = new System.Windows.Forms.GroupBox();
             this.board4_Diode2_RadioButton2 = new System.Windows.Forms.RadioButton();
             this.board4_Diode2_RadioButton1 = new System.Windows.Forms.RadioButton();
-            this.Label2 = new System.Windows.Forms.Label();
-            this.ComPortTextBox = new System.Windows.Forms.RichTextBox();
-            this.GroupBox1 = new System.Windows.Forms.GroupBox();
-            this.SubmitButton = new System.Windows.Forms.Button();
             this.lbl_board_1_status = new System.Windows.Forms.Label();
             this.Circuit_Controls = new System.Windows.Forms.GroupBox();
             this.brd_1_ch2 = new System.Windows.Forms.GroupBox();
@@ -92,8 +88,6 @@
             this.lbl_gain_1 = new System.Windows.Forms.Label();
             this.lbl_scope = new System.Windows.Forms.Label();
             this.Brd_1_Scope = new System.Windows.Forms.ComboBox();
-            this.Label3 = new System.Windows.Forms.Label();
-            this.TabPageSetup = new System.Windows.Forms.TabPage();
             this.Setup = new System.Windows.Forms.TabControl();
             this.Board_1 = new System.Windows.Forms.TabPage();
             this.lbl5k_1 = new System.Windows.Forms.Label();
@@ -182,11 +176,9 @@
             this.Board_2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.board_2_chematic)).BeginInit();
             this.Diode2.SuspendLayout();
-            this.GroupBox1.SuspendLayout();
             this.Circuit_Controls.SuspendLayout();
             this.brd_1_ch2.SuspendLayout();
             this.brd_1_ch1.SuspendLayout();
-            this.TabPageSetup.SuspendLayout();
             this.Setup.SuspendLayout();
             this.Board_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Board_1_Image)).BeginInit();
@@ -754,44 +746,6 @@
             this.board4_Diode2_RadioButton1.TabStop = true;
             this.board4_Diode2_RadioButton1.UseVisualStyleBackColor = true;
             // 
-            // Label2
-            // 
-            this.Label2.AutoSize = true;
-            this.Label2.Location = new System.Drawing.Point(360, 24);
-            this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(148, 13);
-            this.Label2.TabIndex = 17;
-            this.Label2.Text = "Setup for Remote Lab System";
-            // 
-            // ComPortTextBox
-            // 
-            this.ComPortTextBox.Location = new System.Drawing.Point(127, 32);
-            this.ComPortTextBox.Name = "ComPortTextBox";
-            this.ComPortTextBox.Size = new System.Drawing.Size(361, 23);
-            this.ComPortTextBox.TabIndex = 3;
-            this.ComPortTextBox.Text = "";
-            // 
-            // GroupBox1
-            // 
-            this.GroupBox1.Controls.Add(this.ComPortTextBox);
-            this.GroupBox1.Controls.Add(this.SubmitButton);
-            this.GroupBox1.Location = new System.Drawing.Point(173, 308);
-            this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(513, 78);
-            this.GroupBox1.TabIndex = 19;
-            this.GroupBox1.TabStop = false;
-            this.GroupBox1.Text = "Enter COM Port Name";
-            // 
-            // SubmitButton
-            // 
-            this.SubmitButton.Location = new System.Drawing.Point(6, 32);
-            this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(97, 23);
-            this.SubmitButton.TabIndex = 0;
-            this.SubmitButton.Text = "Submit";
-            this.SubmitButton.UseVisualStyleBackColor = true;
-            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
-            // 
             // lbl_board_1_status
             // 
             this.lbl_board_1_status.AutoSize = true;
@@ -962,28 +916,6 @@
             this.Brd_1_Scope.TabIndex = 1;
             this.Brd_1_Scope.SelectedIndexChanged += new System.EventHandler(this.Brd_1_Scope_SelectedIndexChanged_1);
             // 
-            // Label3
-            // 
-            this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(170, 62);
-            this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(533, 234);
-            this.Label3.TabIndex = 20;
-            this.Label3.Text = resources.GetString("Label3.Text");
-            // 
-            // TabPageSetup
-            // 
-            this.TabPageSetup.Controls.Add(this.Label3);
-            this.TabPageSetup.Controls.Add(this.GroupBox1);
-            this.TabPageSetup.Controls.Add(this.Label2);
-            this.TabPageSetup.Location = new System.Drawing.Point(4, 22);
-            this.TabPageSetup.Name = "TabPageSetup";
-            this.TabPageSetup.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPageSetup.Size = new System.Drawing.Size(1008, 443);
-            this.TabPageSetup.TabIndex = 8;
-            this.TabPageSetup.Text = "Setup";
-            this.TabPageSetup.UseVisualStyleBackColor = true;
-            // 
             // Setup
             // 
             this.Setup.Controls.Add(this.Board_1);
@@ -993,12 +925,12 @@
             this.Setup.Controls.Add(this.Board5);
             this.Setup.Controls.Add(this.Board6);
             this.Setup.Controls.Add(this.Board7);
-            this.Setup.Controls.Add(this.TabPageSetup);
             this.Setup.Location = new System.Drawing.Point(17, 88);
             this.Setup.Name = "Setup";
             this.Setup.SelectedIndex = 0;
             this.Setup.Size = new System.Drawing.Size(1016, 469);
             this.Setup.TabIndex = 7;
+            this.Setup.Resize += new System.EventHandler(this.Setup_Resize);
             // 
             // Board_1
             // 
@@ -1956,6 +1888,7 @@
             this.CommControlGroup.TabIndex = 6;
             this.CommControlGroup.TabStop = false;
             this.CommControlGroup.Text = "Communication Control";
+            this.CommControlGroup.Resize += new System.EventHandler(this.CommControlGroup_Resize);
             // 
             // button1
             // 
@@ -1992,7 +1925,9 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Remote_EE_Lab";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing_1);
             this.Load += new System.EventHandler(this.Form1_Load_1);
+            this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
             this.board_2_Ch_1.ResumeLayout(false);
             this.board_2_Ch_1.PerformLayout();
             this.board_2_ch2.ResumeLayout(false);
@@ -2006,14 +1941,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.board_2_chematic)).EndInit();
             this.Diode2.ResumeLayout(false);
             this.Diode2.PerformLayout();
-            this.GroupBox1.ResumeLayout(false);
             this.Circuit_Controls.ResumeLayout(false);
             this.brd_1_ch2.ResumeLayout(false);
             this.brd_1_ch2.PerformLayout();
             this.brd_1_ch1.ResumeLayout(false);
             this.brd_1_ch1.PerformLayout();
-            this.TabPageSetup.ResumeLayout(false);
-            this.TabPageSetup.PerformLayout();
             this.Setup.ResumeLayout(false);
             this.Board_1.ResumeLayout(false);
             this.Board_1.PerformLayout();
@@ -2104,10 +2036,6 @@
         internal System.Windows.Forms.GroupBox Diode2;
         internal System.Windows.Forms.RadioButton board4_Diode2_RadioButton2;
         internal System.Windows.Forms.RadioButton board4_Diode2_RadioButton1;
-        internal System.Windows.Forms.Label Label2;
-        internal System.Windows.Forms.RichTextBox ComPortTextBox;
-        internal System.Windows.Forms.GroupBox GroupBox1;
-        internal System.Windows.Forms.Button SubmitButton;
         internal System.Windows.Forms.Label lbl_board_1_status;
         internal System.Windows.Forms.GroupBox Circuit_Controls;
         internal System.Windows.Forms.GroupBox brd_1_ch2;
@@ -2122,8 +2050,6 @@
         internal System.Windows.Forms.Label lbl_gain_1;
         internal System.Windows.Forms.Label lbl_scope;
         internal System.Windows.Forms.ComboBox Brd_1_Scope;
-        internal System.Windows.Forms.Label Label3;
-        internal System.Windows.Forms.TabPage TabPageSetup;
         internal System.Windows.Forms.TabControl Setup;
         internal System.Windows.Forms.TabPage Board_1;
         internal System.Windows.Forms.Label lbl5k_1;

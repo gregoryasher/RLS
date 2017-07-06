@@ -429,27 +429,6 @@
         jiMF/Pn55f+3T++ArH8QARIBTR1HKRh1HLlgEDvu/38AX2nOUb9LqtEAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>This page is used to configure the Remote Lab System User Interface for a particular host computer.
-This tab should only be used by professors and lab assistants, not by students. 
-
-Note to Students:
-If you change the name of the COM port, you will not be able to complete your experiment and get credit
-for your lab assignment. Please do not alter this page in any way. Thank you. 
-
-Note to Professors and Lab Assistants: 
-The first time you plug in the RLS to a new host computer, open the Device Manager from the Start menu.
-Look under the Ports dropdown section and identify which COM port the RLS is attached to. Edit Line 5 of 
-the file Form1.vb so that the default COM port matches the COM port showing in the Device Manager. The
-RLS should perform as expected as long as the USB plug remains connected to the same computer. 
-
-For testing purposes, you can temporarily change the COM port using this page (for example, if you want to
-test the system using your personal computer and you don't want to bother to change the code). Enter the name
-of the COM port in this box (for example, COM4) and click "Submit." DO NOT type Enter; you must click the
-"Submit" button instead. You will have to repeat this process each time you load the user interface program.
-
-</value>
-  </data>
   <data name="Board_1_Image.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlhxQHkAIcAAAAAAAAAMwAAZgAAmQAAzAAA/wArAAArMwArZgArmQArzAAr/wBVAABVMwBVZgBV
