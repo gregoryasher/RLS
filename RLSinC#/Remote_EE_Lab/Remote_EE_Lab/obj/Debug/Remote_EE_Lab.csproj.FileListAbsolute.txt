@@ -17,3 +17,13 @@ C:\Users\Gytau_000\Documents\GitHub\RLS\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\obj\
 C:\Users\Gytau_000\Documents\GitHub\RLS\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\obj\Debug\Remote_EE_Lab.csproj.GenerateResource.Cache
 C:\Users\Gytau_000\Documents\GitHub\RLS\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\obj\Debug\Remote_EE_Lab.exe
 C:\Users\Gytau_000\Documents\GitHub\RLS\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\obj\Debug\Remote_EE_Lab.pdb
+C:\Users\Gytau_000\Documents\GitHub\RLS-master\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\bin\Debug\Remote_EE_Lab.exe.config
+C:\Users\Gytau_000\Documents\GitHub\RLS-master\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\bin\Debug\Remote_EE_Lab.exe
+C:\Users\Gytau_000\Documents\GitHub\RLS-master\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\bin\Debug\Remote_EE_Lab.pdb
+C:\Users\Gytau_000\Documents\GitHub\RLS-master\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\obj\Debug\Remote_EE_Lab.Form1.resources
+C:\Users\Gytau_000\Documents\GitHub\RLS-master\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\obj\Debug\Remote_EE_Lab.Properties.Resources.resources
+C:\Users\Gytau_000\Documents\GitHub\RLS-master\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\obj\Debug\Remote_EE_Lab.SplashScreen_1.resources
+C:\Users\Gytau_000\Documents\GitHub\RLS-master\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\obj\Debug\Remote_EE_Lab.csproj.GenerateResource.Cache
+C:\Users\Gytau_000\Documents\GitHub\RLS-master\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\obj\Debug\Remote_EE_Lab.exe
+C:\Users\Gytau_000\Documents\GitHub\RLS-master\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\obj\Debug\Remote_EE_Lab.pdb
+C:\Users\Gytau_000\Documents\GitHub\RLS-master\RLSinC#\Remote_EE_Lab\Remote_EE_Lab\obj\Debug\Remote_EE_Lab.csprojResolveAssemblyReference.cache
