@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name RLS)(type KiCad)(uri U:/Capstone/RLS-master/Schematics/RLS/RLS_CustomFootprints)(options "")(descr ""))
+)
