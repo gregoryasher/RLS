@@ -29,13 +29,15 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:arduino_shield
+LIBS:arduino_shieldsNCL
 LIBS:RLS-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 7
-Title ""
+Title "Remote Lab System"
 Date ""
 Rev ""
 Comp ""
@@ -388,118 +390,107 @@ Text GLabel 7500 5100 3    60   Input ~ 0
 L2D2
 Text GLabel 7400 5100 3    60   Input ~ 0
 L2D0
-$Comp
-L ARDUINO_MEGA_SHIELD U1
-U 1 1 594ADDBF
-P 4150 3350
-F 0 "U1" H 3750 5850 60  0000 C CNN
-F 1 "ARDUINO_MEGA_SHIELD" H 4050 650 60  0000 C CNN
-F 2 "" H 4150 3350 60  0001 C CNN
-F 3 "" H 4150 3350 60  0001 C CNN
-	1    4150 3350
-	1    0    0    -1  
-$EndComp
-Text GLabel 5050 2200 2    60   Input ~ 0
+Text GLabel 5650 2200 2    60   Input ~ 0
 AD4
-Text GLabel 5050 2100 2    60   Input ~ 0
+Text GLabel 5650 2100 2    60   Input ~ 0
 AD5
-Text GLabel 5050 2000 2    60   Input ~ 0
+Text GLabel 5650 2000 2    60   Input ~ 0
 AD6
-Text GLabel 5050 1900 2    60   Input ~ 0
+Text GLabel 5650 1900 2    60   Input ~ 0
 AD7
-Text GLabel 5050 1700 2    60   Input ~ 0
+Text GLabel 5650 1700 2    60   Input ~ 0
 AD8
-Text GLabel 5050 1600 2    60   Input ~ 0
+Text GLabel 5650 1600 2    60   Input ~ 0
 AD9
-Text GLabel 5050 1500 2    60   Input ~ 0
+Text GLabel 5650 1500 2    60   Input ~ 0
 AD10
-Text GLabel 5050 1400 2    60   Input ~ 0
+Text GLabel 5650 1400 2    60   Input ~ 0
 AD11
-Text GLabel 5050 1300 2    60   Input ~ 0
+Text GLabel 5650 1300 2    60   Input ~ 0
 AD12
-Text GLabel 5050 1200 2    60   Input ~ 0
+Text GLabel 5650 1200 2    60   Input ~ 0
 AD13
-Text GLabel 5050 4000 2    60   Input ~ 0
+Text GLabel 5650 4000 2    60   Input ~ 0
 AD22
-Text GLabel 5050 4100 2    60   Input ~ 0
+Text GLabel 5650 4100 2    60   Input ~ 0
 AD23
-Text GLabel 5050 4200 2    60   Input ~ 0
+Text GLabel 5650 4200 2    60   Input ~ 0
 AD24
-Text GLabel 5050 4300 2    60   Input ~ 0
+Text GLabel 5650 4300 2    60   Input ~ 0
 AD25
-Text GLabel 5050 4400 2    60   Input ~ 0
+Text GLabel 5650 4400 2    60   Input ~ 0
 AD26
-Text GLabel 5050 4500 2    60   Input ~ 0
+Text GLabel 5650 4500 2    60   Input ~ 0
 AD27
-Text GLabel 5050 4600 2    60   Input ~ 0
+Text GLabel 5650 4600 2    60   Input ~ 0
 AD28
-Text GLabel 5050 4700 2    60   Input ~ 0
+Text GLabel 5650 4700 2    60   Input ~ 0
 AD29
-Text GLabel 5050 4850 2    60   Input ~ 0
+Text GLabel 5650 4850 2    60   Input ~ 0
 AD30
-Text GLabel 5050 4950 2    60   Input ~ 0
+Text GLabel 5650 4950 2    60   Input ~ 0
 AD31
-Text GLabel 5050 5050 2    60   Input ~ 0
+Text GLabel 5650 5050 2    60   Input ~ 0
 AD32
-Text GLabel 5050 5150 2    60   Input ~ 0
+Text GLabel 5650 5150 2    60   Input ~ 0
 AD33
-Text GLabel 3150 5150 0    60   Input ~ 0
+Text GLabel 3750 5150 0    60   Input ~ 0
 AD44
-Text GLabel 5050 5250 2    60   Input ~ 0
+Text GLabel 5650 5250 2    60   Input ~ 0
 AD34
-Text GLabel 5050 5350 2    60   Input ~ 0
+Text GLabel 5650 5350 2    60   Input ~ 0
 AD35
-Text GLabel 5050 5450 2    60   Input ~ 0
+Text GLabel 5650 5450 2    60   Input ~ 0
 AD36
-Text GLabel 5050 5550 2    60   Input ~ 0
+Text GLabel 5650 5550 2    60   Input ~ 0
 AD37
-Text GLabel 3150 5800 0    60   Input ~ 0
+Text GLabel 3750 5800 0    60   Input ~ 0
 AD38
-Text GLabel 3150 5700 0    60   Input ~ 0
+Text GLabel 3750 5700 0    60   Input ~ 0
 AD39
-Text GLabel 3150 5600 0    60   Input ~ 0
+Text GLabel 3750 5600 0    60   Input ~ 0
 AD40
-Text GLabel 3150 5500 0    60   Input ~ 0
+Text GLabel 3750 5500 0    60   Input ~ 0
 AD41
-Text GLabel 3150 5350 0    60   Input ~ 0
+Text GLabel 3750 5350 0    60   Input ~ 0
 AD42
-Text GLabel 3150 5250 0    60   Input ~ 0
+Text GLabel 3750 5250 0    60   Input ~ 0
 AD43
-Text GLabel 3150 5050 0    60   Input ~ 0
+Text GLabel 3750 5050 0    60   Input ~ 0
 AD45
-Text GLabel 3150 4950 0    60   Input ~ 0
+Text GLabel 3750 4950 0    60   Input ~ 0
 AD46
-Text GLabel 3150 4850 0    60   Input ~ 0
+Text GLabel 3750 4850 0    60   Input ~ 0
 AD47
-Text GLabel 3150 2100 0    60   Input ~ 0
+Text GLabel 3750 2100 0    60   Input ~ 0
 BID0
-Text GLabel 3150 2200 0    60   Input ~ 0
+Text GLabel 3750 2200 0    60   Input ~ 0
 BID1
-Text GLabel 3150 2300 0    60   Input ~ 0
+Text GLabel 3750 2300 0    60   Input ~ 0
 BID2
-Text GLabel 3150 2400 0    60   Input ~ 0
+Text GLabel 3750 2400 0    60   Input ~ 0
 BID3
-Text GLabel 3150 2500 0    60   Input ~ 0
+Text GLabel 3750 2500 0    60   Input ~ 0
 BID4
-Text GLabel 3150 2600 0    60   Input ~ 0
+Text GLabel 3750 2600 0    60   Input ~ 0
 BID5
-Text GLabel 3150 2700 0    60   Input ~ 0
+Text GLabel 3750 2700 0    60   Input ~ 0
 BID6
-Text GLabel 3150 2800 0    60   Input ~ 0
+Text GLabel 3750 2800 0    60   Input ~ 0
 BID7
-Text GLabel 3150 3600 0    60   Input ~ 0
+Text GLabel 3750 3600 0    60   Input ~ 0
 AA14
-Text GLabel 3150 3700 0    60   Input ~ 0
+Text GLabel 3750 3700 0    60   Input ~ 0
 AA15
-NoConn ~ 5050 3750
-NoConn ~ 5050 3850
+NoConn ~ 5650 3750
+NoConn ~ 5650 3850
 $Comp
 L DIN_5-RESCUE-RLS PSU1
 U 1 1 594AF81A
 P 1750 1450
 F 0 "PSU1" H 1750 1100 50  0000 C CNN
 F 1 "DIN_5" H 1750 1025 50  0000 C CNN
-F 2 "" H 1750 1450 50  0001 C CNN
+F 2 "RLS_CustomFootprints:Molex_2x3_3.5mm" H 1750 1450 50  0001 C CNN
 F 3 "" H 1750 1450 50  0001 C CNN
 	1    1750 1450
 	1    0    0    -1  
@@ -575,13 +566,13 @@ SCL
 Text GLabel 1500 2500 2    60   Input ~ 0
 SDA
 NoConn ~ 1500 2700
-Text GLabel 5050 3400 2    60   Input ~ 0
+Text GLabel 5650 3400 2    60   Input ~ 0
 SDA
-Text GLabel 5050 3500 2    60   Input ~ 0
+Text GLabel 5650 3500 2    60   Input ~ 0
 SCL
-Text GLabel 3150 3400 0    60   Input ~ 0
+Text GLabel 3750 3400 0    60   Input ~ 0
 AA12
-Text GLabel 3150 3500 0    60   Input ~ 0
+Text GLabel 3750 3500 0    60   Input ~ 0
 AA13
 $Comp
 L R R6
@@ -701,21 +692,21 @@ U 5952FCB2
 F0 "Positive_Regulators" 60
 F1 "Positive_Regulators.sch" 60
 $EndSheet
-Text GLabel 3150 4200 0    60   Input ~ 0
+Text GLabel 3750 4200 0    60   Input ~ 0
 N_POT_CE
-Text GLabel 3150 4500 0    60   Input ~ 0
+Text GLabel 3750 4500 0    60   Input ~ 0
 P_POT_CE
-Text GLabel 3150 4300 0    60   Input ~ 0
+Text GLabel 3750 4300 0    60   Input ~ 0
 SCLK
-Text GLabel 3150 4400 0    60   Input ~ 0
+Text GLabel 3750 4400 0    60   Input ~ 0
 MOSI
-Text GLabel 3150 3000 0    60   Input ~ 0
+Text GLabel 3750 3000 0    60   Input ~ 0
 +V1_SHDN
-Text GLabel 3150 3100 0    60   Input ~ 0
+Text GLabel 3750 3100 0    60   Input ~ 0
 +V2_SHDN
-Text GLabel 3150 3200 0    60   Input ~ 0
+Text GLabel 3750 3200 0    60   Input ~ 0
 -V1_SHDN
-Text GLabel 3150 3300 0    60   Input ~ 0
+Text GLabel 3750 3300 0    60   Input ~ 0
 -V2_SHDN
 $Sheet
 S 2150 6400 500  500 
@@ -723,34 +714,34 @@ U 5959581C
 F0 "+5V_-5V_Regulators" 60
 F1 "+5V_-5V_Regulator.sch" 60
 $EndSheet
-NoConn ~ 3150 3950
-NoConn ~ 3150 4050
-NoConn ~ 3150 4650
-NoConn ~ 3150 4750
-NoConn ~ 3150 1800
-NoConn ~ 3150 1500
-NoConn ~ 3150 1400
-NoConn ~ 5050 1000
-NoConn ~ 5050 1100
+NoConn ~ 3750 3950
+NoConn ~ 3750 4050
+NoConn ~ 3750 4650
+NoConn ~ 3750 4750
+NoConn ~ 3750 1800
+NoConn ~ 3750 1500
+NoConn ~ 3750 1400
+NoConn ~ 5650 1000
+NoConn ~ 5650 1100
 $Sheet
 S 600  6400 500  500 
 U 595AF7B8
 F0 "Logic_Analyzer_Circuit" 60
 F1 "Logic_Analyzer_Circuit.sch" 60
 $EndSheet
-NoConn ~ 5050 3300
-NoConn ~ 5050 3200
-NoConn ~ 5050 3100
-NoConn ~ 5050 3000
-NoConn ~ 5050 2900
-NoConn ~ 5050 2800
-NoConn ~ 5050 2600
-NoConn ~ 5050 2500
-NoConn ~ 5050 2400
-NoConn ~ 5050 2300
-Text GLabel 3150 1700 0    60   Input ~ 0
+NoConn ~ 5650 3300
+NoConn ~ 5650 3200
+NoConn ~ 5650 3100
+NoConn ~ 5650 3000
+NoConn ~ 5650 2900
+NoConn ~ 5650 2800
+NoConn ~ 5650 2600
+NoConn ~ 5650 2500
+NoConn ~ 5650 2400
+NoConn ~ 5650 2300
+Text GLabel 3750 1700 0    60   Input ~ 0
 DGND
-Text GLabel 3150 1900 0    60   Input ~ 0
+Text GLabel 3750 1900 0    60   Input ~ 0
 +5V
 Wire Wire Line
 	2250 1450 2150 1450
@@ -1003,7 +994,7 @@ F 3 "" H 1650 4500 50  0001 C CNN
 	1    1650 4500
 	1    0    0    -1  
 $EndComp
-Text GLabel 3150 1600 0    60   Input ~ 0
+Text GLabel 3750 1600 0    60   Input ~ 0
 AD_LED
 Text GLabel 1200 3900 1    60   Input ~ 0
 AD_LED
@@ -1060,4 +1051,15 @@ Wire Wire Line
 	1200 3900 1200 3950
 Wire Wire Line
 	1650 3900 1650 3950
+$Comp
+L ARDUINO_MEGA_SHIELD U1
+U 1 1 595F5E81
+P 4750 3350
+F 0 "U1" H 4350 5850 60  0000 C CNN
+F 1 "ARDUINO_MEGA_SHIELD" H 4650 650 60  0000 C CNN
+F 2 "" H 4750 3350 60  0001 C CNN
+F 3 "" H 4750 3350 60  0001 C CNN
+	1    4750 3350
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
