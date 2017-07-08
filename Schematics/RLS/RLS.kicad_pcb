@@ -2,8 +2,8 @@
 
   (general
     (links 331)
-    (no_connects 170)
-    (area 0 0 0 0)
+    (no_connects 278)
+    (area 20.244999 15.164999 265.305716 243.915001)
     (thickness 1.6)
     (drawings 4)
     (tracks 0)
@@ -12,7 +12,7 @@
     (nets 132)
   )
 
-  (page A4)
+  (page User 254 254)
   (title_block
     (title "Remote Lab System")
   )
@@ -370,7 +370,7 @@
   )
 
   (module Capacitors_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm (layer F.Cu) (tedit 5920C254) (tstamp 595F64F3)
-    (at 135.89 69.85)
+    (at 73.66 26.67)
     (descr "C, Disc series, Radial, pin pitch=2.50mm, , diameter*width=3.8*2.6mm^2, Capacitor, http://www.vishay.com/docs/45233/krseries.pdf")
     (tags "C Disc series Radial pin pitch 2.50mm  diameter 3.8mm width 2.6mm Capacitor")
     (path /594DCA38/595882C2)
@@ -409,7 +409,7 @@
   )
 
   (module Capacitors_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm (layer F.Cu) (tedit 5920C254) (tstamp 595F6508)
-    (at 135.89 69.85)
+    (at 73.66 33.02)
     (descr "C, Disc series, Radial, pin pitch=2.50mm, , diameter*width=3.8*2.6mm^2, Capacitor, http://www.vishay.com/docs/45233/krseries.pdf")
     (tags "C Disc series Radial pin pitch 2.50mm  diameter 3.8mm width 2.6mm Capacitor")
     (path /594DCA38/595883A5)
@@ -448,7 +448,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F6524)
-    (at 135.89 69.85)
+    (at 74.93 40.64)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5952F710/59582C2C)
     (attr smd)
@@ -498,7 +498,7 @@
   )
 
   (module Capacitors_SMD:C_0603_HandSoldering (layer F.Cu) (tedit 58AA848B) (tstamp 595F6535)
-    (at 135.89 69.85)
+    (at 90.17 26.67)
     (descr "Capacitor SMD 0603, hand soldering")
     (tags "capacitor 0603")
     (path /5952F710/5958315B)
@@ -534,7 +534,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F6551)
-    (at 135.89 69.85)
+    (at 74.93 48.26)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5952F710/59594AB0)
     (attr smd)
@@ -584,7 +584,7 @@
   )
 
   (module Capacitors_SMD:C_0603_HandSoldering (layer F.Cu) (tedit 58AA848B) (tstamp 595F6562)
-    (at 135.89 69.85)
+    (at 90.17 33.02)
     (descr "Capacitor SMD 0603, hand soldering")
     (tags "capacitor 0603")
     (path /5952F710/59594AB7)
@@ -620,7 +620,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F657E)
-    (at 135.89 69.85)
+    (at 74.93 55.88)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5952F710/5958F709)
     (attr smd)
@@ -670,7 +670,7 @@
   )
 
   (module Capacitors_SMD:C_0603_HandSoldering (layer F.Cu) (tedit 58AA848B) (tstamp 595F658F)
-    (at 135.89 69.85)
+    (at 90.17 38.1)
     (descr "Capacitor SMD 0603, hand soldering")
     (tags "capacitor 0603")
     (path /5952F710/5958F710)
@@ -706,7 +706,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F65AB)
-    (at 135.89 69.85)
+    (at 74.93 64.77)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5952F710/59590FE8)
     (attr smd)
@@ -756,7 +756,7 @@
   )
 
   (module Capacitors_SMD:C_0603_HandSoldering (layer F.Cu) (tedit 58AA848B) (tstamp 595F65BC)
-    (at 135.89 69.85)
+    (at 90.17 43.18)
     (descr "Capacitor SMD 0603, hand soldering")
     (tags "capacitor 0603")
     (path /5952F710/59590FEF)
@@ -792,7 +792,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F65D8)
-    (at 135.89 69.85)
+    (at 74.93 72.39)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5952F710/59593FD8)
     (attr smd)
@@ -842,7 +842,7 @@
   )
 
   (module Capacitors_SMD:C_0603_HandSoldering (layer F.Cu) (tedit 58AA848B) (tstamp 595F65E9)
-    (at 135.89 69.85)
+    (at 90.17 48.26)
     (descr "Capacitor SMD 0603, hand soldering")
     (tags "capacitor 0603")
     (path /5952F710/59593FDF)
@@ -878,7 +878,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F6605)
-    (at 135.89 69.85)
+    (at 74.93 80.01)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5952F710/59590FF6)
     (attr smd)
@@ -928,7 +928,7 @@
   )
 
   (module Capacitors_SMD:C_0603_HandSoldering (layer F.Cu) (tedit 58AA848B) (tstamp 595F6616)
-    (at 135.89 69.85)
+    (at 90.17 52.07)
     (descr "Capacitor SMD 0603, hand soldering")
     (tags "capacitor 0603")
     (path /5952F710/59590FFD)
@@ -964,7 +964,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F6632)
-    (at 135.89 69.85)
+    (at 74.93 88.9)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5952F710/59582C1E)
     (attr smd)
@@ -1014,7 +1014,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F664E)
-    (at 135.89 69.85)
+    (at 74.93 97.79)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5952F710/59582C25)
     (attr smd)
@@ -1064,7 +1064,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F666A)
-    (at 135.89 69.85)
+    (at 74.93 105.41)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5952F710/5959FE9D)
     (attr smd)
@@ -1114,7 +1114,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F6686)
-    (at 135.89 69.85)
+    (at 64.77 39.37)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5952F710/5959FFA5)
     (attr smd)
@@ -1164,7 +1164,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F66A2)
-    (at 135.89 69.85)
+    (at 64.77 46.99)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5952F710/595A20D4)
     (attr smd)
@@ -1214,7 +1214,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F66BE)
-    (at 135.89 69.85)
+    (at 64.77 54.61)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5952F710/595A20DB)
     (attr smd)
@@ -1264,7 +1264,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F66DA)
-    (at 135.89 69.85)
+    (at 64.77 64.77)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5952FCB2/595A399D)
     (attr smd)
@@ -1314,7 +1314,7 @@
   )
 
   (module Capacitors_SMD:C_0603_HandSoldering (layer F.Cu) (tedit 58AA848B) (tstamp 595F66EB)
-    (at 135.89 69.85)
+    (at 90.17 58.42)
     (descr "Capacitor SMD 0603, hand soldering")
     (tags "capacitor 0603")
     (path /5952FCB2/595A39A4)
@@ -1350,7 +1350,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F6707)
-    (at 135.89 69.85)
+    (at 64.77 74.93)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5952FCB2/595A3A2C)
     (attr smd)
@@ -1400,7 +1400,7 @@
   )
 
   (module Capacitors_SMD:C_0603_HandSoldering (layer F.Cu) (tedit 58AA848B) (tstamp 595F6718)
-    (at 135.89 69.85)
+    (at 90.17 64.77)
     (descr "Capacitor SMD 0603, hand soldering")
     (tags "capacitor 0603")
     (path /5952FCB2/595A3A33)
@@ -1436,7 +1436,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F6734)
-    (at 135.89 69.85)
+    (at 64.77 85.09)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5952FCB2/595A39B6)
     (attr smd)
@@ -1486,7 +1486,7 @@
   )
 
   (module Capacitors_SMD:C_0603_HandSoldering (layer F.Cu) (tedit 58AA848B) (tstamp 595F6745)
-    (at 135.89 69.85)
+    (at 90.17 69.85)
     (descr "Capacitor SMD 0603, hand soldering")
     (tags "capacitor 0603")
     (path /5952FCB2/595A39BD)
@@ -1522,7 +1522,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F6761)
-    (at 135.89 69.85)
+    (at 66.04 93.98)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5952FCB2/595A39DC)
     (attr smd)
@@ -1572,7 +1572,7 @@
   )
 
   (module Capacitors_SMD:C_0603_HandSoldering (layer F.Cu) (tedit 58AA848B) (tstamp 595F6772)
-    (at 135.89 69.85)
+    (at 90.17 73.66)
     (descr "Capacitor SMD 0603, hand soldering")
     (tags "capacitor 0603")
     (path /5952FCB2/595A39E3)
@@ -1608,7 +1608,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F678E)
-    (at 135.89 69.85)
+    (at 66.04 104.14)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5952FCB2/595A3A12)
     (attr smd)
@@ -1658,7 +1658,7 @@
   )
 
   (module Capacitors_SMD:C_0603_HandSoldering (layer F.Cu) (tedit 58AA848B) (tstamp 595F679F)
-    (at 135.89 69.85)
+    (at 90.17 78.74)
     (descr "Capacitor SMD 0603, hand soldering")
     (tags "capacitor 0603")
     (path /5952FCB2/595A3A19)
@@ -1694,7 +1694,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F67BB)
-    (at 135.89 69.85)
+    (at 54.61 35.56)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5952FCB2/595A39EA)
     (attr smd)
@@ -1744,7 +1744,7 @@
   )
 
   (module Capacitors_SMD:C_0603_HandSoldering (layer F.Cu) (tedit 58AA848B) (tstamp 595F67CC)
-    (at 135.89 69.85)
+    (at 90.17 83.82)
     (descr "Capacitor SMD 0603, hand soldering")
     (tags "capacitor 0603")
     (path /5952FCB2/595A39F1)
@@ -1780,7 +1780,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F67E8)
-    (at 135.89 69.85)
+    (at 54.61 44.45)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5952FCB2/595A398F)
     (attr smd)
@@ -1830,7 +1830,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F6804)
-    (at 135.89 69.85)
+    (at 54.61 52.07)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5952FCB2/595A3996)
     (attr smd)
@@ -1880,7 +1880,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F6820)
-    (at 135.89 69.85)
+    (at 54.61 59.69)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5952FCB2/5958D2E1)
     (attr smd)
@@ -1930,7 +1930,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F683C)
-    (at 135.89 69.85)
+    (at 54.61 68.58)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5952FCB2/5958D2E8)
     (attr smd)
@@ -1980,7 +1980,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F6858)
-    (at 135.89 69.85)
+    (at 54.61 77.47)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5952FCB2/595A7134)
     (attr smd)
@@ -2030,7 +2030,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F6874)
-    (at 135.89 69.85)
+    (at 54.61 85.09)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5952FCB2/595A713B)
     (attr smd)
@@ -2080,7 +2080,7 @@
   )
 
   (module Capacitors_SMD:C_0603_HandSoldering (layer F.Cu) (tedit 58AA848B) (tstamp 595F6885)
-    (at 135.89 69.85)
+    (at 90.17 87.63)
     (descr "Capacitor SMD 0603, hand soldering")
     (tags "capacitor 0603")
     (path /5959581C/59596655)
@@ -2116,7 +2116,7 @@
   )
 
   (module Capacitors_SMD:C_0603_HandSoldering (layer F.Cu) (tedit 58AA848B) (tstamp 595F6896)
-    (at 135.89 69.85)
+    (at 90.17 91.44)
     (descr "Capacitor SMD 0603, hand soldering")
     (tags "capacitor 0603")
     (path /5959581C/59596B6C)
@@ -2152,7 +2152,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F68B2)
-    (at 135.89 69.85)
+    (at 55.88 92.71)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5959581C/59596610)
     (attr smd)
@@ -2202,7 +2202,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F68CE)
-    (at 135.89 69.85)
+    (at 54.61 99.06)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5959581C/59597317)
     (attr smd)
@@ -2252,7 +2252,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F68EA)
-    (at 135.89 69.85)
+    (at 54.61 106.68)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5959581C/59597677)
     (attr smd)
@@ -2302,7 +2302,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F6906)
-    (at 135.89 69.85)
+    (at 54.61 114.3)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /5959581C/595976C7)
     (attr smd)
@@ -2352,7 +2352,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x5.3 (layer F.Cu) (tedit 58AA85FB) (tstamp 595F6922)
-    (at 135.89 69.85)
+    (at 66.04 113.03)
     (descr "SMT capacitor, aluminium electrolytic, 4x5.3")
     (path /594D69D7/595B0C17)
     (attr smd)
@@ -2402,7 +2402,7 @@
   )
 
   (module LEDs:LED_0603 (layer F.Cu) (tedit 57FE93A5) (tstamp 595F6937)
-    (at 135.89 69.85)
+    (at 149.86 20.32)
     (descr "LED 0603 smd package")
     (tags "LED led 0603 SMD smd SMT smt smdled SMDLED smtled SMTLED")
     (path /595DC5FA)
@@ -2440,7 +2440,7 @@
   )
 
   (module LEDs:LED_0603 (layer F.Cu) (tedit 57FE93A5) (tstamp 595F694C)
-    (at 135.89 69.85)
+    (at 156.21 20.32)
     (descr "LED 0603 smd package")
     (tags "LED led 0603 SMD smd SMT smt smdled SMDLED smtled SMTLED")
     (path /595DC6EF)
@@ -2478,7 +2478,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_2x20_Pitch2.54mm (layer F.Cu) (tedit 58CD4EC6) (tstamp 595F6989)
-    (at 152.4 114.3)
+    (at 190.5 96.52)
     (descr "Through hole straight pin header, 2x20, 2.54mm pitch, double rows")
     (tags "Through hole pin header THT 2x20 2.54mm double row")
     (path /59497804)
@@ -2593,7 +2593,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_2x20_Pitch2.54mm (layer F.Cu) (tedit 58CD4EC6) (tstamp 595F69C6)
-    (at 182.88 104.14)
+    (at 200.66 96.52)
     (descr "Through hole straight pin header, 2x20, 2.54mm pitch, double rows")
     (tags "Through hole pin header THT 2x20 2.54mm double row")
     (path /59497DF1)
@@ -2674,7 +2674,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_2x20_Pitch2.54mm (layer F.Cu) (tedit 58CD4EC6) (tstamp 595F6A03)
-    (at 254 71.12)
+    (at 218.44 91.44)
     (descr "Through hole straight pin header, 2x20, 2.54mm pitch, double rows")
     (tags "Through hole pin header THT 2x20 2.54mm double row")
     (path /594ABA94)
@@ -2791,7 +2791,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_2x20_Pitch2.54mm (layer F.Cu) (tedit 58CD4EC6) (tstamp 595F6A40)
-    (at 168.91 31.75)
+    (at 203.2 19.05)
     (descr "Through hole straight pin header, 2x20, 2.54mm pitch, double rows")
     (tags "Through hole pin header THT 2x20 2.54mm double row")
     (path /594ABB94)
@@ -2908,7 +2908,7 @@
   )
 
   (module Fuse_Holders_and_Fuses:Fuse_SMD2920 (layer F.Cu) (tedit 5880C1DB) (tstamp 595F6A50)
-    (at 135.89 69.85)
+    (at 180.34 48.26)
     (descr "Fuse, 2920 chip size")
     (tags "Fuse SMD2920")
     (path /594B0320)
@@ -2936,7 +2936,7 @@
   )
 
   (module Fuse_Holders_and_Fuses:Fuse_SMD2920 (layer F.Cu) (tedit 5880C1DB) (tstamp 595F6A60)
-    (at 135.89 69.85)
+    (at 180.34 59.69)
     (descr "Fuse, 2920 chip size")
     (tags "Fuse SMD2920")
     (path /594B02D1)
@@ -2964,7 +2964,7 @@
   )
 
   (module Fuse_Holders_and_Fuses:Fuse_SMD2920 (layer F.Cu) (tedit 5880C1DB) (tstamp 595F6A70)
-    (at 135.89 69.85)
+    (at 179.07 71.12)
     (descr "Fuse, 2920 chip size")
     (tags "Fuse SMD2920")
     (path /594B028E)
@@ -2992,7 +2992,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm (layer F.Cu) (tedit 58CD4EC1) (tstamp 595F6A86)
-    (at 135.89 69.85)
+    (at 27.94 128.27)
     (descr "Through hole straight pin header, 1x03, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x03 2.54mm single row")
     (path /594DCA38/595883FC)
@@ -3031,7 +3031,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm (layer F.Cu) (tedit 58CD4EC1) (tstamp 595F6A9C)
-    (at 135.89 69.85)
+    (at 35.56 129.54)
     (descr "Through hole straight pin header, 1x03, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x03 2.54mm single row")
     (path /594DCA38/5958858D)
@@ -3070,7 +3070,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm (layer F.Cu) (tedit 58CD4EC1) (tstamp 595F6AB2)
-    (at 135.89 69.85)
+    (at 25.4 140.97)
     (descr "Through hole straight pin header, 1x03, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x03 2.54mm single row")
     (path /594DCA38/595A5435)
@@ -3110,7 +3110,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_2x20_Pitch2.54mm (layer F.Cu) (tedit 58CD4EC6) (tstamp 595F6AEF)
-    (at 218.44 68.58)
+    (at 232.41 88.9)
     (descr "Through hole straight pin header, 2x20, 2.54mm pitch, double rows")
     (tags "Through hole pin header THT 2x20 2.54mm double row")
     (path /595AF7B8/595979EB)
@@ -3227,7 +3227,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_2x20_Pitch2.54mm (layer F.Cu) (tedit 58CD4EC6) (tstamp 595F6B2C)
-    (at 194.31 29.21)
+    (at 232.41 21.59)
     (descr "Through hole straight pin header, 2x20, 2.54mm pitch, double rows")
     (tags "Through hole pin header THT 2x20 2.54mm double row")
     (path /595AF7B8/59597A25)
@@ -3344,7 +3344,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_1x10_Pitch2.54mm (layer F.Cu) (tedit 58CD4EC1) (tstamp 595F6B49)
-    (at 64.77 119.38)
+    (at 26.67 72.39)
     (descr "Through hole straight pin header, 1x10, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x10 2.54mm single row")
     (path /594B108D)
@@ -3396,7 +3396,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm (layer F.Cu) (tedit 58CD4EC1) (tstamp 595F6B5F)
-    (at 135.89 69.85)
+    (at 34.29 142.24)
     (descr "Through hole straight pin header, 1x03, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x03 2.54mm single row")
     (path /594D69D7/595B0EFE)
@@ -3436,7 +3436,7 @@
   )
 
   (module RLS_CustomFootprints:Molex_2x3_3.5mm (layer F.Cu) (tedit 595F4908) (tstamp 595F6B95)
-    (at 135.89 69.85)
+    (at 36.83 167.64)
     (path /594AF81A)
     (fp_text reference PSU1 (at 0 0) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -3502,7 +3502,7 @@
   )
 
   (module TO_SOT_Packages_SMD:SOT-23 (layer F.Cu) (tedit 58CE4E7E) (tstamp 595F6BAA)
-    (at 135.89 69.85)
+    (at 144.78 27.94)
     (descr "SOT-23, Standard")
     (tags SOT-23)
     (path /594D69D7/595B0816)
@@ -3543,7 +3543,7 @@
   )
 
   (module Resistors_SMD:R_0805_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6BBB)
-    (at 135.89 69.85)
+    (at 153.67 27.94)
     (descr "Resistor SMD 0805, hand soldering")
     (tags "resistor 0805")
     (path /594DCA38/594DCDC0)
@@ -3579,7 +3579,7 @@
   )
 
   (module Resistors_SMD:R_0805_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6BCC)
-    (at 135.89 69.85)
+    (at 153.67 33.02)
     (descr "Resistor SMD 0805, hand soldering")
     (tags "resistor 0805")
     (path /594DCA38/594DCE13)
@@ -3615,7 +3615,7 @@
   )
 
   (module Resistors_SMD:R_0805_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6BDD)
-    (at 135.89 69.85)
+    (at 153.67 36.83)
     (descr "Resistor SMD 0805, hand soldering")
     (tags "resistor 0805")
     (path /594B8785)
@@ -3651,7 +3651,7 @@
   )
 
   (module Resistors_SMD:R_0805_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6BEE)
-    (at 135.89 69.85)
+    (at 154.94 40.64)
     (descr "Resistor SMD 0805, hand soldering")
     (tags "resistor 0805")
     (path /594B8750)
@@ -3687,7 +3687,7 @@
   )
 
   (module Resistors_SMD:R_0805_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6BFF)
-    (at 135.89 69.85)
+    (at 153.67 45.72)
     (descr "Resistor SMD 0805, hand soldering")
     (tags "resistor 0805")
     (path /594B8719)
@@ -3723,7 +3723,7 @@
   )
 
   (module Resistors_SMD:R_0805_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6C10)
-    (at 135.89 69.85)
+    (at 153.67 50.8)
     (descr "Resistor SMD 0805, hand soldering")
     (tags "resistor 0805")
     (path /594B86C6)
@@ -3759,7 +3759,7 @@
   )
 
   (module Resistors_SMD:R_0805_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6C21)
-    (at 135.89 69.85)
+    (at 153.67 54.61)
     (descr "Resistor SMD 0805, hand soldering")
     (tags "resistor 0805")
     (path /594BA5AC)
@@ -3795,7 +3795,7 @@
   )
 
   (module Resistors_SMD:R_0805_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6C32)
-    (at 135.89 69.85)
+    (at 153.67 58.42)
     (descr "Resistor SMD 0805, hand soldering")
     (tags "resistor 0805")
     (path /594BA5F7)
@@ -3831,7 +3831,7 @@
   )
 
   (module Resistors_SMD:R_0805_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6C43)
-    (at 135.89 69.85)
+    (at 153.67 62.23)
     (descr "Resistor SMD 0805, hand soldering")
     (tags "resistor 0805")
     (path /594BA632)
@@ -3867,7 +3867,7 @@
   )
 
   (module Resistors_SMD:R_0805_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6C54)
-    (at 135.89 69.85)
+    (at 153.67 67.31)
     (descr "Resistor SMD 0805, hand soldering")
     (tags "resistor 0805")
     (path /594BA66F)
@@ -3903,7 +3903,7 @@
   )
 
   (module Resistors_SMD:R_1206_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6C65)
-    (at 135.89 69.85)
+    (at 153.67 72.39)
     (descr "Resistor SMD 1206, hand soldering")
     (tags "resistor 1206")
     (path /594D69D7/594D6C41)
@@ -3939,7 +3939,7 @@
   )
 
   (module Resistors_SMD:R_1206_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6C76)
-    (at 135.89 69.85)
+    (at 153.67 76.2)
     (descr "Resistor SMD 1206, hand soldering")
     (tags "resistor 1206")
     (path /594D69D7/594D6CB0)
@@ -3975,7 +3975,7 @@
   )
 
   (module Resistors_SMD:R_1206_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6C87)
-    (at 135.89 69.85)
+    (at 153.67 80.01)
     (descr "Resistor SMD 1206, hand soldering")
     (tags "resistor 1206")
     (path /594D69D7/594D6CC9)
@@ -4011,7 +4011,7 @@
   )
 
   (module Resistors_SMD:R_1206_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6C98)
-    (at 135.89 69.85)
+    (at 153.67 83.82)
     (descr "Resistor SMD 1206, hand soldering")
     (tags "resistor 1206")
     (path /594D69D7/594D6CE4)
@@ -4047,7 +4047,7 @@
   )
 
   (module Resistors_SMD:R_1206_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6CA9)
-    (at 135.89 69.85)
+    (at 153.67 87.63)
     (descr "Resistor SMD 1206, hand soldering")
     (tags "resistor 1206")
     (path /594D69D7/594D6D29)
@@ -4083,7 +4083,7 @@
   )
 
   (module Resistors_SMD:R_1206_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6CBA)
-    (at 135.89 69.85)
+    (at 153.67 91.44)
     (descr "Resistor SMD 1206, hand soldering")
     (tags "resistor 1206")
     (path /594D69D7/594D6D48)
@@ -4119,7 +4119,7 @@
   )
 
   (module Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal (layer F.Cu) (tedit 5874F706) (tstamp 595F6CD0)
-    (at 135.89 69.85)
+    (at 173.99 22.86)
     (descr "Resistor, Axial_DIN0309 series, Axial, Horizontal, pin pitch=12.7mm, 0.5W = 1/2W, length*diameter=9*3.2mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0309 series Axial Horizontal pin pitch 12.7mm 0.5W = 1/2W length 9mm diameter 3.2mm")
     (path /594DCA38/595881BF)
@@ -4157,7 +4157,7 @@
   )
 
   (module Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal (layer F.Cu) (tedit 5874F706) (tstamp 595F6CE6)
-    (at 135.89 69.85)
+    (at 172.72 30.48)
     (descr "Resistor, Axial_DIN0309 series, Axial, Horizontal, pin pitch=12.7mm, 0.5W = 1/2W, length*diameter=9*3.2mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0309 series Axial Horizontal pin pitch 12.7mm 0.5W = 1/2W length 9mm diameter 3.2mm")
     (path /594DCA38/59588224)
@@ -4195,7 +4195,7 @@
   )
 
   (module Resistors_SMD:R_0805_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6CF7)
-    (at 135.89 69.85)
+    (at 153.67 95.25)
     (descr "Resistor SMD 0805, hand soldering")
     (tags "resistor 0805")
     (path /5952F710/5958317D)
@@ -4231,7 +4231,7 @@
   )
 
   (module Resistors_SMD:R_1206_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6D08)
-    (at 135.89 69.85)
+    (at 153.67 99.06)
     (descr "Resistor SMD 1206, hand soldering")
     (tags "resistor 1206")
     (path /5952F710/5959FDF4)
@@ -4267,7 +4267,7 @@
   )
 
   (module Resistors_SMD:R_1206_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6D19)
-    (at 135.89 69.85)
+    (at 153.67 104.14)
     (descr "Resistor SMD 1206, hand soldering")
     (tags "resistor 1206")
     (path /5952F710/595A20CD)
@@ -4303,7 +4303,7 @@
   )
 
   (module Resistors_SMD:R_0805_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6D2A)
-    (at 135.89 69.85)
+    (at 153.67 107.95)
     (descr "Resistor SMD 0805, hand soldering")
     (tags "resistor 0805")
     (path /5952FCB2/595A39AB)
@@ -4339,7 +4339,7 @@
   )
 
   (module Resistors_SMD:R_1206_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6D3B)
-    (at 135.89 69.85)
+    (at 153.67 111.76)
     (descr "Resistor SMD 1206, hand soldering")
     (tags "resistor 1206")
     (path /5952FCB2/595A712D)
@@ -4375,7 +4375,7 @@
   )
 
   (module Resistors_SMD:R_1206_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6D4C)
-    (at 135.89 69.85)
+    (at 153.67 116.84)
     (descr "Resistor SMD 1206, hand soldering")
     (tags "resistor 1206")
     (path /5952FCB2/5958D2DA)
@@ -4411,7 +4411,7 @@
   )
 
   (module Resistors_SMD:R_1206_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6D5D)
-    (at 135.89 69.85)
+    (at 153.67 120.65)
     (descr "Resistor SMD 1206, hand soldering")
     (tags "resistor 1206")
     (path /5959581C/59596672)
@@ -4447,7 +4447,7 @@
   )
 
   (module Potentiometers:Potentiometer_Trimmer_Bourns_3296Y (layer F.Cu) (tedit 58826EFB) (tstamp 595F6D76)
-    (at 135.89 69.85)
+    (at 107.95 69.85)
     (descr "Spindle Trimmer Potentiometer, Bourns 3296Y, https://www.bourns.com/pdfs/3296.pdf")
     (tags "Spindle Trimmer Potentiometer   Bourns 3296Y")
     (path /5959581C/595AB1DA)
@@ -4488,7 +4488,7 @@
   )
 
   (module Potentiometers:Potentiometer_Trimmer_Bourns_3296Y (layer F.Cu) (tedit 58826EFB) (tstamp 595F6D8F)
-    (at 135.89 69.85)
+    (at 119.38 71.12)
     (descr "Spindle Trimmer Potentiometer, Bourns 3296Y, https://www.bourns.com/pdfs/3296.pdf")
     (tags "Spindle Trimmer Potentiometer   Bourns 3296Y")
     (path /5959581C/595AB23B)
@@ -4529,7 +4529,7 @@
   )
 
   (module Resistors_SMD:R_1206_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6DA0)
-    (at 135.89 69.85)
+    (at 153.67 124.46)
     (descr "Resistor SMD 1206, hand soldering")
     (tags "resistor 1206")
     (path /5959581C/59597526)
@@ -4565,7 +4565,7 @@
   )
 
   (module Resistors_SMD:R_1206_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6DB1)
-    (at 135.89 69.85)
+    (at 153.67 129.54)
     (descr "Resistor SMD 1206, hand soldering")
     (tags "resistor 1206")
     (path /594D69D7/595B0B7F)
@@ -4601,7 +4601,7 @@
   )
 
   (module Resistors_SMD:R_0805_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6DC2)
-    (at 135.89 69.85)
+    (at 153.67 134.62)
     (descr "Resistor SMD 0805, hand soldering")
     (tags "resistor 0805")
     (path /595DC99A)
@@ -4637,7 +4637,7 @@
   )
 
   (module Resistors_SMD:R_0805_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6DD3)
-    (at 135.89 69.85)
+    (at 153.67 138.43)
     (descr "Resistor SMD 0805, hand soldering")
     (tags "resistor 0805")
     (path /595DCB07)
@@ -4673,7 +4673,7 @@
   )
 
   (module Resistors_SMD:R_0805_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6DE4)
-    (at 135.89 69.85)
+    (at 153.67 142.24)
     (descr "Resistor SMD 0805, hand soldering")
     (tags "resistor 0805")
     (path /595DF587)
@@ -4708,7 +4708,7 @@
   )
 
   (module Resistors_SMD:R_0805_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 595F6DF5)
-    (at 135.89 69.85)
+    (at 153.67 146.05)
     (descr "Resistor SMD 0805, hand soldering")
     (tags "resistor 0805")
     (path /595DF58E)
@@ -4744,7 +4744,7 @@
   )
 
   (module Resistors_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal (layer F.Cu) (tedit 5874F706) (tstamp 595F6E0B)
-    (at 135.89 69.85)
+    (at 173.99 38.1)
     (descr "Resistor, Axial_DIN0411 series, Axial, Horizontal, pin pitch=12.7mm, 1W = 1/1W, length*diameter=9.9*3.6mm^2")
     (tags "Resistor Axial_DIN0411 series Axial Horizontal pin pitch 12.7mm 1W = 1/1W length 9.9mm diameter 3.6mm")
     (path /594D69D7/595B0BDC)
@@ -4782,7 +4782,7 @@
   )
 
   (module TO_SOT_Packages_THT:TO-220_Vertical (layer F.Cu) (tedit 58CE52AD) (tstamp 595F6E25)
-    (at 135.89 69.85)
+    (at 125.73 21.59)
     (descr "TO-220, Vertical, RM 2.54mm")
     (tags "TO-220 Vertical RM 2.54mm")
     (path /5959581C/59595954)
@@ -4827,7 +4827,7 @@
   )
 
   (module TO_SOT_Packages_THT:TO-220_Vertical (layer F.Cu) (tedit 58CE52AD) (tstamp 595F6E3F)
-    (at 135.89 69.85)
+    (at 109.22 21.59)
     (descr "TO-220, Vertical, RM 2.54mm")
     (tags "TO-220 Vertical RM 2.54mm")
     (path /5959581C/595958FD)
@@ -4872,7 +4872,7 @@
   )
 
   (module SMD_Packages:SSOP-14 (layer F.Cu) (tedit 0) (tstamp 595F6E56)
-    (at 135.89 69.85)
+    (at 104.14 87.63)
     (path /5952F710/595305F7)
     (attr smd)
     (fp_text reference U4 (at 0 -0.762) (layer F.SilkS)
@@ -4920,7 +4920,7 @@
   )
 
   (module SMD_Packages:SSOP-14 (layer F.Cu) (tedit 0) (tstamp 595F6E6D)
-    (at 135.89 69.85)
+    (at 116.84 86.36)
     (path /5952F710/59530648)
     (attr smd)
     (fp_text reference U5 (at 0 -0.762) (layer F.SilkS)
@@ -4967,7 +4967,7 @@
   )
 
   (module TO_SOT_Packages_THT:TO-220-5_Pentawatt_Multiwatt-5_Vertical_StaggeredType1 (layer F.Cu) (tedit 58CE52AD) (tstamp 595F6E93)
-    (at 135.89 69.85)
+    (at 128.27 43.18)
     (descr "TO-220-5, Vertical, RM 1.7mm, Pentawatt, Multiwatt-5, staggered type-1")
     (tags "TO-220-5 Vertical RM 1.7mm Pentawatt Multiwatt-5 staggered type-1")
     (path /5952F710/5952FBCC)
@@ -5025,7 +5025,7 @@
   )
 
   (module TO_SOT_Packages_THT:TO-220-5_Pentawatt_Multiwatt-5_Vertical_StaggeredType1 (layer F.Cu) (tedit 58CE52AD) (tstamp 595F6EB9)
-    (at 135.89 69.85)
+    (at 114.3 43.18)
     (descr "TO-220-5, Vertical, RM 1.7mm, Pentawatt, Multiwatt-5, staggered type-1")
     (tags "TO-220-5 Vertical RM 1.7mm Pentawatt Multiwatt-5 staggered type-1")
     (path /5952F710/595A20C2)
@@ -5083,7 +5083,7 @@
   )
 
   (module SMD_Packages:SSOP-14 (layer F.Cu) (tedit 0) (tstamp 595F6ED0)
-    (at 135.89 69.85)
+    (at 101.6 102.87)
     (path /5952FCB2/595A3981)
     (attr smd)
     (fp_text reference U8 (at 0 -0.762) (layer F.SilkS)
@@ -5131,7 +5131,7 @@
   )
 
   (module SMD_Packages:SSOP-14 (layer F.Cu) (tedit 0) (tstamp 595F6EE7)
-    (at 135.89 69.85)
+    (at 115.57 101.6)
     (path /5952FCB2/595A3988)
     (attr smd)
     (fp_text reference U9 (at 0 -0.762) (layer F.SilkS)
@@ -5178,7 +5178,7 @@
   )
 
   (module TO_SOT_Packages_THT:TO-220-5_Pentawatt_Multiwatt-5_Vertical_StaggeredType1 (layer F.Cu) (tedit 58CE52AD) (tstamp 595F6F0D)
-    (at 135.89 69.85)
+    (at 113.03 57.15)
     (descr "TO-220-5, Vertical, RM 1.7mm, Pentawatt, Multiwatt-5, staggered type-1")
     (tags "TO-220-5 Vertical RM 1.7mm Pentawatt Multiwatt-5 staggered type-1")
     (path /5952FCB2/59530279)
@@ -5236,7 +5236,7 @@
   )
 
   (module TO_SOT_Packages_THT:TO-220-5_Pentawatt_Multiwatt-5_Vertical_StaggeredType1 (layer F.Cu) (tedit 58CE52AD) (tstamp 595F6F33)
-    (at 135.89 69.85)
+    (at 128.27 57.15)
     (descr "TO-220-5, Vertical, RM 1.7mm, Pentawatt, Multiwatt-5, staggered type-1")
     (tags "TO-220-5 Vertical RM 1.7mm Pentawatt Multiwatt-5 staggered type-1")
     (path /5952FCB2/5953022A)
