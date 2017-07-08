@@ -43,10 +43,11 @@ unsigned long lastMsg = 1;
 void setup() {
   Serial.begin(9600);
   Serial.flush();
+  boardController.shutDownRegs();
 
   // Determine which board is plugged in
   //TODO: TEST THE ORDER OF THESE LINES TO SEE IF IT MATTERS
-
+  
   boardController.configureDaughterboardPins();
   boardController.configureBoardIdPins();
   boardController.readBoardID();

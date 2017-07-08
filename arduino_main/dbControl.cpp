@@ -148,6 +148,7 @@ void DBControl::configureDaughterboardPins() {
 boolean DBControl::safetyCheck() {
   readBoardID();
   if (bID.equalsIgnoreCase("00000000") || bID.equalsIgnoreCase("-1")) {
+      shutDownRegs();
       return false;
     /*
        error, no board in place
@@ -203,25 +204,12 @@ void DBControl::configureBoardIdPins() {
 }
 
 /**********************************************
- * Takes in requested voltage source dc voltage(s) 
- * from a particular daughterboard and 
- * computes required potentiometer resistance
+ * Function that shuts down all linear regulators.
  * ********************************************/
-void DBControl::setVin(double vin1, double vin2) {
-  if (vin1 >= 0.0) {
-    potVal1 = ((vin1 - 1.21) / ((1.21 / 1000.0) + 0.000003))
-  }
-  else if (vin1 < 0.0) {
-    potVal1 = ((vin1 + 1.22) / ((-1.22 / 1000.0) + 0.00000003))
-  }
-
-  if (vin2 >= 0.0) {
-    potVal2 = ((vin2 - 1.21) / ((1.21 / 1000.0) + 0.000003))
-  }
-  else if (vin2 < 0.0) {
-    potVal2 = ((vin2 + 1.22) / ((-1.22 / 1000.0) + 0.00000003))
-  }
-
-  setPot(potVal1, potVal2);
+void DBControl::shutDownRegs() {
+  digitalWrite(A8, LOW);
+  digitalWrite(A9, LOW);
+  digitalWrite(A10, LOW);
+  digitalWrite(A11, LOW);
 }
 
