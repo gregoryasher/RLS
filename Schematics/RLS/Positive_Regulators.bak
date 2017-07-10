@@ -30,7 +30,9 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:arduino_shield
-LIBS:arduino_shieldsNCL
+LIBS:RA30421051
+LIBS:RB496EATR
+LIBS:Daughterboard_Connector
 LIBS:RLS-cache
 EELAYER 25 0
 EELAYER END
