@@ -30,7 +30,9 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:arduino_shield
-LIBS:arduino_shieldsNCL
+LIBS:RA30421051
+LIBS:RB496EATR
+LIBS:Daughterboard_Connector
 LIBS:RLS-cache
 EELAYER 25 0
 EELAYER END
@@ -62,15 +64,15 @@ $EndComp
 $Comp
 L LT1963 U10
 U 1 1 59530279
-P 5100 4850
+P 5200 4850
 AR Path="/5952FCB2/59530279" Ref="U10"  Part="1" 
 AR Path="/59595696/59530279" Ref="U10"  Part="1" 
-F 0 "U10" H 5150 5350 60  0000 C CNN
-F 1 "LT1963" H 5150 5450 60  0000 C CNN
-F 2 "TO_SOT_Packages_THT:TO-220-5_Pentawatt_Multiwatt-5_Vertical_StaggeredType1" H 5150 5350 60  0001 C CNN
-F 3 "" H 5150 5350 60  0001 C CNN
-	1    5100 4850
-	1    0    0    -1  
+F 0 "U10" H 5250 5350 60  0000 C CNN
+F 1 "LT1963" H 5250 5450 60  0000 C CNN
+F 2 "TO_SOT_Packages_THT:TO-220-5_Pentawatt_Multiwatt-5_Vertical_StaggeredType1" H 5250 5350 60  0001 C CNN
+F 3 "" H 5250 5350 60  0001 C CNN
+	1    5200 4850
+	-1   0    0    -1  
 $EndComp
 $Comp
 L AD5293-RESCUE-RLS U8
@@ -657,4 +659,14 @@ Wire Wire Line
 	3000 3150 3000 3250
 Wire Wire Line
 	3000 3250 2950 3250
+Text Label 4650 5300 0    40   ~ 0
++V2_ADJ
+Text Label 4650 2650 0    40   ~ 0
++V1_ADJ
+Text Label 2350 3000 2    40   ~ 0
++V1_EX_C
+Text Label 2350 5650 2    40   ~ 0
++V2_EX_C
+Text Label 2000 4200 1    40   ~ 0
++SDO_SDI
 $EndSCHEMATC

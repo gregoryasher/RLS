@@ -30,7 +30,9 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:arduino_shield
-LIBS:arduino_shieldsNCL
+LIBS:RA30421051
+LIBS:RB496EATR
+LIBS:Daughterboard_Connector
 LIBS:RLS-cache
 EELAYER 25 0
 EELAYER END
@@ -611,4 +613,14 @@ Wire Wire Line
 	3900 2650 3950 2650
 Wire Wire Line
 	3950 2650 3950 2550
+Text Label 5950 2250 1    40   ~ 0
+-V1_ADJ
+Text Label 5950 4900 1    40   ~ 0
+-V2_ADJ
+Text Label 3300 5050 2    40   ~ 0
+-V2_EX_C
+Text Label 3300 2400 2    40   ~ 0
+-V1_EX_C
+Text Label 2950 3500 1    40   ~ 0
+-SDO_SDI
 $EndSCHEMATC

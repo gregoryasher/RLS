@@ -30,7 +30,9 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:arduino_shield
-LIBS:arduino_shieldsNCL
+LIBS:RA30421051
+LIBS:RB496EATR
+LIBS:Daughterboard_Connector
 LIBS:RLS-cache
 EELAYER 25 0
 EELAYER END
@@ -244,7 +246,7 @@ U 1 1 595AB1DA
 P 5500 2400
 F 0 "R26" V 5325 2400 50  0000 C CNN
 F 1 "1K_POT" V 5400 2400 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Trimmer_Bourns_3296Y" H 5500 2400 50  0001 C CNN
+F 2 "Potentiometers:Potentiometer_Trimmer_Bourns_3266Y" H 5500 2400 50  0001 C CNN
 F 3 "" H 5500 2400 50  0001 C CNN
 	1    5500 2400
 	1    0    0    -1  
@@ -255,7 +257,7 @@ U 1 1 595AB23B
 P 5500 3000
 F 0 "R27" V 5325 3000 50  0000 C CNN
 F 1 "1K_POT" V 5400 3000 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Trimmer_Bourns_3296Y" H 5500 3000 50  0001 C CNN
+F 2 "Potentiometers:Potentiometer_Trimmer_Bourns_3266Y" H 5500 3000 50  0001 C CNN
 F 3 "" H 5500 3000 50  0001 C CNN
 	1    5500 3000
 	1    0    0    -1  
@@ -270,4 +272,8 @@ Wire Wire Line
 	5500 3300 5500 3250
 NoConn ~ 5500 3150
 NoConn ~ 5500 2250
+Text Label 4900 3250 0    60   ~ 0
+-ADJ
+Text Label 4900 2200 0    60   ~ 0
++ADJ
 $EndSCHEMATC
