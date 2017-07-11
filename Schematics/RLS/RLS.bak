@@ -1052,7 +1052,15 @@ Connection ~ 11025 2575
 Text Label 2250 1050 0    60   ~ 0
 DIN5
 Text Label 2150 800  3    60   ~ 0
-PSU15
+DIN+15
 Text Label 1300 1250 1    60   ~ 0
 DIN-15
+Text Label 1200 4750 2    60   ~ 0
+ARD_LED
+Text Label 1650 4750 0    60   ~ 0
+PSU_LED
+Text Label 1200 4300 2    60   ~ 0
+ARD_R
+Text Label 1650 4300 0    60   ~ 0
+PSU_R
 $EndSCHEMATC

@@ -305,4 +305,12 @@ Wire Wire Line
 Wire Wire Line
 	9350 1050 9350 1100
 Connection ~ 9350 1100
+Text Label 6300 2950 3    40   ~ 0
++SCP1
+Text Label 7700 1700 0    40   ~ 0
+SCP1_10X
+Text Label 8650 3150 1    40   ~ 0
++SCP2
+Text Label 10050 1850 0    40   ~ 0
+SCP2_10X
 $EndSCHEMATC
