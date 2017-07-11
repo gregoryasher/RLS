@@ -408,9 +408,9 @@ AGND
 Wire Wire Line
 	5300 1850 5650 1850
 Wire Wire Line
-	5500 1850 5500 1700
-Connection ~ 5500 1700
-Connection ~ 5500 1850
+	5350 1850 5350 1700
+Connection ~ 5350 1700
+Connection ~ 5350 1850
 Text GLabel 2450 5200 2    60   Input ~ 0
 -15V
 Text GLabel 2450 4600 2    60   Input ~ 0
@@ -498,9 +498,9 @@ Wire Wire Line
 Wire Wire Line
 	1600 4800 2250 4800
 Wire Wire Line
-	1900 4800 1900 4600
-Connection ~ 1900 4600
-Connection ~ 1900 4800
+	1700 4800 1700 4600
+Connection ~ 1700 4600
+Connection ~ 1700 4800
 Wire Wire Line
 	1300 4100 1700 4100
 Wire Wire Line
@@ -607,4 +607,28 @@ Text Notes 6550 4200 0    118  ~ 0
 -15V Buffer and Inverting Circuit
 Text Notes 8550 1000 0    118  ~ 0
 5V DC Fan with Thermal\nVoltage Control Circuit
+Text Label 2000 2100 2    60   ~ 0
++5_OVP
+Text Label 6050 1850 0    40   ~ 0
++15_DIV
+Text Label 5350 1800 0    40   ~ 0
++15_OVP
+Text Label 8900 2200 1    40   ~ 0
+VGS_FAN
+Text Label 10150 1800 1    40   ~ 0
+FAN_GND
+Text Label 1750 4800 0    40   ~ 0
+-5_OVP
+Text Label 2150 5350 0    40   ~ 0
+-5_BUFF
+Text Label 3600 5050 3    40   ~ 0
+-5_INV
+Text Label 6700 5200 0    40   ~ 0
+-15_OVP
+Text Label 7250 5300 0    40   ~ 0
+-15_DIV
+Text Label 7650 5850 0    40   ~ 0
+-15_BUFF
+Text Label 8900 5550 3    40   ~ 0
+-15_INV
 $EndSCHEMATC

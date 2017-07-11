@@ -95,7 +95,7 @@ AR Path="/5959581C/59596655" Ref="C39"  Part="1"
 AR Path="/595AEFB9/59596655" Ref="C39"  Part="1" 
 F 0 "C39" H 4325 2250 50  0000 L CNN
 F 1 "0.1uF" H 4325 2050 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" H 4338 2000 50  0001 C CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 4338 2000 50  0001 C CNN
 F 3 "" H 4300 2150 50  0001 C CNN
 	1    4300 2150
 	1    0    0    -1  
@@ -121,7 +121,7 @@ AR Path="/5959581C/59596B6C" Ref="C40"  Part="1"
 AR Path="/595AEFB9/59596B6C" Ref="C40"  Part="1" 
 F 0 "C40" H 4325 3350 50  0000 L CNN
 F 1 "0.1uF" H 4325 3150 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" H 4338 3100 50  0001 C CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 4338 3100 50  0001 C CNN
 F 3 "" H 4300 3250 50  0001 C CNN
 	1    4300 3250
 	1    0    0    -1  

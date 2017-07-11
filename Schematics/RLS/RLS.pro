@@ -1,4 +1,4 @@
-update=7/10/2017 12:15:40 AM
+update=7/10/2017 7:17:22 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -63,3 +63,13 @@ LibName31=arduino_shield
 LibName32=RLS_Library/RA30421051
 LibName33=RLS_Library/RB496EATR
 LibName34=RLS_Library/Daughterboard_Connector
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
