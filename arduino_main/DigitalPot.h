@@ -17,10 +17,11 @@ class DigitalPot {
 
   //sets the chip select pin for the appropriate set of positive or 
   //negative linear regulators 
-  DigitalPot(byte chipSelect);
+  DigitalPot();
 
   void setRes1(int resistor1);
   void setRes2(int resistor2);
+  void setCS(byte chipSel);
 
   //writes the requested resistor value to the set of potentiometers
   void writeValues(byte shdn1, byte shdn2);

@@ -18,10 +18,18 @@ class NegReg {
 
   //defaults second positive regulator to 0.0 if daughterboard does not
   //request an input voltage for it
-  NegReg(double volt1, double volt2 = 0.0);
+  NegReg(double volt1, double volt2);
+  NegReg(double volt1);
   
   void setV1(double volt1);
   void setV2(double volt2);
+
+  //getters for all regulator variables 
+  int getv1shdn();
+  int getv2shdn();
+  double getV1();
+  double getV2();
+  int getcs();
 
   //calculates required digital potentiometer values for the requested
   //input voltages and sets the digital potentiometer to calculated value 

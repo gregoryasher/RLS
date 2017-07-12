@@ -10,16 +10,25 @@
 #include "Arduino.h"
 #include "PosReg.h"
 #include "DigitalPot.h"
+#include <math.h>
 
 /*********************************************
    Constructor for positive linear regulators.
    Sets the positive digital potentiometer pin  
    to the appropriate chip enable.    
 **********************************************/
-PosReg::PosReg(double volt1, double volt2 = 0.0) {
+PosReg::PosReg(double volt1, double volt2) {
   v1 = volt1;
   v2 = volt2;
-  posPot = new DigitalPot(POS_CS);
+}
+
+/*********************************************
+   Constructor for regulators if only one 
+   voltage is requrested.
+**********************************************/
+PosReg::PosReg(double volt1) {
+  v1 = volt1;
+  v2 = 0.0;
 }
 
 /*********************************************
@@ -37,6 +46,41 @@ void PosReg::setV2(double volt2) {
 }
 
 /*********************************************
+   Getter for requested voltage input 1.  
+**********************************************/
+double PosReg::getV1() {
+  return v1;
+}
+
+/*********************************************
+   Getter for requested voltage input 2.  
+**********************************************/
+double PosReg::getV2() {
+  return v2;
+}
+
+/*********************************************
+   Getter for requested chip select.  
+**********************************************/
+int PosReg::getcs() {
+  return POS_CS;
+}
+
+/*********************************************
+   Setter for v1's shutdown pin 
+**********************************************/
+int PosReg::getv1shdn() {
+  return V1_PLUS_SHDN;
+}
+
+/*********************************************
+   Setter for v2's shutdown pin 
+**********************************************/
+int PosReg::getv2shdn() {
+  return V2_PLUS_SHDN;
+}
+
+/*********************************************
    Takes in requested voltage values and 
    converts them into the appropriate 
    integer potentiometer resistance values.
@@ -44,6 +88,10 @@ void PosReg::setV2(double volt2) {
    resistance(s).
 **********************************************/
 void PosReg::calculatePotValue(double volt1, double volt2) {
+
+  //sets the associated potentiometer to 
+  //appropriate chip select pin
+  posPot.setCS(getcs());
 
   //calculates pot values as an integer
   int posDigRes1 = posPotCalc(volt1);
@@ -75,17 +123,36 @@ void PosReg::calculatePotValue(double volt1, double volt2) {
    integer.
 **********************************************/
 int PosReg::posPotCalc(double vin){  
+  double vReq;
   int posPotRes;
 
   //calculation to determine potentiometer 
   //resistance for the particular positive regulator
   if (vin > 1.21) {
-    posPotRes = ((vin - 1.21) / ((1.21 / 1780.0) + 0.000003));
+    vReq = ((vin - 1.21) / ((1.21 / 1780.0) + 0.000003));
   }
   else {
-    posPotRes = 0;
+    vReq = 0;
   }
-  
+
+  //determines the data that will be sent 
+  //through the digital potentiometer bus
+  double resDataVal = ((vReq / 20000.0) * 1024.0) + 0.5;
+  posPotRes = round(resDataVal) + 1024;
+
+  //if data is not within appropriate bounds to send,
+  //it is clipped
+  if (posPotRes > 2047)
+  {
+    posPotRes = 2047;
+  }
+  if (posPotRes < 400)
+  {
+    posPotRes = 400;
+  }
+
+  //returns the positive pot resistance data to step
+  //the digital potentiometer to the closest bit
   return posPotRes;
 }
 
