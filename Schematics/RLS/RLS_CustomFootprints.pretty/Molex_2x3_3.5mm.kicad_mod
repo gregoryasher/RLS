@@ -1,5 +1,5 @@
-(module RLS_CustomFootprints:Molex_UltraFit_6pin_3.50mm (layer F.Cu) (tedit 595F4908)
-  (fp_text reference REF** (at 0 0) (layer F.SilkS)
+(module Molex_2x3_3.5mm (layer F.Cu) (tedit 596521A2)
+  (fp_text reference REF** (at 0 0) (layer F.SilkS) hide
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (fp_text value Molex_UltraFit_6pin_3.50mm (at 0 -9) (layer F.Fab)

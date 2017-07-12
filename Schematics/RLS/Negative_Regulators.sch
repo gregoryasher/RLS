@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:RLS-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,7 +28,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:arduino_shield
 LIBS:RA30421051
 LIBS:RB496EATR
 LIBS:Daughterboard_Connector
@@ -54,7 +52,7 @@ U 1 1 5952FBCC
 P 6100 4250
 F 0 "U6" H 6150 4750 60  0000 C CNN
 F 1 "LT3015" H 6150 4850 60  0000 C CNN
-F 2 "TO_SOT_Packages_THT:TO-220-5_Pentawatt_Multiwatt-5_Vertical_StaggeredType1" H 6150 4750 60  0001 C CNN
+F 2 "RLS_CustomFootprints:TO-220-5_Vertical_Type1_w_Heatsink" H 6150 4750 60  0001 C CNN
 F 3 "" H 6150 4750 60  0001 C CNN
 	1    6100 4250
 	-1   0    0    -1  
@@ -344,7 +342,7 @@ U 1 1 595A20C2
 P 6100 1600
 F 0 "U7" H 6150 2100 60  0000 C CNN
 F 1 "LT3015" H 6150 2200 60  0000 C CNN
-F 2 "TO_SOT_Packages_THT:TO-220-5_Pentawatt_Multiwatt-5_Vertical_StaggeredType1" H 6150 2100 60  0001 C CNN
+F 2 "RLS_CustomFootprints:TO-220-5_Vertical_Type1_w_Heatsink" H 6150 2100 60  0001 C CNN
 F 3 "" H 6150 2100 60  0001 C CNN
 	1    6100 1600
 	-1   0    0    -1  

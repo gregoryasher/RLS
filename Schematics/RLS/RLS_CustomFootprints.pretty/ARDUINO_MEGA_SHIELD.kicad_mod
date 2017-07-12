@@ -1,5 +1,5 @@
-(module ARDUINO_MEGA_SHIELD (layer F.Cu) (tedit 59635276)
-  (fp_text reference SHIELD1 (at 24.13 -2.54) (layer F.SilkS) hide
+(module ARDUINO_MEGA_SHIELD locked (layer F.Cu) (tedit 596559C7)
+  (fp_text reference U1 (at 17.145 -3.175) (layer F.SilkS) hide
     (effects (font (thickness 0.3048)))
   )
   (fp_text value ARDUINO_MEGA_SHIELD (at 24.13 -6.35) (layer F.Fab)
@@ -60,10 +60,6 @@
   (pad GND3 thru_hole oval (at 50.8 75.184 180) (size 2.4 1.524) (drill 0.8128) (layers *.Cu *.Mask F.SilkS))
   (pad AREF thru_hole oval (at 50.8 77.724 180) (size 2.4 1.524) (drill 0.8128) (layers *.Cu *.Mask F.SilkS))
   (pad 5V thru_hole oval (at 2.54 63.5 180) (size 2.54 1.524) (drill 0.8128) (layers *.Cu *.Mask F.SilkS))
-  (pad "" thru_hole circle (at 2.54 5.08 180) (size 2.5 2.5) (drill 2.2) (layers *.Cu *.Mask F.SilkS))
-  (pad "" thru_hole circle (at 50.8 11.43 180) (size 2.5 2.5) (drill 2.2) (layers *.Cu *.Mask F.SilkS))
-  (pad "" thru_hole circle (at 50.8 86.36 180) (size 2.5 2.5) (drill 2.2) (layers *.Cu *.Mask F.SilkS))
-  (pad "" thru_hole circle (at 2.54 87.63 180) (size 2.5 2.5) (drill 2.2) (layers *.Cu *.Mask F.SilkS))
   (pad 22 thru_hole circle (at 48.26 7.62 270) (size 1.524 1.524) (drill 0.8128) (layers *.Cu *.Mask F.SilkS))
   (pad 23 thru_hole circle (at 48.26 5.08 270) (size 1.524 1.524) (drill 0.8128) (layers *.Cu *.Mask F.SilkS))
   (pad 24 thru_hole circle (at 45.72 7.62 270) (size 1.524 1.524) (drill 0.8128) (layers *.Cu *.Mask F.SilkS))
