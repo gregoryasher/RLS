@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:RLS-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,7 +28,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:arduino_shield
 LIBS:RA30421051
 LIBS:RB496EATR
 LIBS:Daughterboard_Connector
@@ -437,7 +435,7 @@ U 1 1 594B028E
 P 2450 750
 F 0 "F3" H 2450 690 50  0000 C CNN
 F 1 "4A" H 2450 810 50  0000 C CNN
-F 2 "Fuse_Holders_and_Fuses:Fuse_SMD2920" H 2450 750 50  0001 C CNN
+F 2 "RLS_CustomFootprints:Fuse_SMD_Custom" H 2450 750 50  0001 C CNN
 F 3 "" H 2450 750 50  0001 C CNN
 	1    2450 750 
 	-1   0    0    -1  
@@ -448,7 +446,7 @@ U 1 1 594B02D1
 P 1950 750
 F 0 "F2" H 1950 690 50  0000 C CNN
 F 1 "1.5A" H 1950 810 50  0000 C CNN
-F 2 "Fuse_Holders_and_Fuses:Fuse_SMD2920" H 1950 750 50  0001 C CNN
+F 2 "RLS_CustomFootprints:Fuse_SMD_Custom" H 1950 750 50  0001 C CNN
 F 3 "" H 1950 750 50  0001 C CNN
 	1    1950 750 
 	1    0    0    -1  
@@ -459,7 +457,7 @@ U 1 1 594B0320
 P 1150 1250
 F 0 "F1" H 1150 1190 50  0000 C CNN
 F 1 "1A" H 1150 1310 50  0000 C CNN
-F 2 "Fuse_Holders_and_Fuses:Fuse_SMD2920" H 1150 1250 50  0001 C CNN
+F 2 "RLS_CustomFootprints:Fuse_SMD_Custom" H 1150 1250 50  0001 C CNN
 F 3 "" H 1150 1250 50  0001 C CNN
 	1    1150 1250
 	1    0    0    -1  

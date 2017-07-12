@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:RLS-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,7 +28,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:arduino_shield
 LIBS:RA30421051
 LIBS:RB496EATR
 LIBS:Daughterboard_Connector
@@ -56,7 +54,7 @@ AR Path="/5952FCB2/5953022A" Ref="U11"  Part="1"
 AR Path="/59595696/5953022A" Ref="U11"  Part="1" 
 F 0 "U11" H 5250 2700 60  0000 C CNN
 F 1 "LT1963" H 5250 2800 60  0000 C CNN
-F 2 "TO_SOT_Packages_THT:TO-220-5_Pentawatt_Multiwatt-5_Vertical_StaggeredType1" H 5250 2700 60  0001 C CNN
+F 2 "RLS_CustomFootprints:TO-220-5_Vertical_Type1_w_Heatsink" H 5250 2700 60  0001 C CNN
 F 3 "" H 5250 2700 60  0001 C CNN
 	1    5200 2200
 	-1   0    0    -1  
@@ -69,7 +67,7 @@ AR Path="/5952FCB2/59530279" Ref="U10"  Part="1"
 AR Path="/59595696/59530279" Ref="U10"  Part="1" 
 F 0 "U10" H 5250 5350 60  0000 C CNN
 F 1 "LT1963" H 5250 5450 60  0000 C CNN
-F 2 "TO_SOT_Packages_THT:TO-220-5_Pentawatt_Multiwatt-5_Vertical_StaggeredType1" H 5250 5350 60  0001 C CNN
+F 2 "RLS_CustomFootprints:TO-220-5_Vertical_Type1_w_Heatsink" H 5250 5350 60  0001 C CNN
 F 3 "" H 5250 5350 60  0001 C CNN
 	1    5200 4850
 	-1   0    0    -1  
@@ -221,7 +219,7 @@ Wire Wire Line
 Wire Wire Line
 	3300 4350 3200 4350
 Wire Wire Line
-	3300 4650 3200 4650
+	3200 4650 3300 4650
 Connection ~ 3200 4650
 Text GLabel 3200 4250 1    60   Input ~ 0
 +15V
@@ -519,7 +517,7 @@ F 3 "" H 5400 3100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4900 2950 4900 2850
+	4900 2850 4900 2950
 Connection ~ 4900 2850
 Wire Wire Line
 	4600 3250 4600 3400
@@ -606,7 +604,7 @@ F 3 "" H 5400 5750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4900 5600 4900 5500
+	4900 5500 4900 5600
 Connection ~ 4900 5500
 Wire Wire Line
 	4600 5900 4600 6050

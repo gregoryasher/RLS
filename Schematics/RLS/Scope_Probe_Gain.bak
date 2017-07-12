@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:RLS-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,7 +28,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:arduino_shield
 LIBS:RA30421051
 LIBS:RB496EATR
 LIBS:Daughterboard_Connector
