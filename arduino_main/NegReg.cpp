@@ -10,30 +10,74 @@
 #include "Arduino.h"
 #include "NegReg.h"
 #include "DigitalPot.h"
+#include <math.h>
 
 /*********************************************
    Constructor for negative linear regulators.
    Sets the negative digital potentiometer pin  
    to the appropriate chip enable.    
 **********************************************/
-NegReg::NegReg(double volt1, double volt2 = 0.0) {
+NegReg::NegReg(double volt1, double volt2) {
   v1 = volt1;
   v2 = volt2;
-  negPot = new DigitalPot(NEG_CS);
 }
 
 /*********************************************
-   Mutator for requested voltage input 1.  
+   Constructor for regulators if only one 
+   voltage is requrested.
+**********************************************/
+NegReg::NegReg(double volt1) {
+  v1 = volt1;
+  v2 = 0.0;
+}
+
+/*********************************************
+   Setter for requested voltage input 1.  
 **********************************************/
 void NegReg::setV1(double volt1) {
   v1 = volt1;
 }
 
 /*********************************************
-   Mutator for requested voltage input 2.  
+   Setter for requested voltage input 2.  
 **********************************************/
 void NegReg::setV2(double volt2) {
   v2 = volt2;
+}
+
+/*********************************************
+   Getter for requested voltage input 1.  
+**********************************************/
+double NegReg::getV1() {
+  return v1;
+}
+
+/*********************************************
+   Getter for requested voltage input 2.  
+**********************************************/
+double NegReg::getV2() {
+  return v2;
+}
+
+/*********************************************
+   Getter for requested chip select.  
+**********************************************/
+int NegReg::getcs() {
+  return NEG_CS;
+}
+
+/*********************************************
+   Setter for v1's shutdown pin 
+**********************************************/
+int NegReg::getv1shdn() {
+  return V1_MINUS_SHDN;
+}
+
+/*********************************************
+   Setter for v2's shutdown pin 
+**********************************************/
+int NegReg::getv2shdn() {
+  return V2_MINUS_SHDN;
 }
 
 /*********************************************
@@ -45,6 +89,10 @@ void NegReg::setV2(double volt2) {
 **********************************************/
 void NegReg::calculatePotValue(double volt1, double volt2) {  
 
+  //sets the associated potentiometer to 
+  //appropriate chip select pin
+  negPot.setCS(getcs());
+  
   //calculates pot values as an integer
   int negDigRes1 = negPotCalc(volt1);
   int negDigRes2 = negPotCalc(volt2);
@@ -75,16 +123,35 @@ void NegReg::calculatePotValue(double volt1, double volt2) {
    integer.
 **********************************************/
 int NegReg::negPotCalc(double vin){  
+  double vReq;
   int negPotRes;
-
+  
   //calculation to determine potentiometer 
   //resistance for the particular negative regulator
   if (vin < -1.22) {
-    negPotRes = ((vin + 1.22) / ((-1.22 / 1780.0) + 0.00000003));
+    vReq = ((vin + 1.22) / ((-1.22 / 1780.0) + 0.00000003));
   }
   else {
-    negPotRes = 0;
+    vReq = 0.0;
   }
-  
+
+  //determines the data that will be sent 
+  //through the digital potentiometer bus
+  double resDataVal = ((vReq / 20000.0) * 1024.0) + 0.5;
+  negPotRes = round(resDataVal) + 1024;
+
+  //if data is not within appropriate bounds to send,
+  //it is clipped
+  if (negPotRes > 2047)
+  {
+    negPotRes = 2047;
+  }
+  if (negPotRes < 400)
+  {
+    negPotRes = 400;
+  }
+
+  //returns the negative pot resistance data to step
+  //the digital potentiometer to the closest bit
   return negPotRes;
 }

@@ -12,25 +12,29 @@
 #include <SPI.h>
 
 /*********************************************
-   Mutator for chip select associated with set
-   of digital potentiometers. 
+   Default constructor for digital pot.
 **********************************************/
-DigitalPot::DigitalPot(byte chipSelect) {
-  chipSel = chipSelect;
-}
+DigitalPot::DigitalPot() {};
 
 /*********************************************
-   Mutator for required resistance 1.
+   Setters for required resistance 1.
 **********************************************/
 void DigitalPot::setRes1(int resistor1) {
   res1 = resistor1;
 }
 
 /*********************************************
-   Mutator for required resistance 2.
+   Setter for required resistance 2.
 **********************************************/
 void DigitalPot::setRes2(int resistor2) {
   res2 = resistor2;
+}
+
+/*********************************************
+   Setter for required chip enable.
+**********************************************/
+void DigitalPot::setCS(byte chipsel) {
+  chipSel = chipsel;
 }
 
 /*********************************************
@@ -38,10 +42,6 @@ void DigitalPot::setRes2(int resistor2) {
    digital potentiometers.
 **********************************************/
 void DigitalPot::writeValues(byte shdn1, byte shdn2) {
-
-  //converts integer resistances to hex
-  byte res1hex[] {res1 >> 8, res1};
-  byte res2hex[] {res2 >> 8, res2};
 
   //shuts down regulators while writing to pots
   checkShutdowns(shdn1, shdn2);
@@ -56,8 +56,8 @@ void DigitalPot::writeValues(byte shdn1, byte shdn2) {
 
   //writes the requested resistance to the pots
   digitalWrite(chipSel, LOW);
-  SPI.transfer16(res1hex);
-  SPI.transfer16(res2hex);
+  SPI.transfer16(res1);
+  SPI.transfer16(res2);
   digitalWrite(chipSel, HIGH); 
   
   delay(50);

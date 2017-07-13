@@ -74,7 +74,7 @@ int r3_state = 1;  // bottom potentiometer
 
 
 void DB3::configurePins() {
-    pinMode(switch_In1, OUTPUT); 
+  pinMode(switch_In1, OUTPUT); 
 	pinMode(pot1_sdaPin, OUTPUT);
 	pinMode(pot1_sclPin, OUTPUT);
 	pinMode(pot1_address, OUTPUT);
