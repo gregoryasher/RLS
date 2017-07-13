@@ -1,4 +1,4 @@
-update=7/11/2017 6:27:02 PM
+update=7/13/2017 02:34:31
 version=1
 last_client=kicad
 [cvpcb]
@@ -6,25 +6,6 @@ version=1
 NetIExt=net
 [general]
 version=1
-[pcbnew]
-version=1
-PageLayoutDescrFile=
-LastNetListRead=RLS_NetList.net
-PadDrill=0.762
-PadDrillOvalY=0.762
-PadSizeH=1.524
-PadSizeV=1.524
-PcbTextSizeV=1.5
-PcbTextSizeH=1.5
-PcbTextThickness=0.3
-ModuleTextSizeV=1
-ModuleTextSizeH=1
-ModuleTextSizeThickness=0.15
-SolderMaskClearance=0.2
-SolderMaskMinWidth=0
-DrawSegmentWidth=0.2
-BoardOutlineThickness=0.15
-ModuleOutlineThickness=0.15
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
@@ -72,3 +53,22 @@ LibName30=RLS_Library/RA30421051
 LibName31=RLS_Library/RB496EATR
 LibName32=RLS_Library/Daughterboard_Connector
 LibName33=RLS_Library/RLS-cache
+[pcbnew]
+version=1
+PageLayoutDescrFile=
+LastNetListRead=RLS_NetList.net
+PadDrill=1.02
+PadDrillOvalY=1.02
+PadSizeH=2
+PadSizeV=2
+PcbTextSizeV=1.5
+PcbTextSizeH=1.5
+PcbTextThickness=0.3
+ModuleTextSizeV=1
+ModuleTextSizeH=1
+ModuleTextSizeThickness=0.15
+SolderMaskClearance=0.2
+SolderMaskMinWidth=0
+DrawSegmentWidth=0.2
+BoardOutlineThickness=0.15
+ModuleOutlineThickness=0.15
