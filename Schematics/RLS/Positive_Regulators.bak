@@ -38,9 +38,9 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 7
 Title "Remote Lab System"
-Date ""
-Rev ""
-Comp ""
+Date "2017-07-18"
+Rev "15"
+Comp "University of Washington, Bothell"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -74,7 +74,7 @@ U 1 1 595A3981
 P 3100 5300
 F 0 "U17" H 2550 5700 50  0000 L CNN
 F 1 "AD5293" H 3400 5700 50  0000 L CNN
-F 2 "SMD_Packages:SSOP-14" H 3100 5300 50  0001 C CNN
+F 2 "Housings_SSOP:TSSOP-14_4.4x5mm_Pitch0.65mm" H 3100 5300 50  0001 C CNN
 F 3 "" H 3100 5300 50  0001 C CNN
 	1    3100 5300
 	1    0    0    -1  
@@ -85,7 +85,7 @@ U 1 1 595A3988
 P 3100 2650
 F 0 "U16" H 2550 3050 50  0000 L CNN
 F 1 "AD5293" H 3400 3050 50  0000 L CNN
-F 2 "SMD_Packages:SSOP-14" H 3100 2650 50  0001 C CNN
+F 2 "Housings_SSOP:TSSOP-14_4.4x5mm_Pitch0.65mm" H 3100 2650 50  0001 C CNN
 F 3 "" H 3100 2650 50  0001 C CNN
 	1    3100 2650
 	1    0    0    -1  
