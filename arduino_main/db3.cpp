@@ -85,6 +85,14 @@ void DB3::configurePins() {
 	// set the address of both pots to be different
 	digitalWrite(pot1_address, LOW);
 	digitalWrite(pot2_address, HIGH);
+
+  // configures the V1+ and V1- of the arduino to the specified voltage (+/- 6V for this daughterboard)
+  PosReg posReg(6.0);
+  NegReg negReg(-6.0);
+
+  //adjuts the pot value to allow the regulators to output the specified voltage(s)
+  posReg.calculatePotValue(posReg.getV1(), posReg.getV2());
+  negReg.calculatePotValue(negReg.getV1(), negReg.getV2());
 }
 
 void DB3::execute(String Board_3_Serial) {
