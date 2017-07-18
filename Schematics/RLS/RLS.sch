@@ -38,9 +38,9 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 7
 Title "Remote Lab System"
-Date ""
-Rev ""
-Comp ""
+Date "2017-07-18"
+Rev "15"
+Comp "University of Washington, Bothell"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -615,13 +615,13 @@ SCLK
 Text GLabel 2950 4600 0    60   Input ~ 0
 MOSI
 Text GLabel 2950 3200 0    60   Input ~ 0
-+V1_SHDN
-Text GLabel 2950 3300 0    60   Input ~ 0
 +V2_SHDN
+Text GLabel 2950 3300 0    60   Input ~ 0
++V1_SHDN
 Text GLabel 2950 3400 0    60   Input ~ 0
--V1_SHDN
-Text GLabel 2950 3500 0    60   Input ~ 0
 -V2_SHDN
+Text GLabel 2950 3500 0    60   Input ~ 0
+-V1_SHDN
 $Sheet
 S 2150 6400 500  500 
 U 5959581C

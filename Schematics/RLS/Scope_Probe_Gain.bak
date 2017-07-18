@@ -38,9 +38,9 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 7
 Title "Remote Lab System"
-Date ""
-Rev ""
-Comp ""
+Date "2017-07-18"
+Rev "15"
+Comp "University of Washington, Bothell"
 Comment1 ""
 Comment2 ""
 Comment3 ""
