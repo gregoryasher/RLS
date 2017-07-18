@@ -47,15 +47,15 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text GLabel 7050 1250 1    60   Input ~ 0
-AD4
+SCL
 Text GLabel 7150 1250 1    60   Input ~ 0
-AD5
+SDA
 Text GLabel 7250 1250 1    60   Input ~ 0
-AD6
+SCLK
 Text GLabel 7350 1250 1    60   Input ~ 0
-AD7
+MOSI
 Text GLabel 7450 1250 1    60   Input ~ 0
-AD8
+MISO
 Text GLabel 7550 1250 1    60   Input ~ 0
 AD9
 Text GLabel 7650 1250 1    60   Input ~ 0
@@ -330,16 +330,6 @@ Text GLabel 7150 6050 3    60   Input ~ 0
 L2D2
 Text GLabel 7050 6050 3    60   Input ~ 0
 L2D0
-Text GLabel 4850 2400 2    60   Input ~ 0
-AD4
-Text GLabel 4850 2300 2    60   Input ~ 0
-AD5
-Text GLabel 4850 2200 2    60   Input ~ 0
-AD6
-Text GLabel 4850 2100 2    60   Input ~ 0
-AD7
-Text GLabel 4850 1900 2    60   Input ~ 0
-AD8
 Text GLabel 4850 1800 2    60   Input ~ 0
 AD9
 Text GLabel 4850 1700 2    60   Input ~ 0
@@ -463,10 +453,10 @@ F 3 "" H 1150 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X10 J6
+L CONN_01X10 J1
 U 1 1 594B108D
 P 1300 2650
-F 0 "J6" H 1300 3200 50  0000 C CNN
+F 0 "J1" H 1300 3200 50  0000 C CNN
 F 1 "ADS1115" V 1400 2650 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x10_Pitch2.54mm" H 1300 2650 50  0001 C CNN
 F 3 "" H 1300 2650 50  0001 C CNN
@@ -618,7 +608,7 @@ F1 "Positive_Regulators.sch" 60
 $EndSheet
 Text GLabel 2950 4400 0    60   Input ~ 0
 N_POT_CE
-Text GLabel 2950 4700 0    60   Input ~ 0
+Text GLabel 2950 4950 0    60   Input ~ 0
 P_POT_CE
 Text GLabel 2950 4500 0    60   Input ~ 0
 SCLK
@@ -641,7 +631,6 @@ $EndSheet
 NoConn ~ 2950 4150
 NoConn ~ 2950 4250
 NoConn ~ 2950 4850
-NoConn ~ 2950 4950
 NoConn ~ 2950 2000
 NoConn ~ 2950 1700
 NoConn ~ 2950 1600
@@ -745,10 +734,10 @@ F 3 "" H 1650 5000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R30
+L R R1
 U 1 1 595DC99A
 P 1200 4500
-F 0 "R30" V 1280 4500 50  0000 C CNN
+F 0 "R1" V 1280 4500 50  0000 C CNN
 F 1 "4.7K" V 1200 4500 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 1130 4500 50  0001 C CNN
 F 3 "" H 1200 4500 50  0001 C CNN
@@ -756,10 +745,10 @@ F 3 "" H 1200 4500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R31
+L R R2
 U 1 1 595DCB07
 P 1650 4500
-F 0 "R31" V 1730 4500 50  0000 C CNN
+F 0 "R2" V 1730 4500 50  0000 C CNN
 F 1 "4.7K" V 1650 4500 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 1580 4500 50  0001 C CNN
 F 3 "" H 1650 4500 50  0001 C CNN
@@ -768,9 +757,9 @@ F 3 "" H 1650 4500 50  0001 C CNN
 $EndComp
 Text GLabel 2950 1800 0    60   Input ~ 0
 AD_LED
-Text GLabel 1200 3900 1    60   Input ~ 0
+Text GLabel 1200 4350 1    60   Input ~ 0
 AD_LED
-Text GLabel 1650 3900 1    60   Input ~ 0
+Text GLabel 1650 4350 1    60   Input ~ 0
 +5V_LED
 Text GLabel 1400 5250 3    60   Input ~ 0
 AGND
@@ -813,36 +802,24 @@ Wire Wire Line
 Wire Wire Line
 	2150 750  2050 750 
 Wire Wire Line
-	850  1250 950  1250
+	850  1250 1050 1250
 Wire Wire Line
-	950  1250 1050 1250
-Wire Wire Line
-	1350 750  1600 750 
-Wire Wire Line
-	1600 750  1850 750 
+	1350 750  1850 750 
 Wire Wire Line
 	1350 1250 1250 1250
 Wire Wire Line
 	1500 2300 1850 2300
 Wire Wire Line
-	1850 2300 1850 2450
-Wire Wire Line
-	1850 2450 1850 2600
+	1850 2300 1850 2600
 Wire Wire Line
 	1850 2600 1500 2600
 Wire Wire Line
 	1850 2450 1950 2450
 Connection ~ 1850 2450
 Wire Wire Line
-	10975 2575 11025 2575
+	10975 2575 11100 2575
 Wire Wire Line
-	11025 2575 11100 2575
-Wire Wire Line
-	11025 2575 11025 2750
-Wire Wire Line
-	11025 2750 11025 2950
-Wire Wire Line
-	11025 2950 11025 3125
+	11025 2575 11025 3125
 Wire Wire Line
 	11025 3125 10975 3125
 Wire Wire Line
@@ -860,33 +837,19 @@ Wire Notes Line
 Wire Notes Line
 	9325 1525 9325 975 
 Wire Wire Line
-	1700 950  1750 950 
-Wire Wire Line
-	1750 950  1950 950 
+	1700 950  1950 950 
 Wire Wire Line
 	1750 950  1750 1050
 Wire Wire Line
-	1000 1450 1250 1450
-Wire Wire Line
-	1250 1450 1350 1450
+	1000 1450 1350 1450
 Wire Wire Line
 	1250 1450 1250 1600
 Connection ~ 1250 1450
 Connection ~ 1750 950 
 Wire Wire Line
-	10100 4050 10100 4150
+	10100 4050 10100 4550
 Wire Wire Line
-	10100 4150 10100 4250
-Wire Wire Line
-	10100 4250 10100 4350
-Wire Wire Line
-	10100 4350 10100 4450
-Wire Wire Line
-	10100 4450 10100 4550
-Wire Wire Line
-	10050 4550 10100 4550
-Wire Wire Line
-	10100 4550 10150 4550
+	10050 4550 10150 4550
 Wire Wire Line
 	10050 4450 10100 4450
 Connection ~ 10100 4450
@@ -903,19 +866,9 @@ Connection ~ 10100 4550
 Wire Wire Line
 	10050 3450 10100 3450
 Wire Wire Line
-	10100 3450 10100 3550
+	10100 3450 10100 3950
 Wire Wire Line
-	10100 3550 10100 3650
-Wire Wire Line
-	10100 3650 10100 3750
-Wire Wire Line
-	10100 3750 10100 3850
-Wire Wire Line
-	10100 3850 10100 3950
-Wire Wire Line
-	10050 3950 10100 3950
-Wire Wire Line
-	10100 3950 10150 3950
+	10050 3950 10150 3950
 Wire Wire Line
 	10050 3850 10100 3850
 Connection ~ 10100 3850
@@ -940,16 +893,12 @@ Wire Wire Line
 Wire Wire Line
 	2250 750  2250 1450
 Wire Wire Line
-	2550 750  2650 750 
-Wire Wire Line
-	2650 750  2800 750 
+	2550 750  2800 750 
 Connection ~ 2650 750 
 Wire Wire Line
 	1650 5200 1650 5150
 Wire Wire Line
-	1200 5200 1400 5200
-Wire Wire Line
-	1400 5200 1650 5200
+	1200 5200 1650 5200
 Wire Wire Line
 	1200 5200 1200 5150
 Wire Wire Line
@@ -960,17 +909,9 @@ Wire Wire Line
 Wire Wire Line
 	1200 4650 1200 4850
 Wire Wire Line
-	1200 4250 1200 4350
-Wire Wire Line
-	1650 4250 1650 4350
-Wire Wire Line
 	2650 750  2650 900 
 Wire Wire Line
 	2650 900  2800 900 
-Wire Wire Line
-	1200 3900 1200 3950
-Wire Wire Line
-	1650 3900 1650 3950
 Wire Wire Line
 	10050 2750 10575 2750
 Wire Wire Line
@@ -988,15 +929,9 @@ Wire Wire Line
 Wire Wire Line
 	10575 3125 10675 3125
 Wire Wire Line
-	7950 2575 8025 2575
+	7950 2575 8125 2575
 Wire Wire Line
-	8025 2575 8125 2575
-Wire Wire Line
-	8025 2575 8025 2750
-Wire Wire Line
-	8025 2750 8025 2950
-Wire Wire Line
-	8025 2950 8025 3125
+	8025 2575 8025 3125
 Wire Wire Line
 	8025 3125 8125 3125
 Wire Wire Line
@@ -1081,30 +1016,11 @@ Text Label 1200 4750 2    60   ~ 0
 ARD_LED
 Text Label 1650 4750 0    60   ~ 0
 PSU_LED
-Text Label 1650 4300 0    60   ~ 0
-PSU_R
-Text Label 1200 4300 2    60   ~ 0
-ARD_R
-$Comp
-L R R32
-U 1 1 595DF587
-P 1200 4100
-F 0 "R32" V 1280 4100 50  0000 C CNN
-F 1 "4.7K" V 1200 4100 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 1130 4100 50  0001 C CNN
-F 3 "" H 1200 4100 50  0001 C CNN
-	1    1200 4100
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R33
-U 1 1 595DF58E
-P 1650 4100
-F 0 "R33" V 1730 4100 50  0000 C CNN
-F 1 "4.7K" V 1650 4100 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 1580 4100 50  0001 C CNN
-F 3 "" H 1650 4100 50  0001 C CNN
-	1    1650 4100
-	1    0    0    -1  
-$EndComp
+Text GLabel 2950 4700 0    60   Input ~ 0
+MISO
+NoConn ~ 4850 1900
+NoConn ~ 4850 2100
+NoConn ~ 4850 2200
+NoConn ~ 4850 2300
+NoConn ~ 4850 2400
 $EndSCHEMATC

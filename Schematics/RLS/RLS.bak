@@ -47,15 +47,15 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text GLabel 7050 1250 1    60   Input ~ 0
-AD4
+SCL
 Text GLabel 7150 1250 1    60   Input ~ 0
-AD5
+SDA
 Text GLabel 7250 1250 1    60   Input ~ 0
-AD6
+SCLK
 Text GLabel 7350 1250 1    60   Input ~ 0
-AD7
+MOSI
 Text GLabel 7450 1250 1    60   Input ~ 0
-AD8
+MISO
 Text GLabel 7550 1250 1    60   Input ~ 0
 AD9
 Text GLabel 7650 1250 1    60   Input ~ 0
@@ -330,16 +330,6 @@ Text GLabel 7150 6050 3    60   Input ~ 0
 L2D2
 Text GLabel 7050 6050 3    60   Input ~ 0
 L2D0
-Text GLabel 4850 2400 2    60   Input ~ 0
-AD4
-Text GLabel 4850 2300 2    60   Input ~ 0
-AD5
-Text GLabel 4850 2200 2    60   Input ~ 0
-AD6
-Text GLabel 4850 2100 2    60   Input ~ 0
-AD7
-Text GLabel 4850 1900 2    60   Input ~ 0
-AD8
 Text GLabel 4850 1800 2    60   Input ~ 0
 AD9
 Text GLabel 4850 1700 2    60   Input ~ 0
@@ -463,10 +453,10 @@ F 3 "" H 1150 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X10 J6
+L CONN_01X10 J1
 U 1 1 594B108D
 P 1300 2650
-F 0 "J6" H 1300 3200 50  0000 C CNN
+F 0 "J1" H 1300 3200 50  0000 C CNN
 F 1 "ADS1115" V 1400 2650 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x10_Pitch2.54mm" H 1300 2650 50  0001 C CNN
 F 3 "" H 1300 2650 50  0001 C CNN
@@ -618,7 +608,7 @@ F1 "Positive_Regulators.sch" 60
 $EndSheet
 Text GLabel 2950 4400 0    60   Input ~ 0
 N_POT_CE
-Text GLabel 2950 4700 0    60   Input ~ 0
+Text GLabel 2950 4950 0    60   Input ~ 0
 P_POT_CE
 Text GLabel 2950 4500 0    60   Input ~ 0
 SCLK
@@ -641,7 +631,6 @@ $EndSheet
 NoConn ~ 2950 4150
 NoConn ~ 2950 4250
 NoConn ~ 2950 4850
-NoConn ~ 2950 4950
 NoConn ~ 2950 2000
 NoConn ~ 2950 1700
 NoConn ~ 2950 1600
@@ -745,10 +734,10 @@ F 3 "" H 1650 5000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R30
+L R R1
 U 1 1 595DC99A
 P 1200 4500
-F 0 "R30" V 1280 4500 50  0000 C CNN
+F 0 "R1" V 1280 4500 50  0000 C CNN
 F 1 "4.7K" V 1200 4500 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 1130 4500 50  0001 C CNN
 F 3 "" H 1200 4500 50  0001 C CNN
@@ -756,10 +745,10 @@ F 3 "" H 1200 4500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R31
+L R R2
 U 1 1 595DCB07
 P 1650 4500
-F 0 "R31" V 1730 4500 50  0000 C CNN
+F 0 "R2" V 1730 4500 50  0000 C CNN
 F 1 "4.7K" V 1650 4500 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 1580 4500 50  0001 C CNN
 F 3 "" H 1650 4500 50  0001 C CNN
@@ -768,36 +757,14 @@ F 3 "" H 1650 4500 50  0001 C CNN
 $EndComp
 Text GLabel 2950 1800 0    60   Input ~ 0
 AD_LED
-Text GLabel 1200 3900 1    60   Input ~ 0
+Text GLabel 1200 4350 1    60   Input ~ 0
 AD_LED
-Text GLabel 1650 3900 1    60   Input ~ 0
+Text GLabel 1650 4350 1    60   Input ~ 0
 +5V_LED
 Text GLabel 1400 5250 3    60   Input ~ 0
 AGND
 Text GLabel 2800 900  2    60   Input ~ 0
 +5V_LED
-$Comp
-L R R32
-U 1 1 595DF587
-P 1200 4100
-F 0 "R32" V 1280 4100 50  0000 C CNN
-F 1 "4.7K" V 1200 4100 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 1130 4100 50  0001 C CNN
-F 3 "" H 1200 4100 50  0001 C CNN
-	1    1200 4100
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R33
-U 1 1 595DF58E
-P 1650 4100
-F 0 "R33" V 1730 4100 50  0000 C CNN
-F 1 "4.7K" V 1650 4100 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 1580 4100 50  0001 C CNN
-F 3 "" H 1650 4100 50  0001 C CNN
-	1    1650 4100
-	1    0    0    -1  
-$EndComp
 $Comp
 L ARDUINO_MEGA_SHIELD U1
 U 1 1 595F5E81
@@ -942,17 +909,9 @@ Wire Wire Line
 Wire Wire Line
 	1200 4650 1200 4850
 Wire Wire Line
-	1200 4250 1200 4350
-Wire Wire Line
-	1650 4250 1650 4350
-Wire Wire Line
 	2650 750  2650 900 
 Wire Wire Line
 	2650 900  2800 900 
-Wire Wire Line
-	1200 3900 1200 3950
-Wire Wire Line
-	1650 3900 1650 3950
 Wire Wire Line
 	10050 2750 10575 2750
 Wire Wire Line
@@ -1057,8 +1016,11 @@ Text Label 1200 4750 2    60   ~ 0
 ARD_LED
 Text Label 1650 4750 0    60   ~ 0
 PSU_LED
-Text Label 1200 4300 2    60   ~ 0
-ARD_R
-Text Label 1650 4300 0    60   ~ 0
-PSU_R
+Text GLabel 2950 4700 0    60   Input ~ 0
+MISO
+NoConn ~ 4850 1900
+NoConn ~ 4850 2100
+NoConn ~ 4850 2200
+NoConn ~ 4850 2300
+NoConn ~ 4850 2400
 $EndSCHEMATC

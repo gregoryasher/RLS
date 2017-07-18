@@ -146,10 +146,10 @@ Wire Wire Line
 Wire Wire Line
 	4900 3100 4900 3400
 $Comp
-L R R37
+L R R35
 U 1 1 59597526
 P 5500 3450
-F 0 "R37" V 5580 3450 50  0000 C CNN
+F 0 "R35" V 5580 3450 50  0000 C CNN
 F 1 "120" V 5500 3450 50  0000 C CNN
 F 2 "Resistors_SMD:R_1206_HandSoldering" V 5430 3450 50  0001 C CNN
 F 3 "" H 5500 3450 50  0001 C CNN
@@ -219,26 +219,26 @@ Text GLabel 4150 3700 0    60   Input ~ 0
 Text GLabel 4150 1700 0    60   Input ~ 0
 +15V
 $Comp
-L POT R35
+L POT RV4
 U 1 1 595AB1DA
 P 5500 2400
-F 0 "R35" V 5325 2400 50  0000 C CNN
-F 1 "1K_POT" V 5400 2400 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Trimmer_Bourns_3266Y" H 5500 2400 50  0001 C CNN
+F 0 "RV4" V 5400 2400 50  0000 C CNN
+F 1 "1K" V 5500 2400 50  0000 C CNN
+F 2 "RLS_CustomFootprints:Potentiometer_Trimmer_Bourns_PVG5A" H 5500 2400 50  0001 C CNN
 F 3 "" H 5500 2400 50  0001 C CNN
 	1    5500 2400
 	1    0    0    -1  
 $EndComp
 $Comp
-L POT R36
+L POT RV5
 U 1 1 595AB23B
 P 5500 3000
-F 0 "R36" V 5325 3000 50  0000 C CNN
-F 1 "1K_POT" V 5400 3000 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Trimmer_Bourns_3266Y" H 5500 3000 50  0001 C CNN
+F 0 "RV5" V 5400 3000 50  0000 C CNN
+F 1 "1K" V 5500 3000 50  0000 C CNN
+F 2 "RLS_CustomFootprints:Potentiometer_Trimmer_Bourns_PVG5A" H 5500 3000 50  0001 C CNN
 F 3 "" H 5500 3000 50  0001 C CNN
 	1    5500 3000
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	5500 2100 5500 2200

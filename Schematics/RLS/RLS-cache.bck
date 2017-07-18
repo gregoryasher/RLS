@@ -1,8 +1,3 @@
 EESchema-DOCLIB  Version 2.0
 #
-$CMP DIN_5
-D 5 pins connector, 41524
-K connector DIN 5-pins 41524
-$ENDCMP
-#
 #End Doc Library
