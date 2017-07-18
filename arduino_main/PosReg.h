@@ -53,7 +53,7 @@ class PosReg {
   //positive digital potentiometer attached to them 
   const byte V1_PLUS_SHDN = A8;
   const byte V2_PLUS_SHDN = A9;
-  const byte POS_CS = 50;
+  const byte POS_CS = 48;
 };
 
 #endif

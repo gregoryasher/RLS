@@ -63,8 +63,14 @@ void DigitalPot::writeValues(byte shdn1, byte shdn2) {
   delay(50);
 
   //turns on regulators once writing is complete
-  digitalWrite(shdn1, HIGH);
-  digitalWrite(shdn2, HIGH);
+  if (noVin1 = false)
+  {
+    digitalWrite(shdn1, HIGH);
+  }
+  if (noVin2 = false)
+  {
+    digitalWrite(shdn2, HIGH);
+  }
 }
 
 /*********************************************
@@ -74,9 +80,11 @@ void DigitalPot::writeValues(byte shdn1, byte shdn2) {
 **********************************************/
 void DigitalPot::checkShutdowns(byte shdn1, byte shdn2) {  
   if (shdn1 == HIGH) {
+    noVin1 = false;
     digitalWrite(shdn1, LOW);
   }
   if (shdn2 == HIGH) {
+    noVin2 = false;
     digitalWrite(shdn2, LOW);
   }
 }

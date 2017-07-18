@@ -18,6 +18,17 @@
    to the appropriate chip enable.    
 **********************************************/
 NegReg::NegReg(double volt1, double volt2) {
+  pinMode(NEG_CS, OUTPUT);
+  pinMode(V1_MINUS_SHDN, OUTPUT);
+  pinMode(V2_MINUS_SHDN, OUTPUT);
+  
+  if (V1_MINUS_SHDN == LOW) {
+    digitalWrite(V1_MINUS_SHDN, HIGH);
+  }
+  if (V2_MINUS_SHDN == LOW) {
+    digitalWrite(V2_MINUS_SHDN, HIGH);
+  }
+  
   v1 = volt1;
   v2 = volt2;
 }
@@ -27,6 +38,14 @@ NegReg::NegReg(double volt1, double volt2) {
    voltage is requrested.
 **********************************************/
 NegReg::NegReg(double volt1) {
+  pinMode(NEG_CS, OUTPUT);
+  pinMode(V1_MINUS_SHDN, OUTPUT);
+  pinMode(V2_MINUS_SHDN, OUTPUT);
+  
+  if (V1_MINUS_SHDN == LOW) {
+    digitalWrite(V1_MINUS_SHDN, HIGH);
+  }
+
   v1 = volt1;
   v2 = 0.0;
 }
@@ -99,14 +118,14 @@ void NegReg::calculatePotValue(double volt1, double volt2) {
 
   //shuts down associated regulator if 
   //user does not request a voltage
-  if ((negDigRes1) == 0) {
+  if ((negDigRes1) == 399) {
     digitalWrite(V1_MINUS_SHDN, LOW);
   }
   else {
     negPot.setRes1(negDigRes1);
   }
 
-  if ((negDigRes2) == 0) {
+  if ((negDigRes2) == 399) {
     digitalWrite(V2_MINUS_SHDN, LOW);
   }
   else {
@@ -133,6 +152,8 @@ int NegReg::negPotCalc(double vin){
   }
   else {
     vReq = 0.0;
+    negPotRes = 399;
+    return negPotRes;
   }
 
   //determines the data that will be sent 

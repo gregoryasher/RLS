@@ -18,6 +18,17 @@
    to the appropriate chip enable.    
 **********************************************/
 PosReg::PosReg(double volt1, double volt2) {
+  pinMode(POS_CS, OUTPUT);
+  pinMode(V1_PLUS_SHDN, OUTPUT);
+  pinMode(V2_PLUS_SHDN, OUTPUT);
+  
+  if (V1_PLUS_SHDN == LOW) {
+    digitalWrite(V1_PLUS_SHDN, HIGH);
+  }
+  if (V2_PLUS_SHDN == LOW) {
+    digitalWrite(V2_PLUS_SHDN, HIGH);
+  }
+
   v1 = volt1;
   v2 = volt2;
 }
@@ -27,6 +38,14 @@ PosReg::PosReg(double volt1, double volt2) {
    voltage is requrested.
 **********************************************/
 PosReg::PosReg(double volt1) {
+  pinMode(POS_CS, OUTPUT);
+  pinMode(V1_PLUS_SHDN, OUTPUT);
+  pinMode(V2_PLUS_SHDN, OUTPUT);
+  
+  if (V1_PLUS_SHDN == LOW) {
+    digitalWrite(V1_PLUS_SHDN, HIGH);
+  }
+
   v1 = volt1;
   v2 = 0.0;
 }
@@ -99,14 +118,14 @@ void PosReg::calculatePotValue(double volt1, double volt2) {
 
   //shuts down associated regulator if 
   //user does not request a voltage
-  if ((posDigRes1) == 0) {
+  if ((posDigRes1) == 399) {
     digitalWrite(V1_PLUS_SHDN, LOW);
   }
   else {
     posPot.setRes1(posDigRes1);
   }
 
-  if ((posDigRes2) == 0) {
+  if ((posDigRes2) == 399) {
     digitalWrite(V2_PLUS_SHDN, LOW);
   }
   else {
@@ -132,7 +151,9 @@ int PosReg::posPotCalc(double vin){
     vReq = ((vin - 1.21) / ((1.21 / 1780.0) + 0.000003));
   }
   else {
-    vReq = 0;
+    vReq = 0.0;
+    posPotRes = 399;
+    return posPotRes;
   }
 
   //determines the data that will be sent 
