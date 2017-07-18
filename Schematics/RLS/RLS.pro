@@ -1,4 +1,4 @@
-update=7/13/2017 02:34:31
+update=7/17/2017 7:07:23 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -18,7 +18,7 @@ SpiceUseNetNumbers=0
 LabSize=60
 [eeschema]
 version=1
-LibDir=../RLS;../RLS;RLS_Library
+LibDir=../RLS;RLS_Library
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -52,15 +52,14 @@ LibName29=valves
 LibName30=RLS_Library/RA30421051
 LibName31=RLS_Library/RB496EATR
 LibName32=RLS_Library/Daughterboard_Connector
-LibName33=RLS_Library/RLS-cache
 [pcbnew]
 version=1
 PageLayoutDescrFile=
 LastNetListRead=RLS_NetList.net
-PadDrill=1.02
-PadDrillOvalY=1.02
-PadSizeH=2
-PadSizeV=2
+PadDrill=1
+PadDrillOvalY=1
+PadSizeH=1.7
+PadSizeV=1.7
 PcbTextSizeV=1.5
 PcbTextSizeH=1.5
 PcbTextThickness=0.3
