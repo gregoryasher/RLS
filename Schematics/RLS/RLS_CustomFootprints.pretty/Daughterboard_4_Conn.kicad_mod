@@ -295,4 +295,24 @@
   (pad 158 thru_hole circle (at 83.82 53.34) (size 1.6002 1.6002) (drill 0.8128) (layers *.Cu *.Mask F.SilkS))
   (pad 159 thru_hole circle (at 86.36 55.88) (size 1.6002 1.6002) (drill 0.8128) (layers *.Cu *.Mask F.SilkS))
   (pad 160 thru_hole circle (at 83.82 55.88) (size 1.6002 1.6002) (drill 0.8128) (layers *.Cu *.Mask F.SilkS))
+  (model U:/Capstone/RLS-master/Schematics/RLS/RLS_3D_Parts.3dshapes/DaughterBoard_Header_4_2x20_Pitch2.54mm.wrl
+    (at (xyz 1.35 -0.1 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 180 0 0))
+  )
+  (model U:/Capstone/RLS-master/Schematics/RLS/RLS_3D_Parts.3dshapes/DaughterBoard_Header_4_2x20_Pitch2.54mm.wrl
+    (at (xyz 0.25 -1.25 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 180 0 90))
+  )
+  (model U:/Capstone/RLS-master/Schematics/RLS/RLS_3D_Parts.3dshapes/DaughterBoard_Header_4_2x20_Pitch2.54mm.wrl
+    (at (xyz 2.5 -1.25 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 180 0 90))
+  )
+  (model U:/Capstone/RLS-master/Schematics/RLS/RLS_3D_Parts.3dshapes/DaughterBoard_Header_4_2x20_Pitch2.54mm.wrl
+    (at (xyz 3.35 -1.25 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 180 0 90))
+  )
 )

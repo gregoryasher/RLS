@@ -134,4 +134,9 @@
   (pad GND4 thru_hole circle (at 7.62 7.62 270) (size 1.524 1.524) (drill 0.8128) (layers *.Cu *.Mask F.SilkS))
   (pad GND5 thru_hole circle (at 7.62 5.08 270) (size 1.524 1.524) (drill 0.8128) (layers *.Cu *.Mask F.SilkS)
     (zone_connect 1))
+  (model U:/Capstone/RLS-master/Schematics/RLS/RLS_3D_Parts.3dshapes/ArduinoMegaShield.wrl
+    (at (xyz 0 -4 -0.1))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 180 0 -90))
+  )
 )
