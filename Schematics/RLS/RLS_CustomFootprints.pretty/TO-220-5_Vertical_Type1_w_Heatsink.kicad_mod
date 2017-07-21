@@ -59,9 +59,9 @@
   (pad 5 thru_hole oval (at 16.071 18.415) (size 1.8 1.8) (drill 1) (layers *.Cu *.Mask))
   (pad "" np_thru_hole circle (at 2.286 7.366) (size 4.826 4.826) (drill 4.826) (layers *.Cu *.Mask))
   (pad "" np_thru_hole circle (at 23.114 7.366) (size 4.826 4.826) (drill 4.826) (layers *.Cu *.Mask))
-  (model ${KISYS3DMOD}/TO_SOT_Packages_THT.3dshapes/TO-220-5_Pentawatt_Multiwatt-5_Vertical_StaggeredType1.wrl
-    (at (xyz 0 0 0))
-    (scale (xyz 0.393701 0.393701 0.393701))
+  (model U:/Capstone/RLS-master/Schematics/RLS/RLS_3D_Parts.3dshapes/TO_220_5_Pentawatt_Multiwatt_5_Vertical_StaggeredType1.wrl
+    (at (xyz 0.365 -0.725 0))
+    (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
   )
 )

@@ -20,4 +20,9 @@
   (pad 3 smd rect (at 1.25 1.45) (size 1.3 1.6) (layers F.Cu F.Paste F.Mask))
   (pad 1 smd rect (at -1.25 1.45) (size 1.3 1.6) (layers F.Cu F.Paste F.Mask))
   (pad 2 smd rect (at 0 -1.45) (size 2 1.6) (layers F.Cu F.Paste F.Mask))
+  (model U:/Capstone/RLS-master/Schematics/RLS/RLS_3D_Parts.3dshapes/Bourns_Trimmer_PVG5A.wrl
+    (at (xyz -0.1025 -0.075 0))
+    (scale (xyz 430 430 430))
+    (rotate (xyz 0 0 0))
+  )
 )
