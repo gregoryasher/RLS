@@ -631,7 +631,6 @@ $EndSheet
 NoConn ~ 2950 4150
 NoConn ~ 2950 4250
 NoConn ~ 2950 4850
-NoConn ~ 2950 2000
 NoConn ~ 2950 1700
 NoConn ~ 2950 1600
 NoConn ~ 4850 1200
@@ -652,7 +651,7 @@ NoConn ~ 4850 2800
 NoConn ~ 4850 2700
 NoConn ~ 4850 2600
 NoConn ~ 4850 2500
-Text GLabel 2950 1900 0    60   Input ~ 0
+Text GLabel 2900 1900 0    60   Input ~ 0
 DGND
 Text GLabel 2950 2100 0    60   Input ~ 0
 +5V
@@ -720,7 +719,7 @@ F 1 "AD_LED" H 1200 4900 50  0000 C CNN
 F 2 "LEDs:LED_0603" H 1200 5000 50  0001 C CNN
 F 3 "" H 1200 5000 50  0001 C CNN
 	1    1200 5000
-	0    1    1    0   
+	0    1    -1   0   
 $EndComp
 $Comp
 L LED D2
@@ -731,7 +730,7 @@ F 1 "+5V_LED" H 1650 4900 50  0000 C CNN
 F 2 "LEDs:LED_0603" H 1650 5000 50  0001 C CNN
 F 3 "" H 1650 5000 50  0001 C CNN
 	1    1650 5000
-	0    1    1    0   
+	0    1    -1   0   
 $EndComp
 $Comp
 L R R1
@@ -761,7 +760,7 @@ Text GLabel 1200 4350 1    60   Input ~ 0
 AD_LED
 Text GLabel 1650 4350 1    60   Input ~ 0
 +5V_LED
-Text GLabel 1400 5250 3    60   Input ~ 0
+Text GLabel 1650 5200 3    60   Input ~ 0
 AGND
 Text GLabel 2800 900  2    60   Input ~ 0
 +5V_LED
@@ -898,12 +897,7 @@ Connection ~ 2650 750
 Wire Wire Line
 	1650 5200 1650 5150
 Wire Wire Line
-	1200 5200 1650 5200
-Wire Wire Line
 	1200 5200 1200 5150
-Wire Wire Line
-	1400 5250 1400 5200
-Connection ~ 1400 5200
 Wire Wire Line
 	1650 4650 1650 4850
 Wire Wire Line
@@ -1023,4 +1017,10 @@ NoConn ~ 4850 2100
 NoConn ~ 4850 2200
 NoConn ~ 4850 2300
 NoConn ~ 4850 2400
+Text GLabel 1200 5200 3    60   Input ~ 0
+DGND
+Wire Wire Line
+	2950 1900 2900 1900
+Wire Wire Line
+	2950 1900 2950 2000
 $EndSCHEMATC
