@@ -87,12 +87,18 @@ void DB3::configurePins() {
 	digitalWrite(pot2_address, HIGH);
 
   // configures the V1+ and V1- of the arduino to the specified voltage (+/- 6V for this daughterboard)
-  PosReg posReg(6.0);
-  NegReg negReg(-6.0);
+  //PosReg posReg(6.0);
+  //NegReg negReg(-6.0);
 
-  //adjuts the pot value to allow the regulators to output the specified voltage(s)
-  posReg.calculatePotValue(posReg.getV1(), posReg.getV2());
-  negReg.calculatePotValue(negReg.getV1(), negReg.getV2());
+  //TEST THIS LINE!!! Reimplemented the above function below using new keyword to put objects in heap
+  //instead of the stack.
+
+  //Doesnt work! can't delete created objectrs inside a local function, this causes a memory leak.
+  PosReg *posReg = new PosReg(6.0);
+  NegReg *negReg = new NegReg(-6.0);
+
+  delete posReg;
+  delete negReg;
 }
 
 void DB3::execute(String Board_3_Serial) {

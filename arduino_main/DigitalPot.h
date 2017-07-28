@@ -33,8 +33,8 @@ class DigitalPot {
   byte chipSel;
   int res1;
   int res2;
-  boolean noVin1 = true;
-  boolean noVin2 = true;
+  boolean noVout1 = true;
+  boolean noVout2 = true;
 };
 
 #endif

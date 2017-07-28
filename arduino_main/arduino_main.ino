@@ -43,16 +43,26 @@ unsigned long lastMsg = 1;
 void setup() {
   Serial.begin(9600);
   Serial.flush();
-  boardController.shutDownRegs();
+  
 
   // Determine which board is plugged in
   //TODO: TEST THE ORDER OF THESE LINES TO SEE IF IT MATTERS
+  //ORIGINAL ORDER: boardController.configureDaughterboardPins();
+  //                boardController.configureBoardIdPins();
+  //                boardController.readBoardID();
   
-  boardController.configureDaughterboardPins();
+  //PAOLO'S NEW ORDER: I NOTICED THAT READBOARDID IS ALSO CALLED IN THE CONFIGUREDAUGHTERBOARDPINS FUNCTION,
+  //THEREFORE, I DECIDED TO REMOVE THE SECOND READBOARDID (THE THIRD FUNCTION CALL). I ALSO PUT 
+  //CONFIGUREBOARDIDPINS FIRST AS ALL IT DOES IS SET THE PIN MODE OF THE BOARD ID PINS TO INPUT
+
   boardController.configureBoardIdPins();
-  boardController.readBoardID();
+  boardController.configureDaughterboardPins();
 
   // Need to include power regulator stuff here later, but not now for testing a few boards only
+
+  //shuts down regulators on setup
+  boardController.shutDownRegs(); 
+  
   //Serial.println("Finished Setup successfully.");
 }
 

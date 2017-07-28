@@ -37,7 +37,7 @@ class PosReg {
 
   //helper function that calculates the digitial potentiometer resistance
   //as an int
-  int posPotCalc(double vin); 
+  int posPotCalc(double vout); 
   
   private:
 
@@ -51,8 +51,8 @@ class PosReg {
   //appropriate pin allocations for the shutdown pins of both 
   //positive linear regulators as well as the chip enable for the 
   //positive digital potentiometer attached to them 
-  const byte V1_PLUS_SHDN = A8;
-  const byte V2_PLUS_SHDN = A9;
+  const byte V1_PLUS_SHDN = A9;
+  const byte V2_PLUS_SHDN = A8;
   const byte POS_CS = 48;
 };
 
