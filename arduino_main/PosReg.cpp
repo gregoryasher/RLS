@@ -31,6 +31,8 @@ PosReg::PosReg(double volt1, double volt2) {
 
   v1 = volt1;
   v2 = volt2;
+
+  calculatePotValue(v1, v2);
 }
 
 /*********************************************
@@ -48,6 +50,8 @@ PosReg::PosReg(double volt1) {
 
   v1 = volt1;
   v2 = 0.0;
+
+  calculatePotValue(v1, v2);
 }
 
 /*********************************************
@@ -141,14 +145,14 @@ void PosReg::calculatePotValue(double volt1, double volt2) {
    resitance and returns the value as an 
    integer.
 **********************************************/
-int PosReg::posPotCalc(double vin){  
+int PosReg::posPotCalc(double vout){  
   double vReq;
   int posPotRes;
 
   //calculation to determine potentiometer 
   //resistance for the particular positive regulator
-  if (vin > 1.21) {
-    vReq = ((vin - 1.21) / ((1.21 / 1780.0) + 0.000003));
+  if (vout > 1.21) {
+    vReq = ((vout - 1.21) / ((1.21 / 1780.0) + 0.000003));
   }
   else {
     vReq = 0.0;

@@ -46,8 +46,13 @@ String bID = ""; //global variable used for comparison of each bit represented i
 
 *****************************/
 void DBControl::serialControl() {
+  configureDaughterboardPins();
+  safetyCheck();
 
   if (Serial.available()) {
+
+     //(7/19/2017) - CONTINUALLY CHECKS FOR AND RECONFIGURES PINS BASED ON DAUGHTER BOARD CONNECTED
+    configureDaughterboardPins();
 
     String outputFromUI = Serial.readString();
     Serial.flush();
@@ -55,10 +60,18 @@ void DBControl::serialControl() {
     String boardIDsubstring = outputFromUI.substring(0, 7);
     if (outputFromUI.equalsIgnoreCase("boardID")) //Board ID is requested
     {
-      readBoardID();
+       //(7/19/2017) - NO LONGER NEEDS TO CHECK AGAIN AS ITS ALREADY DONE IN THE BEGINNING OF FUNCTION
+      //readBoardID();
+      
       Serial.flush();
       //if (bID.equals("00000000")) // if all zeros error
         //Serial.println("-1");     //send -1: no board present
+
+      //(7/19/2017) - DOES A SAFETY CHECK WHEN USER SELECTS "CHECK BOARD" FROM GUI AND THERE 
+      //IS NO DAUGHTER BOARD PRESENT
+      
+      //safetyCheck();
+       
       Serial.println(bID);
     }
     else if (boardIDsubstring == "board_3")//Board 3 is addressed (the default message is board_3,1,1)
@@ -90,7 +103,8 @@ void DBControl::serialControl() {
     */
     else
     {
-      safetyCheck();
+      //safetyCheck();
+      
       // error -2: bad serial command received
       Serial.println("-2");
     }
@@ -146,8 +160,11 @@ void DBControl::configureDaughterboardPins() {
 
 *****************************/
 boolean DBControl::safetyCheck() {
-  readBoardID();
-  if (bID.equalsIgnoreCase("00000000") || bID.equalsIgnoreCase("-1")) {
+
+  //commented out readBoardID()  since serial control now continually does this function  
+  //readBoardID(); 
+
+  if (bID.equalsIgnoreCase("00000000")) {
       shutDownRegs();
       return false;
     /*
@@ -207,9 +224,18 @@ void DBControl::configureBoardIdPins() {
  * Function that shuts down all linear regulators.
  * ********************************************/
 void DBControl::shutDownRegs() {
+  configureShutdownRegPins();
+
   digitalWrite(A8, LOW);
   digitalWrite(A9, LOW);
   digitalWrite(A10, LOW);
   digitalWrite(A11, LOW);
+}
+
+void DBControl::configureShutdownRegPins() {
+  pinMode(A8, OUTPUT);
+  pinMode(A9, OUTPUT);
+  pinMode(A10, OUTPUT);
+  pinMode(A11, OUTPUT);
 }
 

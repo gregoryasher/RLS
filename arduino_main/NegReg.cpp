@@ -31,6 +31,8 @@ NegReg::NegReg(double volt1, double volt2) {
   
   v1 = volt1;
   v2 = volt2;
+
+  calculatePotValue(v1, v2);
 }
 
 /*********************************************
@@ -48,6 +50,8 @@ NegReg::NegReg(double volt1) {
 
   v1 = volt1;
   v2 = 0.0;
+
+  calculatePotValue(v1, v2);
 }
 
 /*********************************************
@@ -141,14 +145,14 @@ void NegReg::calculatePotValue(double volt1, double volt2) {
    resitance and returns the value as an 
    integer.
 **********************************************/
-int NegReg::negPotCalc(double vin){  
+int NegReg::negPotCalc(double vout){  
   double vReq;
   int negPotRes;
   
   //calculation to determine potentiometer 
   //resistance for the particular negative regulator
-  if (vin < -1.22) {
-    vReq = ((vin + 1.22) / ((-1.22 / 1780.0) + 0.00000003));
+  if (vout < -1.22) {
+    vReq = ((vout + 1.22) / ((-1.22 / 1780.0) + 0.00000003));
   }
   else {
     vReq = 0.0;

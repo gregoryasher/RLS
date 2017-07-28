@@ -37,7 +37,7 @@ class NegReg {
 
   //helper function that calculates the digitial potentiometer resistance
   //as an int
-  int negPotCalc(double vin); 
+  int negPotCalc(double vout); 
   
   private:
 
@@ -51,8 +51,8 @@ class NegReg {
   //appropriate pin allocations for the shutdown pins of both 
   //negative linear regulators as well as the chip enable for the 
   //negative digital potentiometer attached to them 
-  const byte V1_MINUS_SHDN = A10;
-  const byte V2_MINUS_SHDN = A11;
+  const byte V1_MINUS_SHDN = A11;
+  const byte V2_MINUS_SHDN = A10;
   const byte NEG_CS = 53;
 };
 

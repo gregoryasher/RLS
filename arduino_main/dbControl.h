@@ -21,6 +21,7 @@ class DBControl {
   boolean safetyCheck();
   void readBoardID();
   void configureBoardIdPins();
+  void configureShutdownRegPins();
   void shutDownRegs();
   
   private:
