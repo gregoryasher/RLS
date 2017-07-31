@@ -29,7 +29,7 @@ class NegReg {
   int getv2shdn();
   double getV1();
   double getV2();
-  int getcs();
+  int getCS();
 
   //calculates required digital potentiometer values for the requested
   //input voltages and sets the digital potentiometer to calculated value 

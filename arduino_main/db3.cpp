@@ -86,14 +86,13 @@ void DB3::configurePins() {
 	digitalWrite(pot1_address, LOW);
 	digitalWrite(pot2_address, HIGH);
 
-  // configures the V1+ and V1- of the arduino to the specified voltage (+/- 6V for this daughterboard)
-  //PosReg posReg(6.0);
-  //NegReg negReg(-6.0);
-
-  //TEST THIS LINE!!! Reimplemented the above function below using new keyword to put objects in heap
-  //instead of the stack.
-
-  //Doesnt work! can't delete created objectrs inside a local function, this causes a memory leak.
+  //When requesting voltages from V1 and V2 +/-
+  //create a new regulator object with either one 
+  //or two arguments (PosReg for positive voltage 
+  //and NegReg for negative) to set the regulators 
+  //to output the specified voltage. Objects must 
+  //also be deleted within the same function.
+    
   PosReg *posReg = new PosReg(6.0);
   NegReg *negReg = new NegReg(-6.0);
 
