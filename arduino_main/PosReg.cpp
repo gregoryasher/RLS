@@ -85,7 +85,7 @@ double PosReg::getV2() {
 /*********************************************
    Getter for requested chip select.  
 **********************************************/
-int PosReg::getcs() {
+int PosReg::getCS() {
   return POS_CS;
 }
 
@@ -114,7 +114,7 @@ void PosReg::calculatePotValue(double volt1, double volt2) {
 
   //sets the associated potentiometer to 
   //appropriate chip select pin
-  posPot.setCS(getcs());
+  posPot.setCS(getCS());
 
   //calculates pot values as an integer
   int posDigRes1 = posPotCalc(volt1);

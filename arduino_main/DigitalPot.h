@@ -14,7 +14,7 @@
 
 class DigitalPot {
   public:
-
+  
   //sets the chip select pin for the appropriate set of positive or 
   //negative linear regulators 
   DigitalPot();

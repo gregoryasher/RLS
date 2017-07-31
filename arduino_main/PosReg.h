@@ -17,7 +17,7 @@ class PosReg {
   public:
 
   //defaults second positive regulator to 0.0 if daughterboard does not
-  //request an input voltage for it
+  //request an input voltage argument for it
   PosReg(double volt1, double volt2);
   PosReg(double volt1);
   
@@ -29,7 +29,7 @@ class PosReg {
   int getv2shdn();
   double getV1();
   double getV2();
-  int getcs();
+  int getCS();
 
   //calculates required digital potentiometer values for the requested
   //input voltages and sets the digital potentiometer to calculated value 

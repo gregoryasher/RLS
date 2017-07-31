@@ -8,25 +8,9 @@
   Released into the public domain.
 ******************************************************************************/
 
-// TODO:
-// Need to include power regulator stuff from original code but updated for new motherboard
-// check pin numbers of arduino mega analog write pins
-// check signatures of functions inside all .h files to make sure no const, private, &, etc. are missing
-// refactor helper methods in daughterboard execute functions?
-// create keywords file to turn some function names orange in Arduino IDE (https://www.arduino.cc/en/Hacking/LibraryTutorial)
-// consider making an interface that each DB object implements, so you can force each of them
-//    to have an execute() method and a configurePins() method
-
-
-/*
-   Error messages:
-   -1 = bad board id
-   -2 = bad serial command recieved from GUI
-*/
-
 #include "dbControl.h"
-//#include <db1.h>
-//#include <db2.h>
+//#include "db1.h"
+//#include "db2.h"
 #include "db3.h"
 #include "db4.h"
 #include "db5.h"
@@ -43,50 +27,28 @@ unsigned long lastMsg = 1;
 void setup() {
   Serial.begin(9600);
   Serial.flush();
-  
 
-  // Determine which board is plugged in
-  //TODO: TEST THE ORDER OF THESE LINES TO SEE IF IT MATTERS
-  //ORIGINAL ORDER: boardController.configureDaughterboardPins();
-  //                boardController.configureBoardIdPins();
-  //                boardController.readBoardID();
-  
-  //PAOLO'S NEW ORDER: I NOTICED THAT READBOARDID IS ALSO CALLED IN THE CONFIGUREDAUGHTERBOARDPINS FUNCTION,
-  //THEREFORE, I DECIDED TO REMOVE THE SECOND READBOARDID (THE THIRD FUNCTION CALL). I ALSO PUT 
-  //CONFIGUREBOARDIDPINS FIRST AS ALL IT DOES IS SET THE PIN MODE OF THE BOARD ID PINS TO INPUT
-
+  //configures the initial boardId and daughterboard pins 
   boardController.configureBoardIdPins();
   boardController.configureDaughterboardPins();
 
-  // Need to include power regulator stuff here later, but not now for testing a few boards only
-
   //shuts down regulators on setup
   boardController.shutDownRegs(); 
-  
-  //Serial.println("Finished Setup successfully.");
 }
 
 // the loop routine runs over and over again forever
 void loop() {
   boardController.serialControl();
-  /*
-     if it fails the safety check print -1 to the serial
-     to be interpretted as error by the GUI
 
-     In order to minimize serial buffer usage the printing of
-     -1 occurs only once every two seconds.
-
-     safetyCheck() returns true if pass
-                    returns false if fail
-
-  */
+  //if statement that runs safety check. If no board is 
+  //connected, print "00000000" to indicate that no board
+  //is connected and shut down all regulators
   if ( !(boardController.safetyCheck()) ) {
     if ((millis() - lastMsg) > 2000) {
       Serial.println("00000000");
       lastMsg = millis();
     }
   }
-
 }
 
 

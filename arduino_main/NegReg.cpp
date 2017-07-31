@@ -85,7 +85,7 @@ double NegReg::getV2() {
 /*********************************************
    Getter for requested chip select.  
 **********************************************/
-int NegReg::getcs() {
+int NegReg::getCS() {
   return NEG_CS;
 }
 
@@ -114,7 +114,7 @@ void NegReg::calculatePotValue(double volt1, double volt2) {
 
   //sets the associated potentiometer to 
   //appropriate chip select pin
-  negPot.setCS(getcs());
+  negPot.setCS(getCS());
   
   //calculates pot values as an integer
   int negDigRes1 = negPotCalc(volt1);
