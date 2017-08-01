@@ -32,7 +32,8 @@ void setup() {
   boardController.configureBoardIdPins();
   //shuts down regulators on setup
   boardController.shutDownRegs();
-
+  //set oscilloscope probe gain to X1
+  boardController.setGainX1();
   
   //PosReg *fuck = new PosReg(7.0, 13.0);
 //NegReg *that = new NegReg(-10.0, -12.0);
