@@ -30,8 +30,8 @@ void setup(void)
 
 void loop(void) 
 {
-  volatile int16_t adc0, adc1, adc2, adc3;
-  double mathFun;
+  //volatile int16_t adc0, adc1, adc2, adc3;
+  double adc0, adc1, adc2, adc3;
 
   //adc0////////////////////////////////////////////////////////////////////////////////////////////////////////////
   ads.setGain(GAIN_SIXTEEN);    // 16x gain  +/- 0.256V  1 bit = 0.125mV  0.0078125mV
@@ -107,61 +107,32 @@ void loop(void)
           {
             ads.setGain(GAIN_TWOTHIRDS); // 2/3x gain +/- 6.144V  1 bit = 3mV      0.1875mV (default) max 5534.44
             adc1 = ads.readADC_SingleEnded(1);
-            //mathFun = adc1*.1875*3;
-            //mathFun = mathFun / .924357;
-            //mathFun = mathFun - .87442;
-            //mathFun = mathFun - .8;
-            Serial.print("AIN1: "); Serial.println(((((adc1*.1875*3)/.924357)-.87442)));
-            //Serial.print("AIN1: "); Serial.println(mathFun);
+            Serial.print("AIN1: "); Serial.println(((((adc1*.1875*3)/.924357)-874.42)));
           }
           else
           {
-            //mathFun = adc1*.1875*3;
-            //mathFun = mathFun / .924357;
-            //mathFun = mathFun - .87442;
-            //mathFun = mathFun - .8;
-            Serial.print("AIN1: "); Serial.println(((((adc1*.125*3)/.924357)-.87442)));
-            //Serial.print("AIN1: "); Serial.println(mathFun);
+            Serial.print("AIN1: "); Serial.println(((((adc1*.125*3)/.924357)-874.42)));
           }
         }
         else
         {
-            //mathFun = adc1*.1875*3;
-            //mathFun = mathFun / .924357;
-            //mathFun = mathFun - .87442;
-            //mathFun = mathFun - .8;
-            Serial.print("AIN1: "); Serial.println(((((adc1*.0625*3)/.924357)-.87442)));
+            Serial.print("AIN1: "); Serial.println(((((adc1*.0625*3)/.924357)-874.42)));
             //Serial.print("AIN1: "); Serial.println(mathFun);
         }
       }
       else
       {
-            //mathFun = adc1*.1875*3;
-            //mathFun = mathFun / .924357;
-            //mathFun = mathFun - .87442;
-            //mathFun = mathFun - .8;
-            Serial.print("AIN1: "); Serial.println(((((adc1*.03125*3)/.924357)-.87442)));
-            //Serial.print("AIN1: "); Serial.println(mathFun);
+            Serial.print("AIN1: "); Serial.println(((((adc1*.03125*3)/.924357)-874.42)));
       }
     }
     else
     {
-      //mathFun = adc1*.1875*3;
-            //mathFun = mathFun / .924357;
-            //mathFun = mathFun - .87442;
-      //mathFun = mathFun - .8;
-      Serial.print("AIN1: "); Serial.println(((((adc1*.015625*3)/.924357)-.87442)));
-      //Serial.print("AIN1: "); Serial.println(mathFun);
+      Serial.print("AIN1: "); Serial.println(((((adc1*.015625*3)/.924357)-874.42)));
     }
   }
   else
   {
-    //mathFun = adc1*.1875*3;
-    //mathFun = mathFun / .924357;
-    //mathFun = mathFun - .87442;
-    //mathFun = mathFun - .8;
-    Serial.print("AIN1: "); Serial.println(((((adc1*.0078125*3)/.924357)-.87442)));
-    //Serial.print("AIN1: "); Serial.println(mathFun);
+    Serial.print("AIN1: "); Serial.println(((((adc1*.0078125*3)/.924357)-874.42)));
   }
 
 
@@ -238,49 +209,33 @@ void loop(void)
           {
             ads.setGain(GAIN_TWOTHIRDS); // 2/3x gain +/- 6.144V  1 bit = 3mV      0.1875mV (default) max 5534.44
             adc3 = ads.readADC_SingleEnded(3);
-            Serial.print("AIN3: "); Serial.println(adc3*-.1875*3);
+            Serial.print("AIN3: "); Serial.println(((adc3*-.1875*3)/.912929)+886.575);
           }
           else
           {
-            Serial.print("AIN3: "); Serial.println(adc3*-.125*3);
+            Serial.print("AIN3: "); Serial.println(((adc3*-.125*3)/.912929)+886.575);
           }
         }
         else
         {
-          Serial.print("AIN3: "); Serial.println(adc3*-.0625*3);
+          Serial.print("AIN3: "); Serial.println(((adc3*-.0625*3)/.912929)+886.575);
         }
       }
       else
       {
-        Serial.print("AIN3: "); Serial.println(adc3*-.03125*3);
+        Serial.print("AIN3: "); Serial.println(((adc3*-.03125*3)/.912929)+886.575);
       }
     }
     else
     {
-      Serial.print("AIN3: "); Serial.println(adc3*-.015625*3);
+      Serial.print("AIN3: "); Serial.println(((adc3*-.015625*3)/.912929)+886.575);
     }
   }
   else
   {
-    Serial.print("AIN3: "); Serial.println(adc3*-.0078125*3);
+    Serial.print("AIN3: "); Serial.println(((adc3*-.0078125*3)/.912929)+886.575);
   }
 
-
-
-
-
-
-
-
-  
- // adc0 = ads.readADC_SingleEnded(0);
- // adc1 = ads.readADC_SingleEnded(1);
- // adc2 = ads.readADC_SingleEnded(2);
- // adc3 = ads.readADC_SingleEnded(3);
- // Serial.print("AIN0: "); Serial.println(adc0);
- // Serial.print("AIN1: "); Serial.println(adc1);
- // Serial.print("AIN2: "); Serial.println(adc2);
- // Serial.print("AIN3: "); Serial.println(adc3);
   Serial.println(" ");
   
   delay(1000);
