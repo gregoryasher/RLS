@@ -9,6 +9,12 @@
 
 #ifndef PosReg_h
 #define PosReg_h
+  //appropriate pin allocations for the shutdown pins of both 
+  //positive linear regulators as well as the chip enable for the 
+  //positive digital potentiometer attached to them 
+#define V1_PLUS_SHDN A9
+#define V2_PLUS_SHDN A8
+#define POS_CS 48
 
 #include "Arduino.h"
 #include "DigitalPot.h"
@@ -48,12 +54,7 @@ class PosReg {
   //digital potentiometer associated with the positive regulators
   DigitalPot posPot;
 
-  //appropriate pin allocations for the shutdown pins of both 
-  //positive linear regulators as well as the chip enable for the 
-  //positive digital potentiometer attached to them 
-  const byte V1_PLUS_SHDN = A9;
-  const byte V2_PLUS_SHDN = A8;
-  const byte POS_CS = 48;
+
 };
 
 #endif

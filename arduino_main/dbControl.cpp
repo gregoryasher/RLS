@@ -11,8 +11,7 @@
 
 #include "Arduino.h"
 #include "dbControl.h"
-//#include "db1.h"
-//#include "db2.h"
+
 #include "db3.h"
 #include "db4.h"
 #include "db5.h"
@@ -20,8 +19,7 @@
 #include "db7.h"
 
 // instantiate board objects
-// DB1 board1;
-// DB2 board2;
+
 DB3 board3;
 DB4 board4;
 DB5 board5;
@@ -38,7 +36,6 @@ String bIDCheck = ""; //global variable used to check if the same board is plugg
    serialControl handles the commands sent from the GUI
 *****************************************************************************/
 void DBControl::serialControl() {
-  configureDaughterboardPins();
   safetyCheck();
 
   if (Serial.available()) { //reads in what the user requested from GUI
@@ -48,27 +45,33 @@ void DBControl::serialControl() {
     String boardIDsubstring = outputFromUI.substring(0, 7);
     if (outputFromUI.equalsIgnoreCase("boardID")) //Board ID is requested
     { 
+      readBoardID();
       Serial.flush();
       Serial.println(bID);
     }
     else if (boardIDsubstring == "board_3")//Board 3 is addressed (the default message is board_3,1,1)
     {
+      configureDaughterboardPins();
       board3.execute(outputFromUI);
     }
     else if (boardIDsubstring == "board_4") // Board 4 is addressed (the default message is board_4,1,1,1)
     {
+      configureDaughterboardPins();
       board4.execute(outputFromUI);
     }
     else if (boardIDsubstring == "board_5")//Board 5 is addressed (the default message is board_5,1,1,1)
     {
+      configureDaughterboardPins();
       board5.execute(outputFromUI);
     }
     else if (boardIDsubstring == "board_6")//Board 5 is addressed (the default message is board_5,1,1,1)
     {
+      configureDaughterboardPins();
       board6.execute(outputFromUI);
     }
     else if (boardIDsubstring == "board_7")//Board 5 is addressed (the default message is board_5,1,1,1)
     {
+      configureDaughterboardPins();
       board7.execute(outputFromUI);
     }
     else
@@ -86,22 +89,13 @@ void DBControl::serialControl() {
           Thier configuration settings have been commented out.
 *****************************************************************************/
 void DBControl::configureDaughterboardPins() {
-  readBoardID();
-
+  
   //empty if statement that checks if the same board is connected as previous
   //serial control implementation and skips board configuration if the same
   //board is connected
-  if (bID.equalsIgnoreCase(bIDCheck)) {}
   
   // Configure pins correctly for the given board
-  //Note: Daughterboard 1 and daughterboard 2 configuration commented out
-  /*if (bID.equalsIgnoreCase("00000001")) {
-    board1.configurePins();
-  } 
-  else if (bID.equalsIgnoreCase("00000010")) {
-    board2.configurePins();
-  } */
-  else if (bID.equalsIgnoreCase("00000011")) {
+  if (bID.equalsIgnoreCase("00000011")) {
     bIDCheck = bID;
     board3.configurePins();
   }
@@ -122,7 +116,7 @@ void DBControl::configureDaughterboardPins() {
     board7.configurePins();
   }
   
-  Serial.println(bID);
+ // Serial.println(bID);
 }
 
 /***********************************************************************

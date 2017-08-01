@@ -14,7 +14,12 @@
 /*********************************************
    Default constructor for digital pot.
 **********************************************/
-DigitalPot::DigitalPot() {};
+DigitalPot::DigitalPot() {
+  SPI.begin();
+  SPI.setBitOrder(MSBFIRST);
+  SPI.setClockDivider(SPI_CLOCK_DIV4);
+  SPI.setDataMode(SPI_MODE1);
+  }
 
 /*********************************************
    Setters for required resistance 1.
