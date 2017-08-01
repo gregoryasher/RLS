@@ -1,4 +1,4 @@
- /******************************************************************************
+/******************************************************************************
   arduino_main.ino
   This is the main Arduino code that calls all libraries
   needed to run the Remote Lab System project for the
@@ -9,8 +9,8 @@
 ******************************************************************************/
 
 #include "dbControl.h"
-//#include "db1.h"
-//#include "db2.h"
+#include "PosReg.h"
+#include "NegReg.h"
 #include "db3.h"
 #include "db4.h"
 #include "db5.h"
@@ -28,27 +28,24 @@ void setup() {
   Serial.begin(9600);
   Serial.flush();
 
-  //configures the initial boardId and daughterboard pins 
+  //configures the initial boardId and daughterboard pins
   boardController.configureBoardIdPins();
-  boardController.configureDaughterboardPins();
-
   //shuts down regulators on setup
-  boardController.shutDownRegs(); 
+  boardController.shutDownRegs();
+
+  
+  //PosReg *fuck = new PosReg(7.0, 13.0);
+//NegReg *that = new NegReg(-10.0, -12.0);
+
 }
 
 // the loop routine runs over and over again forever
 void loop() {
   boardController.serialControl();
-
-  //if statement that runs safety check. If no board is 
+  boardController.safetyCheck();
+  //if statement that runs safety check. If no board is
   //connected, print "00000000" to indicate that no board
   //is connected and shut down all regulators
-  if ( !(boardController.safetyCheck()) ) {
-    if ((millis() - lastMsg) > 2000) {
-      Serial.println("00000000");
-      lastMsg = millis();
-    }
-  }
 }
 
 

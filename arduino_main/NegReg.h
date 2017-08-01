@@ -9,6 +9,12 @@
 
 #ifndef NegReg_h
 #define NegReg_h
+//appropriate pin allocations for the shutdown pins of both 
+  //negative linear regulators as well as the chip enable for the 
+  //negative digital potentiometer attached to them 
+#define V1_MINUS_SHDN A11
+#define V2_MINUS_SHDN A10
+#define NEG_CS 53
 
 #include "Arduino.h"
 #include "DigitalPot.h"
@@ -48,12 +54,7 @@ class NegReg {
   //digital potentiometer associated with the negative regulators
   DigitalPot negPot;
 
-  //appropriate pin allocations for the shutdown pins of both 
-  //negative linear regulators as well as the chip enable for the 
-  //negative digital potentiometer attached to them 
-  const byte V1_MINUS_SHDN = A11;
-  const byte V2_MINUS_SHDN = A10;
-  const byte NEG_CS = 53;
+
 };
 
 #endif
