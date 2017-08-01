@@ -25,7 +25,6 @@
 #endif
 
 #include <Wire.h>
-
 /*=========================================================================
     I2C ADDRESS/BITS
     -----------------------------------------------------------------------*/
@@ -136,6 +135,10 @@ protected:
   int16_t   getLastConversionResults();
   void      setGain(adsGain_t gain);
   adsGain_t getGain(void);
+  double getCh0();
+  double getCh1();
+  double getCh2();
+  double getCh3();
 
  private:
 };
