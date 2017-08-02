@@ -23,7 +23,7 @@ namespace Remote_EE_Lab
         String boardID = "null";
         String Current_Board = "-1";
         String USB_port = "COM69"; //default COM port; this can be changed later using Setup tab;
-        bool isDebugMode = true;
+        bool isDebugMode = false;
 
         //Declare the variables for Board_1
         String Board_1_Serial_Message = "board_1,01,1,4,4,01,01"; //default message
@@ -162,7 +162,7 @@ namespace Remote_EE_Lab
             }
             else
             {
-                Process.Start("C:/Program Files (x86)/Velleman/PcLab2000LT/PcLab2000LT.exe");
+                Process.Start("C:/Velleman/PcLab2000LT.exe");
             }
         }
 
@@ -1555,7 +1555,7 @@ namespace Remote_EE_Lab
             }
             else
             {
-                Process.Start("C:/Program Files (x86)/LogicPort2/LogicPort2.exe");
+                Process.Start("C:/LogicPort2/LogicPort2.exe");
             }
         }
 
