@@ -34,19 +34,13 @@ void setup() {
   boardController.shutDownRegs();
   //sets oscilloscope gain to X1
   boardController.setScopeGainX1();
-   
-  //PosReg *fuck = new PosReg(7.0, 13.0);
-//NegReg *that = new NegReg(-10.0, -12.0);
-
+  
 }
 
 // the loop routine runs over and over again forever
 void loop() {
   boardController.serialControl();
   boardController.safetyCheck();
-  //if statement that runs safety check. If no board is
-  //connected, print "00000000" to indicate that no board
-  //is connected and shut down all regulators
 }
 
 
