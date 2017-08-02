@@ -21,8 +21,8 @@ class DBControl {
   boolean safetyCheck();
   void readBoardID();
   void configureBoardIdPins();
-  void configureShutdownRegPins();
   void shutDownRegs();
+  void setScopeGainX1();
   
   private:
   // Arduino Pins used for reading Board ID
