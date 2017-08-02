@@ -163,7 +163,10 @@ void DBControl::configureBoardIdPins() {
  Function that shuts down all linear regulators.
 ***********************************************************************/
 void DBControl::shutDownRegs() {
-  configureShutdownRegPins();
+  pinMode(A8, OUTPUT);
+  pinMode(A9, OUTPUT);
+  pinMode(A10, OUTPUT);
+  pinMode(A11, OUTPUT);
 
   digitalWrite(A8, LOW);
   digitalWrite(A9, LOW);
@@ -171,10 +174,14 @@ void DBControl::shutDownRegs() {
   digitalWrite(A11, LOW);
 }
 
-void DBControl::configureShutdownRegPins() {
-  pinMode(A8, OUTPUT);
-  pinMode(A9, OUTPUT);
-  pinMode(A10, OUTPUT);
-  pinMode(A11, OUTPUT);
+/***********************************************************************
+ Function that sets the oscilloscope probe gain to X1.
+***********************************************************************/
+void DBControl::setScopeGainX1() {
+  pinMode(A12, OUTPUT);
+  pinMode(A13, OUTPUT);
+
+  digitalWrite(A12, LOW);
+  digitalWrite(A13, LOW);
 }
 
