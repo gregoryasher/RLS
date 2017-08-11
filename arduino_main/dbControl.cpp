@@ -125,7 +125,7 @@ void DBControl::configureDaughterboardPins() {
 ***********************************************************************/
 boolean DBControl::safetyCheck() {
 
-  if (bID.equalsIgnoreCase("00000000")) { //if no board is connected, turn off regulators and report error
+  if (bID.equalsIgnoreCase("11111111")) { //if no board is connected, turn off regulators and report error
       shutDownRegs();
       return false;
   }
