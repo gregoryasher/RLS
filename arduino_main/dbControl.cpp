@@ -49,34 +49,55 @@ void DBControl::serialControl() {
       Serial.flush();
       Serial.println(bID);
     }
-    else if (boardIDsubstring == "board_3")//Board 3 is addressed (the default message is board_3,1,1)
+    else if (boardIDsubstring.equalsIgnoreCase("board_3"))//Board 3 is addressed (the default message is board_3,1,1)
     {
+      //Serial.flush();
+      //Serial.println("1"); //success
       configureDaughterboardPins();
       board3.execute(outputFromUI);
+//      Serial.flush();
+//      Serial.println("1"); //success
     }
-    else if (boardIDsubstring == "board_4") // Board 4 is addressed (the default message is board_4,1,1,1)
+    else if (boardIDsubstring.equalsIgnoreCase("board_4")) // Board 4 is addressed (the default message is board_4,1,1,1)
     {
+//      Serial.flush();
+//      Serial.println("1"); //success
       configureDaughterboardPins();
       board4.execute(outputFromUI);
+//      Serial.flush();
+//      Serial.println("1"); //success
     }
-    else if (boardIDsubstring == "board_5")//Board 5 is addressed (the default message is board_5,1,1,1)
+    else if (boardIDsubstring.equalsIgnoreCase("board_5"))//Board 5 is addressed (the default message is board_5,1,1,1)
     {
+//      Serial.flush();
+//      Serial.println("1"); //success
       configureDaughterboardPins();
       board5.execute(outputFromUI);
+//      Serial.flush();
+//      Serial.println("1"); //success
     }
-    else if (boardIDsubstring == "board_6")//Board 5 is addressed (the default message is board_5,1,1,1)
+    else if (boardIDsubstring.equalsIgnoreCase("board_6"))//Board 5 is addressed (the default message is board_5,1,1,1)
     {
+//      Serial.flush();
+//      Serial.println("1"); //success
       configureDaughterboardPins();
       board6.execute(outputFromUI);
+//      Serial.flush();
+//      Serial.println("1"); //success
     }
-    else if (boardIDsubstring == "board_7")//Board 5 is addressed (the default message is board_5,1,1,1)
+    else if (boardIDsubstring.equalsIgnoreCase("board_7"))//Board 5 is addressed (the default message is board_5,1,1,1)
     {
+//      Serial.flush();
+//      Serial.println("1"); //success
       configureDaughterboardPins();
       board7.execute(outputFromUI);
+//      Serial.flush();
+//      Serial.println("1"); //success
     }
     else
     {
-      Serial.println("Wrong board plugged in while board is updating.");
+      Serial.flush();
+      Serial.println("No board dectected. Check Board again"); //failure
     }
   }
 }
