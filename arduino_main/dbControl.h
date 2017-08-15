@@ -22,6 +22,7 @@ class DBControl {
   void readBoardID();
   void configureBoardIdPins();
   void shutDownRegs();
+  void setScopeGainX1();
   
   private:
   // Arduino Pins used for reading Board ID

@@ -17,6 +17,9 @@
 #define db3_h
 
 #include "Arduino.h"
+#include "PosReg.h"
+#include "NegReg.h"
+#include "DigitalPot.h"
 
 class DB3 {
 	public: 

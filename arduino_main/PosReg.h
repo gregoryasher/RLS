@@ -9,6 +9,12 @@
 
 #ifndef PosReg_h
 #define PosReg_h
+  //appropriate pin allocations for the shutdown pins of both 
+  //positive linear regulators as well as the chip enable for the 
+  //positive digital potentiometer attached to them 
+#define V1_PLUS_SHDN A9
+#define V2_PLUS_SHDN A8
+#define POS_CS 48
 
 #include "Arduino.h"
 #include "DigitalPot.h"
@@ -17,7 +23,7 @@ class PosReg {
   public:
 
   //defaults second positive regulator to 0.0 if daughterboard does not
-  //request an input voltage for it
+  //request an input voltage argument for it
   PosReg(double volt1, double volt2);
   PosReg(double volt1);
   
@@ -29,7 +35,7 @@ class PosReg {
   int getv2shdn();
   double getV1();
   double getV2();
-  int getcs();
+  int getCS();
 
   //calculates required digital potentiometer values for the requested
   //input voltages and sets the digital potentiometer to calculated value 
@@ -37,7 +43,7 @@ class PosReg {
 
   //helper function that calculates the digitial potentiometer resistance
   //as an int
-  int posPotCalc(double vin); 
+  int posPotCalc(double vout); 
   
   private:
 
@@ -48,12 +54,7 @@ class PosReg {
   //digital potentiometer associated with the positive regulators
   DigitalPot posPot;
 
-  //appropriate pin allocations for the shutdown pins of both 
-  //positive linear regulators as well as the chip enable for the 
-  //positive digital potentiometer attached to them 
-  const byte V1_PLUS_SHDN = A8;
-  const byte V2_PLUS_SHDN = A9;
-  const byte POS_CS = 50;
+
 };
 
 #endif

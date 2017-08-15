@@ -14,7 +14,7 @@
 
 class DigitalPot {
   public:
-
+  
   //sets the chip select pin for the appropriate set of positive or 
   //negative linear regulators 
   DigitalPot();
@@ -33,6 +33,8 @@ class DigitalPot {
   byte chipSel;
   int res1;
   int res2;
+  boolean noVout1 = true;
+  boolean noVout2 = true;
 };
 
 #endif

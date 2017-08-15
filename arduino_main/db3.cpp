@@ -85,6 +85,19 @@ void DB3::configurePins() {
 	// set the address of both pots to be different
 	digitalWrite(pot1_address, LOW);
 	digitalWrite(pot2_address, HIGH);
+
+  //When requesting voltages from V1 and V2 +/-
+  //create a new regulator object with either one 
+  //or two arguments (PosReg for positive voltage 
+  //and NegReg for negative) to set the regulators 
+  //to output the specified voltage. Objects must 
+  //also be deleted within the same function.
+    
+  PosReg *posReg = new PosReg(6.0);
+  NegReg *negReg = new NegReg(-6.0);
+
+  delete posReg;
+  delete negReg;
 }
 
 void DB3::execute(String Board_3_Serial) {

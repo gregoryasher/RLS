@@ -14,7 +14,12 @@
 /*********************************************
    Default constructor for digital pot.
 **********************************************/
-DigitalPot::DigitalPot() {};
+DigitalPot::DigitalPot() {
+  SPI.begin();
+  SPI.setBitOrder(MSBFIRST);
+  SPI.setClockDivider(SPI_CLOCK_DIV4);
+  SPI.setDataMode(SPI_MODE1);
+  }
 
 /*********************************************
    Setters for required resistance 1.
@@ -63,8 +68,14 @@ void DigitalPot::writeValues(byte shdn1, byte shdn2) {
   delay(50);
 
   //turns on regulators once writing is complete
-  digitalWrite(shdn1, HIGH);
-  digitalWrite(shdn2, HIGH);
+  if (noVout1 = false)
+  {
+    digitalWrite(shdn1, HIGH);
+  }
+  if (noVout2 = false)
+  {
+    digitalWrite(shdn2, HIGH);
+  }
 }
 
 /*********************************************
@@ -74,9 +85,11 @@ void DigitalPot::writeValues(byte shdn1, byte shdn2) {
 **********************************************/
 void DigitalPot::checkShutdowns(byte shdn1, byte shdn2) {  
   if (shdn1 == HIGH) {
+    noVout1 = false;
     digitalWrite(shdn1, LOW);
   }
   if (shdn2 == HIGH) {
+    noVout2 = false;
     digitalWrite(shdn2, LOW);
   }
 }
