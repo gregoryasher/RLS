@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:RLS-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,8 +28,14 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+<<<<<<< HEAD
 LIBS:arduino_shield
 LIBS:arduino_shieldsNCL
+=======
+LIBS:RA30421051
+LIBS:RB496EATR
+LIBS:Daughterboard_Connector
+>>>>>>> e8f4e07749823e75fa73ba694785caaf5f5a629c
 LIBS:RLS-cache
 EELAYER 25 0
 EELAYER END
@@ -38,19 +43,25 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 7 7
 Title "Remote Lab System"
+<<<<<<< HEAD
 Date ""
 Rev ""
 Comp ""
+=======
+Date "2017-07-18"
+Rev "15"
+Comp "University of Washington, Bothell"
+>>>>>>> e8f4e07749823e75fa73ba694785caaf5f5a629c
 Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L CONN_02X20 J4
+L CONN_02X20 J6
 U 1 1 595979EB
 P 4750 3300
-F 0 "J4" H 4750 4350 50  0000 C CNN
+F 0 "J6" H 4750 4350 50  0000 C CNN
 F 1 "Logic_Analyzer1" V 4750 3300 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_2x20_Pitch2.54mm" H 4750 2350 50  0001 C CNN
 F 3 "" H 4750 2350 50  0001 C CNN
@@ -58,10 +69,10 @@ F 3 "" H 4750 2350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_02X20 J5
+L CONN_02X20 J7
 U 1 1 59597A25
 P 6450 3300
-F 0 "J5" H 6450 4350 50  0000 C CNN
+F 0 "J7" H 6450 4350 50  0000 C CNN
 F 1 "Logic_Analyzer2" V 6450 3300 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_2x20_Pitch2.54mm" H 6450 2350 50  0001 C CNN
 F 3 "" H 6450 2350 50  0001 C CNN

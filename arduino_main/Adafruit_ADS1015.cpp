@@ -27,7 +27,6 @@
 #include <Wire.h>
 
 #include "Adafruit_ADS1015.h"
-
 /**************************************************************************/
 /*!
     @brief  Abstract away platform differences in Arduino wire library
@@ -366,6 +365,256 @@ int16_t Adafruit_ADS1015::getLastConversionResults()
       res |= 0xF000;
     }
     return (int16_t)res;
+  }
+}
+
+
+double getCh0()
+{
+  double adc0;
+  Adafruit_ADS1115 ads;  /* Use this for the 16-bit version */
+  ads.begin();
+  //adc0////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  ads.setGain(GAIN_SIXTEEN);    // 16x gain  +/- 0.256V  1 bit = 0.125mV  0.0078125mV
+  adc0 = ads.readADC_SingleEnded(0);
+  if(adc0*0.0078125 > 250)
+  {
+    ads.setGain(GAIN_EIGHT);    // 8x gain   +/- 0.512V  1 bit = 0.25mV   0.015625mV
+    adc0 = ads.readADC_SingleEnded(0);
+    if(adc0*0.015625 > 500)
+    {
+      ads.setGain(GAIN_FOUR);   // 4x gain   +/- 1.024V  1 bit = 0.5mV    0.03125mV max 1023.97
+      adc0 = ads.readADC_SingleEnded(0);
+      if(adc0*.03125 > 1000)
+      {
+        ads.setGain(GAIN_TWO);  // 2x gain   +/- 2.048V  1 bit = 1mV      0.0625mV max 2047.94
+        adc0 = ads.readADC_SingleEnded(0);
+        if(adc0*.0625 > 2000)
+        {
+          ads.setGain(GAIN_ONE); // 1x gain   +/- 4.096V  1 bit = 2mV      0.125mV max 4095.87
+          adc0 = ads.readADC_SingleEnded(0);
+          if(adc0*.125 > 4000)
+          {
+            ads.setGain(GAIN_TWOTHIRDS); // 2/3x gain +/- 6.144V  1 bit = 3mV      0.1875mV (default) max 5534.44
+            adc0 = ads.readADC_SingleEnded(0);
+            return adc0*.1875;
+            //Serial.print("AIN0: "); Serial.println(adc0*.1875);
+          }
+          else
+          {
+            return adc0*.125;
+            //Serial.print("AIN0: "); Serial.println(adc0*.125);
+          }
+        }
+        else
+        {
+          return adc0*.0625;
+          //Serial.print("AIN0: "); Serial.println(adc0*.0625);
+        }
+      }
+      else
+      {
+        return adc0*.03125;
+        //Serial.print("AIN0: "); Serial.println(adc0*.03125);
+      }
+    }
+    else
+    {
+      return adc0*.015625;
+      //Serial.print("AIN0: "); Serial.println(adc0*.015625);
+    }
+  }
+  else
+  {
+    return adc0*.0078125;
+    //Serial.print("AIN0: "); Serial.println(adc0*.0078125);
+  }
+}
+
+double getCh1()
+{
+  double adc1;
+  Adafruit_ADS1115 ads;  /* Use this for the 16-bit version */
+  ads.begin();
+  //adc1///////////////////////////////////////////////////////////////////////////////////////////////////
+  ads.setGain(GAIN_SIXTEEN);    // 16x gain  +/- 0.256V  1 bit = 0.125mV  0.0078125mV
+  adc1 = ads.readADC_SingleEnded(1);
+  if(adc1*0.0078125 > 250)
+  {
+    ads.setGain(GAIN_EIGHT);    // 8x gain   +/- 0.512V  1 bit = 0.25mV   0.015625mV
+    adc1 = ads.readADC_SingleEnded(1);
+    if(adc1*0.015625 > 500)
+    {
+      ads.setGain(GAIN_FOUR);   // 4x gain   +/- 1.024V  1 bit = 0.5mV    0.03125mV max 1023.97
+      adc1 = ads.readADC_SingleEnded(1);
+      if(adc1*.03125 > 1000)
+      {
+        ads.setGain(GAIN_TWO);  // 2x gain   +/- 2.048V  1 bit = 1mV      0.0625mV max 2047.94
+        adc1 = ads.readADC_SingleEnded(1);
+        if(adc1*.0625 > 2000)
+        {
+          ads.setGain(GAIN_ONE); // 1x gain   +/- 4.096V  1 bit = 2mV      0.125mV max 4095.87
+          adc1 = ads.readADC_SingleEnded(1);
+          if(adc1*.125 > 4000)
+          {
+            ads.setGain(GAIN_TWOTHIRDS); // 2/3x gain +/- 6.144V  1 bit = 3mV      0.1875mV (default) max 5534.44
+            adc1 = ads.readADC_SingleEnded(1);
+            return ((((adc1*.1875*3)/.924357)-874.42));
+            //Serial.print("AIN1: "); Serial.println(((((adc1*.1875*3)/.924357)-874.42)));
+          }
+          else
+          {
+            return (((((adc1*.125*3)/.924357)-874.42)));
+            //Serial.print("AIN1: "); Serial.println(((((adc1*.125*3)/.924357)-874.42)));
+          }
+        }
+        else
+        {
+            return (((((adc1*.0625*3)/.924357)-874.42)));
+            //Serial.print("AIN1: "); Serial.println(((((adc1*.0625*3)/.924357)-874.42)));
+            //Serial.print("AIN1: "); Serial.println(mathFun);
+        }
+      }
+      else
+      {
+            return (((((adc1*.03125*3)/.924357)-874.42)));
+            //Serial.print("AIN1: "); Serial.println(((((adc1*.03125*3)/.924357)-874.42)));
+      }
+    }
+    else
+    {
+      return (((((adc1*.015625*3)/.924357)-874.42)));
+      //Serial.print("AIN1: "); Serial.println(((((adc1*.015625*3)/.924357)-874.42)));
+    }
+  }
+  else
+  {
+    return (((((adc1*.0078125*3)/.924357)-874.42)));
+    //Serial.print("AIN1: "); Serial.println(((((adc1*.0078125*3)/.924357)-874.42)));
+  }
+}
+
+double getCh2()
+{
+  double adc2;
+  Adafruit_ADS1115 ads;  /* Use this for the 16-bit version */
+  ads.begin();
+    //adc2///////////////////////////////////////////////////////////////////////////////////////////////////
+  ads.setGain(GAIN_SIXTEEN);    // 16x gain  +/- 0.256V  1 bit = 0.125mV  0.0078125mV
+  adc2 = ads.readADC_SingleEnded(2);
+  if(adc2*0.0078125 > 250)
+  {
+    ads.setGain(GAIN_EIGHT);    // 8x gain   +/- 0.512V  1 bit = 0.25mV   0.015625mV
+    adc2 = ads.readADC_SingleEnded(2);
+    if(adc2*0.015625 > 500)
+    {
+      ads.setGain(GAIN_FOUR);   // 4x gain   +/- 1.024V  1 bit = 0.5mV    0.03125mV max 1023.97
+      adc2 = ads.readADC_SingleEnded(2);
+      if(adc2*.03125 > 1000)
+      {
+        ads.setGain(GAIN_TWO);  // 2x gain   +/- 2.048V  1 bit = 1mV      0.0625mV max 2047.94
+        adc2 = ads.readADC_SingleEnded(2);
+        if(adc2*.0625 > 2000)
+        {
+          ads.setGain(GAIN_ONE); // 1x gain   +/- 4.096V  1 bit = 2mV      0.125mV max 4095.87
+          adc2 = ads.readADC_SingleEnded(2);
+          if(adc2*.125 > 4000)
+          {
+            ads.setGain(GAIN_TWOTHIRDS); // 2/3x gain +/- 6.144V  1 bit = 3mV      0.1875mV (default) max 5534.44
+            adc2 = ads.readADC_SingleEnded(2);
+            return adc2*-.1875;
+            //Serial.print("AIN2: "); Serial.println(adc2*-.1875);
+          }
+          else
+          {
+            return adc2*-.125;
+           // Serial.print("AIN2: "); Serial.println(adc2*-.125);
+          }
+        }
+        else
+        {
+          return adc2*-.0625;
+          //Serial.print("AIN2: "); Serial.println(adc2*-.0625);
+        }
+      }
+      else
+      {
+        return adc2*-.03125;
+        //Serial.print("AIN2: "); Serial.println(adc2*-.03125);
+      }
+    }
+    else
+    {
+      return adc2*-.015625;
+      //Serial.print("AIN2: "); Serial.println(adc2*-.015625);
+    }
+  }
+  else
+  {
+    return adc2*-.0078125;
+    //Serial.print("AIN2: "); Serial.println(adc2*-.0078125);
+  }
+}
+
+double getCh3()
+{
+  double adc3;
+  Adafruit_ADS1115 ads;  /* Use this for the 16-bit version */
+  ads.begin();
+  //adc3///////////////////////////////////////////////////////////////////////////////////////////////////
+  ads.setGain(GAIN_SIXTEEN);    // 16x gain  +/- 0.256V  1 bit = 0.125mV  0.0078125mV
+  adc3 = ads.readADC_SingleEnded(3);
+  if(adc3*0.0078125 > 250)
+  {
+    ads.setGain(GAIN_EIGHT);    // 8x gain   +/- 0.512V  1 bit = 0.25mV   0.015625mV
+    adc3 = ads.readADC_SingleEnded(3);
+    if(adc3*0.015625 > 500)
+    {
+      ads.setGain(GAIN_FOUR);   // 4x gain   +/- 1.024V  1 bit = 0.5mV    0.03125mV max 1023.97
+      adc3 = ads.readADC_SingleEnded(3);
+      if(adc3*.03125 > 1000)
+      {
+        ads.setGain(GAIN_TWO);  // 2x gain   +/- 2.048V  1 bit = 1mV      0.0625mV max 2047.94
+        adc3 = ads.readADC_SingleEnded(3);
+        if(adc3*.0625 > 2000)
+        {
+          ads.setGain(GAIN_ONE); // 1x gain   +/- 4.096V  1 bit = 2mV      0.125mV max 4095.87
+          adc3 = ads.readADC_SingleEnded(3);
+          if(adc3*.125 > 4000)
+          {
+            ads.setGain(GAIN_TWOTHIRDS); // 2/3x gain +/- 6.144V  1 bit = 3mV      0.1875mV (default) max 5534.44
+            adc3 = ads.readADC_SingleEnded(3);
+            return (((adc3*-.1875*3)/.912929)+886.575);
+            //Serial.print("AIN3: "); Serial.println(((adc3*-.1875*3)/.912929)+886.575);
+          }
+          else
+          {
+            return (((adc3*-.125*3)/.912929)+886.575);
+            //Serial.print("AIN3: "); Serial.println(((adc3*-.125*3)/.912929)+886.575);
+          }
+        }
+        else
+        {
+          return (((adc3*-.0625*3)/.912929)+886.575);
+          //Serial.print("AIN3: "); Serial.println(((adc3*-.0625*3)/.912929)+886.575);
+        }
+      }
+      else
+      {
+        return (((adc3*-.03125*3)/.912929)+886.575);
+        //Serial.print("AIN3: "); Serial.println(((adc3*-.03125*3)/.912929)+886.575);
+      }
+    }
+    else
+    {
+      return (((adc3*-.015625*3)/.912929)+886.575);
+      //Serial.print("AIN3: "); Serial.println(((adc3*-.015625*3)/.912929)+886.575);
+    }
+  }
+  else
+  {
+    return (((adc3*-.0078125*3)/.912929)+886.575);
+    //Serial.print("AIN3: "); Serial.println(((adc3*-.0078125*3)/.912929)+886.575);
   }
 }
 

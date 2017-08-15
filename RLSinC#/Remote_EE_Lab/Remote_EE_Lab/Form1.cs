@@ -23,7 +23,7 @@ namespace Remote_EE_Lab
         String boardID = "null";
         String Current_Board = "-1";
         String USB_port = "COM69"; //default COM port; this can be changed later using Setup tab;
-        bool isDebugMode = true;
+        bool isDebugMode = false;
 
         //Declare the variables for Board_1
         String Board_1_Serial_Message = "board_1,01,1,4,4,01,01"; //default message
@@ -162,7 +162,7 @@ namespace Remote_EE_Lab
             }
             else
             {
-                Process.Start("C:/Program Files (x86)/Velleman/PcLab2000LT/PcLab2000LT.exe");
+                Process.Start("C:/Velleman/PcLab2000LT.exe");
             }
         }
 
@@ -608,6 +608,7 @@ namespace Remote_EE_Lab
                         Serial_Message = Board_4_Serial_Message;
                         break;
                     case "00000101":
+                        Board_5_Compile_Serial_Message();
                         Serial_Message = Board_5_Serial_Message;
                         break;
                     case "00000110":
@@ -634,7 +635,13 @@ namespace Remote_EE_Lab
                 SerialPort1.DiscardInBuffer();
                 SerialPort1.DiscardOutBuffer();
                 SerialPort1.WriteLine(Serial_Message);
+                MessageBox.Show(Serial_Message);
                 Serial_Text_Test.Text = "Board " + boardID + " message sent!";
+                //Thread.Sleep(1000);
+                //string returnMes = SerialPort1.ReadLine(); //Added to be consistant with check
+                ///returnMes = SerialPort1.ReadLine();
+                //Serial_Text_Test.Text = returnMes;
+
                 SerialPort1.Close();
             }
             catch { }
@@ -936,61 +943,21 @@ namespace Remote_EE_Lab
         void Board_3_Compile_Serial_Message()
         {
             Board_3_Serial_Message = "board_3," +
-                             Board_3_R2_State + "," +
-                             Board_3_R3_State;
+                             (board_3_R2.SelectedIndex.Equals(0) ? "1" : 
+                                board_3_R2.SelectedIndex.Equals(1) ? "2" :
+                                board_3_R2.SelectedIndex.Equals(2) ? "3" : 
+                                board_3_R2.SelectedIndex.Equals(2) ? "4" : "5") + 
+                             "," +
+                             (board_3_R3.SelectedIndex.Equals(0) ? "1" :
+                                board_3_R3.SelectedIndex.Equals(1) ? "2" :
+                                board_3_R3.SelectedIndex.Equals(2) ? "3" :
+                                board_3_R3.SelectedIndex.Equals(2) ? "4" : "5");
             //this statement exists exclusively for debuginng purposes
             Serial_Text_Test.Text = Board_3_Serial_Message;
             //Change the 'Send Data' button color to orange, to indicate that
             //a change in the board configuration has occured.
             btn_Send_Config.BackColor = Color.Orange;
         }
-
-
-        //Board 3: R2 control
-        private void board_3_R2_SelectedIndexChanged(System.Object sender, System.EventArgs e)
-        {
-            if (board_3_R2.SelectedIndex.Equals(0))
-                Board_3_R2_State = "1";
-            else if (board_3_R2.SelectedIndex.Equals(1))
-                Board_3_R2_State = "2";
-            else if (board_3_R2.SelectedIndex.Equals(2))
-                Board_3_R2_State = "3";
-            else if (board_3_R2.SelectedIndex.Equals(3))
-                Board_3_R2_State = "4";
-            else
-                Board_3_R2_State = "5";
-
-            //Call the message compiler
-            Board_3_Compile_Serial_Message();
-        }
-
-
-        //Board 3: R3 control
-        private void board_3_R3_SelectedIndexChanged(System.Object sender, System.EventArgs e)
-        {
-            if (board_3_R3.SelectedIndex.Equals(0))
-                Board_3_R3_State = "1";
-            else if (board_3_R3.SelectedIndex.Equals(1))
-                Board_3_R3_State = "2";
-            else if (board_3_R3.SelectedIndex.Equals(2))
-                Board_3_R3_State = "3";
-            else if (board_3_R3.SelectedIndex.Equals(3))
-                Board_3_R3_State = "4";
-            else
-                Board_3_R3_State = "5";
-
-            //Call the message compiler
-            Board_3_Compile_Serial_Message();
-        }
-
-
-
-
-
-
-
-
-
 
 
         //Board 4 Subroutines 
@@ -1000,87 +967,19 @@ namespace Remote_EE_Lab
         void Board_4_Compile_Serial_Message()
         {
             Board_4_Serial_Message = "board_4," +
-                             Board_4_R1_State + "," +
-                             Board_4_Diode1_State + "," +
-                             Board_4_Diode2_State;
+                             (board_4_R1.SelectedIndex.Equals(0) ? "1" :
+                             board_4_R1.SelectedIndex.Equals(1) ? "2" :
+                             board_4_R1.SelectedIndex.Equals(2) ? "3" : "4") + 
+                             "," +
+                             (board4_Diode1_RadioButton1.Checked.Equals(true) ? "1" : "0") + 
+                             "," +
+                             (board4_Diode2_RadioButton2.Checked.Equals(true) ? "1" : "0");
             //this statement exists exclusively for debuginng purposes
             Serial_Text_Test.Text = Board_4_Serial_Message;
             //Change the 'Send Data' button collor to orange, to indicate that
             //a change in the board configuration has occured.
             btn_Send_Config.BackColor = Color.Orange;
         }
-
-
-        //Board 4: R1 control
-        private void board_4_R1_SelectedIndexChanged(System.Object sender, System.EventArgs e)
-        {
-            if (board_4_R1.SelectedIndex.Equals(0))
-                Board_4_R1_State = "1";
-            else if (board_4_R1.SelectedIndex.Equals(1))
-                Board_4_R1_State = "2";
-            else if (board_4_R1.SelectedIndex.Equals(2))
-                Board_4_R1_State = "3";
-            else
-                Board_4_R1_State = "4";
-
-            //Call the message compiler
-            Board_4_Compile_Serial_Message();
-        }
-
-
-        //Board 4: Diode 1 control
-        private void board4_Diode1_RadioButton1_CheckedChanged(System.Object sender, System.EventArgs e)
-        {
-            if (board4_Diode1_RadioButton1.Checked.Equals(true))
-                Board_4_Diode1_State = "1";
-            else
-                Board_4_Diode1_State = "0";
-
-            //Call the message compiler
-            Board_4_Compile_Serial_Message();
-        }
-
-        //You actually DO need a function for BOTH radio buttons; if you only have a function for RadioButton1,
-        // RadioButton2 will not work until AFTER RadioButton1 has been clicked, which is confusing and undesirable
-        private void board4_Diode1_RadioButton2_CheckedChanged(System.Object sender, System.EventArgs e)
-        {
-            if (board4_Diode1_RadioButton2.Checked.Equals(true))
-                Board_4_Diode1_State = "0";
-            else
-                Board_4_Diode1_State = "1";
-
-            //Call the message compiler
-            Board_4_Compile_Serial_Message();
-        }
-
-
-
-        //Board 4: Diode 2 control
-        private void board4_Diode2_RadioButton1_CheckedChanged(System.Object sender, System.EventArgs e)
-        {
-            if (board4_Diode2_RadioButton1.Checked.Equals(true))
-                Board_4_Diode2_State = "1";
-            else
-                Board_4_Diode2_State = "0";
-
-            //Call the message compiler
-            Board_4_Compile_Serial_Message();
-        }
-
-        private void board4_Diode2_RadioButton2_CheckedChanged(System.Object sender, System.EventArgs e)
-        {
-            if (board4_Diode2_RadioButton2.Checked.Equals(true))
-                Board_4_Diode2_State = "0";
-            else
-                Board_4_Diode2_State = "1";
-
-            //Call the message compiler
-            Board_4_Compile_Serial_Message();
-        }
-
-
-
-
 
 
         //Board 5 Subroutines 
@@ -1090,65 +989,17 @@ namespace Remote_EE_Lab
         void Board_5_Compile_Serial_Message()
         {
             Board_5_Serial_Message = "board_5," +
-                             Board_5_R2_State + "," +
-                             Board_5_R3_State + "," +
-                             Board_5_C1_State;
+                             (board_5_R2.SelectedIndex.Equals(0) ? "1" : "0")+
+                             "," +
+                             (board_5_R3.SelectedIndex.Equals(0) ? "1" : "0") +
+                             "," +
+                             (board_5_C1.SelectedIndex.Equals(0) ? "1" : "0");
             //this statement exists exclusively for debuginng purposes
             Serial_Text_Test.Text = Board_5_Serial_Message;
             //Change the 'Send Data' button collor to orange, to indicate that
             //a change in the board configuration has occured.
             btn_Send_Config.BackColor = Color.Orange;
         }
-
-
-        //Board 5: R2 control
-        private void board_5_R2_SelectedIndexChanged(System.Object sender, System.EventArgs e)
-        {
-            if (board_5_R2.SelectedIndex.Equals(0))
-                Board_5_R2_State = "1";
-            else
-                Board_5_R2_State = "0";
-
-            //Call the message compiler
-            Board_5_Compile_Serial_Message();
-        }
-
-
-        //Board 5: R2 control
-        private void board_5_R3_SelectedIndexChanged(System.Object sender, System.EventArgs e)
-        {
-            if (board_5_R3.SelectedIndex.Equals(0))
-                Board_5_R3_State = "1";
-            else
-                Board_5_R3_State = "0";
-
-            //Call the message compiler
-            Board_5_Compile_Serial_Message();
-        }
-
-
-        //Board 5: C1 control
-        private void board_5_C1_SelectedIndexChanged(System.Object sender, System.EventArgs e)
-        {
-            if (board_5_C1.SelectedIndex.Equals(0))
-                Board_5_C1_State = "1";
-            else
-                Board_5_C1_State = "0";
-
-            //Call the message compiler
-            Board_5_Compile_Serial_Message();
-        }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1555,7 +1406,7 @@ namespace Remote_EE_Lab
             }
             else
             {
-                Process.Start("C:/Program Files (x86)/LogicPort2/LogicPort2.exe");
+                Process.Start("C:/LogicPort2/LogicPort2.exe");
             }
         }
 

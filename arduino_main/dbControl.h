@@ -21,11 +21,14 @@ class DBControl {
   boolean safetyCheck();
   void readBoardID();
   void configureBoardIdPins();
-  void setVin(double vin1, double vin2 = vin1);
+  void shutDownRegs();
+  void setScopeGainX1();
   
   private:
   // Arduino Pins used for reading Board ID
-  const int boardIdPins[8] = {A7, A6, A5, A4, A3, A2, A1, A0};
+
+  //Changed array to byte array as int array is too big for arduino pins
+  const byte boardIdPins[8] = {A7, A6, A5, A4, A3, A2, A1, A0};
   int boardIdPinState[8];
 };
 
