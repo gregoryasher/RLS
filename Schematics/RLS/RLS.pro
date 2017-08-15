@@ -1,13 +1,53 @@
+<<<<<<< HEAD
+update=7/7/2017 03:06:57
+=======
 update=7/18/2017 00:24:48
+>>>>>>> e8f4e07749823e75fa73ba694785caaf5f5a629c
 version=1
 last_client=kicad
 [cvpcb]
 version=1
 NetIExt=net
-[general]
-version=1
 [eeschema]
 version=1
+<<<<<<< HEAD
+LibDir=../RLS;../RLS;../../Arduino_Shield_Modules_for_KiCad_V3
+[eeschema/libraries]
+LibName1=RLS-rescue
+LibName2=power
+LibName3=device
+LibName4=transistors
+LibName5=conn
+LibName6=linear
+LibName7=regul
+LibName8=74xx
+LibName9=cmos4000
+LibName10=adc-dac
+LibName11=memory
+LibName12=xilinx
+LibName13=microcontrollers
+LibName14=dsp
+LibName15=microchip
+LibName16=analog_switches
+LibName17=motorola
+LibName18=texas
+LibName19=intel
+LibName20=audio
+LibName21=interface
+LibName22=digital-audio
+LibName23=philips
+LibName24=display
+LibName25=cypress
+LibName26=siliconi
+LibName27=opto
+LibName28=atmel
+LibName29=contrib
+LibName30=valves
+LibName31=arduino_shield
+LibName32=E:/a_sos/Documents/Arduino_Shield_Modules_for_KiCad_V3/arduino_shieldsNCL
+[general]
+version=1
+=======
 LibDir=../RLS;RLS_Library
 [eeschema/libraries]
 LibName1=power
@@ -42,14 +82,22 @@ LibName29=valves
 LibName30=RLS_Library/RA30421051
 LibName31=RLS_Library/RB496EATR
 LibName32=RLS_Library/Daughterboard_Connector
+>>>>>>> e8f4e07749823e75fa73ba694785caaf5f5a629c
 [pcbnew]
 version=1
 PageLayoutDescrFile=
 LastNetListRead=RLS_NetList.net
+<<<<<<< HEAD
+PadDrill=0.762
+PadDrillOvalY=0.762
+PadSizeH=1.524
+PadSizeV=1.524
+=======
 PadDrill=1
 PadDrillOvalY=1
 PadSizeH=1.7
 PadSizeV=1.7
+>>>>>>> e8f4e07749823e75fa73ba694785caaf5f5a629c
 PcbTextSizeV=1.5
 PcbTextSizeH=1.5
 PcbTextThickness=0.3
@@ -61,6 +109,8 @@ SolderMaskMinWidth=0
 DrawSegmentWidth=0.2
 BoardOutlineThickness=0.15
 ModuleOutlineThickness=0.15
+<<<<<<< HEAD
+=======
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
@@ -71,3 +121,4 @@ NetFmtName=Pcbnew
 SpiceForceRefPrefix=0
 SpiceUseNetNumbers=0
 LabSize=60
+>>>>>>> e8f4e07749823e75fa73ba694785caaf5f5a629c

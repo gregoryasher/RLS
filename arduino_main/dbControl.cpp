@@ -17,6 +17,10 @@
 #include "db5.h"
 #include "db6.h"
 #include "db7.h"
+//#include "db8.h" //undefined variable issue
+//#include "db9.h" //undefined variable issues
+//#include "db10.h" //WORK IN PROGRESS
+//#include "db11.h" //undefined variable issue
 
 // instantiate board objects
 
@@ -25,6 +29,10 @@ DB4 board4;
 DB5 board5;
 DB6 board6;
 DB7 board7;
+//DB8 board8; //undefined variable issue
+//DB9 board9; //undefined variable issues
+//DB10 board10; //WORK IN PROGRESS
+//DB11 board11; //undefined variable issue
 
 // Pins of Board ID are Arduino Mega's analog input pins
 int boardIdPinState[8] = {0};
@@ -44,7 +52,7 @@ void DBControl::serialControl() {
     Serial.println(outputFromUI);
     String boardIDsubstring = outputFromUI.substring(0, 7);
     if (outputFromUI.equalsIgnoreCase("boardID")) //Board ID is requested
-    { 
+    {
       readBoardID();
       Serial.flush();
       Serial.println(bID);
@@ -55,45 +63,88 @@ void DBControl::serialControl() {
       //Serial.println("1"); //success
       configureDaughterboardPins();
       board3.execute(outputFromUI);
-//      Serial.flush();
-//      Serial.println("1"); //success
+      //      Serial.flush();
+      //      Serial.println("1"); //success
     }
     else if (boardIDsubstring.equalsIgnoreCase("board_4")) // Board 4 is addressed (the default message is board_4,1,1,1)
     {
-//      Serial.flush();
-//      Serial.println("1"); //success
+      //      Serial.flush();
+      //      Serial.println("1"); //success
       configureDaughterboardPins();
       board4.execute(outputFromUI);
-//      Serial.flush();
-//      Serial.println("1"); //success
+      //      Serial.flush();
+      //      Serial.println("1"); //success
     }
     else if (boardIDsubstring.equalsIgnoreCase("board_5"))//Board 5 is addressed (the default message is board_5,1,1,1)
     {
-//      Serial.flush();
-//      Serial.println("1"); //success
+      //      Serial.flush();
+      //      Serial.println("1"); //success
       configureDaughterboardPins();
       board5.execute(outputFromUI);
-//      Serial.flush();
-//      Serial.println("1"); //success
+      //      Serial.flush();
+      //      Serial.println("1"); //success
     }
     else if (boardIDsubstring.equalsIgnoreCase("board_6"))//Board 5 is addressed (the default message is board_5,1,1,1)
     {
-//      Serial.flush();
-//      Serial.println("1"); //success
+      //      Serial.flush();
+      //      Serial.println("1"); //success
       configureDaughterboardPins();
       board6.execute(outputFromUI);
-//      Serial.flush();
-//      Serial.println("1"); //success
+      //      Serial.flush();
+      //      Serial.println("1"); //success
     }
     else if (boardIDsubstring.equalsIgnoreCase("board_7"))//Board 5 is addressed (the default message is board_5,1,1,1)
     {
-//      Serial.flush();
-//      Serial.println("1"); //success
+      //      Serial.flush();
+      //      Serial.println("1"); //success
       configureDaughterboardPins();
       board7.execute(outputFromUI);
-//      Serial.flush();
-//      Serial.println("1"); //success
+      //      Serial.flush();
+      //      Serial.println("1"); //success
     }
+
+    //undefined variable issue
+    //    else if (boardIDsubstring.equalsIgnoreCase("board_8"))//Board 8 is addressed (the default message is board_8,XXXXXXXX)
+    //    {
+    //      //      Serial.flush();
+    //      //      Serial.println("1"); //success
+    //      configureDaughterboardPins();
+    //      board8.execute(outputFromUI);
+    //      //      Serial.flush();
+    //      //      Serial.println("1"); //success
+    //    }
+    //undefined variable issues
+    //    else if (boardIDsubstring.equalsIgnoreCase("board_9"))//Board 9 is addressed (the default message is board_9,XXXXXXX)
+    //    {
+    //      //      Serial.flush();
+    //      //      Serial.println("1"); //success
+    //      configureDaughterboardPins();
+    //      board9.execute(outputFromUI);
+    //      //      Serial.flush();
+    //      //      Serial.println("1"); //success
+    //    }
+
+    //WORK IN PROGRESS
+    //    else if (boardIDsubstring.equalsIgnoreCase("board_10"))//Board 10 is addressed (the default message is board_10,XXXXXXX)
+    //    {
+    //      //      Serial.flush();
+    //      //      Serial.println("1"); //success
+    //      configureDaughterboardPins();
+    //      board10.execute(outputFromUI);
+    //      //      Serial.flush();
+    //      //      Serial.println("1"); //success
+    //    }
+
+    //undefined variable issue
+    //    else if (boardIDsubstring.equalsIgnoreCase("board_11"))//Board 11 is addressed (the default message is board_11,XXXXXXX)
+    //    {
+    //      //      Serial.flush();
+    //      //      Serial.println("1"); //success
+    //      configureDaughterboardPins();
+    //      board11.execute(outputFromUI);
+    //      //      Serial.flush();
+    //      //      Serial.println("1"); //success
+    //    }
     else
     {
       Serial.flush();
@@ -110,13 +161,13 @@ void DBControl::serialControl() {
           Thier configuration settings have been commented out.
 *****************************************************************************/
 void DBControl::configureDaughterboardPins() {
-  
+
   //empty if statement that checks if the same board is connected as previous
   //serial control implementation and skips board configuration if the same
   //board is connected
-  
+
   // Configure pins correctly for the given board
-  if (bID.equalsIgnoreCase("00000011")) {
+  if      (bID.equalsIgnoreCase("00000011")) {
     bIDCheck = bID;
     board3.configurePins();
   }
@@ -136,19 +187,38 @@ void DBControl::configureDaughterboardPins() {
     bIDCheck = bID;
     board7.configurePins();
   }
-  
- // Serial.println(bID);
+
+  //undefined variable issue
+  //  else if (bID.equalsIgnoreCase("00001000")) {
+  //    board8.configurePins();
+  //  }
+
+  //undefined variable issue
+  //  else if (bID.equalsIgnoreCase("00001001")) {
+  //    board9.configurePins();
+  //  }
+
+  //WORK IN PROGRESS
+  //  else if (bID.equalsIgnoreCase("00001010")) {
+  //    board10.configurePins();
+  //  }
+  //undefined variable issue
+  //  else if (bID.equalsIgnoreCase("00001011")) {
+  //    board11.configurePins();
+  //  }
+
+  // Serial.println(bID);
 }
 
 /***********************************************************************
-   Check if the daughter board is present. If it isnt, disable the linear 
+   Check if the daughter board is present. If it isnt, disable the linear
    regulators.
 ***********************************************************************/
 boolean DBControl::safetyCheck() {
 
   if (bID.equalsIgnoreCase("11111111")) { //if no board is connected, turn off regulators and report error
-      shutDownRegs();
-      return false;
+    shutDownRegs();
+    return false;
   }
   return true;
 }
@@ -181,7 +251,7 @@ void DBControl::configureBoardIdPins() {
 }
 
 /***********************************************************************
- Function that shuts down all linear regulators.
+  Function that shuts down all linear regulators.
 ***********************************************************************/
 void DBControl::shutDownRegs() {
   pinMode(A8, OUTPUT);
@@ -196,7 +266,7 @@ void DBControl::shutDownRegs() {
 }
 
 /***********************************************************************
- Function that sets the oscilloscope probe gain to X1.
+  Function that sets the oscilloscope probe gain to X1.
 ***********************************************************************/
 void DBControl::setScopeGainX1() {
   pinMode(A12, OUTPUT);

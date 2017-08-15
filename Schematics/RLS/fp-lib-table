@@ -1,2 +1,4 @@
 (fp_lib_table
+  (lib (name RLS_CustomFootprints)(type KiCad)(uri E:/a_sos/Documents/RLS-master/RLS/RLS_CustomFootprints.pretty)(options "")(descr ""))
+  (lib (name Arduino_Sheilds)(type KiCad)(uri E:/a_sos/Documents/Arduino_Shield_Modules_for_KiCad_V3)(options "")(descr ""))
 )

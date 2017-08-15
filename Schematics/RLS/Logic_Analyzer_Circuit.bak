@@ -28,9 +28,14 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+<<<<<<< HEAD
+LIBS:arduino_shield
+LIBS:arduino_shieldsNCL
+=======
 LIBS:RA30421051
 LIBS:RB496EATR
 LIBS:Daughterboard_Connector
+>>>>>>> e8f4e07749823e75fa73ba694785caaf5f5a629c
 LIBS:RLS-cache
 EELAYER 25 0
 EELAYER END
@@ -38,9 +43,15 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 7 7
 Title "Remote Lab System"
+<<<<<<< HEAD
+Date ""
+Rev ""
+Comp ""
+=======
 Date "2017-07-18"
 Rev "15"
 Comp "University of Washington, Bothell"
+>>>>>>> e8f4e07749823e75fa73ba694785caaf5f5a629c
 Comment1 ""
 Comment2 ""
 Comment3 ""
