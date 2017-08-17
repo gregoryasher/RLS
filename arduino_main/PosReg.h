@@ -1,7 +1,7 @@
 /******************************************************************************
   PosReg.h
   This header file contains code to control the positive set of linear 
-  regulators based on a daughterboard requested input voltage.
+  regulators based on a daughterboard requested output voltage.
   
   Created by Paolo Sebastian, July 2017
   Reseased into the public domain.
@@ -9,9 +9,10 @@
 
 #ifndef PosReg_h
 #define PosReg_h
-  //appropriate pin allocations for the shutdown pins of both 
-  //positive linear regulators as well as the chip enable for the 
-  //positive digital potentiometer attached to them 
+
+//appropriate pin allocations for the shutdown pins of both 
+//positive linear regulators as well as the chip enable for the 
+//positive digital potentiometer attached to them 
 #define V1_PLUS_SHDN A9
 #define V2_PLUS_SHDN A8
 #define POS_CS 48
@@ -53,8 +54,6 @@ class PosReg {
 
   //digital potentiometer associated with the positive regulators
   DigitalPot posPot;
-
-
 };
 
 #endif

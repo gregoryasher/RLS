@@ -21,9 +21,6 @@
 // instantiate board controller object
 DBControl boardController;
 
-//unsigned long used for reducing error message spam
-unsigned long lastMsg = 1;
-
 // setup runs once when Arduino is powered on
 void setup() {
   Serial.begin(9600);

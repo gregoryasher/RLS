@@ -1,7 +1,7 @@
 /******************************************************************************
   NegReg.h
   This header file contains code to control the negative set of linear 
-  regulators based on a daughterboard requested input voltage.
+  regulators based on a daughterboard requested output voltage.
   
   Created by Paolo Sebastian, July 2017
   Reseased into the public domain.
@@ -9,9 +9,10 @@
 
 #ifndef NegReg_h
 #define NegReg_h
+
 //appropriate pin allocations for the shutdown pins of both 
-  //negative linear regulators as well as the chip enable for the 
-  //negative digital potentiometer attached to them 
+//negative linear regulators as well as the chip enable for the 
+//negative digital potentiometer attached to them 
 #define V1_MINUS_SHDN A11
 #define V2_MINUS_SHDN A10
 #define NEG_CS 53
