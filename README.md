@@ -2,9 +2,9 @@
 The Remote Lab System is a system designed for the University of Washington Bothell campus's Electrical Engineering department. This was a Capstone (or Senior) project that concluded our degrees at the University of Washington. We are a group of Computer Engineering students who were enrolled in the program from 2015 to 2017 when we graduated summer quarter. The development of this project was broken up into Spring and Summer quarter 2017.
 
 # Starting Notes
-When we chose this as our project we were initially informed the system did not function. At all. What we found towards the end of our first quarter was the system did not work because previous teams did not create or test any of the components or any code to do so. It became immediately apparent at this point we must completely redesign the system and create all the code.
+When we chose this as our project we were initially informed the system did not function. At all. What we found towards the end of our first quarter was the system did not work because previous teams did not create or test any of the components or any code to do so. It became apparent we needed to completely redesign the system and create all the code.
 
-We created a project and work schedule and dove in immediately. These schedules were essential to the success of our project.
+We created a project and work schedule and dove in. These schedules were essential to the success of our project.
 
 # Goals
 This was the fourth iteration of the Base Station and our design goals were to: 
