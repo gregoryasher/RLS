@@ -1,0 +1,21 @@
+As mentioned in the FAQs, it is recommended to use multiple units in state mode if your circuit can provide a common clock and trigger signal to all units. The common clock is what keeps the samples coherent in time, while the common trigger signal is what synchronizes the acquisitions of multiple units. 
+
+It is possible to use multiple units in timing mode, but keep in mind that each unit has its own independent clock oscillator. Since the clocks are not synchronized this means that at the trigger sample there will be an uncertainty of +/-1 sample period between units. This effectively reduces the timing resolution by 1/2 (500MHz only has resolution of 250MHz). With compression enabled, the situation can get even worse since it may be possible to compress large numbers of samples into the buffer. While the uncertainty at the trigger point is always +/-1 sample period, the clock oscillators have a worst case mismatch of 100ppm between multiple units. If you were able to compress 1,000,000 samples into the buffer, the signals sampled 1,000,000 sample periods before/after the trigger event could have a differential error of 100 sample periods between units! This is why we don't recommend using multiple units in timing mode. Often times you won't be able to capture (or even be interested in) 1,000,000 samples, so this last point isn't always an issue. 
+
+Here are a few tips on using multiple LogicPorts from one PC:
+
+1. The LogicPort software will open the first LogicPort it finds. The first instance of the software you open will use the first LogicPort you connected to the PC. Once that instance is open, the second instance of the software will find and use the second LogicPort connected and so on.
+
+2. It will be more convenient if you have separate installations of the LogicPort software so that each instance has it's own .INI file in it's  respective install directory. The .INI file tells the software which project file to open when the application starts up (among other things). The default installation is in:
+
+ "C:\Program Files\LogicPort"
+
+We recommend that you install the second instance in a directory such as:
+
+ "C:\Program Files\LogicPort2"
+
+3. Here's the tricky part: The second installation will overwrite the desktop and start menu shortcuts causing them to point to the second installation only. You will need to create a new shortcut which points to the first installation. You should be able to just make a copy of the  desktop shortcut and change the shortcut's target directory to point to the first installation.
+
+Note that although there should be separate installations, you don't necessarily need to use separate directories for project or export files. For example, you could open a project file in the "\Projects" directory of the first installation using the second instance of the software.
+
+We have run as many as 4 LogicPorts from the same PC simultaneously, and the theoretical limit is 127 units. 

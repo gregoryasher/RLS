@@ -1,7 +1,0 @@
-(fp_lib_table
-  (lib (name 10MSOP)(type KiCad)(uri "/Users/alex284200/Desktop/CapstoneFile/Capstone Motherboard /Capstone_Motherboard")(options "")(descr 10Lead_MSOP))
-  (lib (name ARDUINO_MEGA)(type KiCad)(uri "/Users/alex284200/Desktop/CapstoneFile/Capstone Motherboard /Capstone_Motherboard")(options "")(descr Arduino_footprint))
-  (lib (name TSC)(type KiCad)(uri "/Users/alex284200/Desktop/CapstoneFile/Capstone Motherboard /Capstone_Motherboard")(options "")(descr Relay))
-  (lib (name DIN_5)(type KiCad)(uri "/Users/alex284200/Desktop/CapstoneFile/Capstone Motherboard /Capstone_Motherboard")(options "")(descr 5DIN_powerconnector))
-  (lib (name Conn120)(type KiCad)(uri "/Users/alex284200/Desktop/CapstoneFile/Capstone Motherboard /Capstone_Motherboard")(options "")(descr 120pin))
-)
