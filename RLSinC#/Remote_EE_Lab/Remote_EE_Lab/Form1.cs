@@ -23,6 +23,7 @@ namespace Remote_EE_Lab
         String boardID = "null";
         String Current_Board = "-1";
         String USB_port = "COM69"; //default COM port; this can be changed later using Setup tab;
+        String SendCode = "";
         bool isDebugMode = false;
 
         //Declare the variables for Board_1
@@ -1461,7 +1462,312 @@ namespace Remote_EE_Lab
         {
             
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            string line;
+            string returnChar;
+            System.IO.StreamReader file =
+            new System.IO.StreamReader("E:/Capstone/RLS-master/RLSinC#/Remote_EE_Lab/Remote_EE_Lab/Z80BubbleSort_2C1.hex");
+            Byte highAddr = 0;
+            Byte lowAddr = 0;
+            Byte data = 0;
+            Byte temp;
+            Byte[] temp2;
+            
+            int csByteIndex = 0;
+            //bool csValid = false;
+            bool cont = true;
+            string dataNum;
+            byte[] toBytes;
+            //int tempInt;
+            byte numBytes;
+
+
+
+            //returnChar = "";
+            SendCode = "Board10";
+            SerialPort1.PortName = USB_port;
+            SerialPort1.Open();
+            SerialPort1.DiscardInBuffer();
+            SerialPort1.DiscardOutBuffer();
+            SerialPort1.Write(SendCode);
+            //while (returnChar != "1")
+            //{
+              //  //returnChar = SerialPort1.ReadLine(); //Added to be consistant with check
+                //MessageBox.Show(returnChar);
+                //returnChar = SerialPort1.ReadLine().Substring(1, 1);
+                //MessageBox.Show(returnChar);
+            //}
+            SerialPort1.Close();
+
+            while ((line = file.ReadLine()) != null && cont == true)
+            {
+                char[] lolk = line.ToCharArray();
+                //String tempString = new String(lolk, 1, 40);
+                //char[] noSemi = tempString.ToCharArray();
+                for (int i = 1; i < lolk.Length - 2; i = i + 2)
+                {
+                    MessageBox.Show("Iterator at i = " + i);
+                    if (i == 1)
+                    {                        
+                        dataNum = lolk[i].ToString() + lolk[i + 1].ToString();
+                       // MessageBox.Show(dataNum + "fuck you");
+                        toBytes = StringToByteArray(dataNum);
+                        numBytes = toBytes[0];
+                        MessageBox.Show(numBytes.ToString());
+                        //getchecksum index
+                        csByteIndex = numBytes + numBytes;
+                        csByteIndex = csByteIndex + 9;
+
+
+                        if (numBytes == 0)
+                        {
+                            string SendCode = "FF";
+                            SerialPort1.PortName = USB_port;
+                            SerialPort1.Open();
+                            SerialPort1.DiscardInBuffer();
+                            SerialPort1.DiscardOutBuffer();
+                            SerialPort1.Write(SendCode);
+                            SerialPort1.Close();
+                            break;
+                        }
+                        //dataNum = lolk[csByteIndex].ToString() + lolk[csByteIndex + 1].ToString(); //Checksum val
+                        //temp2 = StringToByteArray(dataNum); //Byte array ofchecksum byte
+                      // MessageBox.Show(csByteIndex.ToString());
+                       // MessageBox.Show(dataNum.ToString());
+                        cont = true;
+                        //try
+                        //{
+                        //     //returnChar = sendBytes(numBytes);
+                        //    //MessageBox.Show("MSG 1 send");
+                        //    if (returnChar.Equals("1"))
+                        //     {
+                        //         returnChar = "0";
+                        //         continue;
+                        //     }
+                        //     else
+                        //     {
+                        //         MessageBox.Show("Message sending failed");
+                        //     }
+                        //}
+                        //catch { }
+                            //send the number of data bytes
+                        
+                        //Send saying its board10
+                        //Dont send colon
+                        //Send toBytes
+                    }
+                    else if (i == 3)
+                    {
+                        MessageBox.Show("im in i = 3");
+                        dataNum = lolk[i + 1].ToString() + lolk[i + 2].ToString();
+                        toBytes = StringToByteArray(dataNum);
+                        highAddr = toBytes[0]; //sets high addr start
+                        // Send high addr start
+                        //MessageBox.Show(highAddr.ToString());
+                    }
+                    else if (i == 5)
+                    {
+                        MessageBox.Show("im in i = 5");
+                        dataNum = lolk[i + 1].ToString() + lolk[i + 2].ToString();
+                        toBytes = StringToByteArray(dataNum);
+                        lowAddr = toBytes[0]; //sets low addr start
+                        //Send low addr start
+                        //MessageBox.Show(lowAddr.ToString());
+                    }
+                    else if (i == 7)
+                    {
+                        MessageBox.Show("im in i = 7");
+                        dataNum = lolk[i + 1].ToString() + lolk[i + 2].ToString();
+                        toBytes = StringToByteArray(dataNum);
+                        temp = toBytes[0];
+                        // Send temp which is 00 or 01
+                        //MessageBox.Show(temp.ToString());
+                        if (temp == 1)
+                        {
+                            cont = false;
+                        }
+                        else
+                        {
+                            cont = true;
+                        }
+                    }
+                    else if (i == 9 && cont == true)
+                    {
+                        MessageBox.Show("im in i = 9");
+                        dataNum = lolk[i].ToString() + lolk[i + 1].ToString();
+                        toBytes = StringToByteArray(dataNum);
+                        data = toBytes[0];
+                        //send high, low, data and update high addr and low addr for next
+                        returnChar = sendBytes(highAddr);
+                        MessageBox.Show(highAddr.ToString());
+                        if (lowAddr == 255)
+                        {
+                            highAddr++;
+                        }
+                        sendBytes(lowAddr);
+                        MessageBox.Show(lowAddr.ToString());
+                        if (lowAddr == 255)
+                        {
+                            lowAddr = 0;
+                        }
+                        else
+                        {
+                            lowAddr++;
+                        }
+                        sendBytes(data);
+                        MessageBox.Show(data.ToString());
+                        //Send
+                        //update
+                        //MessageBox.Show(data.ToString());
+                    }
+                    else if (i >= 11 && i < csByteIndex && cont == true)
+                    {
+                        MessageBox.Show("im in i = 11");
+                        dataNum = lolk[i].ToString() + lolk[i + 1].ToString();
+                        toBytes = StringToByteArray(dataNum);
+                        data = toBytes[0];
+                        //send high, low, data and update high addr and low addr for next
+                        //Send
+                        //Update
+                        MessageBox.Show(highAddr.ToString());
+                        sendBytes(highAddr);
+                        if (lowAddr == 255)
+                        {
+                            highAddr++;
+                        }
+                        MessageBox.Show(lowAddr.ToString());
+                        sendBytes(lowAddr);
+                        if (lowAddr == 255)
+                        {
+                            lowAddr = 0;
+                        }
+                        else
+                        {
+                            lowAddr++;
+                        }
+                        
+                        MessageBox.Show(data.ToString());
+                        sendBytes(data);
+                        
+                    }
+
+                    else if (i == csByteIndex)
+                    {
+                        MessageBox.Show("End of line"); // End of line
+                    }
+
+
+
+
+
+
+
+
+                    //try
+                    //{
+                    //returnChar = "";
+                    //SendCode = lolk[i].ToString();
+                    //SerialPort1.PortName = USB_port;
+                    //SerialPort1.Open();
+                    //SerialPort1.DiscardInBuffer();
+                    //SerialPort1.DiscardOutBuffer();
+                    //SerialPort1.Write(SendCode);
+                    //while (returnChar != "1")
+                    //{
+                    //    returnChar = SerialPort1.ReadLine(); //Added to be consistant with check
+                    //    returnChar = SerialPort1.ReadLine().Substring(0, 1);
+                    //}
+                    //SerialPort1.Close();
+                    //}
+                    //catch { };
+                }
+            }
+
+            file.Close();
+        }
+
+        //We could not get checksum to work someone else can do it if they want to after
+        Byte IntelHexCSum(String InHEX)
+        {
+            List<Byte> bytes = new List<byte>();
+            int csum = 0;
+            byte[] returnedByteArr;
+            Byte oneByte;
+            //char tempC1;
+            //char tempC2;
+
+            for (int i = 1; i < InHEX.Length - 1; i = i + 2)
+            {
+                //      MessageBox.Show(InHEX.Substring(i, 2));
+                //tempC1 = InHEX[i];
+                //tempC2 = InHEX[i + 1];
+                //        MessageBox.Show(Convert.ToByte(InHEX.Substring(i, 2)).ToString());
+                returnedByteArr = StringToByteArray(InHEX.Substring(i, 2).ToString());
+                oneByte = returnedByteArr[0];
+                bytes.Add(oneByte);
+                //dataNum = lolk[i + 1].ToString() + lolk[i + 2].ToString();
+                //toBytes = StringToByteArray(dataNum);
+                //numBytes = toBytes[0];
+                //bytes.Add(Convert.ToByte(InHEX.Substring(i, 2).ToString())); //"&H" + InHEX.Substring(i, 2))); //tempC1.ToString() + tempC2.ToString())); // + InHEX.Substring(i, 2)));
+            }
+        
+        for(int i = 0; i < bytes.Count(); i++) // Each b As Byte In bytes
+            {
+                csum += bytes[i];
+            }
+            //csum += b
+       
+        csum = csum & 255;
+        csum = csum | 255;
+        csum = csum + 1;
+        csum = csum % 256;
+            MessageBox.Show(csum.ToString());
+        return Convert.ToByte(csum);
+        }
+
+        public static byte[] StringToByteArray(string strBytes)
+        {
+            int iLen = strBytes.Length + 1;
+            byte[] bRet = new byte[iLen / 3];
+            for (int i = 0; i < iLen; i += 3)
+                bRet[i / 3] = Convert.ToByte(strBytes.Substring(i, 2), 16);
+            return bRet;
+        }
+
+        private void CommControlGroup_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        string sendBytes(byte b)
+        {
+            string tempReturnChar = "";
+            //int timerCount = 0;
+            try
+            {
+                //tempReturnChar = "";
+                string SendCode = b.ToString();
+                MessageBox.Show(SendCode);
+                SerialPort1.PortName = USB_port;
+                SerialPort1.Open();
+                SerialPort1.DiscardInBuffer();
+                SerialPort1.DiscardOutBuffer();
+                SerialPort1.Write(SendCode);
+
+
+                //    tempReturnChar = SerialPort1.ReadLine(); //Added to be consistant with check
+                //tempReturnChar = SerialPort1.ReadLine().Substring(0, 1);
+
+                //Thread.Sleep(500);
+                
+                SerialPort1.Close();
+            }
+            catch { };
+
+            return tempReturnChar;
+        }
+    }
     }
 
-
-}
