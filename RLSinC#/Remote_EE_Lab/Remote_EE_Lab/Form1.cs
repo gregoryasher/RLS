@@ -24,7 +24,7 @@ namespace Remote_EE_Lab
         String Current_Board = "-1";
         String USB_port = "COM69"; //default COM port; this can be changed later using Setup tab;
         String SendCode = "";
-        bool isDebugMode = false;
+        bool isDebugMode = true;
 
         //Declare the variables for Board_1
         String Board_1_Serial_Message = "board_1,01,1,4,4,01,01"; //default message
@@ -87,6 +87,7 @@ namespace Remote_EE_Lab
         String Board_7_Preset_D8_State = "0";
         String Board_7_Clock_State = "0";
         String Board_7_Clear_All = "0"; //0 means no signal is not sent; 1 means clear all flipflops when Update button is pressed
+       
         
 
         public Form1()
@@ -218,6 +219,8 @@ namespace Remote_EE_Lab
                 lbl_board_6_status.Text = "Debug";
                 lbl_board_7_status.BackColor = Color.Purple;
                 lbl_board_7_status.Text = "Debug";
+                lbl_board10_status.BackColor = Color.Purple;
+                lbl_board10_status.Text = "Debug";
 
                 Current_Board = "-1";
                 //board 1
@@ -284,6 +287,9 @@ namespace Remote_EE_Lab
                 ClearCheckBox.Enabled = true;
                 ConnectClock.Enabled = true;
                 DisconnectClock.Enabled = true;
+
+                //board 10
+                BubbleSort_Button.Enabled = true;
             }
             else
             {
@@ -385,6 +391,11 @@ namespace Remote_EE_Lab
                         DisconnectClock.Enabled = true;
                         Current_Board = "00000111";
                     }
+                    else if(boardID.Equals("00001010"))
+                    {
+                        BubbleSort_Button.Enabled = true;
+                        Current_Board = "00001010";
+                    }
                 }
                 catch { }//Deactivate(); Serial_Text_Test.Text = "No board is present: " + boardID; };
             }
@@ -454,6 +465,13 @@ namespace Remote_EE_Lab
                         lbl_board_7_status.Text = "Active";
                         Serial_Text_Test.Text = board;
                         break;
+                    case "00001010":
+                        Setup.SelectTab(7);
+                        Deactivate();
+                        lbl_board10_status.BackColor = Color.Green;
+                        lbl_board10_status.Text = "Active";
+                        Serial_Text_Test.Text = board;
+                        break;
                     default:
                         Deactivate();
                         Serial_Text_Test.Text = "Invalid board: "+ board;
@@ -487,6 +505,8 @@ namespace Remote_EE_Lab
             lbl_board_6_status.Text = "Inactive";
             lbl_board_7_status.BackColor = Color.Red;
             lbl_board_7_status.Text = "Inactive";
+            lbl_board10_status.BackColor = Color.Red;
+            lbl_board10_status.Text = "Inactive";
 
             Current_Board = "-1";
             //board 1
@@ -554,6 +574,8 @@ namespace Remote_EE_Lab
             ConnectClock.Enabled = false;
             DisconnectClock.Enabled = false;
 
+            //board 10
+            BubbleSort_Button.Enabled = false;
         }
 
         /************************************************************
@@ -1434,10 +1456,10 @@ namespace Remote_EE_Lab
             {
                 process.Kill();
             }
-            foreach (var process in Process.GetProcessesByName("PcLab2000LT"))
-            {
-                process.Kill();
-            }
+            //foreach (var process in Process.GetProcessesByName("PcLab2000LT"))
+            //{
+            //    process.Kill();
+            //}
 
 
         }
@@ -1465,10 +1487,18 @@ namespace Remote_EE_Lab
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            if (lbl_board10_status.Text == "Active" || isDebugMode == true)
+            {
+                runExpTen("C:/Users/Gytau_000/Documents/GitHub/RLS-master/RLSinC#/Remote_EE_Lab/Remote_EE_Lab/Z80BubbleSort_2C1.hex");
+            }
+        }
+
+        private void runExpTen(string fileName)
+        { 
             string line;
             string returnChar;
             System.IO.StreamReader file =
-            new System.IO.StreamReader("E:/Capstone/RLS-master/RLSinC#/Remote_EE_Lab/Remote_EE_Lab/Z80BubbleSort_2C1.hex");
+            new System.IO.StreamReader(fileName);
             Byte highAddr = 0;
             Byte lowAddr = 0;
             Byte data = 0;
@@ -1492,13 +1522,6 @@ namespace Remote_EE_Lab
             SerialPort1.DiscardInBuffer();
             SerialPort1.DiscardOutBuffer();
             SerialPort1.Write(SendCode);
-            //while (returnChar != "1")
-            //{
-              //  //returnChar = SerialPort1.ReadLine(); //Added to be consistant with check
-                //MessageBox.Show(returnChar);
-                //returnChar = SerialPort1.ReadLine().Substring(1, 1);
-                //MessageBox.Show(returnChar);
-            //}
             SerialPort1.Close();
 
             while ((line = file.ReadLine()) != null && cont == true)
@@ -1532,31 +1555,8 @@ namespace Remote_EE_Lab
                             SerialPort1.Close();
                             break;
                         }
-                        //dataNum = lolk[csByteIndex].ToString() + lolk[csByteIndex + 1].ToString(); //Checksum val
-                        //temp2 = StringToByteArray(dataNum); //Byte array ofchecksum byte
-                      // MessageBox.Show(csByteIndex.ToString());
-                       // MessageBox.Show(dataNum.ToString());
                         cont = true;
-                        //try
-                        //{
-                        //     //returnChar = sendBytes(numBytes);
-                        //    //MessageBox.Show("MSG 1 send");
-                        //    if (returnChar.Equals("1"))
-                        //     {
-                        //         returnChar = "0";
-                        //         continue;
-                        //     }
-                        //     else
-                        //     {
-                        //         MessageBox.Show("Message sending failed");
-                        //     }
-                        //}
-                        //catch { }
-                            //send the number of data bytes
-                        
-                        //Send saying its board10
-                        //Dont send colon
-                        //Send toBytes
+
                     }
                     else if (i == 3)
                     {
@@ -1657,31 +1657,6 @@ namespace Remote_EE_Lab
                     {
                         MessageBox.Show("End of line"); // End of line
                     }
-
-
-
-
-
-
-
-
-                    //try
-                    //{
-                    //returnChar = "";
-                    //SendCode = lolk[i].ToString();
-                    //SerialPort1.PortName = USB_port;
-                    //SerialPort1.Open();
-                    //SerialPort1.DiscardInBuffer();
-                    //SerialPort1.DiscardOutBuffer();
-                    //SerialPort1.Write(SendCode);
-                    //while (returnChar != "1")
-                    //{
-                    //    returnChar = SerialPort1.ReadLine(); //Added to be consistant with check
-                    //    returnChar = SerialPort1.ReadLine().Substring(0, 1);
-                    //}
-                    //SerialPort1.Close();
-                    //}
-                    //catch { };
                 }
             }
 
@@ -1695,22 +1670,12 @@ namespace Remote_EE_Lab
             int csum = 0;
             byte[] returnedByteArr;
             Byte oneByte;
-            //char tempC1;
-            //char tempC2;
 
             for (int i = 1; i < InHEX.Length - 1; i = i + 2)
             {
-                //      MessageBox.Show(InHEX.Substring(i, 2));
-                //tempC1 = InHEX[i];
-                //tempC2 = InHEX[i + 1];
-                //        MessageBox.Show(Convert.ToByte(InHEX.Substring(i, 2)).ToString());
                 returnedByteArr = StringToByteArray(InHEX.Substring(i, 2).ToString());
                 oneByte = returnedByteArr[0];
                 bytes.Add(oneByte);
-                //dataNum = lolk[i + 1].ToString() + lolk[i + 2].ToString();
-                //toBytes = StringToByteArray(dataNum);
-                //numBytes = toBytes[0];
-                //bytes.Add(Convert.ToByte(InHEX.Substring(i, 2).ToString())); //"&H" + InHEX.Substring(i, 2))); //tempC1.ToString() + tempC2.ToString())); // + InHEX.Substring(i, 2)));
             }
         
         for(int i = 0; i < bytes.Count(); i++) // Each b As Byte In bytes
@@ -1755,18 +1720,25 @@ namespace Remote_EE_Lab
                 SerialPort1.DiscardInBuffer();
                 SerialPort1.DiscardOutBuffer();
                 SerialPort1.Write(SendCode);
-
-
-                //    tempReturnChar = SerialPort1.ReadLine(); //Added to be consistant with check
-                //tempReturnChar = SerialPort1.ReadLine().Substring(0, 1);
-
-                //Thread.Sleep(500);
+                //Sleep to make sure arduino gets correct data and doesn't overflow
+                // buffer
+                Thread.Sleep(500);
                 
                 SerialPort1.Close();
             }
             catch { };
 
             return tempReturnChar;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_board10_status_Click(object sender, EventArgs e)
+        {
+
         }
     }
     }
