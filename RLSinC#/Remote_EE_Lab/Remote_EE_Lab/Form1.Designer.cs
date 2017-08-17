@@ -158,6 +158,8 @@
             this.lbl_board_7_status = new System.Windows.Forms.Label();
             this.PresetD8 = new System.Windows.Forms.ComboBox();
             this.PictureBox5 = new System.Windows.Forms.PictureBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.PrintDialog1 = new System.Windows.Forms.PrintDialog();
             this.SerialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.lbl_serial = new System.Windows.Forms.Label();
@@ -202,6 +204,7 @@
             this.XOR6.SuspendLayout();
             this.XOR7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).BeginInit();
+            this.tabPage1.SuspendLayout();
             this.CommControlGroup.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -925,6 +928,7 @@
             this.Setup.Controls.Add(this.Board5);
             this.Setup.Controls.Add(this.Board6);
             this.Setup.Controls.Add(this.Board7);
+            this.Setup.Controls.Add(this.tabPage1);
             this.Setup.Location = new System.Drawing.Point(17, 88);
             this.Setup.Name = "Setup";
             this.Setup.SelectedIndex = 0;
@@ -1815,6 +1819,27 @@
             this.PictureBox5.TabStop = false;
             this.PictureBox5.Click += new System.EventHandler(this.PictureBox5_Click);
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.button2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1008, 443);
+            this.tabPage1.TabIndex = 8;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(812, 78);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // PrintDialog1
             // 
             this.PrintDialog1.UseEXDialog = true;
@@ -1831,18 +1856,18 @@
             // btn_test_2
             // 
             this.btn_test_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_test_2.Location = new System.Drawing.Point(816, 19);
+            this.btn_test_2.Location = new System.Drawing.Point(804, 19);
             this.btn_test_2.Name = "btn_test_2";
-            this.btn_test_2.Size = new System.Drawing.Size(87, 23);
+            this.btn_test_2.Size = new System.Drawing.Size(103, 23);
             this.btn_test_2.TabIndex = 4;
-            this.btn_test_2.Text = "Logic Analyzer";
+            this.btn_test_2.Text = "Logic Analyzer 1";
             this.btn_test_2.UseVisualStyleBackColor = true;
             this.btn_test_2.Click += new System.EventHandler(this.btn_test_2_Click);
             // 
             // btn_Dev_Test
             // 
             this.btn_Dev_Test.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Dev_Test.Location = new System.Drawing.Point(603, 19);
+            this.btn_Dev_Test.Location = new System.Drawing.Point(591, 19);
             this.btn_Dev_Test.Name = "btn_Dev_Test";
             this.btn_Dev_Test.Size = new System.Drawing.Size(207, 23);
             this.btn_Dev_Test.TabIndex = 3;
@@ -1887,13 +1912,13 @@
             this.CommControlGroup.Size = new System.Drawing.Size(1016, 65);
             this.CommControlGroup.TabIndex = 6;
             this.CommControlGroup.TabStop = false;
-            this.CommControlGroup.Text = "Communication Control";
+            this.CommControlGroup.Enter += new System.EventHandler(this.CommControlGroup_Enter);
             this.CommControlGroup.Resize += new System.EventHandler(this.CommControlGroup_Resize);
             // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(909, 19);
+            this.button1.Location = new System.Drawing.Point(913, 19);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(96, 23);
             this.button1.TabIndex = 8;
@@ -1984,6 +2009,7 @@
             this.XOR7.ResumeLayout(false);
             this.XOR7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).EndInit();
+            this.tabPage1.ResumeLayout(false);
             this.CommControlGroup.ResumeLayout(false);
             this.CommControlGroup.PerformLayout();
             this.ResumeLayout(false);
@@ -2130,6 +2156,8 @@
         internal System.Windows.Forms.GroupBox CommControlGroup;
         internal System.Windows.Forms.Button board_detect;
         internal System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
