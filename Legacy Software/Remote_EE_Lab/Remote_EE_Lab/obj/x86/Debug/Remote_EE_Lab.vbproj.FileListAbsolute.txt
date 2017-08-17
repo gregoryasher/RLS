@@ -1,0 +1,24 @@
+C:\GithubRepos\RLS_Capstone\Remote_EE_Lab\Remote_EE_Lab\bin\Debug\Remote_EE_Lab.exe
+C:\GithubRepos\RLS_Capstone\Remote_EE_Lab\Remote_EE_Lab\bin\Debug\Remote_EE_Lab.pdb
+C:\GithubRepos\RLS_Capstone\Remote_EE_Lab\Remote_EE_Lab\bin\Debug\Remote_EE_Lab.xml
+C:\GithubRepos\RLS_Capstone\Remote_EE_Lab\Remote_EE_Lab\obj\x86\Debug\Remote_EE_Lab.vbprojResolveAssemblyReference.cache
+C:\GithubRepos\RLS_Capstone\Remote_EE_Lab\Remote_EE_Lab\obj\x86\Debug\Remote_EE_Lab.Form1.resources
+C:\GithubRepos\RLS_Capstone\Remote_EE_Lab\Remote_EE_Lab\obj\x86\Debug\Remote_EE_Lab.Resources.resources
+C:\GithubRepos\RLS_Capstone\Remote_EE_Lab\Remote_EE_Lab\obj\x86\Debug\Remote_EE_Lab.SplashScreen_1.resources
+C:\GithubRepos\RLS_Capstone\Remote_EE_Lab\Remote_EE_Lab\obj\x86\Debug\Remote_EE_Lab.Test_Form.resources
+C:\GithubRepos\RLS_Capstone\Remote_EE_Lab\Remote_EE_Lab\obj\x86\Debug\Remote_EE_Lab.vbproj.GenerateResource.Cache
+C:\GithubRepos\RLS_Capstone\Remote_EE_Lab\Remote_EE_Lab\obj\x86\Debug\Remote_EE_Lab.exe
+C:\GithubRepos\RLS_Capstone\Remote_EE_Lab\Remote_EE_Lab\obj\x86\Debug\Remote_EE_Lab.xml
+C:\GithubRepos\RLS_Capstone\Remote_EE_Lab\Remote_EE_Lab\obj\x86\Debug\Remote_EE_Lab.pdb
+C:\Users\Paolo\Desktop\Capstone Software\RLS_Capstone\Remote_EE_Lab\Remote_EE_Lab\bin\Debug\Remote_EE_Lab.exe
+C:\Users\Paolo\Desktop\Capstone Software\RLS_Capstone\Remote_EE_Lab\Remote_EE_Lab\bin\Debug\Remote_EE_Lab.pdb
+C:\Users\Paolo\Desktop\Capstone Software\RLS_Capstone\Remote_EE_Lab\Remote_EE_Lab\bin\Debug\Remote_EE_Lab.xml
+C:\Users\Paolo\Desktop\Capstone Software\RLS_Capstone\Remote_EE_Lab\Remote_EE_Lab\obj\x86\Debug\Remote_EE_Lab.vbprojResolveAssemblyReference.cache
+C:\Users\Paolo\Desktop\Capstone Software\RLS_Capstone\Remote_EE_Lab\Remote_EE_Lab\obj\x86\Debug\Remote_EE_Lab.Form1.resources
+C:\Users\Paolo\Desktop\Capstone Software\RLS_Capstone\Remote_EE_Lab\Remote_EE_Lab\obj\x86\Debug\Remote_EE_Lab.Resources.resources
+C:\Users\Paolo\Desktop\Capstone Software\RLS_Capstone\Remote_EE_Lab\Remote_EE_Lab\obj\x86\Debug\Remote_EE_Lab.SplashScreen_1.resources
+C:\Users\Paolo\Desktop\Capstone Software\RLS_Capstone\Remote_EE_Lab\Remote_EE_Lab\obj\x86\Debug\Remote_EE_Lab.Test_Form.resources
+C:\Users\Paolo\Desktop\Capstone Software\RLS_Capstone\Remote_EE_Lab\Remote_EE_Lab\obj\x86\Debug\Remote_EE_Lab.vbproj.GenerateResource.Cache
+C:\Users\Paolo\Desktop\Capstone Software\RLS_Capstone\Remote_EE_Lab\Remote_EE_Lab\obj\x86\Debug\Remote_EE_Lab.exe
+C:\Users\Paolo\Desktop\Capstone Software\RLS_Capstone\Remote_EE_Lab\Remote_EE_Lab\obj\x86\Debug\Remote_EE_Lab.xml
+C:\Users\Paolo\Desktop\Capstone Software\RLS_Capstone\Remote_EE_Lab\Remote_EE_Lab\obj\x86\Debug\Remote_EE_Lab.pdb
