@@ -158,8 +158,8 @@
             this.lbl_board_7_status = new System.Windows.Forms.Label();
             this.PresetD8 = new System.Windows.Forms.ComboBox();
             this.PictureBox5 = new System.Windows.Forms.PictureBox();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Board10 = new System.Windows.Forms.TabPage();
+            this.BubbleSort_Button = new System.Windows.Forms.Button();
             this.PrintDialog1 = new System.Windows.Forms.PrintDialog();
             this.SerialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.lbl_serial = new System.Windows.Forms.Label();
@@ -170,6 +170,8 @@
             this.CommControlGroup = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.board_detect = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lbl_board10_status = new System.Windows.Forms.Label();
             this.board_2_Ch_1.SuspendLayout();
             this.board_2_ch2.SuspendLayout();
             this.Diode1.SuspendLayout();
@@ -204,8 +206,9 @@
             this.XOR6.SuspendLayout();
             this.XOR7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).BeginInit();
-            this.tabPage1.SuspendLayout();
+            this.Board10.SuspendLayout();
             this.CommControlGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // Label6
@@ -928,7 +931,7 @@
             this.Setup.Controls.Add(this.Board5);
             this.Setup.Controls.Add(this.Board6);
             this.Setup.Controls.Add(this.Board7);
-            this.Setup.Controls.Add(this.tabPage1);
+            this.Setup.Controls.Add(this.Board10);
             this.Setup.Location = new System.Drawing.Point(17, 88);
             this.Setup.Name = "Setup";
             this.Setup.SelectedIndex = 0;
@@ -1819,26 +1822,28 @@
             this.PictureBox5.TabStop = false;
             this.PictureBox5.Click += new System.EventHandler(this.PictureBox5_Click);
             // 
-            // tabPage1
+            // Board10
             // 
-            this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1008, 443);
-            this.tabPage1.TabIndex = 8;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.Board10.Controls.Add(this.lbl_board10_status);
+            this.Board10.Controls.Add(this.pictureBox2);
+            this.Board10.Controls.Add(this.BubbleSort_Button);
+            this.Board10.Location = new System.Drawing.Point(4, 22);
+            this.Board10.Name = "Board10";
+            this.Board10.Padding = new System.Windows.Forms.Padding(3);
+            this.Board10.Size = new System.Drawing.Size(1008, 443);
+            this.Board10.TabIndex = 8;
+            this.Board10.Text = "Experiment 10";
+            this.Board10.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // BubbleSort_Button
             // 
-            this.button2.Location = new System.Drawing.Point(812, 78);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.BubbleSort_Button.Location = new System.Drawing.Point(891, 25);
+            this.BubbleSort_Button.Name = "BubbleSort_Button";
+            this.BubbleSort_Button.Size = new System.Drawing.Size(111, 28);
+            this.BubbleSort_Button.TabIndex = 0;
+            this.BubbleSort_Button.Text = "BubbleSort";
+            this.BubbleSort_Button.UseVisualStyleBackColor = true;
+            this.BubbleSort_Button.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // PrintDialog1
             // 
@@ -1938,6 +1943,30 @@
             this.board_detect.UseVisualStyleBackColor = false;
             this.board_detect.Click += new System.EventHandler(this.board_detect_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(3, 25);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(882, 415);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // lbl_board10_status
+            // 
+            this.lbl_board10_status.AutoSize = true;
+            this.lbl_board10_status.BackColor = System.Drawing.Color.Red;
+            this.lbl_board10_status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_board10_status.ForeColor = System.Drawing.Color.White;
+            this.lbl_board10_status.Location = new System.Drawing.Point(11, 7);
+            this.lbl_board10_status.Name = "lbl_board10_status";
+            this.lbl_board10_status.Size = new System.Drawing.Size(47, 15);
+            this.lbl_board10_status.TabIndex = 17;
+            this.lbl_board10_status.Text = "Inactive";
+            this.lbl_board10_status.Click += new System.EventHandler(this.lbl_board10_status_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2009,9 +2038,11 @@
             this.XOR7.ResumeLayout(false);
             this.XOR7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).EndInit();
-            this.tabPage1.ResumeLayout(false);
+            this.Board10.ResumeLayout(false);
+            this.Board10.PerformLayout();
             this.CommControlGroup.ResumeLayout(false);
             this.CommControlGroup.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2156,8 +2187,10 @@
         internal System.Windows.Forms.GroupBox CommControlGroup;
         internal System.Windows.Forms.Button board_detect;
         internal System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TabPage Board10;
+        private System.Windows.Forms.Button BubbleSort_Button;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        internal System.Windows.Forms.Label lbl_board10_status;
     }
 }
 
