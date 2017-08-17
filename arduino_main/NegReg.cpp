@@ -176,3 +176,4 @@ int NegReg::negPotCalc(double vout) {
   //the digital potentiometer to the closest bit
   return negPotRes;
 }
+
