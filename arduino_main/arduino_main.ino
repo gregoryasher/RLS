@@ -16,6 +16,7 @@
 #include "db5.h"
 #include "db6.h"
 #include "db7.h"
+#include "db10.h"
 
 // instantiate board controller object
 DBControl boardController;
@@ -42,5 +43,6 @@ void loop() {
   boardController.serialControl();
   boardController.safetyCheck();
 }
+
 
 
