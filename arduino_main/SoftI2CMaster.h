@@ -2,7 +2,7 @@
  * SoftI2CMaster.h -- Multi-instance software I2C Master library
  * 
  * 2010-2012 Tod E. Kurt, http://todbot.com/blog/
- * 2014, by Testato: update library and examples for follow Wire’s API of Arduino IDE 1.x
+ * 2014, by Testato: update library and examples for follow Wireâ€™s API of Arduino IDE 1.x
  *
  */
 
@@ -74,3 +74,4 @@ public:
 };
 
 #endif
+

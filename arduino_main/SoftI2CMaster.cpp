@@ -7,7 +7,7 @@
  * This code takes some tricks from:
  *  http://codinglab.blogspot.com/2008/10/i2c-on-avr-using-bit-banging.html
  *
- * 2014, by Testato: update library and examples for follow Wire’s API of Arduino IDE 1.x
+ * 2014, by Testato: update library and examples for follow Wireâ€™s API of Arduino IDE 1.x
  *
  */
 
@@ -348,3 +348,4 @@ uint8_t SoftI2CMaster::readLast()
 {
     return i2c_read( I2C_NAK );
 }
+
