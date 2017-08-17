@@ -174,5 +174,3 @@ int PosReg::posPotCalc(double vout) {
   //the digital potentiometer to the closest bit
   return posPotRes;
 }
-
-

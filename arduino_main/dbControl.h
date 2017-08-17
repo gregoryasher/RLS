@@ -7,6 +7,13 @@
   
   Created by Ellery Walsh, March 2016
   Reseased into the public domain.
+
+  Further revisions made by Paolo Sebastian, August 2017
+  RLS Capstone, Summer 2017 Motherboard Team  
+  
+  Version 8/17/2017
+  
+  Reseased into the public domain.
 ******************************************************************************/
 
 #ifndef dbControl_h
@@ -14,8 +21,9 @@
 
 #include "Arduino.h"
 
-class DBControl {
+class DBControl { 
   public: 
+  
   void serialControl();
   void configureDaughterboardPins();
   boolean safetyCheck();
@@ -25,8 +33,8 @@ class DBControl {
   void setScopeGainX1();
   
   private:
+  
   // Arduino Pins used for reading Board ID
-
   //Changed array to byte array as int array is too big for arduino pins
   const byte boardIdPins[8] = {A7, A6, A5, A4, A3, A2, A1, A0};
   int boardIdPinState[8];

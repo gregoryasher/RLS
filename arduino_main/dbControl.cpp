@@ -2,25 +2,45 @@
   dbControl.cpp
   This implementation file contains code that is common to all daughterboards
   that are part of the Remote Lab System at the University of
-  Washington Bothell. See dbControl.cpp for implementation.
-  This code is designed to run on an Arduino Mega 2560.
+  Washington Bothell. Contains functions to control daughterboards, linear
+  regulators, and oscilloscope probe gain. This code is designed to run on 
+  an Arduino Mega 2560.
 
   Created by Ellery Walsh, March 2016
+
+  Further revisions made by Paolo Sebastian, August 2017
+  RLS Capstone, Summer 2017 Motherboard Team  
+  
+  Version 8/17/2017
+  
   Reseased into the public domain.
 ******************************************************************************/
 
 #include "Arduino.h"
 #include "dbControl.h"
 
+/******************************************************************************
+  Includes daughterboard files of previous daughterboard teams prior to 
+  Summer 2017.
+******************************************************************************/
 #include "db3.h"
 #include "db4.h"
 #include "db5.h"
 #include "db6.h"
 #include "db7.h"
+
+/******************************************************************************
+  Includes header and implementation files of Daughterboards 8,9,10, and 11
+  created by the sister daughterboard team of Capstone Summer 2017. Daughterboard 
+  files are commented out due to daughterboard software being incomplete and 
+  incompatible with completed motherboard software at the completion of Summer 2017.  
+******************************************************************************/
+//#include "db8.h"
+//#include "db9.h"
 #include "db10.h"
+//#nclude "db11.h"
 
-// instantiate board objects
-
+//instantiate board objects
 DB3 board3;
 DB4 board4;
 DB5 board5;
@@ -28,11 +48,10 @@ DB6 board6;
 DB7 board7;
 DB10 board10;
 
-// Pins of Board ID are Arduino Mega's analog input pins
+//Pins of Board ID are Arduino Mega's analog input pins
 int boardIdPinState[8] = {0};
 
 String bID = ""; //global variable used for comparison of each bit represented in boardIdPinState
-String bIDCheck = ""; //global variable used to check if the same board is plugged in with each serial control iteration
 
 /*****************************************************************************
    serialControl handles the commands sent from the GUI
@@ -53,59 +72,38 @@ void DBControl::serialControl() {
     }
     else if (boardIDsubstring.equalsIgnoreCase("board_3"))//Board 3 is addressed (the default message is board_3,1,1)
     {
-      //Serial.flush();
-      //Serial.println("1"); //success
       configureDaughterboardPins();
       board3.execute(outputFromUI);
-//      Serial.flush();
-//      Serial.println("1"); //success
     }
     else if (boardIDsubstring.equalsIgnoreCase("board_4")) // Board 4 is addressed (the default message is board_4,1,1,1)
     {
-//      Serial.flush();
-//      Serial.println("1"); //success
       configureDaughterboardPins();
       board4.execute(outputFromUI);
-//      Serial.flush();
-//      Serial.println("1"); //success
     }
     else if (boardIDsubstring.equalsIgnoreCase("board_5"))//Board 5 is addressed (the default message is board_5,1,1,1)
     {
-//      Serial.flush();
-//      Serial.println("1"); //success
       configureDaughterboardPins();
       board5.execute(outputFromUI);
-//      Serial.flush();
-//      Serial.println("1"); //success
     }
     else if (boardIDsubstring.equalsIgnoreCase("board_6"))//Board 5 is addressed (the default message is board_5,1,1,1)
     {
-//      Serial.flush();
-//      Serial.println("1"); //success
       configureDaughterboardPins();
       board6.execute(outputFromUI);
-//      Serial.flush();
-//      Serial.println("1"); //success
     }
     else if (boardIDsubstring.equalsIgnoreCase("board_7"))//Board 7 is addressed (the default message is board_5,1,1,1)
     {
-//      Serial.flush();
-//      Serial.println("1"); //success
       configureDaughterboardPins();
       board7.execute(outputFromUI);
-//      Serial.flush();
-//      Serial.println("1"); //success
     }
     else if (boardIDsubstring.equalsIgnoreCase("Board10"))
     {
-      //Serial.write("1");
       configureDaughterboardPins();
       board10.execute();
     }
     else
     {
       Serial.flush();
-      Serial.println("No board dectected. Check Board again"); //failure
+      Serial.println("No board dectected. Check Board again"); //no board detected when "update board" was selected in GUI 
     }
   }
 }
@@ -115,41 +113,29 @@ void DBControl::serialControl() {
     correct digital pins marked as outputFromUI
 
     Note: Daughterboard 1 and daughterboard 2 files do not exist (or are missing)
-          Thier configuration settings have been commented out.
+          Their configuration settings have been commented out.
 *****************************************************************************/
 void DBControl::configureDaughterboardPins() {
   
-  //empty if statement that checks if the same board is connected as previous
-  //serial control implementation and skips board configuration if the same
-  //board is connected
-  
   // Configure pins correctly for the given board
   if (bID.equalsIgnoreCase("00000011")) {
-    bIDCheck = bID;
     board3.configurePins();
   }
   else if (bID.equalsIgnoreCase("00000100")) {
-    bIDCheck = bID;
     board4.configurePins();
   }
   else if (bID.equalsIgnoreCase("00000101")) {
-    bIDCheck = bID;
     board5.configurePins();
   }
   else if (bID.equalsIgnoreCase("00000110")) {
-    bIDCheck = bID;
     board6.configurePins();
   }
   else if (bID.equalsIgnoreCase("00000111")) {
-    bIDCheck = bID;
     board7.configurePins();
   }
   else if (bID.equalsIgnoreCase("00001010")){
-    bIDCheck = bID;
     board10.configurePins();
   }
-  
- // Serial.println(bID);
 }
 
 /***********************************************************************
