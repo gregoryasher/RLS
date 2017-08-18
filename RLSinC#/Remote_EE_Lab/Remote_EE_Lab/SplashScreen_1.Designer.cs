@@ -108,7 +108,7 @@
             this.Version.Name = "Version";
             this.Version.Size = new System.Drawing.Size(241, 20);
             this.Version.TabIndex = 1;
-            this.Version.Text = "Version 2.00";
+            this.Version.Text = "Version 3";
             this.Version.Click += new System.EventHandler(this.Version_Click);
             // 
             // progressBar1
