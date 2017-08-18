@@ -42,42 +42,48 @@ void DB10::execute()
   while (true)
   {
     bool continuePls = true;
-    byte test = 0x01;
+    String tempString = "";
+    int convertedVal = 0;
+    //byte test = 0x01;
     //Get high addr
     if (Serial.available() && continuePls == true) { //reads in what the user requested from GUI
-      Serial.readBytes(tempByte, 2);
-      if((tempByte[0]) == test)
+      tempString = Serial.readString();
+      convertedVal = stringToInt(tempString);
+      if(convertedVal == 255)
       {
-        Serial.println("It reads it valid");
-      }
-      
-      Serial.flush();
-      if(tempByte[0] == 0xFF)
-      {
+        //Serial.println("Breaking FF in high order address");
         continuePls = false;
         break;
       }
+      //Serial.print(convertedVal);
+      Serial.flush();
+
+      
       digitalWrite(MBRST, LOW);
       digitalWrite(MBWR, LOW);
       digitalWrite(L1, LOW);
       digitalWrite(L2, LOW);
       digitalWrite(L3, LOW);
-      togglePins(tempByte, 1);
-      //Serial.write("1");
+      // Put 1 bytes in for latch 1
+      togglePins(convertedVal, 1);
     }
 
     if (Serial.available() && continuePls == true) { //reads in what the user requested from GUI
-      Serial.readBytes(tempByte, 2);
+      tempString = Serial.readString();
+      convertedVal = stringToInt(tempString);
+      //Serial.print(convertedVal);
       Serial.flush();
-      togglePins(tempByte, 2);
-      //Serial.write("1");
+      //put 1 byte in for latch 2
+      togglePins(convertedVal, 2);
     }
 
     if (Serial.available() && continuePls == true) { //reads in what the user requested from GUI
-      Serial.readBytes(tempByte, 2);
+      tempString = Serial.readString();
+      convertedVal = stringToInt(tempString);
+      //Serial.println(convertedVal);
       Serial.flush();
-      togglePins(tempByte, 3);
-      //Serial.write("1");
+      //put 1 byte in for latch 3
+      togglePins(convertedVal, 3);
     }
     digitalWrite(MBWR, HIGH);
     digitalWrite(OE, LOW);
@@ -89,9 +95,117 @@ void DB10::execute()
 
 }
 
-void DB10::togglePins(byte tempByte[], int latch)
+//Sorry this is badly done but its easy enough
+int DB10::stringToInt(String stringVal)
 {
-  if (bitRead(tempByte[0], 0) == 1)
+  int returnVal = 0;
+  switch(stringVal.charAt(0)){
+  case '1': 
+  returnVal += 16;
+  break;
+  case '2': 
+  returnVal += 32;
+  break;
+  case '3': 
+  returnVal += 48;
+  break;
+  case '4': 
+  returnVal += 64;
+  break;
+  case '5': 
+  returnVal += 80;
+  break;
+  case '6': 
+  returnVal += 96;
+  break;
+  case '7': 
+  returnVal += 112;
+  break;
+  case '8': 
+  returnVal += 128;
+  break;
+  case '9': 
+  returnVal += 144;
+  break; 
+  case 'A': 
+  returnVal += 160;
+  break;
+  case 'B': 
+  returnVal += 176;
+  break;
+  case 'C': 
+  returnVal += 192;
+  break;
+  case 'D': 
+  returnVal += 208;
+  break;
+  case 'E': 
+  returnVal += 224;
+  break;
+  case 'F': 
+  returnVal += 240;
+  break;
+  default:
+  break;
+  }
+
+  switch(stringVal.charAt(1)){
+  case '1': 
+  returnVal += 1;
+  break;
+  case '2': 
+  returnVal += 2;
+  break;
+  case '3': 
+  returnVal += 3;
+  break;
+  case '4': 
+  returnVal += 4;
+  break;
+  case '5': 
+  returnVal += 5;
+  break;
+  case '6': 
+  returnVal += 6;
+  break;
+  case '7': 
+  returnVal += 7;
+  break;
+  case '8': 
+  returnVal += 8;
+  break;
+  case '9': 
+  returnVal += 9;
+  break; 
+  case 'A': 
+  returnVal += 10;
+  break;
+  case 'B': 
+  returnVal += 11;
+  break;
+  case 'C': 
+  returnVal += 12;
+  break;
+  case 'D': 
+  returnVal += 13;
+  break;
+  case 'E': 
+  returnVal += 14;
+  break;
+  case 'F': 
+  returnVal += 15;
+  break;
+  default:
+  break;
+  }
+
+  return returnVal;
+}
+
+
+void DB10::togglePins(int ValSent, int latch)
+{
+  if (bitRead(ValSent, 0) == 1)
   {
     digitalWrite(ard0, HIGH);
   }
@@ -100,7 +214,7 @@ void DB10::togglePins(byte tempByte[], int latch)
     digitalWrite(ard0, LOW);
   }
 
-  if (bitRead(tempByte[0], 1) == 1)
+  if (bitRead(ValSent, 1) == 1)
   {
     digitalWrite(ard1, HIGH);
   }
@@ -109,7 +223,7 @@ void DB10::togglePins(byte tempByte[], int latch)
     digitalWrite(ard1, LOW);
   }
 
-  if (bitRead(tempByte[0], 2) == 1)
+  if (bitRead(ValSent, 2) == 1)
   {
     digitalWrite(ard2, HIGH);
   }
@@ -118,7 +232,7 @@ void DB10::togglePins(byte tempByte[], int latch)
     digitalWrite(ard2, LOW);
   }
 
-  if (bitRead(tempByte[0], 3) == 1)
+  if (bitRead(ValSent, 3) == 1)
   {
     digitalWrite(ard3, HIGH);
   }
@@ -127,7 +241,7 @@ void DB10::togglePins(byte tempByte[], int latch)
     digitalWrite(ard3, LOW);
   }
 
-  if (bitRead(tempByte[0], 4) == 1)
+  if (bitRead(ValSent, 4) == 1)
   {
     digitalWrite(ard4, HIGH);
   }
@@ -136,7 +250,7 @@ void DB10::togglePins(byte tempByte[], int latch)
     digitalWrite(ard4, LOW);
   }
 
-  if (bitRead(tempByte[0], 5) == 1)
+  if (bitRead(ValSent, 5) == 1)
   {
     digitalWrite(ard5, HIGH);
   }
@@ -145,7 +259,7 @@ void DB10::togglePins(byte tempByte[], int latch)
     digitalWrite(ard5, LOW);
   }
 
-  if (bitRead(tempByte[0], 6) == 1)
+  if (bitRead(ValSent, 6) == 1)
   {
     digitalWrite(ard6, HIGH);
   }
@@ -154,7 +268,7 @@ void DB10::togglePins(byte tempByte[], int latch)
     digitalWrite(ard6, LOW);
   }
 
-  if (bitRead(tempByte[0], 7) == 1)
+  if (bitRead(ValSent, 7) == 1)
   {
     digitalWrite(ard7, HIGH);
   }

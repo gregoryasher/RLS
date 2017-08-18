@@ -8,7 +8,8 @@ class DB10 {
   public: 
   void execute();
   void configurePins();
-  void togglePins(byte*, int);
+  void togglePins(int, int);
+  int stringToInt(String);
   
   private:
   const int ard0 = 32; 
